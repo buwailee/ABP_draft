@@ -446,12 +446,13 @@ In \cite{} the study of stringy canonical forms and binary geometries with ``per
 \section{Introduction}
 In \cite{} the notions of stringy canonical forms and binary geometries were introduced which helped in understanding the configuration spaces of clusters as generalisations of moduli space for scattering of particles and strings . 
 
-It is a natural question to ask if binary geometries whose stringy integrals factorise at any finite $\alpha'$ are extremely special and are associated to only the classical $A_n, B_n, C_n,D_n$ or  Exceptional $E_6, E_7, E_8, F_2, G_4$  type clusters  as discussed in \cite{}. In this paper we answer this question in the negative by providing infinitely many counter examples. These fall broadly into two classes, the first of which corresponds to the permutahedron $P_n$ and more generally generalised permutahedra which do not have perfect $u$-equations but are still binary. The second class corresponds to various degenerations of the associahedra and cyclohedra which are binary geometries with perfect $u$-equations. In both these cases the configuration space can be realised as hyperplane arrangements and we discuss how this allows to understand why some degenerations give us binary geometries with perfect $u$-equations while others do not.
+It is a natural question to ask if binary geometries whose stringy integrals factorise at any finite $\alpha^{'}$ are extremely special and are associated to only the classical $A_n, B_n, C_n,D_n$ or  Exceptional $E_6, E_7, E_8, F_2, G_4$  type clusters  as discussed in \cite{}. In this paper we answer this question in the negative by providing infinitely many counter examples. These fall broadly into two classes, the first of which corresponds to the permutahedron $P_n$ and more generally generalised permutahedra which do not have perfect $u$-equations but are still binary. The second class corresponds to various degenerations of the associahedra and cyclohedra which are binary geometries with perfect $u$-equations. In both these cases the configuration space can be realised as hyperplane arrangements and we discuss how this allows to understand why some degenerations give us binary geometries with perfect $u$-equations while others do not.
 
 \subsection{Invitation: stringy canonical forms and cluster configuration spaces}
 
 {\bf review of stringy canonical forms, mention big polytopes and $u$ variables in general; then specify to cluster string integrals, then cluster configuration spaces with perfect $u$ equations, do $A_n$, $B_n$ examples; define "binary geometries"}
 
+*******************
 
 (stringy canonical form)
 
@@ -505,6 +506,9 @@ giving a “binary” geometry we will describe later.
 \]
 where $f_i$ are polynomials such that $f_i(\dots,u_i=0,\dots)=1$.
 
+
+*******************
+
 \newpage
 \section{Stringy canonical forms and $u$-equations for generalized permutahedra}
 In this section we shall argue that  a large subset of generalised permutahedra which are realised as degenerations of permutahderon $P_n$ are binary geometries. Before we proceed we shall review some details about the generalised permutahedra which we shall use throughout the paper.
@@ -513,6 +517,38 @@ In this section we shall argue that  a large subset of generalised permutahedra 
 \subsection{Natural stringy integrals with linear factors} 
 
 {\bf introduce a natural stringy integrals for any generalized stringy canonical forms: variables $x_0=1, x_1, \cdots, x_n$ and define $x_I=\sum_{i \in I} x_i$, the factors are $x_I^{\alpha' S_I}$ (we can say monomials $S_\{i\}=X_i$ and polynomials $S_I=-c_I$. $N=n+m$ and big polytope is a simplex, then general formula for $u$ variables, which is equivalent to ABHY conditions; again $P_n$ in full details and others as degenerations.}
+
+*******************
+
+In the last subsection, we have seen that any $n$-dimensional generalized 
+permutahedron can be constructed by a Minkowski sum of some simplices labeled by
+subsets of $[0,n]$. For a simplex labeled by a subset $I$, it can be realized as the 
+Newton Polytope of the linear polynomial $x_I=\sum_{i\in I}x_i$. Therefore, we can
+write down a natrual stringy canonical for the generalized permutahedron 
+$\mathscr P$
+\[
+	I_{\mathscr P}(\{S_I\})=\int_{\mathbb R^{n+1}_+}
+	\frac{\prod_{i=0}^n \mathrm{d}\log x_i}
+	{\operatorname{GL}(1)_+}\prod_{I\in\mathscr P}x_I^{\alpha' S_I},
+\]
+where the global $\operatorname{GL}(1)_+$ redundance $x_i\mapsto a x_i$ require that 
+$\sum_{I\in\mathscr P}S_I = 0$. 
+
+Generally, we can consider arbitrary set of subsets of $[0,n]$ in above integrals. 
+However, the big polytope of this integral is usually not a simplex.
+It's highly non-trivial to figure out all such sets whose big polytopes are simplices,
+but we can easily see that every generalized permutahedron satisfies $N=n+m$
+because each facet $F_I$ corresponds to a set of nested set $\{[0,n],I\}$ for 
+$I\neq [0,n]$.
+
+
+***
+
+The following set of equations to define the $n$-dimensional Permutahedron: 
+\bea
+C_I = (-1)^{|I|} \left( \sum_{i \in I} X_i - \sum _{{i<j}\atop{i,j \in I}} X_{ij} +\cdots + (-1)^{|I|+1}  X_I \right) \nonumber
+\eea
+for all non-empty subsets $I \subset \{0,1,\cdots,n\}$ with the understanding that $C_{I} =0$ for all singlets $I$ and $X_{I} =0$ for $I=\{ 0,1,\cdots,n \}$. 
 
 \subsection{Binary geometries and $u$ equations}
 
