@@ -430,7 +430,7 @@
 \vspace*{5.0ex}
 \centerline{\bf Abstract} \bigskip
 
-In \cite{} the study of stringy canonical forms and binary geometries with ``perfect'' u equations, associated with the scattering of particles and strings was initiated. In this paper we continue the study of binary geometries and find two large classes of new examples.  The first class corresponds to degenerations of $A_n$ and $B_n$ (associahedra and cyclohedra respectively) which have perfect $u$-equations. The second class corresponds to a large subset of  generalized permutahedra which can be realised as degenerations of the permutahedron $P_n$ which are binary positive geometries despite not having perfect $u$-equations. Both these large classes of examples have stringy integrals which factorise at any  finite $\alpha^{'}$  on all the massless poles.
+In \cite{} the study of stringy canonical forms and binary geometries with ``perfect'' u equations, associated with the scattering of particles and strings was initiated. In this paper we continue the study of binary geometries and find two large classes of new examples.  The first class corresponds to degenerations of $A_n$ and $B_n$ (associahedra and cyclohedra respectively) which have perfect $u$-equations. The second class corresponds to a large subset of  generalized permutahedra which can be realised as degenerations of the permutahedron $P_n$ which are binary positive geometries despite not having perfect $u$-equations. Both these large classes of examples have stringy integrals which factorise at any finite $\alpha^{'}$  on all the massless poles.
 
 
 
@@ -460,10 +460,10 @@ The $\mathcal I(\mathbf X,\{c\})$ is convergent when $\mathbf X$ is contained in
 the Minkowski sum $\mathcal P=\sum_I c_I \mathcal P_I$ of Newton polytopes 
 $\mathcal P_I=\mathbf N[p_I]$. For a facet $F_a$ of $\mathcal P$, this condition 
 requires that $\mathbf X$ should lay on one side of $F_a$ which is equivalent to 
-an inequality of variables $\mathbf S=(-X_1,\dots,-X_d,c_1,\dots,c_m)$, 
+an inequality of variables $\mathbf S=(X_1,\dots,X_d,-c_1,\dots,-c_m)$, 
 $W_a^JS_J\geq 0$, where $W_a^J$ is determined by the facet $F_a$. 
-These inequalities cut out a polyhedron in the $(d+m)$-dimensional space of $\mathbf S$,
-which is called the \textit{big polyhedron} of $\mathcal P$, 
+These inequalities cut out a polyhedron in the $(d+m)$-dimensional space of 
+$\mathbf S$, which is called the \textit{big polyhedron} of $\mathcal P$, 
 and the integral $\mathcal I(\mathbf S)$ converges for each point $\mathbf S$ 
 inside this polyhedron.
 
@@ -474,14 +474,14 @@ $\{U_A\}_{1\leq A\leq v}$.  Therefore, the integral $\mathcal I(\mathbf S)$
 can be seen as a function of `dual coordinates' $\{U_A\}$ which encourages us to 
 rewrite the integral to make it manifest by
 \[
-	\mathcal I(U)=
+	\mathcal I(\mathbf U)=
 	\int_{\mathbb R_+^m}\frac{\mathrm d x_1\cdots \mathrm d x_n}{x_1\cdots x_n}
-	\prod_{J}p_J^{-\alpha' S_J}
+	\prod_{A}u_A^{\alpha' U_A}
 	=
 	\int_{\mathbb R_+^m}\frac{\mathrm d x_1\cdots \mathrm d x_n}{x_1\cdots x_n}
-	\prod_{A}u_A^{\alpha' U_A},
+	\prod_{J}p_J^{\alpha' S_J},
 \]
-where we introduce a new set of variables $u_A = \prod_J p_J^{-V_J^A}$ for 
+where we introduce a new set of variables $u_A = \prod_J p_J^{V_J^A}$ for 
 $A=1,\dots,v$. Note that there's no unique way to write $S_J=U_AV_J^A$ when
 the big polyhedron is not a simplex, \textit{i.e.} $v>d+m$, and in this case,
 $u$-variables $\{u_A\}$ are not independent. 
@@ -493,9 +493,11 @@ there's no nontrivial linear isometry from the simplex to itself besides permuta
 of vertices. Therefore, we identity the labal of facets $a$ with the label of 
 vertices $A$ and get $V=W^{-1}$. Furthermore, every facet of the original polytope
 $\mathcal P$ can be associated with a single $u_A$ going to zero, 
-giving a “binary” geometry we will describe later.
+giving a ``binary geometry'' we will describe later.
 
-(why cluster configuration space, perfect u eqs)
+Generally, the big polyhdron of a stringy integral is not necessary to be a simplex.
+
+(cluster configuration space, perfect u eqs)
 
 ($A_n$ (sting integral?), $B_n$ (Shi arrangement?), or both from $F$-polynomial)
 
@@ -524,10 +526,10 @@ In the last subsection, we have seen that any $n$-dimensional generalized
 permutahedron can be constructed by a Minkowski sum of some simplices labeled by
 subsets of $[0,n]$. For a simplex labeled by a subset $I$, it can be realized as the 
 Newton Polytope of the linear polynomial $x_I=\sum_{i\in I}x_i$. Therefore, we can
-write down a natrual stringy canonical for the generalized permutahedron 
+write down a natrual stringy canonical form for the generalized permutahedron 
 $\mathscr P$
 \[
-	I_{\mathscr P}(\{S_I\})=\int_{\mathbb R^{n+1}_+}
+	\mathcal I_{\mathscr P}(\{S_I\})=\int_{\mathbb R^{n+1}_+}
 	\frac{\prod_{i=0}^n \mathrm{d}\log x_i}
 	{\operatorname{GL}(1)_+}\prod_{I\in\mathscr P}x_I^{\alpha' S_I},
 \]
@@ -540,15 +542,35 @@ It's highly non-trivial to figure out all such sets whose big polytopes are simp
 but we can easily see that every generalized permutahedron satisfies $N=n+m$
 because each facet $F_I$ corresponds to a set of nested set $\{[0,n],I\}$ for 
 $I\neq [0,n]$.
-
+Therefore, for a generalized permutahedron $\mathscr P$, we can write the matrix 
+$W^J_A$ of facets and get the ABHY conditions $S_J=F_A(W^{-1})^A_J\geq 0$ and 
+its $u$-variables $u_A=\prod_J p_J^{(W^{-1})^A_J}$.
 
 ***
 
-The following set of equations to define the $n$-dimensional Permutahedron: 
+($P_n$)
+
+As shown in the last subsection, the $n$-dimensional permutahedron is associated 
+with the set of all non-empty subsets of $[0,n]$, which is denoted by $\mathscr P_n$. 
+The number of facets of $\mathscr P_n$ is $2^n-2$.
+
+(equations of facets?)
+
+ABHY conditions:
 \bea
 C_I = (-1)^{|I|} \left( \sum_{i \in I} X_i - \sum _{{i<j}\atop{i,j \in I}} X_{ij} +\cdots + (-1)^{|I|+1}  X_I \right) \nonumber
 \eea
 for all non-empty subsets $I \subset \{0,1,\cdots,n\}$ with the understanding that $C_{I} =0$ for all singlets $I$ and $X_{I} =0$ for $I=\{ 0,1,\cdots,n \}$. 
+
+(proof?)
+
+Then we can then solve for the corresponding $u's$ :
+\bea
+u_J &=& ~~\prod_{J \subset I} x_I^{(-1)^{|I|-|J|}} \nonumber \\
+u^{'}_J &=& \prod_{{0 \in I}\atop{ \{0,\cdots,n\} - I \subset J}} x_I^{(-1)^{|I|-|J|+\color{red}{mod(n, 2)}}} \nonumber
+\eea
+
+(notation!)
 
 \subsection{Binary geometries and $u$ equations}
 
