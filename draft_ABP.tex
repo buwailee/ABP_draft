@@ -1,0 +1,1113 @@
+\documentclass[hidelinks,12pt]{article}
+\pdfoutput=1
+\usepackage{epsfig,amsfonts,amssymb}
+
+\usepackage{comment}
+\input epsf.sty
+\topmargin -.1cm
+\textheight 21cm
+\oddsidemargin 0.15cm 
+\textwidth 14cm
+\usepackage{cite}
+\usepackage{epsfig,amssymb,euscript,xspace,xcolor}
+\usepackage{amsmath,mathtools,empheq,amsthm,hyperref,graphicx}
+\usepackage{mathrsfs,float}  
+\usepackage{pgf,tikz,pgfplots}
+\usetikzlibrary{arrows}
+\usepackage[T1]{fontenc} 
+\usepackage{tikz,caption,subcaption,marvosym} 
+\usetikzlibrary{decorations.markings,arrows,snakes}
+\usepackage[belowskip=-15pt,aboveskip=0pt]{caption}
+\usepackage[skip=10pt]{caption} % example skip set to 2pt
+\usepackage{comment}
+
+
+
+
+\usepackage[utf8]{inputenc}
+
+\usepackage[titles]{tocloft}
+\renewcommand{\cftdot}{} %Don't want dots in TOC
+
+
+\definecolor{lightblue}{rgb}{.1,.4,.5}
+\definecolor{brown1}{rgb}{.64,.43,.138}
+
+\usepackage{hyperref,cite}
+\hypersetup{linktocpage, colorlinks=true,linkcolor= blue,citecolor=blue,urlcolor=lightblue}
+
+\newcommand{\hab}{}
+
+\newcommand{\pii}{\pi}
+
+\newcommand{\vq}{\xi}
+
+\newcommand{\tree}{}
+
+\newcommand{\epk}{\epsilon^{\mu\nu}p_{\nu}k^{\rho}k^{\sigma}}
+\newcommand{\epkl}{(p. k)\epsilon^{\mu\rho}k^{\sigma}}
+\newcommand{\epkll}{\epsilon^{\mu\rho}p_{\rho}k^{\nu}k^{\sigma}}
+\newcommand{\epklll}{\epsilon^{\mu\nu}p_{\rho}k^{\rho}k^{\sigma}}
+
+\textwidth 16.9cm
+\oddsidemargin -.25cm
+
+\def\ZZZ{{\hbox{ Z\kern-1.6mm Z}}}
+\def\RRR{{\hbox{ R\kern-2.4mm R}}}
+\def\CCC{{\hbox{ C\kern-2.0mm C}}}
+\def\zzz{{\hbox{z\kern-1mm z}}}
+\def\eee{e}
+
+\newcommand{\ten}{{(10)}}
+\newcommand{\bet}{{( b )}}
+
+\newcommand{\qq}{k}
+\newcommand{\pp}{l}
+\newcommand{\nn}{\nonumber \\ }
+
+\newcommand{\vt}{\vartheta}
+
+\newcommand{\vtau} {\vec \tau}
+\newcommand{\vj} {\vec J}
+\newcommand{\vxi} {\vec \xi}
+\newcommand{\vu} {\vec u}
+\newcommand{\htau} {\vec \eta}
+\newcommand{\vc}{\vec\chi}
+\newcommand{\vpsi} {\vec \psi}
+
+\newcommand{\qeq}{{\hbox{=\kern-2.3mm ? \kern.5mm }}}
+\renewcommand{\qeq}{=}
+\usepackage{tikz}
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{\node[shape=circle,draw,inner sep=2pt] (char){#1};}}
+
+\newcommand{\rrho}{r}
+\newcommand{\bA}{{\bf A}}
+\newcommand{\tx}{\wt x}
+\newcommand{\bG}{{\bf G}}
+\newcommand{\bF}{{\bar F}}
+\newcommand{\bbb}{{\bar b}}
+\newcommand{\gam}{\tau}
+\newcommand{\eps}{\epsilon}
+\newcommand{\vareps}{\varepsilon}
+\newcommand{\ra}{\rangle}
+\newcommand{\la}{\langle}
+\newcommand{\T}{\chi_{T}(k)}
+\newcommand{\Tm}{\chi_{T}(k')}
+\newcommand{\Cn}{{\cal C}_n}
+\newcommand{\vp}{\varphi}
+\newcommand{\ve}{\varepsilon}
+\newcommand{\tl}{\lambda}
+\newcommand{\dt}{(\vec \nabla T)^2}
+\newcommand{\hp}{{\wh\Phi}}
+\newcommand{\hq}{{\wh Q_B}}
+\newcommand{\he}{{\wh\eta_0}}
+\newcommand{\ha}{{\wh{A}}}
+\newcommand{\lllb}{\Bigl\langle\Bigl\langle}
+\newcommand{\rrrb}{\Bigr\rangle\Bigr\rangle}
+\newcommand{\tf}{\wt f}
+\newcommand{\sss}{{\cal L}_{av}}
+\newcommand{\bx}{\bar x}
+\newcommand{\bw}{\bar w}
+\newcommand{\ws}{{\wt\sigma}}
+\newcommand{\wrh}{{\wt\rho}}
+\newcommand{\wv}{{\wt v}}
+
+\newcommand{\bJ}{{\bf J}}
+
+
+
+
+\newcommand{\vv} {\bar v}
+\newcommand{\uu} {\bar u}
+
+\newcommand{\K}{{\rm K_1}}
+\newcommand{\Kt}{{\rm \widetilde K_1}}
+
+\newcommand{\B}{b'}
+\newcommand{\C}{c\,'}
+\newcommand{\bB}{\bar b'}
+\newcommand{\Bu}{B_{\vec u}}
+\newcommand{\VV}{{\cal V}}
+\newcommand{\BB}{{\cal B}}
+\newcommand{\DD}{{\cal D}}
+\newcommand{\BBB}{{\cal B}}
+\newcommand{\II}{{\cal I}}
+\newcommand{\AAA}{{\cal A}}
+\newcommand{\GG}{{\cal G}}
+\newcommand{\KK}{{\cal K}}
+\newcommand{\fff}{{\bf f}}
+\newcommand{\ccc}{{\bf c}}
+\newcommand{\FF}{{\cal F}}
+\newcommand{\JJ}{{\cal J}}
+\newcommand{\HH}{{\cal H}}
+\newcommand{\MM}{{\cal M}}
+\newcommand{\CC}{{\cal C}}
+\newcommand{\bC}{{\bf C}}
+\newcommand{\OO}{{\cal O}}
+\newcommand{\QQ}{{\cal Q}}
+\newcommand{\PP}{{\cal P}}
+\newcommand{\EE}{{\cal E}}
+\newcommand{\LL}{{\cal L}}
+
+\newcommand{\XX}{{\cal X}}
+
+\newcommand{\rrr}{\rangle\rangle}
+\newcommand{\half}{{1\over 2}}
+\newcommand{\wt}{\widetilde}
+\newcommand{\wh}{\widehat}
+\newcommand{\wc}{\wt}
+\newcommand{\wb}{\bar}
+%\newcommand{\bd}{\bar{\rm D}}
+\newcommand{\RR}{{\cal R}}
+\newcommand{\NN}{{\cal N}}
+\newcommand{\TT}{{\cal T}}
+\newcommand{\bg}{\bar g}
+\newcommand{\ba}{\bar a}
+\newcommand{\bc}{\bar c}
+\newcommand{\bd}{\bar d}
+\newcommand{\bb}{\bar b}
+\newcommand{\bT}{\bar \Theta}
+\newcommand{\SSS}{{\cal S}}
+\newcommand{\tlx}{\left(\tilde \lambda ; X^0(0) \right)}
+\newcommand{\al}{\alpha}
+
+\newcommand{\tk}{\tilde \kappa}
+
+%\newcommand{\gcd}{{\rm gcd}}
+\newcommand{\ppp}{\prime\prime}
+
+\newcommand{\omk}{\omega_n(\vec k)}
+\newcommand{\onk}{\omega^{(N)}_{\vec k_\perp}}
+\newcommand{\tI}{\wt\II}
+\newcommand{\hI}{\wh\II}
+\newcommand{\nI}{\II}
+
+\newcommand{\cp}{\check\Phi}
+\newcommand{\cps}{\Psi}
+\newcommand{\crh}{\check\rho}
+\newcommand{\cs}{\check\sigma}
+\newcommand{\cv}{\check v}
+\newcommand{\com}{\check\Omega}
+
+\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+\newcommand{\ben}{\begin{eqnarray}\displaystyle}
+\newcommand{\een}{\end{eqnarray}}
+
+\newcommand{\refb}[1]{(\ref{#1})}
+\newcommand{\p}{\partial}
+\newcommand{\sectiono}[1]{\section{#1}\setcounter{equation}{0}}
+\newcommand{\subsectiono}[1]{\subsection{#1}\setcounter{equation}{0}}
+
+\newcommand{\zet}{\zeta}
+
+\newcommand{\gsim}{\stackrel{>}{\sim}}
+\newcommand{\lsim}{\stackrel{<}{\sim}}
+
+\newcommand{\Lamb}{\Lambda}
+
+\newcommand{\ia}{i}
+\newcommand{\ja}{j}
+
+%\renewcommand{\vec}{}
+
+\def\one{{\hbox{ 1\kern-.8mm l}}}
+\def\zero{{\hbox{ 0\kern-1.5mm 0}}}
+
+\def\wa{{\wh a}}
+\def\wb{{\wh b}}
+\def\wc{{\wh c}}
+\def\wc{\check}
+\def\wdd{{\wh d}}
+
+\newcommand{\bi}{{\bf i}}
+
+\renewcommand{\theequation}{\thesection.\arabic{equation}}
+\renewcommand{\theequation}{\arabic{equation}}
+
+\newcommand{\bea}[1]{\begin{eqnarray}\label{#1} }
+\newcommand{\eea}{\end{eqnarray}}
+
+\newcommand{\wJ}{\wt J}
+\newcommand{\bN}{{\bf N}}
+
+\newcommand{\aaa}{b}
+
+%\newcommand{\eqref}{\refb}
+
+\newcommand{\un}{{\rm u}}
+
+\newcommand{\dotalpha}{{\dot{\alpha}}}
+
+\newcommand{\dotbeta}{{\dot{\beta}}}
+
+\newcommand{\dotgamma}{{\dot{\gamma}}}
+
+\newcommand{\dalpha}{\beta}
+
+\newcommand{\Vm}{V}
+
+\newcommand{\gb}{G}
+
+\newcommand{\q}{e}
+
+\newcommand{\PPP}{{\cal P}}
+
+%\newcommand{\gold}{\VV_{\rm goldstino}}
+
+\newcommand{\gold}{\VV_{\rm G}}
+
+%\newcommand{\goldc}{\VV^c_{\rm goldstino}}
+
+\newcommand{\goldc}{\VV^c_{\rm G}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CAN BE DELETED AT THE END %%%%%%%%%%
+
+\usepackage{bm}
+%\usepackage[table]{xcolor}
+%\def\rpnote#1{{\color{magenta} #1}}
+%\def\arnote#1{{\color{blue} #1}}
+%\def\asnote#1{{\color{red} #1}}
+
+\newcommand{\bM}{{\bf M}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%TO ADD A COMMENT WRITE \arnote{} %%%%%
+
+\newcommand{\scalar}{\VV_{\rm S}} 
+
+\newcommand{\wscalar}{\wt\VV_{\rm B}} 
+
+
+\newcommand{\fermion}{\VV_{\rm F}} 
+
+\newcommand{\wfermion}{\wt\VV_{\rm F}}  
+
+\newcommand{\wts}{\wt\Sigma}
+
+\newcommand{\wtsp}{\wt\Sigma^c}
+
+\newcommand{\four}{(4)}
+
+\newcommand{\cL} {\{\hskip -4pt\{}
+\newcommand{\cR} {\}\hskip -4pt\}}
+\newcommand{\sL} {[\hskip -1.5pt[}
+\newcommand{\sR} {]\hskip -1.5pt]}
+\newcommand{\oR}{{\overline{\RR}}}
+
+
+\def\bj{{\bf j}}
+
+\def\asnote#1{{\color{magenta}#1}}
+
+\def\asnotea#1{{\color{orange}#1}}
+
+
+\def\asnote#1{{\color{black}#1}}
+\def\asnotea#1{{\color{black}#1}}
+
+\newcommand{\mmu}{\mu}
+
+
+\newcommand{\f}{\frac}
+
+\newcommand{\non}{\nonumber}
+
+
+
+
+
+\setlength{\intextsep}{10pt plus 2pt minus 2pt}
+\def\bea{\begin{eqnarray}}
+\def\eea{\end{eqnarray}}
+\def\be{\begin{equation}}
+\def\ee{\end{equation}}
+
+\newcommand{\drm}{\mathrm{d}}
+\newcommand{\der}[2]{\frac{\drm #1}{\drm #2}}
+\newcommand{\cross}{\times}
+\newcommand{\del}{\vec{\nabla}}
+\newcommand{\pd}{\partial}
+\newcommand{\prd}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\dv}{\delta\hspace{-2pt}}
+\newcommand\veps{\varepsilon}
+\newcommand\vphi{\varphi}
+%\newcommand{\com}[2]{[#1,\, #2]}
+\newcommand{\tr}{\text{Tr }}
+\newcommand{\td}{\text{d}}
+
+\definecolor{wvvxds}{rgb}{0.396078431372549,0.3411764705882353,0.8235294117647058}
+\definecolor{dbwrru}{rgb}{0.8588235294117647,0.3803921568627451,0.0784313725490196}
+\definecolor{dtsfsf}{rgb}{0.8274509803921568,0.1843137254901961,0.1843137254901961}
+\definecolor{wrwrwr}{rgb}{0.3803921568627451,0.3803921568627451,0.3803921568627451}
+\definecolor{cqcqcq}{rgb}{0.7529411764705882,0.7529411764705882,0.7529411764705882}
+\definecolor{rvwvcq}{rgb}{0.08235294117647059,0.396078431372549,0.7529411764705882}
+\makeatletter
+\newenvironment{calc}{\allowdisplaybreaks\start@align\@ne\st@rredtrue\m@ne}
+{\addtocounter{equation}{1}\tag{\theequation}\endalign}
+% for calculations/derivations---only last line gets an equation number, 
+%	and allows page breaks for long calculations
+
+\newenvironment{multeq}
+{\incr@eqnum
+	\mathdisplay@push
+	\st@rredfalse\global\@eqnswtrue
+	\mathdisplay{equation}
+	\let\@testopt\alignsafe@testopt
+	\aligned@a}
+{\crcr
+	\egroup
+	\restorecolumn@
+	\egroup
+	\endmathdisplay{equation}
+	\mathdisplay@pop
+	\ignorespacesafterend
+}
+% Should be equivalent to 
+% \begin{equation}\begin{split} ... \end{split}\end{equation}
+% use for multiline equations/multiple equations that should get a single
+% equation number, _centered_.
+% Note I don't think page breaks work with this construction.
+\makeatother
+
+
+\DeclareMathOperator\sech{sech}
+\DeclareMathOperator\csch{csch}
+\newcommand\AdS{$AdS_3$\xspace}
+\newcommand\re{\mathbb{R}}
+\newcommand\sacomment[1]{\textcolor{blue}{[\textit{SA: #1}]}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\addtolength{\topmargin}{-2cm} 
+%\addtolength{\textheight}{2.5cm}
+\addtolength{\oddsidemargin}{-0.5cm} 
+\addtolength{\textwidth}{1.cm}
+%\addtolength{\footskip}{0.7cm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newtheorem{identity}{Identity}[section]
+
+
+
+
+
+
+\begin{document}
+
+\baselineskip 24pt
+
+
+\begin{center}
+
+{\Large \bf  Binary geometries: Associahedra, Cyclohedra and Generalized Permutahedra}
+
+
+\end{center}
+
+\vskip .5cm
+\medskip
+
+\vspace*{4.0ex}
+
+\baselineskip=15 pt
+
+\centerline{\large \rm  {\bf Song He$^{a, b}$, Zhenjie Li$^{a, b}$, Prashanth Raman$^{a, c,d}$, Chi Zhang$^{a, b}$ } } 
+
+\vspace*{4.0ex}
+{\it ~ $^a$ CAS Key Laboratory of Theoretical Physics, Institute of Theoretical Physics, Chinese Academy}
+
+{\it of Sciences, Beijing 100190, China}
+
+{\it ~$^b$ School of Physical Sciences, University of Chinese Academy of Sciences, No.19A Yuquan Road,}
+
+{\it Beijing 100049, China}
+
+{\it ~$^c$ Institute of Mathematical Sciences, Taramani, Chennai 600 113, India}
+
+{\it ~$^d$ Homi Bhabha National Institute, Anushakti Nagar, Mumbai 400085, India}
+
+
+\vspace*{1.0ex}
+\centerline{\it ~E-mail : songhe@itp.ac.cn, lizhenjie@itp.ac.cn, prashanthr@imsc.res.in, zhangchi@itp.ac.cn} 
+\vspace*{5.0ex}
+\centerline{\bf Abstract} \bigskip
+
+In \cite{} the study of stringy canonical forms and binary geometries with ``perfect'' u equations, associated with the scattering of particles and strings was initiated. In this paper we continue the study of binary geometries and find two large classes of new examples.  The first class corresponds to degenerations of $A_n$ and $B_n$ (associahedra and cyclohedra respectively) which have perfect $u$-equations. The second class corresponds to a large subset of  generalized permutahedra which can be realised as degenerations of the permutahedron $P_n$ which are binary positive geometries despite not having perfect $u$-equations. Both these large classes of examples have stringy integrals which factorise at any  finite $\alpha^{'}$  on all the massless poles.
+
+
+
+\vfill \eject
+
+
+
+\baselineskip=18pt
+
+\tableofcontents
+
+\newpage
+\section{Introduction}
+In \cite{} the notions of stringy canonical forms and binary geometries were introduced which helped in understanding the configuration spaces of clusters as generalisations of moduli space for scattering of particles and strings . 
+
+It is a natural question to ask if binary geometries whose stringy integrals factorise at any finite $\alpha'$ are extremely special and are associated to only the classical $A_n, B_n, C_n,D_n$ or  Exceptional $E_6, E_7, E_8, F_2, G_4$  type clusters  as discussed in \cite{}. In this paper we answer this question in the negative by providing infinitely many counter examples. These fall broadly into two classes, the first of which corresponds to the permutahedron $P_n$ and more generally generalised permutahedra which do not have perfect $u$-equations but are still binary. The second class corresponds to various degenerations of the associahedra and cyclohedra which are binary geometries with perfect $u$-equations. In both these cases the configuration space can be realised as hyperplane arrangements and we discuss how this allows to understand why some degenerations give us binary geometries with perfect $u$-equations while others do not.
+
+\subsection{Invitation: stringy canonical forms and cluster configuration spaces}
+
+{\bf review of stringy canonical forms, mention big polytopes and $u$ variables in general; then specify to cluster string integrals, then cluster configuration spaces with perfect $u$ equations, do $A_n$, $B_n$ examples; define "binary geometries"}
+
+
+(stringy canonical form)
+
+The $\mathcal I(\mathbf X,\{c\})$ is convergent when $\mathbf X$ is contained inside
+the Minkowski sum $\mathcal P=\sum_I c_I \mathcal P_I$ of Newton polytopes 
+$\mathcal P_I=\mathbf N[p_I]$. For a facet $F_a$ of $\mathcal P$, this condition 
+requires that $\mathbf X$ should lay on one side of $F_a$ which is equivalent to 
+an inequality of variables $\mathbf S=(-X_1,\dots,-X_d,c_1,\dots,c_m)$, 
+$W_a^JS_J\geq 0$, where $W_a^J$ is determined by the facet $F_a$. 
+These inequalities cut out a polyhedron in the $(d+m)$-dimensional space of $\mathbf S$,
+which is called the \textit{big polyhedron} of $\mathcal P$, 
+and the integral $\mathcal I(\mathbf S)$ converges for each point $\mathbf S$ 
+inside this polyhedron.
+
+Dually, we can describe the big polyhedron by its vertices. Suppose 
+$\{V_J^A\}_{1\leq A\leq v}$ are its non-zero vertices, the point $\mathbf S$ inside 
+the polyhedron can be written as $S_J = U_A V^A_J$ with non-nagetive coefficients 
+$\{U_A\}_{1\leq A\leq v}$.  Therefore, the integral $\mathcal I(\mathbf S)$
+can be seen as a function of `dual coordinates' $\{U_A\}$ which encourages us to 
+rewrite the integral to make it manifest by
+\[
+	\mathcal I(U)=
+	\int_{\mathbb R_+^m}\frac{\mathrm d x_1\cdots \mathrm d x_n}{x_1\cdots x_n}
+	\prod_{J}p_J^{-\alpha' S_J}
+	=
+	\int_{\mathbb R_+^m}\frac{\mathrm d x_1\cdots \mathrm d x_n}{x_1\cdots x_n}
+	\prod_{A}u_A^{\alpha' U_A},
+\]
+where we introduce a new set of variables $u_A = \prod_J p_J^{-V_J^A}$ for 
+$A=1,\dots,v$. Note that there's no unique way to write $S_J=U_AV_J^A$ when
+the big polyhedron is not a simplex, \textit{i.e.} $v>d+m$, and in this case,
+$u$-variables $\{u_A\}$ are not independent. 
+When the big polyhdron is a simplex, \textit{i.e.} $N=v=d+m$, where $N$ is 
+the number of facets of the big polyhdron or the original polytope $\mathcal P$,
+and inequalities $U_A=S_J(V^{-1})^J_A\geq 0$ are exactly the inequalities
+$W_a^J S_J\geq 0$ up to resales $U_A\mapsto t U_A$ for non-zero factors $t$, because
+there's no nontrivial linear isometry from the simplex to itself besides permutations
+of vertices. Therefore, we identity the labal of facets $a$ with the label of 
+vertices $A$ and get $V=W^{-1}$. Furthermore, every facet of the original polytope
+$\mathcal P$ can be associated with a single $u_A$ going to zero, 
+giving a “binary” geometry we will describe later.
+
+(why cluster configuration space, perfect u eqs)
+
+($A_n$ (sting integral?), $B_n$ (Shi arrangement?), or both from $F$-polynomial)
+
+(binary geometries)
+
+\[
+	1-u_i=f_i(u)\prod_{j}u_j^{i||j}
+\]
+where $f_i$ are polynomials such that $f_i(\dots,u_i=0,\dots)=1$.
+
+\newpage
+\section{Stringy canonical forms and $u$-equations for generalized permutahedra}
+In this section we shall argue that  a large subset of generalised permutahedra which are realised as degenerations of permutahderon $P_n$ are binary geometries. Before we proceed we shall review some details about the generalised permutahedra which we shall use throughout the paper.
+\subsection{Generalized permutohedra} {\bf the definition, facets and combinatorial factorizations, do $P_n$ example in full details.}
+
+\subsection{Natural stringy integrals with linear factors} 
+
+{\bf introduce a natural stringy integrals for any generalized stringy canonical forms: variables $x_0=1, x_1, \cdots, x_n$ and define $x_I=\sum_{i \in I} x_i$, the factors are $x_I^{\alpha' S_I}$ (we can say monomials $S_\{i\}=X_i$ and polynomials $S_I=-c_I$. $N=n+m$ and big polytope is a simplex, then general formula for $u$ variables, which is equivalent to ABHY conditions; again $P_n$ in full details and others as degenerations.}
+
+\subsection{Binary geometries and $u$ equations}
+
+{\bf argue in general to have binary geometries we must have $1-u=\prod u' p(\{u\})$ with $p(u=0)=1$, conjecture that this is true fo ALL gen. perm. Show it for gen. perm. more examples?}
+
+\section{Configuration spaces with perfect $u$-equations from degenerating $A_n$ and $B_n$}
+In this section we shall consider some degenerations of $A_n$ and $B_n$ and show that these form an infinite class of examples of binary geometries with perfect $u$-equations. To do this we shall use the fact that both $A_n$ and $B_n$ are generalised permutahedra and can be realised as a Minkowski sum of coordinate simplices. 
+
+\subsection{$A_n$ and $B_n$ as generalized permutohedra} 
+
+{\bf linear factors, (standard) string integrals, ABHY and $u$ variables, talk about hyperplane arrangement}
+
+\subsection{Degenerations of $A_n$ and $B_n$ with perfect $u$ equations} 
+
+{\bf things I wrote in my handwritten notes...}
+
+*******************
+
+\section*{Permutahedron}
+ For $x_1,x_2, \cdots, x_{n+1} \in \mathbb{R} $ , the permutahedron $P_n(x_1,\cdots,x_{n+1})$ is a convex polytope in $\mathbb{R}^{n+1}$ defined as the convex hull of all vectors obtained from $(x_1,x_2, \cdots, x_{n+1})$ by permutations of the coordinates:
+ \bea
+ P_n(x_1,x_2, \cdots, x_{n+1}) = ConvexHull \{ (x_{w(1)},x_{w(2)}, \cdots, x_{w(n+1)})~ |~ w \in S_{n+1} \}, \nonumber
+ \eea
+ where $S_{n+1}$ is the symmetric group. 
+ 
+ The permutahedron has $(n+1)!$ vertices and is of dimension at most $n$ since it lies in the hyperplane 
+ \bea
+ H_c= \{(t_1,t_2, \cdots, t_{n+1}) | t_1 + t_2 + \cdots + t_{n+1}= c \} \subset \mathbb{R}^{n+1}, \nonumber
+ \eea
+where $c= x_1+x_2+ \cdots +x_{n+1}$
+
+For $n=2$ and distinct $x_1,x_2, x_3$ the permutahedron $P_2(x_1,x_2, x_3)$ is a hexagon. If two of the $x_i$'s are equal then the permutahedron degenerates into a triangle and if $x_1= x_2 = x_3$ then its degenerates into a single point.
+
+We shall state a few results about permutahedra:
+
+{\bf Rado's theorem}: For any $x_1 \ge x_2  \cdots \ge x_{n+1}$ a point $(t_1,t_2, \cdots, t_{n+1}) \in \mathbb{R}^{n+1}$ belongs to the permutahedron $P_n(t_1,t_2, \cdots, t_{n+1})$ if and only if 
+\bea
+t_1+ \cdots +t_{n+1} = x_1 +\cdots+ x_{n+1} \nonumber
+\eea
+and for any nonemepty subset $\{i_1,\cdots,i_k \} \subset \{1,\cdots, n+1 \}$, we have 
+\bea
+t_{i_1}+ \cdots +t_{i_k} \leq x_1 +\cdots+ x_k \nonumber
+\eea
+The combinatorial structure of the permutahedron $P_n (x_1, \cdots, x_{n+1}) $ does not depend on $ x_1, \cdots, x_{n+1} $ as long as all these are distinct. 
+
+{\bf Proposition 2}: For any  $x_1> \cdots > x_{n+1} $. The $d$-dimensional faces of $P_n ( x_1, \cdots, x_{n+1 })$ are in one-to-one correspondence with the disjoint subdivisions of the corresponding set $\{x_1,\cdots, x_{n+1 }\}$ into nonempty ordered blocks $B_1 \cup B_2 \cup \cdots \cup B_{n+1-d} =\{1,\cdots,n+1 \}$. The face corresponding to $B_1,\cdots, B_{n+1-d}$ is given by the $n+1-d$ linear equations 
+\bea
+\sum_{i \in B_1\cup \cdots \cup B_k} t_i = x_1 + \cdots +x_{| B_1 \cup \cdots \cup B_k |}, ~~~ for~ k=1,\cdots,n+1-d \nonumber
+\eea 
+\section*{Generalized permutahedra}
+Generalized permutahedra are polytopes which are deformations of the usual permutahedron i.e., obtained by moving the vertices of the usual permutahedron so that the directions of all the edges are preserved though some of the edges may degenerate into points.
+
+ Since each generalised permutahedron is obtained by parallel translation of facets of the usual permutahedron it is parametrized  by a collection $\{ z_I\}$ of $2^{n+1}-1$ coordinates, for non-empty sets of $I \subset [n+1] := \{1,\cdots,n+1 \}$
+ \bea
+ P_n^z(\{ z_I \}) = \left \{ (t_1, t_2, \cdots , t_{n+1}) \in \mathbb{R}^{n+1} | \sum_{i=1}^{n+1} t_i = z_{[n+1]},~ \sum_{i \in I} t_i \geq z_I, ~for ~subsets~ I  \right  \} \nonumber
+ \eea
+ 
+ If $z_I =z_J$ whenever $|I| =|J|$, then  $ P_n^z(\{ z_I \})$ is the usual permutahedron.
+ 
+ 
+ A different construction of the generalised permutahedron is the following :
+ 
+ Let, $\Delta_{[n+1]} = ConvexHull(e_1,\cdots,e_n)$ be the standard coordinate simplex in $\mathbb{R}^{n+1}$. For any $I \subset [n+1] $ let $\Delta_I =ConvexHull(e_i~|~i\in I)$ denote the face of the $\Delta_{[n+1]}$. The polytope $P_n^y(\{y_I \})$ obtained as the Minkowski sum of simplices $\Delta_I$ scaled by  parameters $y_I \geq 0$ for all nonempty subsets $I \subset [n+1]$
+ \bea
+ P_n^y(\{y_I \})= \sum_{I \subset[n+1]} y_I . \Delta_I  \nonumber
+ \eea
+is the generalised permutahedron $P_n^z(\{z_I \})$  provided $z_I = \sum_{J \subset I} y_J  ~ for ~all~nonempty ~I \subset [n+1]$.
+Note that all generalised permutahedra cannot be written as Minkowski sum of coordinate simplices and we shall restrict ourselves to the large class of generalised permutahedra which admit such a realisation.
+\section*{Nested Complex}
+Since the combinatorial structure of the generalised permutahedron depends only on the set $B$ of nonemepty subsets $I \subset [n+1]$ such that $y_I \geq 0$ which is called the {\it building set}. We can describe the combinatorial structure when $B$ additionally satisfies the following:
+
+\noindent(1) If $I,J \in B$ and $I \cap J \neq \phi $, then $I \cup J \in B$. \\
+(2) $B$ contains all singletons $\{ i\}$ for $i \in S$.
+
+A subset $N$ in the building set $B$ is called a {\it nested set} if it satisfies the following conditions:\\
+\noindent
+(1) For any $I,J \in N$, we either have $I \subset J$ or $J\subset I$ or $I$ and $J$ are disjoint.\\
+(2) For any collection of $k \geq 2$ disjoint subsets $J_1,J_2,\cdots, J_k \in N$ their union $J_1 \cup \cdots \cup J_k$ is not in B. \\
+(3) N contains all maximal elements of $B$.
+
+The {\it nested complex} $\mathcal{N}(B)$ is defined as the poset of the set of all nested sets in $B$ ordered by inclusion.
+
+{\bf Theorem 1}: Let us assume that the set $B$ associated with a generalised permutahedron $P_n^{y}$ is a building set on $[n+1]$. Then the poset of faces $P_n^{y}$ ordered by reverse inclusion is isomorphic to the nested complex $\mathcal{N}(B)$. 
+
+{\bf Theorem 2}: Let us assume that the set $B$ associated with a generalised permutahedron $P_n^{y}$ is a building set on $[n+1]$. The face $P_N$ of $P_n^{y}(y_I)$ associated with the nested set $N \in \mathcal{N}(B)$ is given by:
+\bea
+P_N = \left \{ \right (t_1,\cdots,t_{n+1}) \in \mathbb{R}^{n+1} | \sum_{i \in I} t_i =y_{I}~for~I \in N; ~ \sum_{i \in J}t_i \geq y_J, for J \in B  )\}
+\eea
+In particular the dimension of the face $P_N$ equals $n+1-|N|$. 
+
+In summary the above results imply that we can look at any collection of subsets of $[n+1]$ which form a building set $B$ and associate  coordinate simplex $\Delta_I$ for each $I \in B$ and resulting Minkowski sum with positive weights $y_I$ generates a generalised permutahedron associated with the building set. Further, the number of facets of the generalised permutahedron just correspond to the set of all non-singlet elements in $B$.  
+We shall use $ \{0,1,\cdots,n \}$ instead of $[n+1]$ with $x_0 =1$ from now on. Since, the number of singlets correspond to the dimension of the generalised permutahedron this implies that:
+
+{\bf Number of facets = Number of linear equation + dimension of  gen permutahedron}
+ 
+Thus, generalised permutahedra have "Big Polytope" which correspond to a simplex and we can write down the stringy canonical forms and solve for the $u$-variables and examine if they satisfy some kind of $u$-equations.
+
+Here are some interesting examples of generalised permutahedra:
+
+(1) If $B$ consists of only singlets i.e., $B=\{ \{ 0,1,\cdots,n \}, \{ 0 \},\{ 1 \},\cdots ,\{ n \} \}$ then the generalised permutahedron is a Simplex. In this case the relevant $x$ variables are $x_i,~ i=0,\cdots,n$ and $\sum_{i=0}^n x_i$. 
+The Newton polytope of the Minkowski sum is $\prod_{i=1}^{n} x_i (1+\sum_{j=1}^{n} x_j)$ and $u$-variables are 
+$u_i =\frac{ x_i}{1+\sum_{i=1}^n x_i} $
+which satisfy $\sum u_i =1$ as their only $u$-equation. \\
+
+(2) If $B= \{[i] | i=1,\cdots,n+1 \}$ is the complete flag of intervals, then $P_n({\bf Y})$ is the Stanley-Pitman polytope or Hypercube.
+The Newton polytope of the Minkowski sum is $x_1\cdots x_n (1+x_1) \cdots (1+x_1+\cdots +x_n)$ and $u$-variables are 
+$u_i =\frac{ 1}{1+\sum_{j=1}^{i} x_j} $, ~~$u^{'}_i =\frac{ \sum_{j=1}^{i} x_j}{1+\sum_{j=1}^{i} x_j} $ for $j=1,\cdots,n$ \\
+which satisfy $u_i +u^{'}_{i} =1$ as their $u$-equation. \\
+
+(3) If $B$ corresponds to all the non empty subsets of $\{0,1,\cdots,n \}$ and $Y_I =y_{|I|}$ i.e., the variables $Y_I$ are equal for all subsets of the same cardinality, then $P_n({\bf Y})$ is the usual permutahedron $P_n$. 
+
+\section*{ABHY like realisation for the Permutahedron}
+The following set of equations to define the $n$-dimensional Permutahedron: 
+\bea
+C_I = (-1)^{|I|} \left( \sum_{i \in I} X_i - \sum _{{i<j}\atop{i,j \in I}} X_{ij} +\cdots + (-1)^{|I|}  X_I \right) \nonumber
+\eea
+for all non-empty subsets $I \subset \{0,1,\cdots,n\}$ with the understanding that $C_{I} =0$ for all singlets $I$ and $X_{I} =0$ for $I=\{ 0,1,\cdots,n \}$. 
+
+It is clear that
+\bea
+m= \text{No. of  C's }&=& 2^{n+1}-(n+2) \nonumber \\
+N= \text{No. of X's} &=& 2^{n+1}- 2 \nonumber 
+\eea
+Thus we see that $N= d+m$ and hence the "Big polytope" in this case is again a simplex. We can write down the stringy integral as usual to be 
+\bea
+\int_{\mathbb{R}^{n}_{+}} \prod_{i =1}^{n} d x_i x_i^{\alpha^{'} X_i -1} \prod_{I} \left (\sum_{a\in I} x_a \right) ^{-\alpha^{'} C_I} \nonumber
+\eea 
+where the product is over all non-singlets $ I \subset \{0,1,\cdots,n\}$ with $x_{0} =1$.
+
+We can then solve for the corresponding $u's$ :
+\bea
+u_J &=& ~~\prod_{J \subset I} x_I^{(-1)^{|I|-|J|}} \nonumber \\
+u^{'}_J &=& \prod_{{0 \in I}\atop{ \{0,\cdots,n\} - I \subset J}} x_I^{(-1)^{|I|-|J|+\color{red}{mod(n, 2)}}} \nonumber
+\eea
+
+\section*{2d permutahedron}
+In this case the building set $B=\{ \{ 0,1,2\},\{ 0,1\},\{0,2\},\{1,2\},\{0\},\{1\},\{2\}\}$ and the relevant $x$ variables are $x_0=1, ~x_1=x, ~x_2=y, ~x_{01}=1+x, ~x_{02}=1+y,~ x_{12}=x+y,~ x_{012}=1+x+y$. 
+
+We can write down the Newton polynomial for the Minkowski sum as $ x_1~ x_2~(1+x_1)~(1+x_2)~(x_1+x_2)~(1+x_1+x_2)$.
+
+The $u$-variables can be written in terms of $x$ variables as:
+\bea
+u_1&=&\frac{x(1+x+y)}{(x+y)(1+x)}, ~ u_2 =\frac{y(1+x+y)}{(x+y)(1+y)},~ u_{12}=\frac{(x+y)}{(1+x+y)}\nonumber \\
+u^{'}_1&=&\frac{(1+y)}{(1+x+y)}, ~~~~~ u^{'}_2=\frac{(1+x)}{(1+x+y)},~~~~~ u^{'}_{12}= \frac{(1+x+y)}{(1+x)(1+y)} \nonumber
+\eea
+The $u$-equations are:
+\bea
+1-u_i &=& (u^{'}_i)^2 u_j u^{'}_{12}, ~~~ 1-u_{12} = u^{'}_{1} u^{'}_{2} u^{'}_{12} \nonumber \\
+1-u^{'}_i &=& u_i u^{'}_j u_{12}, ~~~~~~~ 1-u^{'}_{12} = u_{1} u_{2} (u_{12})^2 \nonumber
+\eea
+where $i=1$ implies $j=2$ and vice versa.
+Let us look at the $n=3$ example.
+
+\section*{3d permutahedron}
+In this case the building set $B=\{ \{ 0,1,2,3\},\{ 0,1,2\},\{0,2,3\},\{0,1,3\},\{1,2,3\},\{0,1\},\{0,2\},\{0,3\},\{1,2\} \\ ,\{2,3\},\{1,3\},\{0\},\{1\},\{2\},\{3\}\}$ and the relevant $x$ variables are $x_0=1, ~x_1=x, ~x_2=y, ~x_3=z, ~x_{01}=1+x, ~x_{02}=1+y,~x_{03}=1+z,~ x_{12}=x+y,~x_{13}=x+z,~x_{23}=y+z,~ x_{012}=1+x+y,~ x_{013}=1+x+z,~ x_{023}=1+y+z,~ x_{123}=x+y+z,~ x_{0123}=1+x+y+z$. \\
+
+The $u$ and $u'$-variables can be written interms of $x$ variables as:
+{\scriptsize  \bea
+u_1&=&\frac{x(1+x+y)(1+x+z)(x+y+z)}{(x+y)(x+z)(1+x)(1+x+y+z)}, ~ u_2 =\frac{y(1+x+y)(1+y+z)(x+y+z)}{(x+y)(y+z)(1+y)(1+x+y+z)},~ u_{3}=\frac{z(1+x+z)(1+y+z)(x+y+z)}{(x+z)(y+z)(1+z)(1+x+y+z)},\nonumber \\
+u^{'}_1&=&\frac{(1+y+z)}{(1+x+y+z)}, ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ u^{'}_2 =\frac{(1+x+z)}{(1+x+y+z)},~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ u^{'}_{3}=\frac{(1+x+y)}{(1+x+y+z)},\nonumber \\
+u_{12}&=&\frac{(x+y)(1+x+y+z)}{(1+x+y)(x+y+z)}, ~~~~~~~~~~~~~~~~~~ u_{23} =\frac{(y+z)(1+x+y+z)}{(1+y+z)(x+y+z)},~~~~~~~~~~~~~~~~~~~ u_{13}=\frac{(x+z)(1+x+y+z)}{(1+x+z)(x+y+z)},\nonumber \\
+u^{'}_{12}&=&\frac{(1+z)(1+x+y+z)}{(1+y+z)(1+x+z)}, ~~~~~~~~~~~~~~~~~~ u^{'}_{23} =\frac{(1+x)(1+x+y+z)}{(1+x+y)(1+x+z)},~~~~~~~~~~~~~~~~~~~ u^{'}_{13}=\frac{(1+y)(1+x+y+z)}{(1+x+y))(1+y+z)},\nonumber  \\
+u_{123}&=&\frac{(x+y+z)}{(1+x+y+z)}, ~~~~~~~~~~~~~~~~~~~~~~~~~~~ u^{'}_{123} =\frac{(1+x+y)(1+y+z)}{(1+x)(1+y)(1+z)(1+x+y+z)}\nonumber
+\eea }
+The $u$-equations in this case are:
+{\small  \bea
+1-u_i &=& u_j u_k (u_{jk})^2 (u^{'}_i)^3 (u^{'}_{ij})^2(u^{'}_{ik})^2 u^{'}_{123} \left(1+ u_i u_{ij} u_{ik} u^{'}_{j} u^{'}_{k}  u^{'}_{jk}\right), ~~ 1-u_{ij} = u_k u_{ik} u_{jk} (u^{'}_i)^2 (u^{'}_{j})^2 (u^{'}_{ij})^2 u^{'}_{ik} u^{'}_{jk} u^{'}_{123} \nonumber  \\
+1-u^{'}_i &=& u_i u_{ij} u_{ik} u^{'}_{j} u^{'}_{k}  u^{'}_{jk}, ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 1-u^{'}_{ij} = u_i u_{j}  (u_{ij})^2 u_{ik} u_{jk} (u_{123})^2 (u^{'}_{k})^2 u^{'}_{ik} u^{'}_{jk}  \nonumber \\
+1-u^{'}_{123} &=& u_1 u_{2} u_{3} (u_{12})^2 (u_{23})^2  (u_{13})^2 (u_{123})^3 \left(1+ u^{'}_{123}  u^{'}_1 u^{'}_{2} u^{'}_{3} u^{'}_{12} u^{'}_{23}  u^{'}_{13} \right), 1-u_{123} = u^{'}_1 u^{'}_{2} u^{'}_{3} u^{'}_{12} u^{'}_{23}  u^{'}_{13} u^{'}_{123}   \nonumber
+\eea}
+where $i,j,k \in {1,2,3}$ and $i \neq j \neq k$.
+
+The 8 facets of the 3d permutahedron corresponding to $u_i \rightarrow 0, u^{'}_i \rightarrow 0,u_{123} \rightarrow 0 ~and ~u^{'}_{123} \rightarrow 0$  are all $B_2$'s. Similarly, the 6 facets corresponding to  $u_{ij} \rightarrow 0, u^{'}_{ij} \rightarrow 0$ are all  $A^{2}_1$.
+
+Thus, the 3d permutahedron integral factorizes nicely on all massless poles at finite $\alpha^{'}$ !!
+\section*{4d permutahedron}
+The $u$ variables for the 4d permutahedron are:
+{\tiny
+\begin{align*}
+u_1&= \frac{x (w+x+1) (x+y+1) (w+x+y) (x+z+1) (w+x+z)
+   (x+y+z) (w+x+y+z+1)}{(x+1) (w+x) (x+y) (w+x+y+1) (x+z) (w+x+z+1) (x+y+z+1)
+   (w+x+y+z)},\nonumber \\  u_2 &= \frac{y (w+y+1) (x+y+1) (w+x+y) (y+z+1) (w+y+z) (x+y+z)
+   (w+x+y+z+1)}{(y+1) (w+y) (x+y) (w+x+y+1) (y+z) (w+y+z+1) (x+y+z+1)
+   (w+x+y+z)} \nonumber \\  u_3 &= \frac{z (w+z+1) (x+z+1) (w+x+z) (y+z+1) (w+y+z) (x+y+z)
+   (w+x+y+z+1)}{(z+1) (w+z) (x+z) (w+x+z+1) (y+z) (w+y+z+1) (x+y+z+1)
+   (w+x+y+z)},\nonumber \\ u_4 &= \frac{w (w+x+1) (w+y+1) (w+x+y) (w+z+1) (w+x+z) (w+y+z) (w+x+y+z+1)}{(w+1)
+   (w+x) (w+y) (w+x+y+1) (w+z) (w+x+z+1) (w+y+z+1) (w+x+y+z)},\nonumber \\
+   u_{12} &=  \frac{(x+y) (w+x+y+1) (x+y+z+1) (w+x+y+z)}{(x+y+1) (w+x+y)
+   (x+y+z) (w+x+y+z+1)},~u_{13} = \frac{(x+z) (w+x+z+1) (x+y+z+1) (w+x+y+z)}{(x+z+1) (w+x+z)
+   (x+y+z) (w+x+y+z+1)},\nonumber \\ ~ u_{14} &= \frac{(w+x)(w+x+y+1) (w+x+z+1) (w+x+y+z)}{(w+x+1) (w+x+y) (w+x+z) (w+x+y+z+1)}, u_{24} = \frac{(w+y) (w+x+y+1) (w+y+z+1) (w+x+y+z)}{(w+y+1) (w+x+y) (w+y+z) (w+x+y+z+1)},\nonumber \\ ~u_{23} &=
+   \frac{(y+z) (w+y+z+1) (x+y+z+1) (w+x+y+z)}{(y+z+1) (w+y+z) (x+y+z)(w+x+y+z+1)},~ u_{34} = \frac{(w+z) (w+x+z+1) (w+y+z+1) (w+x+y+z)}{(w+z+1) (w+x+z) (w+y+z) (w+x+y+z+1)}, \nonumber \\  
+  u_{123} &= \frac{(x+y+z) (w+x+y+z+1)}{(x+y+z+1)(w+x+y+z)},~u_{134}= \frac{(w+x+z) (w+x+y+z+1)}{(w+x+z+1)(w+x+y+z)},~ u_{124}= \frac{(w+x+y) (w+x+y+z+1)}{(w+x+y+1) (w+x+y+z)},~ u_{234} = \frac{(w+y+z) (w+x+y+z+1)}{(w+y+z+1) (w+x+y+z)},\nonumber \\
+    u_{1234} &= \frac{w+x+y+z}{w+x+y+z+1},\nonumber \\ u'_1&= \frac{w+y+z+1}{w+x+y+z+1},~~u'_2= \frac{w+x+z+1}{w+x+y+z+1}, u'_3=  \frac{w+x+y+1}{w+x+y+z+1},u'_4 = \frac{x+y+z+1}{w+x+y+z+1}, \nonumber \\  u'_{12} &= \frac{(w+z+1) (w+x+y+z+1)}{(w+x+z+1) (w+y+z+1)}, u'_{13} = \frac{(w+y+1) (w+x+y+z+1)}{(w+x+y+1) (w+y+z+1)},\nonumber \\  u'_{14} &= \frac{(y+z+1) (w+x+y+z+1)}{(w+y+z+1) (x+y+z+1)},u'_{23} = \frac{(w+x+1) (w+x+y+z+1)}{(w+x+y+1) (w+x+z+1)}, \nonumber \\ u'_{24}&= \frac{(x+z+1) (w+x+y+z+1)}{(w+x+z+1)(x+y+z+1)}, u'_{34}=  \frac{(x+y+1) (w+x+y+z+1)}{(w+x+y+1) (x+y+z+1)},\nonumber \\  
+u'_{123} &=  \frac{(w+1) (w+x+y+1) (w+x+z+1) (w+y+z+1)}{(w+x+1) (w+y+1) (w+z+1) (w+x+y+z+1)},~u'_{124}= \frac{(z+1) (w+x+z+1) (w+y+z+1) (x+y+z+1)}{(w+z+1) (x+z+1) (y+z+1) (w+x+y+z+1)},\nonumber \\  u'_{134}&= \frac{(y+1) (w+x+y+1) (w+y+z+1) (x+y+z+1)}{(w+y+1)(x+y+1) (y+z+1) (w+x+y+z+1)},u'_{234} = \frac{(x+1) (w+x+y+1) (w+x+z+1) (x+y+z+1)}{(w+x+1) (x+y+1) (x+z+1) (w+x+y+z+1)},\nonumber \\  u'_{1234} &= \frac{(w+x+1) (w+y+1)(x+y+1) (w+z+1) (x+z+1) (y+z+1) (w+x+y+z+1)}{(w+1) (x+1) (y+1) (w+x+y+1) (z+1) (w+x+z+1) (w+y+z+1) (x+y+z+1)} \nonumber
+\end{align*}
+}
+\newpage
+\vspace*{-25pt}
+The $u$ equations are 
+{\tiny
+{\begin{align*}
+1-u_1&=u_2 u_3 u_4 u_{2,3}^2 u_{24}^2 u_{34}^2 u_{234}^4
+   \left(u'\right)_1^8 \left(u'\right)_{12}^4 \left(u'\right)_{13}^4
+   \left(u'\right)_{14}^4 \left(u'\right)_{123}^2
+   \left(u'\right)_{124}^2 \left(u'\right)_{134}^2 u'_{1234}+ 6~
+ \textcolor{red}{  u_1^2} u_2 u_3 u_4 u_{12}^2 u_{13}^2 u_{14}^2 u_{23}^2 u_{24}^2
+   u_{34}^2 u_{123}^2 u_{124}^2 u_{134}^2 u_{234}^3 u_{1234}
+   u'_2 u'_3 u'_4 \left(u'\right)_1^4  \nonumber \\ &\left(u'\right)_{12}^3
+   \left(u'\right)_{13}^3 \left(u'\right)_{14}^3
+   \left(u'\right)_{23}^2 \left(u'\right)_{24}^2
+   \left(u'\right)_{34}^2 \left(u'\right)_{123}^2
+   \left(u'\right)_{124}^2 \left(u'\right)_{134}^2
+   \left(u'\right)_{234}^2 u'_{1234}+~2 ~\textcolor{red}{u_1} u_2 u_3 u_4 u_{12}
+   u_{13} u_{14} u_{23}^2 u_{24}^2 u_{34}^2 u_{123} u_{124}
+   u_{134} u_{234}^3 \left(u'\right)_1^4 \left(u'\right)_{12}^3
+   \left(u'\right)_{13}^3 \nonumber \\ & \left(u'\right)_{14}^3 u'_{23} u'_{24}
+   u'_{34} \left(u'\right)_{123}^2 \left(u'\right)_{124}^2
+   \left(u'\right)_{134}^2 u'_{234} \left(u_{234}
+   \left(1-u_{1234}\right) u_{1234} u'_1+u'_2 u'_3
+   \left(1-u'_{23}\right)+u'_2 u'_4 \left(1-u'_{24}\right)+u'_3 u'_4
+   \left(1-u'_{34}\right)+\left(u'\right)_1^2\right) u'_{1234} ,\nonumber \\
+   1-u_2&=u_1 u_3 u_4 u_{13}^2 u_{14}^2 u_{34}^2 u_{134}^4
+   \left(u'\right)_2^8 \left(u'\right)_{12}^4 \left(u'\right)_{23}^4
+   \left(u'\right)_{24}^4 \left(u'\right)_{123}^2
+   \left(u'\right)_{124}^2 \left(u'\right)_{234}^2 u'_{1234}+~6
+   u_1 \textcolor{red}{u_2^2} u_3 u_4 u_{1,2}^2 u_{13}^2 u_{14}^2 u_{23}^2 u_{24}^2
+   u_{34}^2 u_{123}^2 u_{124}^2 u_{134}^3 u_{234}^2 u_{1234}
+   u'_1 u'_3 u'_4 \left(u'\right)_2^4 \nonumber \\ &\left(u'\right)_{12}^3
+   \left(u'\right)_{13}^2 \left(u'\right)_{14}^2
+   \left(u'\right)_{23}^3 \left(u'\right)_{24}^3
+   \left(u'\right)_{34}^2 \left(u'\right)_{123}^2
+   \left(u'\right)_{124}^2 \left(u'\right)_{134}^2
+   \left(u'\right)_{234}^2 u'_{1234}+~2~ u_1 \textcolor{red}{u_2} u_3 u_4 u_{12}
+   u_{13}^2 u_{14}^2 u_{23} u_{24} u_{34}^2 u_{123} u_{124}
+   u_{134}^3 u_{234} \left(u'\right)_2^4 \left(u'\right)_{12}^3
+   u'_{13} u'_{14} \nonumber \\ & \left(u'\right)_{23}^3 \left(u'\right)_{24}^3
+   u'_{34} \left(u'\right)_{123}^2 \left(u'\right)_{124}^2
+   u'_{134} \left(u'\right)_{234}^2 \left(u_{134}
+   \left(1-u_{1234}\right) u_{1234} u'_2+u'_1 u'_3
+   \left(1-u'_{13}\right)+u'_1 u'_4 \left(1-u'_{14}\right)+u'_3 u'_4
+   \left(1-u'_{34}\right)+\left(u'\right)_2^2\right) u'_{1234} ,\nonumber \\
+   1-u_3&=u_1 u_2 u_4 u_{12}^2 u_{14}^2 u_{24}^2 u_{124}^4
+   \left(u'\right)_3^8 \left(u'\right)_{13}^4 \left(u'\right)_{23}^4
+   \left(u'\right)_{34}^4 \left(u'\right)_{123}^2
+   \left(u'\right)_{134}^2 \left(u'\right)_{234}^2 u'_{1234}+~6
+   u_1 u_2 \textcolor{red}{u_3^2} u_4 u_{12}^2 u_{13}^2 u_{14}^2 u_{23}^2 u_{24}^2
+   u_{34}^2 u_{123}^2 u_{124}^3 u_{134}^2 u_{234}^2 u_{1234}
+   u'_1 u'_2 u'_4 \left(u'\right)_3^4 \nonumber \\ & \left(u'\right)_{12}^2
+   \left(u'\right)_{13}^3 \left(u'\right)_{14}^2
+   \left(u'\right)_{23}^3 \left(u'\right)_{24}^2
+   \left(u'\right)_{34}^3 \left(u'\right)_{123}^2
+   \left(u'\right)_{124}^2 \left(u'\right)_{134}^2
+   \left(u'\right)_{234}^2 u'_{1234} +~2 ~u_1 u_2 \textcolor{red}{u_3} u_4 u_{1,2}^2
+   u_{13} u_{14}^2 u_{23} u_{24}^2 u_{34} u_{123} u_{124}^3
+   u_{134} u_{234} \left(u'\right)_3^4 u'_{12}
+   \left(u'\right)_{13}^3 u'_{14} \nonumber \\ &\left(u'\right)_{23}^3 u'_{24}
+   \left(u'\right)_{34}^3 \left(u'\right)_{123}^2 u'_{124}
+   \left(u'\right)_{134}^2 \left(u'\right)_{234}^2 \left(u_{124}
+   \left(1-u_{1234}\right) u_{1234} u'_3+u'_1 u'_2
+   \left(1-u'_{12}\right)+u'_1 u'_4 \left(1-u'_{14}\right)+u'_2 u'_4
+   \left(1-u'_{24}\right)+\left(u'\right)_3^2\right) u'_{1234} ,\nonumber \\
+   1-u_4 &= u_1 u_2 u_3 u_{12}^2 u_{13}^2 u_{23}^2 u_{123}^4
+   \left(u'\right)_4^8 \left(u'\right)_{14}^4 \left(u'\right)_{24}^4
+   \left(u'\right)_{34}^4 \left(u'\right)_{124}^2
+   \left(u'\right)_{134}^2 \left(u'\right)_{234}^2 u'_{1234}+~6
+   u_1 u_2 u_3 \textcolor{red}{u_4^2} u_{12}^2 u_{13}^2 u_{14}^2 u_{23}^2 u_{24}^2
+   u_{34}^2 u_{123}^3 u_{124}^2 u_{134}^2 u_{234}^2 u_{1234}
+   u'_1 u'_2 u'_3 \left(u'\right)_4^4 \nonumber\\ &\left(u'\right)_{12}^2
+   \left(u'\right)_{13}^2 \left(u'\right)_{14}^3
+   \left(u'\right)_{23}^2 \left(u'\right)_{24}^3
+   \left(u'\right)_{34}^3 \left(u'\right)_{123}^2
+   \left(u'\right)_{124}^2 \left(u'\right)_{134}^2
+   \left(u'\right)_{234}^2 u'_{1234}+~2 u_1 u_2 u_3 \textcolor{red}{u_4} u_{12}^2
+   u_{13}^2 u_{14} u_{23}^2 u_{24} u_{34} u_{123}^3 u_{124}
+   u_{134} u_{234} \left(u'\right)_4^4 u'_{12} u'_{13}
+   \left(u'\right)_{14}^3 \nonumber\\ &u'_{23} \left(u'\right)_{24}^3
+   \left(u'\right)_{34}^3 u'_{123} \left(u'\right)_{124}^2
+   \left(u'\right)_{134}^2 \left(u'\right)_{234}^2 \left(u_{123}
+   \left(1-u_{1234}\right) u_{1234} u'_4+u'_1 u'_2
+   \left(1-u'_{12}\right)+u'_1 u'_3 \left(1-u'_{13}\right)+u'_2 u'_3
+   \left(1-u'_{23}\right)+\left(u'\right)_4^2\right) u'_{1234},\nonumber \\
+    1-u_{12}&= u_3 u_4
+   u_{13} u_{14} u_{23} u_{24} u_{34}^2 u_{134}^2 u_{234}^2 \left(u'\right)_1^3
+   \left(u'\right)_2^3 \left(u'\right)_{12}^3 \left(u'\right)_{13}^2
+   \left(u'\right)_{14}^2 \left( u'\right)_{23}^2 \left(u'\right)_{24}^2 \left(1+u_{12}
+   u_{123} u_{124} u_{1234} u'_3 u'_4 u'_{34}\right) \left(u'\right)_{123}^2
+   \left(u'\right)_{124}^2 u'_{134} u'_{234} u'_{1234},\nonumber \\
+     1-u_{13}&=u_2 u_4 u_{12}
+   u_{14} u_{23} u_{24}^2 u_{34} u_{124}^2 u_{234}^2 \left(u'\right)_1^3
+   \left(u'\right)_3^3 \left(u'\right)_{12}^2 \left(u'\right)_{13}^3
+   \left(u'\right)_{14}^2 \left(u'\right)_{23}^2 \left(1+ u_{13} u_{123} u_{134} u_{1234}
+   u'_2 u'_4 u'_{24}\right) \left(u'\right)_{34}^2 \left(u'\right)_{123}^2 u'_{124}
+   \left(u'\right)_{134}^2 u'_{234} u'_{1234},\nonumber \\ 
+   1-u_{14}&= u_2 u_3 u_{12} u_{13} u_{23}^2 u_{24} u_{34} u_{123}^2 u_{234}^2
+   \left(u'\right)_1^3 \left(u'\right)_4^3 \left(u'\right)_{12}^2 \left(u'\right)_{13}^2
+   \left(u'\right)_{14}^3 \left(1+ u_{14} u_{124} u_{134} u_{1234} u'_2 u'_3
+   u'_{23}\right) \left(u'\right)_{24}^2 \left(u'\right)_{34}^2 u'_{123}
+   \left(u'\right)_{124}^2 \left(u'\right)_{134}^2 u'_{234} u'_{1234}, \nonumber \\ 
+    1-u_{34}&= u_1 u_2 u_{12}^2 u_{13}
+   u_{14} u_{23} u_{24} u_{123}^2 u_{124}^2 \left(u'\right)_3^3 \left(u'\right)_4^3
+   \left(1+u_{34} u_{134} u_{234} u_{1234} u'_1 u'_2 u'_{12}\right)
+   \left(u'\right)_{13}^2 \left(u'\right)_{14}^2 \left(u'\right)_{23}^2
+   \left(u'\right)_{24}^2 \left(u'\right)_{34}^3 u'_{123} u'_{124}
+   \left(u'\right)_{134}^2 \left(u'\right)_{234}^2 u'_{1234}, \nonumber \\ 
+   1-u_{24}&=u_1 u_3 u_{12} u_{13}^2 u_{14}
+   u_{23} u_{34} u_{123}^2 u_{134}^2 \left(u'\right)_2^3 \left(u'\right)_4^3
+   \left(u'\right)_{12}^2 \left(1+ u_{24} u_{124} u_{234} u_{1234} u'_1 u'_3
+   u'_{13}\right) \left(u'\right)_{14}^2 \left(u'\right)_{23}^2 \left(u'\right)_{24}^3
+   \left(u'\right)_{34}^2 u'_{123} \left(u'\right)_{124}^2 u'_{134}
+   \left(u'\right)_{234}^2 u'_{1234},\nonumber \\
+    1-u_{23}&=u_1 u_4 u_{12} u_{13} u_{14}^2 u_{24}
+   u_{34} u_{124}^2 u_{134}^2 \left(u'\right)_2^3 \left(u'\right)_3^3
+   \left(u'\right)_{12}^2 \left(u'\right)_{13}^2 \left(1+u_{23} u_{123} u_{234} u_{1234}
+   u'_1 u'_4 u'_{14}\right) \left(u'\right)_{23}^3 \left(u'\right)_{24}^2
+   \left(u'\right)_{34}^2 \left(u'\right)_{123}^2 u'_{124} u'_{134}
+   \left(u'\right)_{234}^2 u'_{1234},\nonumber \\ 
+   1-u_{124}&=u_3 u_{13} u_{23} u_{34} u_{123} u_{134}
+   u_{234} \left(u'\right)_1^2 \left(u'\right)_2^2 \left(u'\right)_4^2
+   \left(u'\right)_{12}^2 u'_{13} \left(u'\right)_{14}^2 u'_{23} \left(u'\right)_{24}^2
+   u'_{34} u'_{123} \left(u'\right)_{124}^2 u'_{134} u'_{234} u'_{1234},\nonumber \\ 
+   1-u_{123}&=u_4 u_{14}
+   u_{24} u_{34} u_{124} u_{134} u_{234} \left(u'\right)_1^2 \left(u'\right)_2^2
+   \left(u'\right)_3^2 \left(u'\right)_{12}^2 \left(u'\right)_{13}^2 u'_{14}
+   \left(u'\right)_{23}^2 u'_{24} u'_{34} \left(u'\right)_{123}^2 u'_{124} u'_{134}
+   u'_{234} u'_{1234},\nonumber \\ 
+   1-u_{134}&=u_2 u_{12} u_{23} u_{24} u_{123} u_{124} u_{234}
+   \left(u'\right)_1^2 \left(u'\right)_3^2 \left(u'\right)_4^2 u'_{12}
+   \left(u'\right)_{13}^2 \left(u'\right)_{14}^2 u'_{23} u'_{24} \left(u'\right)_{34}^2
+   u'_{123} u'_{124} \left(u'\right)_{134}^2 u'_{234} u'_{1234},\nonumber \\ 
+   1-u_{234}&=u_1 u_{12} u_{13} u_{14} u_{123} u_{124} u_{134}
+   \left(u'\right)_2^2 \left(u'\right)_3^2 \left(u'\right)_4^2 u'_{12} u'_{13} u'_{14}
+   \left(u'\right)_{23}^2 \left(u'\right)_{24}^2 \left(u'\right)_{34}^2 u'_{123} u'_{124}
+   u'_{134} \left(u'\right)_{234}^2 u'_{1234},\nonumber \\ 
+   1-u_{1234}&=u'_1
+   u'_2 u'_3 u'_4 u'_{12} u'_{13} u'_{14} u'_{23} u'_{24} u'_{34} u'_{123} u'_{124}
+   u'_{134} u'_{234} u'_{1234},\nonumber \\ 
+   1-u'_1&=u_1 u_{12} u_{13} u_{14} u_{123}
+   u_{124} u_{134} u_{1234} u'_2 u'_3 u'_4 u'_{23} u'_{24} u'_{34} u'_{234},\nonumber \\ 
+   1-u'_2&=u_2
+   u_{12} u_{23} u_{24} u_{123} u_{124} u_{234} u_{1234} u'_1 u'_3 u'_4 u'_{13} u'_{14}
+   u'_{34} u'_{134},\nonumber \\ 
+   1-u'_3&=u_3 u_{13} u_{23} u_{34} u_{123} u_{134} u_{234} u_{1234} u'_1
+   u'_2 u'_4 u'_{12} u'_{14} u'_{24} u'_{124},\nonumber \\ 
+   1-u'_4&=u_4 u_{14} u_{24} u_{34} u_{124}
+   u_{134} u_{234} u_{1234} u'_1 u'_2 u'_3 u'_{12} u'_{13} u'_{23} u'_{123},\nonumber \\ 
+   1-u'_{12}&=u_1
+   u_2 u_{12}^2 u_{13} u_{14} u_{23} u_{24} u_{123}^2 u_{124}^2 u_{134} u_{234}
+   u_{1234}^2 \left(u'\right)_3^2 \left(u'\right)_4^2 u'_{13} u'_{14} u'_{23} u'_{24}
+   \left(u'\right)_{34}^2 u'_{134} u'_{234},\nonumber \\
+   1-u'_{13}&=u_1 u_3 u_{12} u_{13}^2 u_{14}
+   u_{23} u_{34} u_{123}^2 u_{124} u_{134}^2 u_{234} u_{1234}^2 \left(u'\right)_2^2
+   \left(u'\right)_4^2 u'_{12} u'_{14} u'_{23} \left(u'\right)_{24}^2 u'_{34} u'_{124}
+   u'_{234},\nonumber \\
+   1-u'_{14}&=u_1 u_4 u_{12} u_{13} u_{14}^2 u_{24} u_{34} u_{123} u_{124}^2
+   u_{134}^2 u_{234} u_{1234}^2 \left(u'\right)_2^2 \left(u'\right)_3^2 u'_{12} u'_{13}
+   \left(u'\right)_{23}^2 u'_{24} u'_{34} u'_{123} u'_{234},\nonumber \\ 1-u'_{23}&=u_2 u_3 u_{12}
+   u_{13} u_{23}^2 u_{24} u_{34} u_{123}^2 u_{124} u_{134} u_{234}^2 u_{1234}^2
+   \left(u'\right)_1^2 \left(u'\right)_4^2 u'_{12} u'_{13} \left(u'\right)_{14}^2 u'_{24}
+   u'_{34} u'_{124} u'_{134},\nonumber \\ 1-u'_{24}&=u_2 u_4 u_{12} u_{14} u_{23} u_{24}^2 u_{34}
+   u_{123} u_{124}^2 u_{134} u_{234}^2 u_{1234}^2 \left(u'\right)_1^2 \left(u'\right)_3^2
+   u'_{12} \left(u'\right)_{13}^2 u'_{14} u'_{23} u'_{34} u'_{123} u'_{134},\nonumber \\ 1-u'_{34}&=u_3
+   u_4 u_{13} u_{14} u_{23} u_{24} u_{34}^2 u_{123} u_{124} u_{134}^2 u_{234}^2
+   u_{1234}^2 \left(u'\right)_1^2 \left(u'\right)_2^2 \left(u'\right)_{12}^2 u'_{13}
+   u'_{14} u'_{23} u'_{24} u'_{123} u'_{124},\nonumber \\
+   1-u'_{123}&=u_1 u_2 u_3 u_{12}^2 u_{13}^2
+   u_{14} u_{23}^2 u_{24} u_{34} u_{123}^3 u_{124}^2 u_{134}^2 u_{234}^2 u_{1234}^3
+   \left(u'\right)_4^3 \left(u'\right)_{14}^2 \left(u'\right)_{24}^2
+   \left(u'\right)_{34}^2 \left(1+ u'_1 u'_2 u'_3 u'_{12} u'_{13} u'_{23} u'_{123}\right)
+   u'_{124} u'_{134} u'_{234},\nonumber \\ 
+   1-u'_{124}&=u_1 u_2 u_4 u_{12}^2 u_{13} u_{14}^2 u_{23}
+   u_{24}^2 u_{34} u_{123}^2 u_{124}^3 u_{134}^2 u_{234}^2 u_{1234}^3 \left(u'\right)_3^3
+   \left(u'\right)_{13}^2 \left(u'\right)_{23}^2 \left(u'\right)_{34}^2 u'_{123}
+   \left(1+u'_1 u'_2 u'_4 u'_{12} u'_{14} u'_{24} u'_{124}\right) u'_{134}
+   u'_{234},\nonumber \\ 
+   1-u'_{134}&=u_1 u_3 u_4 u_{12} u_{13}^2 u_{14}^2 u_{23} u_{24} u_{34}^2
+   u_{123}^2 u_{124}^2 u_{134}^3 u_{234}^2 u_{1234}^3 \left(u'\right)_2^3
+   \left(u'\right)_{12}^2 \left(u'\right)_{23}^2 \left(u'\right)_{24}^2 u'_{123} u'_{124}
+   \left(1+ u'_1 u'_3 u'_4 u'_{13} u'_{14} u'_{34} u'_{134}\right) u'_{234},\nonumber \\ 
+   1-u'_{234}&=u_2
+   u_3 u_4 u_{12} u_{13} u_{14} u_{23}^2 u_{24}^2 u_{34}^2 u_{123}^2 u_{124}^2 u_{134}^2
+   u_{234}^3 u_{1234}^3 \left(u'\right)_1^3 \left(u'\right)_{12}^2 \left(u'\right)_{13}^2
+   \left(u'\right)_{14}^2 u'_{123} u'_{124} u'_{134} \left(u'_2 u'_3 u'_4 u'_{23} u'_{24}
+   u'_{34} u'_{234}+1\right) ,\nonumber \\
+   1-u'_{1234}&=6 u_1 u_2 u_3 u_4 u_{12}^2 u_{13}^2 u_{14}^2 u_{23}^2
+   u_{24}^2 u_{34}^2 u_{123}^3 u_{124}^3 u_{134}^3 u_{234}^3
+   u_{1234}^4 u'_1 u'_2 u'_3 u'_4 \left(u'\right)_{12}^2
+   \left(u'\right)_{13}^2 \left(u'\right)_{14}^2
+   \left(u'\right)_{23}^2 \left(u'\right)_{24}^2
+   \left(u'\right)_{34}^2 \left(u'\right)_{123}^2
+   \left(u'\right)_{124}^2 \left(u'\right)_{134}^2
+   \left(u'\right)_{234}^2 \textcolor{red}{\left(u'\right)_{1234}^2} - \nonumber \\  u_1 u_2& u_3 u_4
+   u_{12}^2 u_{13}^2 u_{14}^2 u_{23}^2 u_{24}^2 u_{34}^2
+   u_{123}^3 u_{124}^3 u_{134}^3 u_{234}^3 u_{1234}^4
+   u'_{12} u'_{13} u'_{14} u'_{23} u'_{24} u'_{34} u'_{123}
+   u'_{124} u'_{134} u'_{234} \left(-3
+   u_{1234}^2+\left(1-u'_1\right){}^2+\left(1-u'_2\right){}^2+\left(1
+   -u'_3\right){}^2+\left(1-u'_4\right){}^2\right) \textcolor{red}{u'_{1234}} \nonumber \\ & + u_1 u_2
+   u_3 u_4 u_{12}^2 u_{13}^2 u_{14}^2 u_{23}^2 u_{24}^2 u_{34}^2
+   u_{123}^4 u_{124}^4 u_{134}^4 u_{234}^4 u_{1234}^8 \nonumber
+  \end{align*} }}
+The $u$-equations for $u_1,u_2,u_3,u_4,u^{'}_{1234}$ are quadratic in the coresponding $u$'s. The 10 facets obtained by setting $u^{'}_{i}, ~u_{i}, u^{'}_{1234}, u_{1234} \rightarrow 0$ are all $P_3$ and the 20 facets obtained by setting $u^{'}_{ij}, ~u_{ij}, ~u^{'}_{ijk},~u_{ijk} \rightarrow 0$ are all $A_1 \times P_2$ . Thus, 4d permutahderon is indeed a binary positive geometry!
+
+More generally the following are some of the $u$-equations for the $n$-dimensional permutahderon:\\
+
+For $|I| =n-1$ and $s_K = \begin{cases}  1,~ if K \not\subset I & \\ 2, ~if K \subset I\end{cases}$
+
+\bea
+1-u_{I} &=& \prod_ {S - I \subset J } u_{J} \prod_ {K \cap I \ne \Phi } (u^{'}_{K})^{s_K}  \nonumber \\
+1-u_{12\cdots n} &=& \prod_ {{I \subset S}\atop {I \ne \Phi}} u^{'}_{I} \nonumber
+\eea
+
+For $t_J = \begin{cases}  1,~ if I  \not\subset J & \\ 2, ~if I \subset J \end{cases}$
+
+\bea
+1-u^{'}_{i} &=& \prod_ {\{ i \} \subset J } u_{J} \prod_ {K \subset S- \{i\} } u^{'}_{K} \nonumber \\
+1-u^{'}_{i j} &=& \prod_ {\{i,j \}\cap J \ne \Phi} u^{t_J}_{J} \prod_ {K \subset S-\{i, j \} } (u^{'}_{K})^{2} u^{'}_{K \cup {i}} u^{'}_{K \cup{j} } \nonumber 
+\eea
+
+and for $|I| =n-2$ with $S- I = \{i, j\}$
+
+\bea
+1-u_{I}= u_i u_j u^{2}_{ij} \prod_{J \subset I} u_{J \cup \{i\}} u_{J \cup \{j\}} u^{2}_{J \cup \{i,j\}} \prod_{K \subset S-I} (u^{'}_K)^{3} (u^{'}_{K \cup \{i\}})^{2}  (u^{'}_{K \cup\{j\}})^{2}  u^{'}_{K\cup \{i,j\}} \left( 1+ u^{'}_i u^{'}_j u^{'}_{ij} \prod_{I \subset L} u_L \right)                       \nonumber
+\eea
+The other $u$-equations are not two or three term equations and seem to be some higher  order polynomials in the corresponding $u$'s and it would be nice if we could classify all of them.
+
+\section*{Associahedra}
+If $B=\{ \{i,i+1,\cdots,j \} | 1\leq  i \leq j \leq n\}$ is the set of consecutive intervals, then $P_n({\bf Y})$ is the associahedron .
+\section*{2d associahedron as generalized permutahedron}
+In this case the building set $B=\{ \{ 0,1,2\},\{ 0,1\},\{1,2\},\{0\},\{1\},\{2\}\}$ and the relevant $x$ variables are $x_0=1, ~x_1=x, ~x_2=y, ~x_{01}=1+x,~ x_{12}=x+y,~ x_{012}=1+x+y$. 
+
+We can write down the Newton polynomial for the Minkowski sum as $ x_1~ x_2~(1+x_1)~(x_1+x_2)~(1+x_1+x_2)$.
+
+The $u$-variables can be written in terms of $x$ variables as:
+\bea
+u_1=\frac{x
+   (x+y+1)}{(x+1)
+   (x+y)},u_2=\frac{x +y}
+   {x+y+1},u_3=\frac{y}{x+y},u_4=\frac{x+1}{x+y+1},u_5=\frac{1}{x+1} \nonumber
+\eea
+The $u$-equations are:
+\bea
+1-u_1=u_3 u_5,1-u_2=u_4
+   u_5,1-u_3=u_1 u_4,1-u_4=u_2
+   u_3,1-u_5=u_1 u_2 \nonumber
+\eea
+Notice that these are precisely the $u$ equations for the ABHY realisation of $A_2$.
+\section*{3d associahedron as generalized permutahedron}
+In this case the building set $B=\{ \{ 0,1,2,3\},\{ 0,1,2\},\{1,2,3\},\{0,1\},\{1,2\},\{2,3\},\{0\},\{1\},\{2\},\{3\}\}$ and the relevant $x$ variables are $x_0=1, ~x_1=x, ~x_2=y,~x_3 =y, ~x_{01}=1+x,~ x_{12}=x+y,~x_{23}=y+z,~ x_{012}=1+x+y,~ x_{123}=x+y+z,~ x_{0123}=1+x+y+z$. 
+
+We can write down the Newton polynomial for the Minkowski sum as $ x_1~ x_2~x_3~(1+x_1)~(x_1+x_2)~(x_2+x_3)~(1+x_1+x_2)~(x_1+x_2+x_3)~(1+x_1+x_2+x_3)$. \\
+
+The $u$-variables can be written in terms of $x$ variables as:
+{\scriptsize \bea
+u_1&=&\frac{x
+   (x+y+1)}{(x+1)
+   (x+y)},~u_2=\frac{(x+y
+   )
+   (x+y+ z+1)}{(x+y+1)
+   (x+ y+z)},~u_3=\frac{x+
+   y+ z}{x+y+z +1},~u_4=
+   \frac{y}{x+z},\nonumber \\ u_5&=&\frac{
+   y
+   (x+y+z)}{(x+y)
+   (y+z)},~u_6= \frac{y+z}
+   {x+y+z},u_7=\frac{x+y+1}{x+y+z+1},u_8=\frac{x+1}{x+y+1},u_9=\frac{
+   1}{x+1} \nonumber
+   \eea}
+   and satisfy the $u$-equations 
+   \bea
+   1-u_1&=&u_5 u_6 u_9,~1-u_2=u_4
+   u_6 u_8 u_9,~1-u_3=u_7 u_8
+   u_9,~1-u_4=u_2 u_5 u_7, \nonumber \\ 1-u_5&=&u_1
+   u_4 u_8,1-u_6=u_1 u_2 u_7
+   u_8,1-u_7=u_3 u_4 u_6,1-u_8=u_2
+   u_3 u_5 u_6,1-u_9=u_1 u_2
+   u_3 \nonumber
+   \eea
+  We see again that these are precisely the $u$ equations of ABHY realisation of $A_3$ !
+  
+This is not a coincidence and it extends to all $n$ since the corresponding Newton polytope is given by $\prod_{1\leq  i \leq j \leq n} (x_i +x_{i+1}+\cdots+x_j)$ is nothing but the Loday's realisation of the associahedron which is equivalent to the ABHY type $A_n$ associahedron. 
+
+Thus remarkably both the generalised permutahedron realisation and ABHY realisation of the associahedra $A_n$ are  the same. \\
+\section*{Cyclohedra}
+If $B$  is the set of cyclic intervals, then $P_n({\bf Y})$ is a cyclohedron.
+\section*{3d cyclohedron}
+The 2d cyclohedron is the same as the 2d permutahedron as they both have the same building sets.
+
+ Let us look at the 3d case. In this case the building set $B=\{ \{ 0,1,2,3\},\{ 0,1,2\},\{1,2,3\},\{2,3,0\},\{3,0,1\}, \\  \{0,1\},\{1,2\},\{2,3\},\{0,3\},\{0\},\{1\},\{2\},\{3\}\}$.
+ 
+ The Newton polynomial of the Minkowski sum is $x y z(1+x)(x+y)(y+z)(1+z)(1+x+y)(x+y+z)(y+z+1)(z+1+x)(1+x+y+z)$ and 
+ 
+ we  find the relevant $u$'s as:
+\bea
+u_1 &=&\frac{x (x+y+1)}{(x+1) (x+y)},~u_2 = \frac{(x+y) (x+y+z+1)}{(x+y+1) (x+y+z)},~u_3 = \frac{x+y+z}{x+y+z+1},~~~~~~~~~~~~~~u_4= \frac{z
+   (y+z+1)}{(z+1) (y+z)}, \nonumber \\
+   u_5 &=& \frac{y (x+y+z)}{(x+y) (y+z)},~u_6 = \frac{(y+z) (x+y+z+1)}{(y+z+1) (x+y+z)},~u_7 =
+   \frac{y+z+1}{x+y+z+1},~~~~~~~~~~~~~~~u_8= \frac{x+z+1}{x+y+z+1}, \nonumber \\
+   u_9 &=& \frac{x+y+1}{x+y+z+1},~u_{10} = \frac{(z+1) (x+y+z+1)}{(x+z+1) (y+z+1)},~u_{11}=
+   \frac{(x+1) (x+y+z+1)}{(x+y+1) (x+z+1)},~u_{12} =\frac{x+z+1}{(x+1) (z+1)} \nonumber
+\eea
+and the u-equations  are:
+\bea
+1-u_1&=&u_5 u_6 u_7^2 u_{10} u_{12},~1-u_2=u_4 u_6 u_7^2 u_8^2 u_{10}^2 u_{11} u_{12},~1-u_3=u_7 u_8 u_9 u_{10} u_{11} u_{12},~1-u_4=u_2 u_5
+   u_9^2 u_{11} u_{12}, \nonumber \\
+   1-u_5 &=& u_1 u_4 u_8^2 u_{10} u_{11},~1-u_6=u_1 u_2 u_8^2 u_9^2 u_{10} u_{11}^2 u_{12},~1-u_7=u_1 u_2 u_3 u_8 u_9
+   u_{11},~1-u_8=u_2 u_3 u_5 u_6 u_7 u_9, \nonumber \\
+   1-u_9&=&u_3 u_4 u_6 u_7 u_8 u_{10},~1-u_{10}=u_1 u_2^2 u_3^2 u_5 u_6 u_9^2 u_{11},~1-u_{11}=u_2 u_3^2 u_4
+   u_5 u_6^2 u_7^2 u_{10},~1-u_{12}=u_1 u_2 u_3^2 u_4 u_6 \nonumber
+\eea
+The $u$-equations above are that of ABHY realisation $B_3$ of the cyclohedron. This fact also generalizes to all $n$.
+
+Thus, the gen.permutahedron realisation and ABHY type $B_n$ realisation of the cyclohedron are one and the same.
+
+We can now consider several degenerations of both $A_n$ and $B_n$ and show that they are binary geometries with perfect $u$-equations.
+\newpage
+\section*{Minkowski sum of $n$ A2's }
+We can also consider general Minkowski sums of non-simplices and see if these also give us any instance of polytopes with perfect $u$ equations. One such case is the following:
+
+We consider the Minkowski sum of $n-1$ $A_2$'s with following Newton polynomial :
+\bea \label {new}
+\prod_{i=1}^{n} (1+x_i ) \prod_{i=1}^{n-1} (1+x_i +x_i x_{i+1}) 
+\eea 
+This gives a family of simple $n$-dimensional polytopes with $3n-1$ facets  and Pell number $P_n$ (~recursively defined as $ P_n=2 P_{n-1} +P_{n-2}$ with $P_1=1,~ P_2=2$) of vertices which we shall call $X_n$. 
+
+We can solve for $u$-variables for this family and we get :
+\bea
+u_1 &=& \frac{p_n}{q_n}, ~u_2 = \frac{p_{n-1}q_n}{p_{n-1,n}},~u_3 = \frac{p_{n-2}q_{n-1}}{p_{n-2,n-1}}, \cdots,
+u_{n-2} = \frac{p_1 q_2}{p_{12}}, ~u_{n-1} = \frac{p_{2}q_3}{p_{23}},~u_n = \frac{p_{3}q_{4}}{p_{34}}, \nonumber \\
+u_{n+1} &=& \frac{1}{q_1}, ~u_{n+2} = \frac{p_{12}}{q_{1}q_{2}},~u_{n+3} = \frac{q_{1}}{p_{23}}, \cdots,
+u_{3n-1} = \frac{ q_{n-1}}{p_{n-1n}} \nonumber
+\eea
+where $p_i =x_i$, $q_i= 1+x_i$ and $p_{i~i+1}=1+x_i+ x_i x_{i+1}$.
+
+The $u$ equations obtained from these $u$ variables are of three types viz. $1-u$ being the product of two, three or four $u$'s  for any $n$.  
+
+There are exactly 4 $u$'s which have $1-u$ is product of 2 u's:
+\bea
+1-u_{1} =u_{3n-2} u_{3n-1},~
+1-u_{n-2} =u_{n+1} u_{n+3},~
+1-u_{n+1} =u_{n-2} u_{n+2},~
+1-u_{3n-1} = \begin{cases}
+u_{2} u_{3} , n=3\\
+u_{1} u_{4} , n=4\\
+u_{1} u_{2} , n\geq 5
+\end{cases} \nonumber 
+\eea
+The facets corresponding to setting any of these $u \to 0$ is $X_{n-1}$.
+
+There are exactly $n-3$ $u$'s which have $1-u$ is product of 4 u's:
+\bea
+1-u_{n+4} =u_{n} u_{n+2}u_{n+4} u_{n+6} ~~and~~
+1-u_{n+6+ 2 i} =u_{n-3-i} u_{n+4+2 i} u_{n+5+2 i} u_{n+8+2 i}~ for~i=0,\cdots,(n-5) \nonumber 
+\eea
+The facets corresponding to setting any of these $u \to 0$ is $A^{m}_1 \times X_{n-m-1}$.
+
+All the other $2n-2$ $u$'s correspond to $1-u$ is product of 3 u's and we do not yet have a complete classification of the facets.
+
+We can also replace the first the first term in the Newton polynomial \eqref{ new} with $(1+x_1+ x_2)$ and we get an identical system of $u$-equations
+
+\bea
+u_1 &=& \frac{p_n}{q_n}, ~u_2 = \frac{p_{n-1}q_n}{p_{n-1,n}},~u_3 = \frac{p_{n-2}q_{n-1}}{p_{n-2,n-1}}, \cdots,
+u_{n-3} = \frac{p_4 q_5}{p_{45}}, ~u_{n-2} = \frac{p_{1}}{q_{1}},~u_{n-1} = \frac{p_{2}q_{3}}{p_{23}},~u_{n} = \frac{p_{3}q_{4}}{p_{34}}, \nonumber \\
+u_{n+1} &=& \frac{q_2}{p_{12}}, ~u_{n+2} = \frac{q_{1}}{p_{12}},~u_{n+3} = \frac{p_{23}}{q_{2}q_{3}}, \cdots,
+u_{3n-1} = \frac{ p_{12}}{q_{1}q_{2}} \nonumber
+\eea
+where $p_i =x_i$, $q_i= 1+x_i$ and $p_{i~i+1}=1+x_i+ x_i x_{i+1}$ with $p_{12}= 1+x_1+x_2$.
+
+The $u$ equations obtained from these $u$ variables are of three types viz. $1-u$ being the product of two, three or four $u$'s  for any $n$.  
+
+There are exactly 4 $u$'s which have $1-u$ is product of 2 u's:
+\bea
+1-u_{1} =u_{3n-2} u_{3n-3},~
+1-u_{n-2} =u_{n+1} u_{3n-1},~
+1-u_{n+1} =u_{n-2} u_{n+2},~
+1-u_{3n-1} = \begin{cases}
+u_{2} u_{3} , n=3\\
+u_{1} u_{4} , n=4\\
+u_{1} u_{2} , n\geq 5
+\end{cases} \nonumber 
+\eea
+The facets corresponding to setting any of these $u \to 0$ is $X_{n-1}$.
+
+There are exactly $n-3$ $u$'s which have $1-u$ is product of 4 u's:
+\bea
+1-u_{n+3} =u_{n} u_{n+2}u_{n+5} u_{3n-1} ~~and~~
+1-u_{n+5+ 2 i} =u_{n-3-i} u_{n+3+2 i} u_{n+4+2 i} u_{n+7+2 i}~ for~i=0,\cdots,(n-5) \nonumber 
+\eea
+It would be nice to see if these also correspond to some degeneration of the associahedron or if they  are generalised permutahedra. 
+\newpage
+\section{Discussions}
+There are several interesting open questions, like the question of  whether degenerations of other cluster types (in particular $C_n$ and $D_n$ can also give binary geometries with (perfect?) $u$-equations.\\\\
+\noindent
+Though many examples of degenerations of $A_n$ and $B_n$ were products of lower dimensional objects of the same type, there were examples where we got non-trivial degenerations which did not factor. We would like to completely classify these cases and this would settle the question of identifying all the ``atoms'' of binary geometries with perfect $u$-equations. One class of examples which is certainly of both mathematical and physical interest in this context are the Stokes polytopes (and more generally Accordiohedra).
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\bibliographystyle{utphys}
+\bibliography{final}
+\end{document}
+ 
