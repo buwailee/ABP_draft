@@ -552,23 +552,38 @@ its $u$-variables $u_A=\prod_J p_J^{(W^{-1})^A_J}$.
 
 As shown in the last subsection, the $n$-dimensional permutahedron is associated 
 with the set of all non-empty subsets of $[0,n]$, which is denoted by $\mathscr P_n$. 
-The number of facets of $\mathscr P_n$ is $2^n-2$.
+Each facet of $P_n$ is lebeled by a non-empty proper subset $I$ of $[0,n]$, whose
+equation is 
+\begin{equation}
+	F_J:=\sum_{J\neq \varnothing, J\subset I} S_J=0,
+\end{equation}
+so the number of facets of $\mathscr P_n$ is $2^n-2$. The AHBY condition 
+can be solved from above equations:
+\[
+	S_I = (-1)^{|I|+1}\sum_{i\in I} S_i,
+\]
+for all non-empty subsets $I \subset [0,n]$ which are not singlets.
 
-(equations of facets?)
+(proof of equations fo facets or ABHY condition?)
 
-ABHY conditions:
-\bea
-C_I = (-1)^{|I|} \left( \sum_{i \in I} X_i - \sum _{{i<j}\atop{i,j \in I}} X_{ij} +\cdots + (-1)^{|I|+1}  X_I \right) \nonumber
-\eea
-for all non-empty subsets $I \subset \{0,1,\cdots,n\}$ with the understanding that $C_{I} =0$ for all singlets $I$ and $X_{I} =0$ for $I=\{ 0,1,\cdots,n \}$. 
-
-(proof?)
-
-Then we can then solve for the corresponding $u's$ :
-\bea
-u_J &=& ~~\prod_{J \subset I} x_I^{(-1)^{|I|-|J|}} \nonumber \\
-u^{'}_J &=& \prod_{{0 \in I}\atop{ \{0,\cdots,n\} - I \subset J}} x_I^{(-1)^{|I|-|J|+\color{red}{mod(n, 2)}}} \nonumber
-\eea
+To get $u$-equations, we should solve $S_J$ by $F_J$ for eq.(\theequation), the 
+solution is 
+\[
+	S_I=\sum_{J\neq \varnothing,J\subset I} (-1)^{|J|-|I|}F_J,
+\]
+then
+\[
+	\prod_{I\neq \varnothing,I\subset [0,n]}u_I^{F_I}=
+	\prod_{I\neq \varnothing,I\subset [0,n]}x_I^{S_I}=
+	\prod_{\varnothing\neq J\subset I\subset [0,n]}
+	x_I^{(-1)^{|J|-|I|}F_J}=
+	\prod_{J\neq \varnothing,J\subset [0,n]}
+	\prod_{I\supset J}(x_I^{(-1)^{|J|-|I|}})^{F_J}
+\]
+gives that
+\[
+	u_I=\prod_{J\supset I}x_J^{(-1)^{|I|-|J|}}
+\]
 
 (notation!)
 
