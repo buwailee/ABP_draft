@@ -496,12 +496,72 @@ $\mathcal P$ can be associated with a single $u_A$ going to zero,
 giving a ``binary geometry'' we will describe later.
 
 Generally, the big polyhdron of a stringy integral is not necessary to be a simplex.
-
-(cluster configuration space, perfect u eqs)
+It's known that stringy integrals associated to the $A_n$, $B_n$, $C_n$, $D_n$,
+$E_6$, $E_7$, $E_8$, $F_2$ and $G_4$ type clusters are in this type. What's more,
+they satisfy the so called $u$-equations with the form
+\begin{equation}\label{perfectu}
+	1-u_i=\prod_{j}u_j^{(i||j)},
+\end{equation}
+where $(i||j)\geq 0$ is a integral defined in the cluster algebra context \cite{}.
+Varieties defined by $u$-equations associated with finite type clusters 
+are called cluster configuration spaces. 
+For this type equations, once $u_i$ goes to $0$, it forces some $u_j$ to go to $1$.
+Therefore, these $u$-equations reveal the binary structure of the cluster
+configuration spaces. ...
 
 ($A_n$ (sting integral?), $B_n$ (Shi arrangement?), or both from $F$-polynomial)
 
+For example, $A_n$ type cluster configuration spaces come from original string 
+amplitudes
+\[
+	\int_{z_1<z_2<\cdots <z_n}
+	\frac{\mathrm dz_2\cdots \mathrm dz_{n-2}}{(z_1-z_2)\cdots (z_{n-2}-z_{n-1})}
+	\prod_{i<j} (z_i-z_j)^{\alpha' s_{ij}},
+\]
+where we fix the gauge by setting $z_1=0$, $z_{n-1}=1$ and $z_n=\infty$.
+The $u$-variables of this configuration space are
+\[
+	u_{ij}=\frac{(z_{i-1}-z_j)(z_i-z_{j-1})}{(z_i-z_j)(z_{i-1}-z_{j-1})},
+\]
+and they satisfy the $u$-equations
+\[
+	1-u_{ij}=\prod_{(k,l)\not\sim (i,j)}u_{kl},
+\]
+where $(i,j)\not\sim (k,l)$ means that diagonals $(i,j)$ and $(k,l)$ of
+$(n+3)$-gon are crossed.
+
+(Zhenjie: we should use another parametrization of $A_n$) 
+(mention hyperplane arrangement)
+
+$B_n$: Shi arrangement
+
+The Shi arrangement of $B_n$ contains $n+1$ punctures $\{z_i\}_{i=1,\dots,n+1}$ 
+on the real line with the freedom corresponding to the global transformation 
+$z_i\to z_i+a$, so we can use it to fix $z_{n+1}=0$. Then the Shi arrangement is 
+given by the following hyperplains
+\[
+    z_i-z_j=0\quad \text{and}\quad z_i-z_j=1,
+\]
+for $1\leq i<j\leq n+1$. 
+
+The the $u$ variables of $B_n$ can be solved by these $z_i$ by 
+\[
+    u_1=1+z_1-z_2,\quad \dots,\quad u_{n}=1+z_{n}-z_{n+1},\quad u_{n+1}=z_{n+1}-z_1
+\]
+and 
+\[
+\begin{aligned}
+    u_{ji}&=\frac{(z_{j+1}-z_{i})(z_{i+1}-z_j)}{(z_{j+1}-z_{i+1})(z_i-z_j)}\quad &&\text{for $i<j$},\\
+    u_{ij}&=\frac{(\tilde z_{j+1}-z_{i})(\tilde z_{i+1}-z_j)}{(\tilde z_{j+1}-z_{i+1})(\tilde z_i-z_j)}\quad &&\text{for $i<j$},
+\end{aligned}
+\]
+where $\tilde{z}_i=z_{i+n+1}=z_{i}+1$ and indices are living in $\mathbb Z_{2n+2}$.
+
+(u eq of $B_n$)
+
 (binary geometries)
+
+
 
 \[
 	1-u_i=f_i(u)\prod_{j}u_j^{i||j}
