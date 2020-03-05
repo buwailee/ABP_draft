@@ -552,9 +552,9 @@ its $u$-variables $u_A=\prod_J p_J^{(W^{-1})^A_J}$.
 
 As shown in the last subsection, the $n$-dimensional permutahedron is associated 
 with the set of all non-empty subsets of $[0,n]$, which is denoted by $\mathscr P_n$. 
-Each facet of $P_n$ is lebeled by a non-empty proper subset $I$ of $[0,n]$, whose
-equation is 
-\begin{equation}
+Each facet of $\mathscr P_n$ is lebeled by a non-empty proper subset $I$ of $[0,n]$, 
+whose equation is 
+\begin{equation}\label{Pnfacet}
 	F_J:=\sum_{J\neq \varnothing, J\subset I} S_J=0,
 \end{equation}
 so the number of facets of $\mathscr P_n$ is $2^n-2$. The AHBY condition 
@@ -564,13 +564,13 @@ can be solved from above equations:
 \]
 for all non-empty subsets $I \subset [0,n]$ which are not singlets.
 
-(proof of equations fo facets or ABHY condition?)
+(Zhenjie: proof of equations of facets or ABHY condition?)
 
-To get $u$-equations, we should solve $S_J$ by $F_J$ for eq.(\theequation), the 
+To get $u$-equations, we should solve $S_J$ by $F_J$ from eq.\eqref{Pnfacet}, the 
 solution is 
-\[
+\begin{equation}\label{SinF}
 	S_I=\sum_{J\neq \varnothing,J\subset I} (-1)^{|J|-|I|}F_J,
-\]
+\end{equation}
 then
 \[
 	\prod_{I\neq \varnothing,I\subset [0,n]}u_I^{F_I}=
@@ -582,10 +582,44 @@ then
 \]
 gives that
 \[
-	u_I=\prod_{J\supset I}x_J^{(-1)^{|I|-|J|}}
+	u_I=\prod_{J\supset I}x_J^{(-1)^{|I|-|J|}}.
 \]
+For example, the $u$-variables of $\mathscr P_2$ are
+\[
+	u_{1}  = \frac{x_1 x_{123}}{x_{12}x_{13}},\quad 
+	u_{2}  = \frac{x_2 x_{123}}{x_{12}x_{23}},\quad
+	u_{3}  = \frac{x_3 x_{123}}{x_{13}x_{23}},\quad
+	u_{12} = \frac{x_{12}}{x_{123}},\quad 
+	u_{13} = \frac{x_{13}}{x_{123}},\quad
+	u_{23} = \frac{x_{23}}{x_{123}}.
+\]
+They satisfy the following equtions
+\begin{align*}
+	&1-u_{1}=u_{2} u_{3} u_{23}^2,
+	1-u_{2}=u_{1} u_{3} u_{13}^2,
+	1-u_{3}=u_{1} u_{2} u_{12}^2,\\
+	&1-u_{12}=u_{3} u_{13} u_{23},
+	1-u_{13}=u_{2} u_{12} u_{23},
+	1-u_{23}=u_{1} u_{12} u_{13}.
+\end{align*}
+We will discuss these $u$-equations in the next subsection.
 
-(notation!)
+For a $n$-dimensional general permutahedron $\mathscr A$, it can be achieved 
+from $\mathscr P_n$ by setting $S_J$ to be $0$ for any 
+$J\in \mathscr P_n-\mathscr A$. Facets of $\mathscr A$ are degenerations of facets 
+of $\mathscr P_n$ eq.\eqref{Pnfacet}, but some of them become spurious. If a pole
+is spurious, it can be written as a positive linear combination of some true facets.
+Such relations are sequence of eq.\eqref{SinF} for $I\not\in \mathscr A$.
+For example, for $\mathscr A=\{123,12,23,1,2,3\}$, we have that
+\[
+	0=S_{13}=F_{13}-F_{1}-F_{3},
+\]
+so $F_{13}$ is not a true facet of $\mathscr A$, there're only $5$ facets left in
+$\mathscr A$.
+
+(Zhenjie: what are the facets of general permutahedra?  I believe they are known.)
+
+
 
 \subsection{Binary geometries and $u$ equations}
 
