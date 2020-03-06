@@ -587,20 +587,19 @@ permutahedron can be constructed by a Minkowski sum of some simplices labeled by
 subsets of $[0,n]$. For a simplex labeled by a subset $I$, 
 it is natrual to associate the linear polynomial $x_I=\sum_{i\in I}x_i$ whose Newton polytope is the corresponding simplex. Therefore, we can write down a natrual stringy canonical form for the generalized permutahedron with the building set 
 $\mathscr P$
-\[
-	\mathcal I_{\mathscr P}(\{S_I\})=\int_{\mathbb R^{n}_+}
+\begin{equation} \label{stringyintforgenpermutohedron}
+   \mathcal I_{\mathscr P}(\{S_I\})=\int_{\mathbb R^{n}_+}
 	\frac{\prod_{i=0}^n \mathrm{d}\log x_i}
 	{\operatorname{GL}(1)_+}\prod_{I\in\mathscr P}x_I^{\alpha' S_I},
-\]
+\end{equation}
 where the global $\operatorname{GL}(1)_+$ redundance $x_i\mapsto a x_i$ require that 
 $\sum_{I\in\mathscr P}S_I = 0$. 
 
-Generally, we can consider arbitrary set of subsets of $[0,n]$ in above integrals. 
-However, the big polytope of this integral is usually not a simplex.
+Generally, we can consider an arbitrary set of subsets of $[0,n]$ in eq.\eqref{stringyintforgenpermutohedron}. 
+However, the big polytope for such integral in general is not a simplex.
 It's highly non-trivial to figure out all such sets whose big polytopes are simplices,
 but we can easily see that every generalized permutahedron satisfies $N=n+m$
-because each facet $F_I$ corresponds to a set of nested set $\{[0,n],I\}$ for 
-$I\neq [0,n]$.
+because each facet $F_I$ is given by a nested set $\{[0,n],I\}$ for $I\neq [0,n]$.
 Therefore, for a generalized permutahedron $\mathscr P$, we can write the matrix 
 $W^J_A$ of facets and get the ABHY conditions $S_J=F_A(W^{-1})^A_J\geq 0$ and 
 its $u$-variables $u_A=\prod_J p_J^{(W^{-1})^A_J}$.
