@@ -509,19 +509,29 @@ For this type equations, once $u_i$ goes to $0$, it forces some $u_j$ to go to $
 Therefore, these $u$-equations reveal the binary structure of the cluster
 configuration spaces. ...
 
-($A_n$ (sting integral?), $B_n$ (Shi arrangement?), or both from $F$-polynomial)
-
 For example, $A_n$ type cluster configuration spaces come from original string 
 amplitudes
 \[
-	\int_{z_1<z_2<\cdots <z_n}
+	\mathcal I_n = \int_{z_1<z_2<\cdots <z_n}
 	\frac{\mathrm dz_2\cdots \mathrm dz_{n-2}}{(z_1-z_2)\cdots (z_{n-2}-z_{n-1})}
-	\prod_{i<j} (z_i-z_j)^{\alpha' s_{ij}},
+	\prod_{i<j} (z_j-z_i)^{\alpha' s_{ij}},
 \]
 where we fix the gauge by setting $z_1=0$, $z_{n-1}=1$ and $z_n=\infty$.
-The $u$-variables of this configuration space are
+It's not in the form of stringy integrals, but we can use a positive
+parametrization 
 \[
-	u_{ij}=\frac{(z_{i-1}-z_j)(z_i-z_{j-1})}{(z_i-z_j)(z_{i-1}-z_{j-1})},
+z_3=1+x_2,\quad z_4=1+x_2+x_3,\quad \dots, \quad 
+z_{n-1}=1+x_2+\cdots+x_{n-2}
+\]
+to rewrite the integral $\mathcal I_n$, then
+\[
+    \mathcal I_n=\int_{\mathbb R_+^{n-3}}
+	\frac{\mathrm dx_2\cdots \mathrm dx_{n-2}}{x_2\cdots x_{n-2}}
+	\prod_{i<j} p_{ij}^{\alpha' s_{ij}},
+\]
+where $p_{ij}=x_i+\cdots+x_{j-1}$. The $u$-variables of this configuration space are
+\[
+	u_{ij}=\frac{p_{i-1,j}p_{i,j-1}}{p_{ij}p_{i-1,j-1}},
 \]
 and they satisfy the $u$-equations
 \[
@@ -530,21 +540,23 @@ and they satisfy the $u$-equations
 where $(i,j)\not\sim (k,l)$ means that diagonals $(i,j)$ and $(k,l)$ of
 $(n+3)$-gon are crossed.
 
-(Zhenjie: we should use another parametrization of $A_n$) 
-(mention hyperplane arrangement)
-
-$B_n$: Shi arrangement
-
-The Shi arrangement of $B_n$ contains $n+1$ punctures $\{z_i\}_{i=1,\dots,n+1}$ 
-on the real line with the freedom corresponding to the global transformation 
+Another example still comes from a hyperplane arrangement, the Shi arrangement,
+which is also $B_n$ type cluster stringy integral.
+The Shi arrangement contains $n+1$ punctures $\{z_i\}_{i=1,\dots,n+1}$ 
+on the real line with the freedom of global transformation 
 $z_i\to z_i+a$, so we can use it to fix $z_{n+1}=0$. Then the Shi arrangement is 
 given by the following hyperplains
 \[
     z_i-z_j=0\quad \text{and}\quad z_i-z_j=1,
 \]
-for $1\leq i<j\leq n+1$. 
-
-The the $u$ variables of $B_n$ can be solved by these $z_i$ by 
+for $1\leq i<j\leq n+1$. Its stringy integral is
+\[
+	\mathcal I_n = \int_{z_1<z_2<\cdots <z_n<0}
+	\frac{\mathrm dz_1\cdots \mathrm dz_{n}}{(z_1-z_2)\cdots (z_{n}-z_{n+1})}
+    \prod_{1\leq i<j \leq n}(z_j-z_i)^{s_{ij}}|z_i-z_j-1|^{t_{ij}}
+\]
+(Zhenjie: Carefully check the notation!)
+The $u$-variables of this configuration space are
 \[
     u_1=1+z_1-z_2,\quad \dots,\quad u_{n}=1+z_{n}-z_{n+1},\quad u_{n+1}=z_{n+1}-z_1
 \]
