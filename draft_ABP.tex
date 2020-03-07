@@ -544,18 +544,18 @@ Another example still comes from a hyperplane arrangement, the Shi arrangement,
 which is also $B_n$ type cluster stringy integral.
 The Shi arrangement contains $n+1$ punctures $\{z_i\}_{i=1,\dots,n+1}$ 
 on the real line with the freedom of global transformation 
-$z_i\to z_i+a$, so we can use it to fix $z_{n+1}=0$. Then the Shi arrangement is 
+$z_i\to z_i+a$, so we can use it to fix $z_{n+1}=0$. The Shi arrangement is 
 given by the following hyperplains
 \[
-    z_i-z_j=0\quad \text{and}\quad z_i-z_j=1,
+	z_i-z_j=0\quad \text{and}\quad z_i-z_j=1\quad \text{for $1\leq i<j\leq n+1$},
 \]
-for $1\leq i<j\leq n+1$. Its stringy integral is
+and its stringy integral is 
 \[
-	\mathcal I_n = \int_{z_1<z_2<\cdots <z_n<0}
-	\frac{\mathrm dz_1\cdots \mathrm dz_{n}}{(z_1-z_2)\cdots (z_{n}-z_{n+1})}
-    \prod_{1\leq i<j \leq n}(z_j-z_i)^{s_{ij}}|z_i-z_j-1|^{t_{ij}}
+\mathcal I_n = \int_{1>z_1>z_2>\cdots >z_n>0}
+\frac{\mathrm dz_1\cdots \mathrm dz_{n}}{(1-z_1)(z_1-z_2)\cdots (z_{n}-0)}
+\prod_{0\leq i<j \leq n}(z_i-z_j)^{s_{ij}}(1-z_i+z_j)^{t_{ij}},
 \]
-(Zhenjie: Carefully check the notation!)
+where the positive region is given by $0<z_i-z_j<1$ for $1\leq i<j \leq n+1$.
 The $u$-variables of this configuration space are
 \[
     u_1=1+z_1-z_2,\quad \dots,\quad u_{n}=1+z_{n}-z_{n+1},\quad u_{n+1}=z_{n+1}-z_1
@@ -568,12 +568,13 @@ and
 \end{aligned}
 \]
 where $\tilde{z}_i=z_{i+n+1}=z_{i}+1$ and indices are living in $\mathbb Z_{2n+2}$.
-
-(u eq of $B_n$)
+They satisfy the following $u$-equations 
+\begin{align*}	
+1-u_{ij}&=\prod\limits_{j\prec k \prec i}u_k^2 u_{ki}u_{jk}\!\!\prod\limits_{j\prec k\prec l\prec i}u_{kl}^2\!\!\prod\limits_{\substack{j\prec k\prec i\\i\prec l\prec j}}u_{kl}u_{lk},\\
+1-u_{i}&=\prod\limits_{j\neq i}u_j \prod_{i\prec j\prec k\prec i}u_{jk}.
+\end{align*}
 
 (binary geometries)
-
-
 
 \[
 	1-u_i=f_i(u)\prod_{j}u_j^{i||j}
