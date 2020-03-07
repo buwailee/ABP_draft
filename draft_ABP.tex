@@ -10,7 +10,7 @@
 \textwidth 14cm
 \usepackage{cite}
 \usepackage{epsfig,amssymb,euscript,xspace,xcolor}
-\usepackage{amsmath,mathtools,empheq,amsthm,hyperref,graphicx}
+\usepackage{amsmath,mathtools,empheq,amsthm,hyperref,graphicx,paralist}
 \usepackage{mathrsfs,float}  
 \usepackage{pgf,tikz,pgfplots}
 \usetikzlibrary{arrows}
@@ -507,7 +507,7 @@ Varieties defined by $u$-equations associated with finite type clusters
 are called cluster configuration spaces. 
 For this type equations, once $u_i$ goes to $0$, it forces some $u_j$ to go to $1$.
 Therefore, these $u$-equations reveal the binary structure of the cluster
-configuration spaces. ...
+configuration spaces. 
 
 For example, $A_n$ type cluster configuration spaces come from original string 
 amplitudes
@@ -624,7 +624,7 @@ It also follows from above that a face $\pi_{S_1,\cdots,S_k}$ is contained in an
 \end{itemize}
 We shall now talk about generalized permutahedra which are polytopes obtained by deformations of the usual permutahedron i.e., obtained by moving the vertices of the usual permutahedron so that the directions of all the edges are preserved though some of the edges may degenerate into points.
 
-\section*{Generalized permutahedra}
+\subsection*{Generalized permutahedra}
 
 A  generalised permutahedron is obtained by parallel translation of facets of the usual permutahedron it is parametrized  by a collection $\{ z_I\}$ of $2^{n+1}-1$ coordinates, for non-empty sets of $I \subset [0,n] $
  \bea
@@ -635,20 +635,25 @@ A  generalised permutahedron is obtained by parallel translation of facets of th
  If $z_I =z_J$ whenever $|I| =|J|$, then  $ P_n^z(\{ z_I \})$ is the usual permutahedron. 
  \begin{itemize}
  \item The combinatorial structure of the generalised permutahedron depends only on the set $B$ of nonemepty subsets $I \subset [0,n]$ such that $y_I \geq 0$ which is called the {\it building set}. To describe the combinatorial structure we need the notion of {\it Nested complex} which we shall define now.
-\section*{Nested Complex}
+ \end{itemize}
+ 
+\subsection*{Nested Complex}
 If $B$ additionally satisfies the following:
+\begin{compactenum}[\quad (1)]
+    \item If $I,J \in B$ and $I \cap J \neq \phi $, then $I \cup J \in B$.
+    \item $B$ contains all singletons $\{ i\}$ for $i \in S$.
+\end{compactenum}
 
-\noindent(1) If $I,J \in B$ and $I \cap J \neq \phi $, then $I \cup J \in B$. \\
-(2) $B$ contains all singletons $\{ i\}$ for $i \in S$.
-
-A subset $N$ in the building set $B$ is called a {\it nested set} if it satisfies the following conditions:\\
-\noindent
-(1) For any $I,J \in N$, we either have $I \subset J$ or $J\subset I$ or $I$ and $J$ are disjoint.\\
-(2) For any collection of $k \geq 2$ disjoint subsets $J_1,J_2,\cdots, J_k \in N$ their union $J_1 \cup \cdots \cup J_k$ is not in B. \\
-(3) N contains all maximal elements of $B$.
+A subset $N$ in the building set $B$ is called a {\it nested set} if it satisfies the following conditions:
+\begin{compactenum}[\quad (1)]
+    \item For any $I,J \in N$, we either have $I \subset J$ or $J\subset I$ or $I$ and $J$ are disjoint.
+    \item For any collection of $k \geq 2$ disjoint subsets $J_1,J_2,\cdots, J_k \in N$ their union $J_1 \cup \cdots \cup J_k$ is not in B.
+    \item $N$ contains all maximal elements of $B$.
+\end{compactenum}
 
 The {\it nested complex} $\mathcal{N}(B)$ is defined as the poset of the set of all nested sets in $B$ ordered by inclusion.
 
+ \begin{itemize}
 \item {\bf Minkowski decomposition:} Let, $\Delta_{[0,n]} = {\rm ConvexHull}(e_1,\cdots,e_n)$ be the standard coordinate simplex in $\mathbb{R}^{n+1}$. For any $I \subset [0,n] $ let $\Delta_I ={\rm ConvexHull(e_i~|~i\in I)}$ denote the face of the $\Delta_{[0,n]}$. The polytope $P_n^y(\{y_I \})$ obtained as the Minkowski sum of simplices $\Delta_I$ scaled by  parameters $y_I \geq 0$ for all nonempty subsets $I \subset [0,n]$
  \bea
  P_n^y(\{y_I \})= \sum_{I \subset[0,n]} y_I . \Delta_I  \nonumber
