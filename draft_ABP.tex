@@ -454,22 +454,85 @@ It is a natural question to ask if binary geometries whose stringy integrals fac
 
 *******************
 
-(stringy canonical form)
+Stringy canonical forms (or stringy integral) are generalizations of tree level string integrals
+\begin{equation}\label{stringint}
+\int_{\mathcal M_{0,n}^+}
+\frac{\mathrm d^{n}z}{\mathrm{SL}(2,\mathbb{R})} \prod_{i=1}^{n}\frac{1}{z_{i}-z_{i+1}}
+\prod_{i<j}(z_j-z_i)^{\alpha' s_{ij}},
+\end{equation}
+where $\mathcal M_{0,n}^+$ is the postive part of moduli space of $n$ punctures on
+the Riemann sphere.
+In the context of stringy canonical form, the form $\mathsf{PT}(n):=\frac{\mathrm d^{n}z}{\mathrm{SL}(2,\mathbb{R})} \prod_{i=1}^{n}\frac{1}{z_{i}-z_{i+1}}$ is understood
+as the canonical form of the moduli space $\mathcal M_{0,n}^+$, and each factor 
+$(z_j-z_i)$ in the Kobe-Nieson factor $\prod_{i<j}(z_j-z_i)^{\alpha' s_{ij}}$ 
+is a nowhere vanishing function on $\mathcal M_{0,n}^+$.
+With a positive parameterization $\{x_1,\dots,x_{n-3}\}$ of $\mathcal M_{0,n}^+$, 
+this canonical form becomes $\prod_{i=1}^{n-3}\mathrm d \log x_i$, 
+the Koba-Nieson factor becomes a product of powers of some polynomials with 
+non-negative coefficients, and the string integral turns into the form
+\begin{equation}\label{stringycanonicalform}
+	\mathcal I(\mathbf X,\{c\})=
+	\int_{\mathbb R_+^d}\prod_{i=1}^d \frac{\mathrm d x_i}{x_i}x_i^{\alpha'X_i}
+	\prod_{I=1}^m p_I(x)^{-\alpha' c_I},
+\end{equation}
+where $p_I$ are polynomials with non-negative coefficients. For general stringy
+canonical forms eq.\eqref{stringycanonicalform}, we allow $p_I$ to be any Laurent 
+polynomial with non-negative coefficients in the integral.
 
-The $\mathcal I(\mathbf X,\{c\})$ is convergent when $\mathbf X$ is contained inside
-the Minkowski sum $\mathcal P=\sum_I c_I \mathcal P_I$ of Newton polytopes 
-$\mathcal P_I=\mathbf N[p_I]$. For a facet $F_a$ of $\mathcal P$, this condition 
-requires that $\mathbf X$ should lay on one side of $F_a$ which is equivalent to 
-an inequality of variables $\mathbf S=(X_1,\dots,X_d,-c_1,\dots,-c_m)$, 
-$W_a^JS_J\geq 0$, where $W_a^J$ is determined by the facet $F_a$. 
-These inequalities cut out a polyhedron in the $(d+m)$-dimensional space of 
+Many remarkable aspects of string integral, \textit{e.g.} field-theory limit, 
+factorization, scattering equations, $u$-variables ..., can be carried to
+stringy canonical forms. Almost all of these aspects are related to a hidden 
+polytope $\mathcal P=\sum_I c_I N[p_I]$ of string canonical form 
+eq.\eqref{stringycanonicalform}, where $N[p_I]$ is the Newton polytope of $p_I$ and 
+the sum is understood as the Minkowski sum. For example, 
+eq.\eqref{stringycanonicalform} is convergent if and only if 
+$\mathbf X=(X_1,\dots,X_D)$ is in the interior of $\mathcal P$, equations of
+facets of $\mathcal P$ are massless poles of eq.\eqref{stringycanonicalform}
+and the residue on this facet is still a stringy canonical form of this facet.
+For stringy integrals eq.\eqref{stringint}, these polytopes are nothing but the ABHY
+associahedra~\cite{}.
+
+This polytope can also be realized in $\mathbf x$-space and understood
+as a blow-up of $\mathbb R_+^D$, but it's usually difficult to use $\mathbf x$ to
+describe this polytope, even for the string integrals eq.\eqref{stringint}. For
+example, a facet may correspond to a complicated limit process of $\mathbf x\to 0$
+or $\infty$.
+%However, as proven in \cite{},
+%the saddle point equations of the Kobe-Nieson factor, \textit{i.e} scattering equations,
+%\[
+	%\frac{\partial}{\partial x_i}\left(
+	%\prod_{i=1}^d x_i^{\alpha'X_i} \prod_I p_I(x)^{-\alpha' c_I},
+	%\right)=0\quad \text{for all $i$}
+%\]
+%give us a diffeomorphism between the interiors of two polytopes in different spaces.
+However, for a limited class of stringy canonical forms, we can introduce
+the so-called $u$-variables $\{u_A\}$ to replace $\mathbf x$ such that the polytope 
+is described by $\{u_A\geq 0\}$ and a set of polynomial equations of $\{u_A\}$, and each
+facet is simply given by an equation $u_A=0$. One way to construct these $u$-variables
+is first constructing variables $\{U_A\}$ with similar properties in the space of
+$\mathbf S=(X_1,\dots,X_d,-c_1,\dots,-c_m)$ such that $\mathcal P=\sum_I c_I N[p_I]$ 
+is simply given by $\{U_A\geq 0\}$ and each facet is given by a $U_A=0$, and then
+relating $\{U_A\}$ to $\{u_A\}$ by the integral
+\[
+	\int_{\mathbb R_+^m}\frac{\mathrm d x_1\cdots \mathrm d x_n}{x_1\cdots x_n}
+	\prod_{A}u_A^{\alpha' U_A}
+	=
+	\int_{\mathbb R_+^m}\frac{\mathrm d x_1\cdots \mathrm d x_n}{x_1\cdots x_n}
+	\prod_{J}p_J^{\alpha' S_J}.
+\]
+
+The construction of $\{U_A\}$ comes from the viewpoint of \textit{big polyhedron}.
+The polytope $\mathcal P=\sum_I c_I N[p_I]$ is bounded by the inequalites
+$W_a^JS_J\geq 0$ of variables $\mathbf S=(X_1,\dots,X_d,-c_1,\dots,-c_m)$ in space 
+of $\mathbf X$, where $W_a^J$ is determined by the facet $F_a$ of $\mathcal P$. 
+These inequalities also cut out a polyhedron in the $(d+m)$-dimensional space of 
 $\mathbf S$, which is called the \textit{big polyhedron} of $\mathcal P$, 
 and the integral $\mathcal I(\mathbf S)$ converges for each point $\mathbf S$ 
-inside this polyhedron.
+inside this polyhedron. 
 
 Dually, we can describe the big polyhedron by its vertices. Suppose 
 $\{V_J^A\}_{1\leq A\leq v}$ are its non-zero vertices, the point $\mathbf S$ inside 
-the polyhedron can be written as $S_J = U_A V^A_J$ with non-nagetive coefficients 
+the polyhedron can be written as $S_J = U_A V^A_J$ with non-negative coefficients 
 $\{U_A\}_{1\leq A\leq v}$.  Therefore, the integral $\mathcal I(\mathbf S)$
 can be seen as a function of `dual coordinates' $\{U_A\}$ which encourages us to 
 rewrite the integral to make it manifest by
@@ -485,17 +548,17 @@ where we introduce a new set of variables $u_A = \prod_J p_J^{V_J^A}$ for
 $A=1,\dots,v$. Note that there's no unique way to write $S_J=U_AV_J^A$ when
 the big polyhedron is not a simplex, \textit{i.e.} $v>d+m$, and in this case,
 $u$-variables $\{u_A\}$ are not independent. 
-When the big polyhdron is a simplex, \textit{i.e.} $N=v=d+m$, where $N$ is 
-the number of facets of the big polyhdron or the original polytope $\mathcal P$,
+When the big polyhedron is a simplex, \textit{i.e.} $N=v=d+m$, where $N$ is 
+the number of facets of the big polyhedron or the original polytope $\mathcal P$,
 and inequalities $U_A=S_J(V^{-1})^J_A\geq 0$ are exactly the inequalities
 $W_a^J S_J\geq 0$ up to resales $U_A\mapsto t U_A$ for non-zero factors $t$, because
 there's no nontrivial linear isometry from the simplex to itself besides permutations
-of vertices. Therefore, we identity the labal of facets $a$ with the label of 
+of vertices. Therefore, we identity the label of facets $a$ with the label of 
 vertices $A$ and get $V=W^{-1}$. Furthermore, every facet of the original polytope
 $\mathcal P$ can be associated with a single $u_A$ going to zero, 
 giving a ``binary geometry'' we will describe later.
 
-Generally, the big polyhdron of a stringy integral is not necessary to be a simplex.
+Generally, the big polyhedron of a stringy integral is not necessary to be a simplex.
 It's known that stringy integrals associated to the $A_n$, $B_n$, $C_n$, $D_n$,
 $E_6$, $E_7$, $E_8$, $F_2$ and $G_4$ type clusters are in this type. What's more,
 they satisfy the so called $u$-equations with the form
