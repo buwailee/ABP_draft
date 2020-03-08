@@ -681,6 +681,54 @@ $\mathscr A$.
 
 {\bf argue in general to have binary geometries we must have $1-u=\prod u' p(\{u\})$ with $p(u=0)=1$, conjecture that this is true fo ALL gen. perm. Show it for gen. perm. more examples?}
 
+
+(Chi: I have checked several examples of graph associahedra, there is a conjecture for $u$ variables for this kind of generalized permutohedra: \\
+For a element $I$ in the building set $\mathcal{B}$, we define $I_{\text{max}}=\Bigl(\bigcup_{j\sim I} \{j\} \Bigr)\cup I$
+where $j\sim I$ means the singleton $j$ is attached to $I$ in the corresponding graph, then 
+\begin{equation}
+   u_{I} = \prod_{ I \subset J \subset I_{\text{max}}}x_J^{(-1)^{|I|-|J|}}.
+\end{equation}
+This conjecture can easily be extended to generalized permutohedra, but I only have checked the several cases of graph associahedra for now.
+)
+
+
+
+\subsubsection{Example: Binary geometries for Cayley graph, graph associahedra and generalized permutohedra. }
+
+
+In the above, we have shown that the binary geometries exist for permutohedra even through the $u$ equtions are not perfect and conjecture that such binary geometries exist for generalized permutohedra. In the remainder of this section, we will give more example on such binary geometries without perfect $u$ equtions.
+
+
+We start with the Cayley graph proposed in \cite{} and further studied in \cite{}. In \cite{}, the ABHY realization for general Cayley graphs have been proposed, here we will use several examples to illustrate that the binary geometries exist for general Cayley graphs. The first Cayley graph which is nether associahedron nor permutahderon is so-called  ``next-to-$A_{3}$'', in terms of generalized permutahdera, the building set for next-to-$A_{3}$ is 
+\begin{equation}
+   \mathscr{NA}_{3}=\{\{1,2,3,4\},\{1,2,3\},\{1,3,4\},\{2,3,4\},\{1,2\},\{1,3\},\{2,3\},\{3,4\},\{1\},\{2\},\{3\},\{4\}\}
+\end{equation}
+
+the $u$ variables are 
+\begin{align}
+   &u_{1}=\frac{x_{1}x_{123}}{x_{12}x_{13}} \:, \quad  u_{2}=\frac{x_{2}x_{123}}{x_{12}x_{23}} \:,  \quad 
+   u_{3}=\frac{x_{3}x_{134}x_{234}x_{123}}{x_{34}x_{13}x_{23}x_{1234}} \:, \quad 
+   u_{4}=\frac{x_{4}}{x_{34}} \\
+   &u_{12}=\frac{x_{12}}{x_{123}} \:, \quad u_{13}=\frac{x_{13}x_{1234}}{x_{134}x_{123}} \:,\quad 
+   u_{23}=\frac{x_{23}x_{1234}}{x_{123}x_{234}} \:, \quad u_{34}=\frac{x_{34}x_{1234}}{x_{134}x_{234}} \\
+   &u_{123}=\frac{x_{123}}{x_{1234}} \:, \quad u_{134}=\frac{x_{134}}{x_{1234}} \:, \quad 
+   u_{234}=\frac{x_{234}}{x_{1234}}
+\end{align}
+The $u$ equations are
+\begin{align}
+   &1-u_{1}=u_{2}u_{3}u_{23}^{2}u_{34}u_{234}^{2} \:, \\
+   &1-u_{2}=u_{1}u_{3}u_{13}^{2}u_{34}u_{123}^{2} \:, \\
+   &1-u_{3}= u_{1}u_{2}u_{4}u_{12}^{2}(1+u_{3}u_{13}u_{23}u_{34}u_{123}u_{134}u_{234}) \:, \\
+   &1-u_{4}=u_{3}u_{13}u_{23}u_{123}  \:, \\
+   &1-u_{12} =u_{3}u_{13}u_{23}u_{34}u_{134}u_{234} \:, \\
+   &1-u_{13} =u_{2}u_{4}u_{12}u_{23}u_{34}u_{234}^{2} \:, \\
+   &1-u_{23}= u_{1}u_{4}u_{12}u_{13}u_{34}u_{134}^{2} \:, \\
+   &1-u_{34}= u_{1}u_{2}u_{12}^{2}u_{13}u_{23}u_{123}^{2} \:, \\
+   &1-u_{123}=u_{4}u_{34}u_{134}u_{234} \:, \\
+   &1-u_{134}=u_{2}u_{12}u_{23}u_{123}u_{234} \:, \\
+   &1-u_{234}=u_{1}u_{12}u_{13}u_{123}u_{134} \:, 
+\end{align} 
+
 \section{Configuration spaces with perfect $u$-equations from degenerating $A_n$ and $B_n$}
 In this section we shall consider some degenerations of $A_n$ and $B_n$ and show that these form an infinite class of examples of binary geometries with perfect $u$-equations. To do this we shall use the fact that both $A_n$ and $B_n$ are generalised permutahedra and can be realised as a Minkowski sum of coordinate simplices. 
 
