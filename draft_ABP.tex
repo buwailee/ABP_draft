@@ -10,7 +10,7 @@
 \textwidth 14cm
 \usepackage{cite}
 \usepackage{epsfig,amssymb,euscript,xspace,xcolor}
-\usepackage{amsmath,mathtools,empheq,amsthm,hyperref,graphicx}
+\usepackage{amsmath,mathtools,empheq,amsthm,hyperref,graphicx,paralist}
 \usepackage{mathrsfs,float}  
 \usepackage{pgf,tikz,pgfplots}
 \usetikzlibrary{arrows}
@@ -507,21 +507,31 @@ Varieties defined by $u$-equations associated with finite type clusters
 are called cluster configuration spaces. 
 For this type equations, once $u_i$ goes to $0$, it forces some $u_j$ to go to $1$.
 Therefore, these $u$-equations reveal the binary structure of the cluster
-configuration spaces. ...
-
-($A_n$ (sting integral?), $B_n$ (Shi arrangement?), or both from $F$-polynomial)
+configuration spaces. 
 
 For example, $A_n$ type cluster configuration spaces come from original string 
 amplitudes
 \[
-	\int_{z_1<z_2<\cdots <z_n}
+	\mathcal I_n = \int_{z_1<z_2<\cdots <z_n}
 	\frac{\mathrm dz_2\cdots \mathrm dz_{n-2}}{(z_1-z_2)\cdots (z_{n-2}-z_{n-1})}
-	\prod_{i<j} (z_i-z_j)^{\alpha' s_{ij}},
+	\prod_{i<j} (z_j-z_i)^{\alpha' s_{ij}},
 \]
 where we fix the gauge by setting $z_1=0$, $z_{n-1}=1$ and $z_n=\infty$.
-The $u$-variables of this configuration space are
+It's not in the form of stringy integrals, but we can use a positive
+parametrization 
 \[
-	u_{ij}=\frac{(z_{i-1}-z_j)(z_i-z_{j-1})}{(z_i-z_j)(z_{i-1}-z_{j-1})},
+z_3=1+x_2,\quad z_4=1+x_2+x_3,\quad \dots, \quad 
+z_{n-1}=1+x_2+\cdots+x_{n-2}
+\]
+to rewrite the integral $\mathcal I_n$, then
+\[
+    \mathcal I_n=\int_{\mathbb R_+^{n-3}}
+	\frac{\mathrm dx_2\cdots \mathrm dx_{n-2}}{x_2\cdots x_{n-2}}
+	\prod_{i<j} p_{ij}^{\alpha' s_{ij}},
+\]
+where $p_{ij}=x_i+\cdots+x_{j-1}$. The $u$-variables of this configuration space are
+\[
+	u_{ij}=\frac{p_{i-1,j}p_{i,j-1}}{p_{ij}p_{i-1,j-1}},
 \]
 and they satisfy the $u$-equations
 \[
@@ -530,21 +540,23 @@ and they satisfy the $u$-equations
 where $(i,j)\not\sim (k,l)$ means that diagonals $(i,j)$ and $(k,l)$ of
 $(n+3)$-gon are crossed.
 
-(Zhenjie: we should use another parametrization of $A_n$) 
-(mention hyperplane arrangement)
-
-$B_n$: Shi arrangement
-
-The Shi arrangement of $B_n$ contains $n+1$ punctures $\{z_i\}_{i=1,\dots,n+1}$ 
-on the real line with the freedom corresponding to the global transformation 
-$z_i\to z_i+a$, so we can use it to fix $z_{n+1}=0$. Then the Shi arrangement is 
-given by the following hyperplains
+Another example still comes from a hyperplane arrangement, the Shi arrangement,
+which is also $B_n$ type cluster stringy integral.
+The Shi arrangement contains $n+1$ punctures $\{z_i\}_{i=1,\dots,n+1}$ 
+on the real line with the freedom of global transformation 
+$z_i\to z_i+a$, so we can use it to fix $z_{n+1}=0$. The Shi arrangement is 
+given by the following hyperplanes
 \[
-    z_i-z_j=0\quad \text{and}\quad z_i-z_j=1,
+	z_i-z_j=0\quad \text{and}\quad z_i-z_j=1\quad \text{for $1\leq i<j\leq n+1$},
 \]
-for $1\leq i<j\leq n+1$. 
-
-The the $u$ variables of $B_n$ can be solved by these $z_i$ by 
+and its stringy integral is 
+\[
+\mathcal I_n = \int_{1>z_1>z_2>\cdots >z_n>0}
+\frac{\mathrm dz_1\cdots \mathrm dz_{n}}{(1-z_1)(z_1-z_2)\cdots (z_{n}-0)}
+\prod_{0\leq i<j \leq n}(z_i-z_j)^{s_{ij}}(1-z_i+z_j)^{t_{ij}},
+\]
+where the positive region is given by $0<z_i-z_j<1$ for $1\leq i<j \leq n+1$.
+The $u$-variables of this configuration space are
 \[
     u_1=1+z_1-z_2,\quad \dots,\quad u_{n}=1+z_{n}-z_{n+1},\quad u_{n+1}=z_{n+1}-z_1
 \]
@@ -556,12 +568,13 @@ and
 \end{aligned}
 \]
 where $\tilde{z}_i=z_{i+n+1}=z_{i}+1$ and indices are living in $\mathbb Z_{2n+2}$.
-
-(u eq of $B_n$)
+They satisfy the following $u$-equations 
+\begin{align*}	
+1-u_{ij}&=\prod\limits_{j\prec k \prec i}u_k^2 u_{ki}u_{jk}\!\!\prod\limits_{j\prec k\prec l\prec i}u_{kl}^2\!\!\prod\limits_{\substack{j\prec k\prec i\\i\prec l\prec j}}u_{kl}u_{lk},\\
+1-u_{i}&=\prod\limits_{j\neq i}u_j \prod_{i\prec j\prec k\prec i}u_{jk}.
+\end{align*}
 
 (binary geometries)
-
-
 
 \[
 	1-u_i=f_i(u)\prod_{j}u_j^{i||j}
@@ -573,9 +586,120 @@ where $f_i$ are polynomials such that $f_i(\dots,u_i=0,\dots)=1$.
 
 \newpage
 \section{Stringy canonical forms and $u$-equations for generalized permutahedra}
-In this section we shall argue that  a large subset of generalised permutahedra which are realised as degenerations of permutahderon $P_n$ are binary geometries. Before we proceed we shall review some details about the generalised permutahedra which we shall use throughout the paper.
+In this section we shall argue that  a large subset of generalised permutahedra which are realised as degenerations of permutahderon ${\mathscr P_n}$ are binary geometries. Before we proceed we shall review some details about the generalised permutahedra which we shall use throughout the paper.
 \subsection{Generalized permutohedra} {\bf the definition, facets and combinatorial factorizations, do $P_n$ example in full details.}
+******************************************************************************************
+\section*{Permutahedron}
+ For $x_1,x_2, \cdots, x_{n+1} \in \mathbb{R} $ , the permutahedron ${\mathscr P_n}(x_1,\cdots,x_{n+1})$ is a convex polytope in $\mathbb{R}^{n+1}$ defined as the convex hull of all vectors obtained from $(x_1,x_2, \cdots, x_{n+1})$ by permutations of the coordinates:
+ \bea
+{\mathscr P_n}(x_1,x_2, \cdots, x_{n+1}) = {\rm ConvexHull} \{ (x_{w(1)},x_{w(2)}, \cdots, x_{w(n+1)})~ |~ w \in S_{n+1} \}, \nonumber
+ \eea
+ where $S_{n+1}$ is the symmetric group. 
+ 
+ The permutahedron has $(n+1)!$ vertices and is of dimension at most $n$ since it lies in the hyperplane 
+ \bea
+ H_c= \{(t_1,t_2, \cdots, t_{n+1}) | t_1 + t_2 + \cdots + t_{n+1}= c \} \subset \mathbb{R}^{n+1}, \nonumber
+ \eea
+where $c= x_1+x_2+ \cdots +x_{n+1}$.
 
+For $n=1$ and distinct $x_1,x_2$ the permutahedron ${\mathscr P_1}(x_1,x_2)$ is a line. If  $x_1=x_2$ then it degenerates into a single point.
+
+For $n=2$ and distinct $x_1,x_2, x_3$ the permutahedron ${\mathscr P_2}(x_1,x_2, x_3)$ is a hexagon. If two of the $x_i$'s are equal then the permutahedron degenerates into a triangle and if $x_1= x_2 = x_3$ then its degenerates into a single point.
+
+We shall list a few results about permutahedra which shall be useful for later purposes: 
+\begin{itemize}
+\item {\bf Coordinate independence:} The combinatorial structure of the permutahedron ${\mathscr P_n} (x_1, \cdots, x_{n+1}) $ does not depend on $ x_1, \cdots, x_{n+1} $ as long as all these are distinct. Henceforth  we will choose $ \{x_1, \cdots, x_{n+1}\} = \{0,1,\cdots,n \} := [0,n ]$. \\
+\item {\bf Facial Structure:} The $(n-k)$ faces of ${\mathscr P_n}$ are in an $1-1$ correspondence with the decomposition of $[0,n]$ into $k$ parts. More precisely, for each $(S_1,\cdots,S_k)$ with $S_i \neq \emptyset ~ \forall i$ and $[0,n] = S_1 \sqcup \cdots \sqcup S_k$ the corresponding face $\pi_{S_1,\cdots,S_k}$ has vertices which are permutations such that the entries $ \{x_i | i \in S_1 \}$ are largest $|S_1|$ numbers in $[0,n]$, $\{x_i | i \in S_2 \}$ are largest $|S_2|$ numbers in $[0,n]$ and so on. 
+
+Further the face $\pi_{S_1,\cdots,S_k}$   is isomorphic to ${\mathscr P_{\left(| S_1|-1\right)} }\times {\mathscr P_{\left(| S_2|-1\right)} } \cdots \times{\mathscr P_{\left(| S_k|-1\right)} } $.
+
+It follows from above that ${\mathscr P_n}$ has $2^{n+1} -2$ facets corresponding to all the non-empty proper subsets of $I$ for which we have a decomposition $[0,n] = S \sqcup S^c$ and the facets are isomorphic to one of the following product of lower dimensional permutahedra  $ \{ {\mathscr P_{n-1}}, {\mathscr P_{n-2}} \times A_1, \cdots ,{\mathscr P_{\lfloor{n/2 \rfloor}}} \times {\mathscr P_{n-1-\lfloor n/2 \rfloor}}  \} $\footnote {More generally the number of $(n-k)$ facets of ${\mathscr P_n}$ is $ k! S(n,k)$ where $S(n,k)$ is the Stirling number of the second kind which counts the number $k$ partitions of  $I$ and there are $p(n+1,k)$ types where $p(n+1,k)$ is the number of $k$ partitions of $(n+1)$.}.
+
+
+It also follows from above that a face $\pi_{S_1,\cdots,S_k}$ is contained in another face $\pi_{T_1,\cdots,T_l}$ if and only if each $T_i$ is a union of consecutive $S_j$ or equivalently if $(S_1,\cdots,S_k)$ is a refinement of $(T_1,\cdots,T_l)$.
+\item {\bf Minkowski decomposition:}   Let, $\Delta_{[0,n]} = {\rm ConvexHull}(e_1,\cdots,e_{n+1})$ be the standard coordinate simplex in $\mathbb{R}^{n+1}$. For any $I \subset [0,n] $ let $\Delta_I ={\rm ConvexHull}(e_i~|~i\in I)$ denote the face of the $\Delta_{[0,n]}$. The polytope $P_n(\{y_I \})$ obtained as the Minkowski sum of simplices $\Delta_I$ scaled by  parameters $y_I > 0$ for all nonempty subsets $I \subset [n+1]$
+ \bea
+ P_n(\{y_I \})= \sum_{I \subset[n+1]} y_I . \Delta_I  \nonumber
+ \eea
+ is the permutahedron ${\mathscr P_n}$
+\end{itemize}
+We shall now talk about generalized permutahedra which are polytopes obtained by deformations of the usual permutahedron i.e., obtained by moving the vertices of the usual permutahedron so that the directions of all the edges are preserved or equivalently translating facets without allowing them to move past vertices which may cause some of the edges to degenerate into points.
+
+\subsection*{Generalized permutahedra}
+
+A  generalised permutahedron is obtained by parallel translation of facets of the usual permutahedron it is parametrized  by a collection $\{ z_I\}$ of $2^{n+1}-1$ coordinates, for non-empty sets of $I \subset [0,n] $
+ \bea \label{genperm_defi}
+ P_n^z(\{ z_I \}) = \left \{ (t_0 , t_2, \cdots , t_{n}) \in \mathbb{R}^{n+1} | \sum_{i=0}^{n} t_i = z_{[0,n]},~ \sum_{i \in I} t_i \geq z_I, {\rm for ~subsets} ~I  \right  \}
+ \eea
+ (a better notation for generalized permutahedron ??)
+ 
+ If $z_I =z_J$ whenever $|I| =|J|$, then  $ P_n^z(\{ z_I \})$ is the usual permutahedron. 
+ \begin{itemize}
+ \item The combinatorial structure of the generalised permutahedron depends only on the set $B$ of nonemepty subsets $I \subset [0,n]$ such that $y_I \geq 0$ which is called the {\it building set}. To describe the combinatorial structure we need the notion of {\it Nested complex} which we shall define now.
+ \end{itemize}
+ 
+\subsection*{Nested Complex}
+If $B$ additionally satisfies the following:
+\begin{compactenum}[\quad (1)]
+    \item If $I,J \in B$ and $I \cap J \neq \phi $, then $I \cup J \in B$.
+    \item $B$ contains all singletons $\{ i\}$ for $i \in S$.
+\end{compactenum}
+A subset $N$ in the building set $B$ is called a {\it nested set} if it satisfies the following conditions:
+\begin{compactenum}[\quad (1)]
+    \item For any $I,J \in N$, we either have $I \subset J$ or $J\subset I$ or $I$ and $J$ are disjoint.
+    \item For any collection of $k \geq 2$ disjoint subsets $J_1,J_2,\cdots, J_k \in N$ their union $J_1 \cup \cdots \cup J_k$ is not in B.
+    \item $N$ contains all maximal elements of $B$.
+\end{compactenum}
+The {\it nested complex} $\mathcal{N}(B)$ is defined as the poset of the set of all nested sets in $B$ ordered by inclusion.
+
+ \begin{itemize}
+\item {\bf Minkowski decomposition:} Let, $\Delta_{[0,n]} = {\rm ConvexHull}(e_1,\cdots,e_n)$ be the standard coordinate simplex in $\mathbb{R}^{n+1}$. For any $I \subset [0,n] $ let $\Delta_I ={\rm ConvexHull(e_i~|~i\in I)}$ denote the face of the $\Delta_{[0,n]}$. The polytope $P_n^y(\{y_I \})$ obtained as the Minkowski sum of simplices $\Delta_I$ scaled by  parameters $y_I \geq 0$ for all nonempty subsets $I \subset [0,n]$
+ \bea
+ P_n^y(\{y_I \})= \sum_{I \subset[0,n]} y_I . \Delta_I  \nonumber
+ \eea
+is the generalised permutahedron $P_n^z(\{z_I \})$ if $z_I = \sum_{J \subset I} y_J  ~{\rm for~all~nonempty}~I \subset [0,n]$.
+\footnote{Not all generalised permutahedra cannot be written as Minkowski sum of coordinate simplices. We shall restrict ourselves to the large class of generalised permutahedra which admit such a realisation which are called Nestohedra.}
+
+\item {\bf Facial structure:} Let us assume that the set $B$ associated with a generalised permutahedron $P_n^{y}$ is a building set on $[0,n]$. Then the poset of faces $P_n^{y}$ ordered by reverse inclusion is isomorphic to the nested complex $\mathcal{N}(B)$. 
+
+For each decomposition $[0,n]=  \sqcup_{I \subset N } S_I $ where $S_I$ are non-empty, the face $P_N$ of $P_n^{y}(y_I)$ associated with the nested set $N \in \mathcal{N}(B)$ is:
+\bea
+P_N = \sum_{{J \subset B}\atop{J \cap S_I \neq \emptyset}} y_{J} \Delta_{J \cap S_I}
+\eea
+\end{itemize}
+\section*{Braid arrangement}
+The braid arrangement in $\mathbb{R}^{n+1}$ consists of $\left({n}\atop{2}\right)$ hyperplanes 
+\bea
+z_i =z_j ~~{\rm for ~ all}~~0 \leq i<j \leq n
+\eea
+
+In summary the above results imply that we can look at any collection of subsets of $[0, n]$ which form a building set $B$ and associate  coordinate simplex $\Delta_I$ for each $I \in B$ and resulting Minkowski sum with positive weights $y_I$ generates a generalised permutahedron associated with the building set. Further, the number of facets of the generalised permutahedron just correspond to the set of all non-singlet elements in $B$.  
+
+We shall set $x_0 =1$ from now on. Since, the number of singlets correspond to the dimension of the generalised permutahedron this implies that:
+
+{\bf Number of facets = Number of linear equation + dimension of  gen permutahedron}
+ 
+Thus, generalised permutahedra have big Polytopes which are simplices and as emphasized in the previous section we can solve for the $u$-variables and examine if they satisfy some kind of $u$-equations.
+
+Here are some interesting examples of generalised permutahedra:
+
+(1) If $B$ consists of only singlets i.e., $B=\{ \{ 0,1,\cdots,n \}, \{ 0 \},\{ 1 \},\cdots ,\{ n \} \}$ then the generalised permutahedron is a Simplex. In this case the relevant $x$ variables are $x_i,~ i=0,\cdots,n$ and $\sum_{i=0}^n x_i$. 
+The Newton polytope of the Minkowski sum is $\prod_{i=1}^{n} x_i (1+\sum_{j=1}^{n} x_j)$ and $u$-variables are 
+$u_i =\frac{ x_i}{1+\sum_{i=1}^n x_i} $
+which satisfy $\sum u_i =1$ as their only $u$-equation. \\
+
+(2) If $B= \{[i] | i=1,\cdots,n+1 \}$ is the complete flag of intervals, then $P_n({\bf Y})$ is the Stanley-Pitman polytope or Hypercube.
+The Newton polytope of the Minkowski sum is $x_1\cdots x_n (1+x_1) \cdots (1+x_1+\cdots +x_n)$ and $u$-variables are 
+$u_i =\frac{ 1}{1+\sum_{j=1}^{i} x_j} $, ~~$u^{'}_i =\frac{ \sum_{j=1}^{i} x_j}{1+\sum_{j=1}^{i} x_j} $ for $j=1,\cdots,n$ \\
+which satisfy $u_i +u^{'}_{i} =1$ as their $u$-equation. \\
+
+(3) If $B$ corresponds to all the non empty subsets of $[0,n]$ and $Y_I =y_{|I|}$ i.e., the variables $Y_I$ are equal for all subsets of the same cardinality, then $P_n({\bf Y})$ is the usual permutahedron $P_n$. 
+
+(4)If $B=\{ [i,j] | 1\leq  i \leq j \leq n\}$ is the set of consecutive intervals, then $P_n({\bf Y})$ is the associahedron.
+
+(5) If $B=\{ [1,i] \cup [j,n] | 1\leq  i \leq j \leq n\}$ is the set of cyclic intervals, then $P_n({\bf Y})$ is the Cyclohedron.
+
+The cases (4) and (5) will be considered in section (3.2). In this section we shall restrict ourselves to the permutahedron example ${\mathscr P_n}$.  
 \subsection{Natural stringy integrals with linear factors} 
 
 {\bf introduce a natural stringy integrals for any generalized stringy canonical forms: variables $x_0=1, x_1, \cdots, x_n$ and define $x_I=\sum_{i \in I} x_i$, the factors are $x_I^{\alpha' S_I}$ (we can say monomials $S_\{i\}=X_i$ and polynomials $S_I=-c_I$. $N=n+m$ and big polytope is a simplex, then general formula for $u$ variables, which is equivalent to ABHY conditions; again $P_n$ in full details and others as degenerations.}
@@ -613,16 +737,15 @@ with the set of all non-empty subsets of $[0,n]$, which is denoted by $\mathscr 
 Each facet of $\mathscr P_n$ is lebeled by a non-empty proper subset $I$ of $[0,n]$, 
 whose equation is 
 \begin{equation}\label{Pnfacet}
-	F_J:=\sum_{J\neq \varnothing, J\subset I} S_J=0,
+	F_I:=\sum_{J\neq \varnothing, J\subset I} S_J=0,
 \end{equation}
-so the number of facets of $\mathscr P_n$ is $2^n-2$. The AHBY condition 
-can be solved from above equations:
+which is the consequence of eq.\eqref{genperm_defi} and $P_n^y(\{S_I\})=P_n^z(\{F_I\})$, (Zhenjie: Right?)
+so the number of facets of $\mathscr P_n$ is $2^n-2$. 
+AHBY condition can be solved from above equations:
 \[
 	S_I = (-1)^{|I|+1}\sum_{i\in I} S_i,
 \]
 for all non-empty subsets $I \subset [0,n]$ which are not singlets.
-
-(Zhenjie: proof of equations of facets or ABHY condition?)
 
 To get $u$-equations, we should solve $S_J$ by $F_J$ from eq.\eqref{Pnfacet}, the 
 solution is 
