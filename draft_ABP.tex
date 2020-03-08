@@ -629,7 +629,7 @@ We shall now talk about generalized permutahedra which are polytopes obtained by
 
 A  generalised permutahedron is obtained by parallel translation of facets of the usual permutahedron it is parametrized  by a collection $\{ z_I\}$ of $2^{n+1}-1$ coordinates, for non-empty sets of $I \subset [0,n] $
  \bea \label{genperm_defi}
- P_n^z(\{ z_I \}) = \left \{ (t_0 , t_2, \cdots , t_{n}) \in \mathbb{R}^{n+1} | \sum_{i=0}^{n} t_i = z_{[0,n]},~ \sum_{i \in I} t_i \geq z_I, {\rm for ~subsets} ~I  \right  \}
+ P_n^z(\{ z_I \}) = \left \{ (t_0 , t_1, \cdots , t_{n}) \in \mathbb{R}^{n+1} | \sum_{i=0}^{n} t_i = z_{[0,n]},~ \sum_{i \in I} t_i \geq z_I, {\rm for ~subsets} ~I  \right  \}
  \eea
  (a better notation for generalized permutahedron ??)
  
@@ -724,31 +724,45 @@ However, the big polytope for such integral in general is not a simplex.
 It's highly non-trivial to figure out all such sets whose big polytopes are simplices,
 but we can easily see that every generalized permutahedron satisfies $N=n+m$
 because each facet $F_I$ is given by a nested set $\{[0,n],I\}$ for $I\neq [0,n]$.
-Therefore, for a generalized permutahedron $\mathscr P$, we can write the matrix 
-$W^J_A$ of facets and get the ABHY conditions $S_J=F_A(W^{-1})^A_J\geq 0$ and 
+Therefore, for a generalized permutahedron $\mathscr P$, we can write down the matrix 
+$W^J_A$ of facets and then get the ABHY conditions $S_J=F_A(W^{-1})^A_J\geq 0$ and 
 its $u$-variables $u_A=\prod_J p_J^{(W^{-1})^A_J}$.
 
-***
-
-($P_n$)
-
-As shown in the last subsection, the $n$-dimensional permutahedron is associated 
-with the set of all non-empty subsets of $[0,n]$, which is denoted by $\mathscr P_n$. 
-Each facet of $\mathscr P_n$ is lebeled by a non-empty proper subset $I$ of $[0,n]$, 
-whose equation is 
-\begin{equation}\label{Pnfacet}
-	F_I:=\sum_{J\neq \varnothing, J\subset I} S_J=0,
+Let's first write down equations of facets of a generalised permutahedron
+with the building set $\mathscr P$. The ABHY polytope of 
+eq.\eqref{stringyintforgenpermutohedron} is given by the Minkowski sum
+\[
+	- \sum_{I\in\mathscr P,|I|>1}S_I.\Delta_I
+\]
+in $(S_0,\dots,S_n)$-space, where $\Delta_I=\operatorname{ConvexHull}
+(\{e_i\}_{i\in I})$. Meanwhile, we know from the last subsection that the facet 
+labeled by a nested set $\{[0,n],I\}$ is given by
+\begin{align*}
+	\biggl\{(S_0,S_1,\dots,S_n)\in \mathbb R^{n+1}\,\bigg |\,
+		\sum_{i\in I}S_i = -\sum_{J\subset I,|J|>1,J\in \mathscr P}S_J,
+		\quad
+		&\sum_{i=0}^nS_i=-\sum_{J\in \mathscr P,|J|>1}S_J,\\
+		&\sum_{i\in K}S_i\geq -\sum_{J\subset I,|J|>1,J\in \mathscr P}S_J
+	\biggr\},
+\end{align*}
+where the second constrain is just $\sum_{I\in \mathscr P}S_I=0$, so the equation 
+of this facet is 
+\begin{equation}\label{GPfacet}
+	F_I:=\sum_{J\subset I,J\in\mathscr P}S_J=0.
 \end{equation}
-which is the consequence of eq.\eqref{genperm_defi} and $P_n^y(\{S_I\})=P_n^z(\{F_I\})$, (Zhenjie: Right?)
-so the number of facets of $\mathscr P_n$ is $2^n-2$. 
-AHBY condition can be solved from above equations:
+
+Within all generalized permutahedrons, the original permutahedron is quite simple
+and important because any other generalized permutahedron can be degenerated from
+permutahedron by setting some $S_I$ to be zero.
+The building set of the $n$-dimensional permutahedron $\mathscr P_n$ is 
+the set of all non-empty subsets of $[0,n]$. AHBY conditions can be solved from 
+eq.\eqref{GPfacet}
 \[
 	S_I = (-1)^{|I|+1}\sum_{i\in I} S_i,
 \]
 for all non-empty subsets $I \subset [0,n]$ which are not singlets.
-
-To get $u$-equations, we should solve $S_J$ by $F_J$ from eq.\eqref{Pnfacet}, the 
-solution is 
+To get $u$-equations, we should solve $S_J$ by $F_J$ from eq.\eqref{GPfacet}, the 
+solution for permutahedron $\mathscr P_n$ is 
 \begin{equation}\label{SinF}
 	S_I=\sum_{J\neq \varnothing,J\subset I} (-1)^{|J|-|I|}F_J,
 \end{equation}
@@ -784,21 +798,6 @@ They satisfy the following equtions
 	1-u_{23}=u_{1} u_{12} u_{13}.
 \end{align*}
 We will discuss these $u$-equations in the next subsection.
-
-For a $n$-dimensional general permutahedron $\mathscr A$, it can be achieved 
-from $\mathscr P_n$ by setting $S_J$ to be $0$ for any 
-$J\in \mathscr P_n-\mathscr A$. Facets of $\mathscr A$ are degenerations of facets 
-of $\mathscr P_n$ eq.\eqref{Pnfacet}, but some of them become spurious. If a pole
-is spurious, it can be written as a positive linear combination of some true facets.
-Such relations are sequence of eq.\eqref{SinF} for $I\not\in \mathscr A$.
-For example, for $\mathscr A=\{123,12,23,1,2,3\}$, we have that
-\[
-	0=S_{13}=F_{13}-F_{1}-F_{3},
-\]
-so $F_{13}$ is not a true facet of $\mathscr A$, there're only $5$ facets left in
-$\mathscr A$.
-
-(Zhenjie: Are facets of $\mathscr A$ associated with $J$ just the $F_J$ of $\mathscr P_n$ after setting all $S_I=0$ for $I\not\in \mathscr A$? How to prove it?)
 
 \subsection{Binary geometries and $u$ equations}
 
