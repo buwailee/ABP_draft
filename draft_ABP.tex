@@ -876,6 +876,17 @@ where $j\sim I$ means the singleton $j$ is attached to $I$ in the corresponding 
    u_{I} = \prod_{ I \subset J \subset I_{\text{max}}}x_J^{(-1)^{|I|-|J|}}.
 \end{equation}
 This conjecture can be extended to generalized permutohedra, but I only have checked the several cases of graph associahedra for now.
+
+Based on the above conjecture,  there is a statement for the binary geometries corresponding to the facet $u_{I}\to 0$, 
+that is the $u$-system for the facet $u_{I}\to 0$ is corresponding to the generlaized permutohedra $\mathcal{P}_{I}\otimes \mathcal{P}_{\bar{I}}$ with building sets  
+\[
+\mathcal{B}_{I} = \{J\vert J\subset I, J\in \mathcal{B}\}
+\]
+and 
+\[
+\mathcal{B}_{\bar{I}} = \{J-I\vert  J\in \mathcal{B}-\mathcal{B}_{I} \}
+\]
+where $J-I$ means the complement of $J$ with respect to $I$. This statement directly follow from the fact that $u_{I}\to 0$ is equivalent to take $x_{i}\to t x_{i} $ for $i\in I$ then take $t \to 0$
 )
 
 
@@ -904,7 +915,7 @@ the $u$ variables are
 The $u$ equations are
 \begin{align}
    &1-u_{1}=u_{2}u_{3}u_{23}^{2}u_{34}u_{234}^{2} \:, \\
-   &1-u_{2}=u_{1}u_{3}u_{13}^{2}u_{34}u_{123}^{2} \:, \\
+   &1-u_{2}=u_{1}u_{3}u_{13}^{2}u_{34}u_{134}^{2} \:, \\
    &1-u_{3}= u_{1}u_{2}u_{4}u_{12}^{2}(1+u_{3}u_{13}u_{23}u_{34}u_{123}u_{134}u_{234}) \:, \\
    &1-u_{4}=u_{3}u_{13}u_{23}u_{123}  \:, \\
    &1-u_{12} =u_{3}u_{13}u_{23}u_{34}u_{134}u_{234} \:, \\
@@ -923,7 +934,9 @@ In this section we shall try to argue that the permutahedron is a binary geometr
 u_J &=& ~~\prod_{J \subset I} x_I^{(-1)^{|I|-|J|}} \nonumber \\
 u^{'}_J &=& \prod_{{0 \in I}\atop{ \{0,\cdots,n\} - I \subset J}} x_I^{(-1)^{|I|-|J|+mod(n, 2)}} \nonumber
 \eea
-From above it is evident that $u^{'}_{I} = u_{\bar{I}} $ where $\bar{I}=[0,n]-I$ for all subsets $I$ that do not contain $0$. And the $2^{n+1}-2$ facets corresponding to proper subsets of $[0,n]$ correspond to the two copies of the $2^{n}-1$ non-empty subsets of $[1,n]$.
+From above it is evident that $u^{'}_{I} = u_{\bar{I}} $ where $\bar{I}=[0,n]-I$ for all subsets $I$ that do not contain $0$. 
+({\bf Zhenjie: so why do we need $u'_J$?})
+And the $2^{n+1}-2$ facets corresponding to proper subsets of $[0,n]$ correspond to the two copies of the $2^{n}-1$ non-empty subsets of $[1,n]$.
 
 \item From the definition of the permutahedron as a Nestohedron we know that $I$ and $J$ are :
 
@@ -957,7 +970,7 @@ and for $|I| =n-2$ with $S- I = \{i, j\}$
 1-u_{I}= u_i u_j u^{2}_{ij} \prod_{J \subset I} u_{J \cup \{i\}} u_{J \cup \{j\}} u^{2}_{J \cup \{i,j\}} \prod_{K \subset S-I} (u^{'}_K)^{3} (u^{'}_{K \cup \{i\}})^{2}  (u^{'}_{K \cup\{j\}})^{2}  u^{'}_{K\cup \{i,j\}} \left( 1+ u^{'}_i u^{'}_j u^{'}_{ij} \prod_{I \subset L} u_L \right)                       \nonumber
 \eea
    
-The other $u$-equations are not two or three term equations and seem to be polynomials of order $|I|=n-2$ in the corresponding $u$'s.Thus, the most general $u$-equations can be conjectured to be:
+The other $u$-equations are not two or three term equations and seem to be polynomials of order $|I|=n-2$ in the corresponding $u$'s. Thus, the most general $u$-equations can be conjectured to be:
 \bea
 1-u_{I} = \prod_{J} u^{s_J}_{J} P_{|I|}(u_I, u_J,u_K) 
 \eea
@@ -974,6 +987,34 @@ In this section we shall consider some degenerations of $A_n$ and $B_n$ and show
 \subsection{$A_n$ and $B_n$ as generalized permutohedra} 
 
 {\bf linear factors, (standard) string integrals, ABHY and $u$ variables, talk about hyperplane arrangement}
+
+Let's define $[i,j]=\{i,i+1,\dots,j\}$ for $i,j\in \mathbb Z/(n+1)\mathbb Z$. 
+
+The building set of $A_n$ is
+\[\left\{
+\begin{aligned}
+	&[0,n],\\
+	&[0,n-1],[1,n],\\
+	&[0,n-2],[1,n-1],[2,n],\\
+	&\hspace{3ex}\vdots\\
+	&[0,1],[1,2],\dots,[n-1,n],\\
+	&\{0\},\{1\},\dots,\{n\}
+\end{aligned}\right.
+\]
+
+The 
+
+The building set of $B_n$ is
+\[\left\{
+\begin{aligned}
+	&[0,n],\\
+	&[0,n-1],[1,n],[2,0]\dots,[n,n-2]\\
+	&[0,n-2],[1,n-1],[2,n],\dots,[n,n-3]\\
+	&\hspace{3ex}\vdots\\
+	&[0,1],[1,2],\dots,[n-1,n],[n,0],\\
+	&\{0\},\{1\},\dots,\{n\}
+\end{aligned}\right.
+\]
 
 \subsection{Degenerations of $A_n$ and $B_n$ with perfect $u$ equations} 
 
