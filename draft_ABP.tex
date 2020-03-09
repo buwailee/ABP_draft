@@ -630,12 +630,14 @@ and
     u_{ij}&=\frac{(\tilde z_{j+1}-z_{i})(\tilde z_{i+1}-z_j)}{(\tilde z_{j+1}-z_{i+1})(\tilde z_i-z_j)}\quad &&\text{for $i<j$},
 \end{aligned}
 \]
-where $\tilde{z}_i=z_{i+n+1}=z_{i}+1$ and indices are living in $\mathbb Z_{2n+2}$.
+where $\tilde{z}_i=z_{i+n+1}=z_{i}+1$ and indices live in $\mathbb Z_{2n+2}$.
 They satisfy the following $u$-equations 
 \begin{align*}	
 1-u_{ij}&=\prod\limits_{j\prec k \prec i}u_k^2 u_{ki}u_{jk}\!\!\prod\limits_{j\prec k\prec l\prec i}u_{kl}^2\!\!\prod\limits_{\substack{j\prec k\prec i\\i\prec l\prec j}}u_{kl}u_{lk},\\
-1-u_{i}&=\prod\limits_{j\neq i}u_j \prod_{i\prec j\prec k\prec i}u_{jk}.
+1-u_{i}&=\prod\limits_{j\neq i}u_j \prod_{i\prec j\prec k\prec i}u_{jk},
 \end{align*}
+where labels are vertices of a $n$-gon and $\prec$ is the counterclockwise order on
+the $n$-gon.
 
 (binary geometries)
 
@@ -819,16 +821,11 @@ of this facet is
 	F_I:=\sum_{J\subset I,J\in\mathscr P}S_J=0.
 \end{equation}
 
-Within all generalized permutahedrons, the original permutahedron is quite simple
+Within all generalized permutahedra, the original permutahedron is quite simple
 and important because any other generalized permutahedron can be degenerated from
 permutahedron by setting some $S_I$ to be zero.
 The building set of the $n$-dimensional permutahedron $\mathscr P_n$ is 
-the set of all non-empty subsets of $[0,n]$. AHBY conditions can be solved from 
-eq.\eqref{GPfacet}
-\[
-	S_I = (-1)^{|I|+1}\sum_{i\in I} S_i,
-\]
-for all non-empty subsets $I \subset [0,n]$ which are not singlets.
+the set of all non-empty subsets of $[0,n]$. 
 To get $u$-equations, we should solve $S_J$ by $F_J$ from eq.\eqref{GPfacet}, the 
 solution for permutahedron $\mathscr P_n$ is 
 \begin{equation}\label{SinF}
