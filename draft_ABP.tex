@@ -522,7 +522,7 @@ relating $\{U_A\}$ to $\{u_A\}$ by the integral
 \]
 
 The construction of $\{U_A\}$ comes from the viewpoint of \textit{big polyhedron}.
-The polytope $\mathcal P=\sum_I c_I N[p_I]$ is bounded by the inequalites
+The polytope $\mathcal P=\sum_I c_I N[p_I]$ is bounded by the inequalities
 $W_a^JS_J\geq 0$ of variables $\mathbf S=(X_1,\dots,X_d,-c_1,\dots,-c_m)$ in space 
 of $\mathbf X$, where $W_a^J$ is determined by the facet $F_a$ of $\mathcal P$. 
 These inequalities also cut out a polyhedron in the $(d+m)$-dimensional space of 
@@ -819,7 +819,7 @@ of this facet is
 	F_I:=\sum_{J\subset I,J\in\mathscr P}S_J=0.
 \end{equation}
 
-Within all generalized permutahedrons, the original permutahedron is quite simple
+Within all generalized permutahedra, the original permutahedron is quite simple
 and important because any other generalized permutahedron can be degenerated from
 permutahedron by setting some $S_I$ to be zero.
 The building set of the $n$-dimensional permutahedron $\mathscr P_n$ is 
@@ -989,6 +989,26 @@ In this section we provide an answer to the question of which degenerations of $
 The maximal set of a building set $B_{max}$ is the set of all inclusion maximal elements of the building set $B$. A building set $B$ is connected if $B_{max}$ has a single element.
 
 {\bf Theorem:}If $B_1, B_2,\cdots B_n$ are connected subsets of a building set $B$ then the corresponding nestohedron ${\mathscr N_B}$ is isomorphic to the product of the nestohedra ${\mathscr N}_{ B_1} \times{\mathscr N}_{ B_2} \cdots \times {\mathscr N}_{B_n}$.
+
+We can use the above result to construct 	a degeneration of $A_n$ which is a most general product i.e., $\prod_{p_i} A_{p_i}$ such that $\sum_{i} p_{i} = n$. 
+
+Let us consider the  $A_4$ example for which the allowed possibilities are : $A_1^{4}$, $A_1^2 \times A_2$, $A_1 \times A_3$ and $A^{2}_2$.
+ 
+For the $A_1^{4}$ the building set is $ \{ {0},{1},{2},{3},{4},{01},{12},{23},{34} \}$ where $\{0,01\} , \{1,12\},\{2,23\},\{3,34\}$ generate the 4 $A_1$'s.
+
+For the $A_1^{2} \times A_2$ the building set is $ \{ {0},{1},{2},{3},{4},{01},{12},{23},{34},{234} \}$ where $\{0,01\} , \{1,12\} $ generate the 2 $A_1$'s and $\{2,3,4,23,34,234\}$ generates the $A_2$'s.
+
+For the $A_1 \times A_3$ the building set is $ \{ {0},{1},{2},{3},{4},{01},{12},{23},{34},{123},{234},{1234} \}$ where $\{0,01\}$ is the generates the $A_1$ and $\{{1},{2},{3},{4},{12},{23},{34},{123},{234},{1234} \}$ generate  $A_3$'s.
+
+For the $A_2^{2}$ the building set is $ \{ {0},{1},{2},{3},{4},{01},{12},{23},{34} ,{012},{234}\}$ where $\{0,1,2,01,12,012\}$  and $\{2,3,4,23,34,234\}$ generate the 2 $A_2$'s.
+
+We can similarly find a degeneration of $A_n,B_n,~or~ {\mathscr P_n}$ which would correspond to any product.
+
+
+
+
+
+
 
 \section*{Permutahedron}
  For $x_1,x_2, \cdots, x_{n+1} \in \mathbb{R} $ , the permutahedron $P_n(x_1,\cdots,x_{n+1})$ is a convex polytope in $\mathbb{R}^{n+1}$ defined as the convex hull of all vectors obtained from $(x_1,x_2, \cdots, x_{n+1})$ by permutations of the coordinates:
