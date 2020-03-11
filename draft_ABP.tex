@@ -846,21 +846,21 @@ gives that
 \]
 For example, the $u$-variables of $\mathscr P_2$ are
 \[
-	u_{1}  = \frac{x_1 x_{123}}{x_{12}x_{13}},\quad 
-	u_{2}  = \frac{x_2 x_{123}}{x_{12}x_{23}},\quad
-	u_{3}  = \frac{x_3 x_{123}}{x_{13}x_{23}},\quad
-	u_{12} = \frac{x_{12}}{x_{123}},\quad 
-	u_{13} = \frac{x_{13}}{x_{123}},\quad
-	u_{23} = \frac{x_{23}}{x_{123}}.
+	u_{0}  = \frac{x_0 x_{012}}{x_{01}x_{02}},\quad 
+	u_{1}  = \frac{x_1 x_{012}}{x_{01}x_{12}},\quad
+	u_{2}  = \frac{x_2 x_{012}}{x_{02}x_{12}},\quad
+	u_{01} = \frac{x_{01}}{x_{012}},\quad 
+	u_{02} = \frac{x_{02}}{x_{012}},\quad
+	u_{12} = \frac{x_{12}}{x_{012}}.
 \]
 They satisfy the following equations
 \begin{align*}
-	&1-u_{1}=u_{2} u_{3} u_{23}^2,
-	1-u_{2}=u_{1} u_{3} u_{13}^2,
-	1-u_{3}=u_{1} u_{2} u_{12}^2,\\
-	&1-u_{12}=u_{3} u_{13} u_{23},
-	1-u_{13}=u_{2} u_{12} u_{23},
-	1-u_{23}=u_{1} u_{12} u_{13}.
+	&1-u_{0}=u_{1} u_{2} u_{12}^2,
+	1-u_{1}=u_{0} u_{2} u_{02}^2,
+	1-u_{2}=u_{0} u_{1} u_{01}^2,\\
+	&1-u_{01}=u_{2} u_{02} u_{12},
+	1-u_{02}=u_{1} u_{01} u_{12},
+	1-u_{12}=u_{0} u_{01} u_{02}.
 \end{align*}
 We will discuss these $u$-equations in the next subsection.
 
@@ -988,7 +988,8 @@ In this section we shall consider some degenerations of $A_n$ and $B_n$ and show
 
 {\bf linear factors, (standard) string integrals, ABHY and $u$ variables, talk about hyperplane arrangement}
 
-Let's define $[i,j]=\{i,i+1,\dots,j\}$ for $i,j\in \mathbb Z/(n+1)\mathbb Z$. 
+Let's define $[i,j]=\{i,i+1,\dots,j\}$ for $i,j\in \mathbb Z/(n+1)\mathbb Z$.
+%For the symbol $X=x,u,S,F$, we also use the notation $X_{ij}:=X_{[i,j-1]}$.
 
 The building set of $A_n$ is
 \[\left\{
@@ -1001,8 +1002,31 @@ The building set of $A_n$ is
 	&\{0\},\{1\},\dots,\{n\}
 \end{aligned}\right.
 \]
+The facets are given by eq.\eqref{GPfacet}
+\[
+F^A_{[i,j]}=\sum_{i\leq k\leq l\leq j}S_{[k,l]},
+\]
+and their solution is 
+\[
+S_{[i,j]}=F^A_{[i,j]}+F^A_{[i+1,j-1]}-F^A_{[i,j-1]}-F^A_{[i+1,j]},
+\]
+where $F^A_{[k,l]}:=0$ when $k>l$ or $[k,l]=[0,n]$. Using this solution to rewrite the integrand
+\[
+\prod_{0\leq i\leq j\leq n}x_{[i,j]}^{S_{[i,j]}}
+=\prod_{0\leq i\leq j\leq n}\frac{x_{[i,j]}^{F^A_{[i,j]}}x_{[i,j]}^{F^A_{[i+1,j-1]}}}{x_{[i,j]}^{F^A_{[i,j-1]}}x_{[i,j]}^{F^A_{[i+1,j]}}}
+=
+\prod_{0\leq i\leq j\leq n}x_{[i,j]}^{F^A_{[i,j]}}
+\prod_{1\leq i\leq j\leq n-1}x_{[i-1,j+1]}^{F^A_{[i,j]}}
+\prod_{0\leq i\leq j\leq n-1}x_{[i,j+1]}^{-F^A_{[i,j]}}
+\prod_{1\leq i\leq j\leq n}x_{[i-1,j]}^{-F^A_{[i,j]}},
+\]
+and we get that
+\[
+u_{[i,j]}=\frac{x_{[i,j]}x_{[i-1,j+1]}}{x_{[i,j+1]}x_{[i-1,j]}} \quad \text{for $0\leq i\leq j\leq n$,}
+\]
+where $x_{[i,n+1]}:=1$ and  $x_{[-1,j]}:=1$.
 
-The 
+(Zhenjie: notation! u-eq!)
 
 The building set of $B_n$ is
 \[\left\{
@@ -1015,6 +1039,20 @@ The building set of $B_n$ is
 	&\{0\},\{1\},\dots,\{n\}
 \end{aligned}\right.
 \]
+The facets are given by eq.\eqref{GPfacet}
+\[
+F^B_{[i,j]}=\sum_{[k,l]\subset [i,j]}S_{[k,l]},
+\]
+and their solution is 
+\[
+S_{[i,i]}=F^B_{[i,i]},\quad S_{[i,j]}=F^B_{[i,j]}+F^B_{[i+1,j-1]}-F^B_{[i,j-1]}-F^B_{[i+1,j]}\quad \text{for $i\neq j$},
+\]
+where $F^B_{[i+1,i]}:=0$. Therefore, the $u$-variables are
+\[
+u_{[i,j]}=\frac{x_{[i,j]}x_{[i-1,j+1]}}{x_{[i,j+1]}x_{[i-1,j]}} \quad (?)
+\]
+
+(Zhenjie: notation! u-eq!)
 
 \subsection{Degenerations of $A_n$ and $B_n$ with perfect $u$ equations} 
 
