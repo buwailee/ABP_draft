@@ -1022,11 +1022,12 @@ where $F^A_{[k,l]}:=0$ when $k>l$ or $[k,l]=[0,n]$. Using this solution to rewri
 \]
 and we get that
 \[
-u_{[i,j]}=\frac{x_{[i,j]}x_{[i-1,j+1]}}{x_{[i,j+1]}x_{[i-1,j]}} \quad \text{for $0\leq i\leq j\leq n$,}
+u_{i,j+2}:=u_{[i,j]}=\frac{x_{[i,j]}x_{[i-1,j+1]}}{x_{[i,j+1]}x_{[i-1,j]}} \quad \text{for $0\leq i\leq j\leq n$,}
 \]
-where $x_{[i,n+1]}:=1$ and  $x_{[-1,j]}:=1$.
-
-(Zhenjie: notation! u-eq!)
+where $x_{[i,n+1]}:=1$ and  $x_{[-1,j]}:=1$. $u$-equations are
+\[
+1-u_{ij}=\prod_{(k,l)\not\sim (i,j)}u_{kl}.
+\]
 
 The building set of $B_n$ is
 \[\left\{
@@ -1049,10 +1050,20 @@ S_{[i,i]}=F^B_{[i,i]},\quad S_{[i,j]}=F^B_{[i,j]}+F^B_{[i+1,j-1]}-F^B_{[i,j-1]}-
 \]
 where $F^B_{[i+1,i]}:=0$. Therefore, the $u$-variables are
 \[
-u_{[i,j]}=\frac{x_{[i,j]}x_{[i-1,j+1]}}{x_{[i,j+1]}x_{[i-1,j]}} \quad (?)
+u_i:=u_{[i,i-2]}=\frac{x_{[i,i-2]}}{x_{[0,n]}},\quad 
+u_{i,j+2}:=u_{[i,j]}=\frac{x_{[i,j]}x_{[i-1,j+1]}}{x_{[i,j+1]}x_{[i-1,j]}}
+\quad \text{for $i-j\neq 2$}.
 \]
-
-(Zhenjie: notation! u-eq!)
+$u$-equations are
+\[
+1-u_i=U_{[i+1,i-1]},\quad 
+1-u_{ij}=U_{[i+1,j],[j+1,i-1]}U_{[j+1,i-1],[i,j-1]}U^2_{[j+1,i-1]},
+\]
+where 
+\[
+U_{A,B}=\prod_{a\in A,b\in B}u_{ab},\quad 
+U_A=\prod_{a\in A}u_a\prod_{a<b\in A}u_{ab}.
+\]
 
 \subsection{Degenerations of $A_n$ and $B_n$ with perfect $u$ equations} 
 
