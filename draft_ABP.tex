@@ -935,14 +935,19 @@ u_J &=& ~~\prod_{J \subset I} x_I^{(-1)^{|I|-|J|}} \nonumber \\
 u^{'}_J &=& \prod_{{0 \in I}\atop{ \{0,\cdots,n\} - I \subset J}} x_I^{(-1)^{|I|-|J|+mod(n, 2)}} \nonumber
 \eea
 From above it is evident that $u^{'}_{I} = u_{\bar{I}} $ where $\bar{I}=[0,n]-I$ for all subsets $I$ that do not contain $0$. 
-({\bf Zhenjie: so why do we need $u'_J$?})
 And the $2^{n+1}-2$ facets corresponding to proper subsets of $[0,n]$ correspond to the two copies of the $2^{n}-1$ non-empty subsets of $[1,n]$.
 
 \item From the definition of the permutahedron as a Nestohedron we know that $I$ and $J$ are :
 
-{\bf compatible if} $I\cap J = \emptyset$ or $I\cap J \neq \emptyset$ and either $I \subset J$ or $J \subset I$
+% {\bf compatible if} $I\cap J = \emptyset$ or $I\cap J \neq \emptyset$ and either $I \subset J$ or $J \subset I$
 
-{\bf incompatible if}   $I\cap J \neq \emptyset$ or $I\cap J = \emptyset$ and neither $I \not\subset J$ or $J \not\subset I$
+% {\bf incompatible if}   $I\cap J \neq \emptyset$ or $I\cap J = \emptyset$ and neither $I \not\subset J$ or $J \not\subset I$
+
+{\bf compatible if and only if} $\{[0,n],I,J\}$ is a nested set, i.e.
+\[
+I\subset J\quad \text{or}\quad J\subset I\quad \text{or}\quad (J\cap I=\varnothing \quad \text{and}\quad J\cup I\not\in \mathscr P_n).
+\]
+For permutohedron, $J\cup I$ is always contained in $\mathscr P_n$ for any $I$ and $J$, so it's compatible if and only if $J\subset I$ or $I\subset J$.
 
 Thus, each $u_I$ is compatible with itself and incompatible with $u^{'}_I$.
 
@@ -1064,6 +1069,7 @@ where
 U_{A,B}=\prod_{a\in A,b\in B}u_{ab},\quad 
 U_A=\prod_{a\in A}u_a\prod_{a<b\in A}u_{ab}.
 \]
+
 
 \subsection{Degenerations of $A_n$ and $B_n$ with perfect $u$ equations} 
 
