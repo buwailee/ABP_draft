@@ -22,6 +22,7 @@
 \usepackage{comment}
 
 
+\usepackage{enumitem} 
 
 
 \usepackage[utf8]{inputenc}
@@ -654,7 +655,7 @@ where $f_i$ are polynomials such that $f_i(\dots,u_i=0,\dots)=1$.
 In this section we shall argue that  a large subset of generalised permutahedra which are realised as degenerations of permutahderon ${\mathscr P_n}$ are binary geometries. Before we proceed we shall review some details about the generalised permutahedra which we shall use throughout the paper.
 \subsection{Generalized permutohedra} {\bf the definition, facets and combinatorial factorizations, do $P_n$ example in full details.}
 ******************************************************************************************
-\section*{Permutahedron}
+\subsubsection*{Permutahedron}
  For $x_1,x_2, \cdots, x_{n+1} \in \mathbb{R} $ , the permutahedron ${\mathscr P_n}(x_1,\cdots,x_{n+1})$ is a convex polytope in $\mathbb{R}^{n+1}$ defined as the convex hull of all vectors obtained from $(x_1,x_2, \cdots, x_{n+1})$ by permutations of the coordinates:
  \bea
 {\mathscr P_n}(x_1,x_2, \cdots, x_{n+1}) = {\rm ConvexHull} \{ (x_{w(1)},x_{w(2)}, \cdots, x_{w(n+1)})~ |~ w \in S_{n+1} \}, \nonumber
@@ -663,7 +664,7 @@ In this section we shall argue that  a large subset of generalised permutahedra 
  
  The permutahedron has $(n+1)!$ vertices and is of dimension at most $n$ since it lies in the hyperplane 
  \bea
- H_c= \{(t_1,t_2, \cdots, t_{n+1}) | t_1 + t_2 + \cdots + t_{n+1}= c \} \subset \mathbb{R}^{n+1}, \nonumber
+ H_c= \{(t_1,t_2, \cdots, t_{n+1}) ~|~ t_1 + t_2 + \cdots + t_{n+1}= c \} \subset \mathbb{R}^{n+1}, \nonumber
  \eea
 where $c= x_1+x_2+ \cdots +x_{n+1}$.
 
@@ -690,7 +691,7 @@ It also follows from above that a face $\pi_{S_1,\cdots,S_k}$ is contained in an
 \end{itemize}
 We shall now talk about generalized permutahedra which are polytopes obtained by deformations of the usual permutahedron i.e., obtained by moving the vertices of the usual permutahedron so that the directions of all the edges are preserved or equivalently translating facets without allowing them to move past vertices which may cause some of the edges to degenerate into points.
 
-\subsection*{Generalized permutahedra}
+\subsubsection*{Generalized permutahedra}
 
 A  generalised permutahedron is obtained by parallel translation of facets of the usual permutahedron it is parametrized  by a collection $\{ z_I\}$ of $2^{n+1}-1$ coordinates, for non-empty sets of $I \subset [0,n] $
  \bea \label{genperm_defi}
@@ -714,7 +715,8 @@ A collection of non-empty subsets of $[0,n]$ is called a building set $B$ if it 
     \item $B$ contains all singletons $\{ i\}$ for $i \in S$.
 \end{compactenum}
 To describe the combinatorial structure we need the notion of {\it Nested complex} which we shall define now.
-\subsection*{Nested Complex}
+
+\subsubsection*{Nested Complex}
 A subset $N$ in the building set $B$ is called a {\it nested set} if it satisfies the following conditions:
 \begin{compactenum}[\quad (1)]
     \item For any $I,J \in N$, we either have $I \subset J$ or $J\subset I$ or $I$ and $J$ are disjoint.
@@ -723,7 +725,7 @@ A subset $N$ in the building set $B$ is called a {\it nested set} if it satisfie
 \end{compactenum}
 The {\it nested complex} $\mathcal{N}(B)$ is defined as the poset of the set of all nested sets in $B$ ordered by inclusion.
 
- \begin{itemize}
+\begin{itemize}
 
 \item {\bf Facial structure:} Let us assume that the set $B$ associated with a generalised permutahedron ${\mathscr N_n}^{y}$ is a building set on $[0,n]$. Then the poset of faces ${\mathscr N_n}^{y}$ ordered by reverse inclusion is isomorphic to the nested complex $\mathcal{N}(B)$. 
 
@@ -873,21 +875,85 @@ We will discuss these $u$-equations in the next subsection.
 For a element $I$ in the building set $\mathcal{B}$, we define $I_{\text{max}}=\Bigl(\bigcup_{j\sim I} \{j\} \Bigr)\cup I$
 where $j\sim I$ means the singleton $j$ is attached to $I$ in the corresponding graph, then 
 \begin{equation}
-   u_{I} = \prod_{ I \subset J \subset I_{\text{max}}}x_J^{(-1)^{|I|-|J|}}.
+   u_{I} = \prod_{ I \subset J \subset I_{\text{max}}}x_J^{(-1)^{|I|-|J|}}. \label{uvarforgraph}
 \end{equation}
-This conjecture can be extended to generalized permutohedra, but I only have checked the several cases of graph associahedra for now.
 
-Based on the above conjecture,  there is a statement for the binary geometries corresponding to the facet $u_{I}\to 0$, 
-that is the $u$-system for the facet $u_{I}\to 0$ is corresponding to the generlaized permutohedra $\mathcal{P}_{I}\otimes \mathcal{P}_{\bar{I}}$ with building sets  
-\[
-\mathcal{B}_{I} = \{J\vert J\subset I, J\in \mathcal{B}\}
-\]
-and 
-\[
-\mathcal{B}_{\bar{I}} = \{J-I\vert  J\in \mathcal{B}-\mathcal{B}_{I} \}
-\]
-where $J-I$ means the complement of $J$ with respect to $I$. This statement directly follow from the fact that $u_{I}\to 0$ is equivalent to take $x_{i}\to t x_{i} $ for $i\in I$ then take $t \to 0$
-)
+\subsubsection{The binary aspects of $u$-variables for graph associahedra}
+
+Here we want to show that the $u_{I}$'s defined in \eqref{uvarforgraph} have the desired binary property, that is, $u_{I}$ and $u_{J}$ are compatible if and only if $I$ and $J$ are one of the following three cases:
+\begin{enumerate}
+   \item $I\subset J$\:,
+   \item $J\subset I$ \:,
+   \item $I\cap J=\emptyset$ and $I\cup J \notin \mathcal{B}$ \:.
+\end{enumerate}
+In other words, this means that $u_{I}$ and $u_{J}$ are incompatible if $I$ and $J$ are one of the following two cases:
+\begin{enumerate}[resume]
+   \item $I\cap J=\emptyset$ and $I\cup J \in \mathcal{B}$ \:, 
+   \item $I\cap J \neq \emptyset,I, J $ \:.
+\end{enumerate}
+
+A crucial observation here is that $u_{J}\to 0$ is equivalent to $x_{J}\to 0 $ according to \eqref{uvarforgraph} since all $x_{i}$ are non-negative. We can approach this limit by replacing $x_{j}$ with $ \epsilon x_{j}$ for all $j\in J$ then taking $\epsilon \to 0$. Then the remaining task is just to consider the behaviour of the other $u_{I}$'s under this limit. In the following arrangement, it is convenient to introduce 
+\begin{equation}
+  p(J_{1},J_{2},\cdots,J_{n}):= \sum_{j\in J } x_{j} \:.
+\end{equation}
+where $J= \bigcup_{a=1}^{n} J_{a}$
+
+For case (1). First note that if $j\in J$ is not attached to $I$, then $x_{j}$ is independent of $u_{I}$ according to \eqref{uvarforgraph}. Thus, we can decompose $J$ into three parts, 
+\begin{equation}
+   J= I\cup J_{c}\cup \bar{J}_{c}
+\end{equation}
+where $J_{c}$ is the set of all singletons in $J$ connected with $I$, $\bar{J}_{c}$ is the set of remaining singletons. Furthermore, We denote $K=I_{\text{max}}-I-J_{c} $ as the set of all singletons which don't belong to $J$ but is connected with $I$. Then we have
+\begin{align}
+   \lim_{\epsilon \to 0}\log u_{I}&=\lim_{\epsilon \to 0}\sum_{\psi\subset J_{c},\kappa\subset K} (-1)^{\lvert \psi\rvert  +\lvert\kappa\rvert} \log p(I_{\epsilon},\psi_{\epsilon},\kappa) \nonumber \\ 
+   &= (-1)^{\lvert \psi\rvert }\sum_{\psi\subset J_{c}}\log p(I,\psi) + \biggl(\log\epsilon +\sum_{\kappa\neq \emptyset}(-1)^{\lvert\kappa\rvert}\log p(\kappa)\biggr)\sum_{\psi\subset J_{c}}(-1)^{\lvert \psi\rvert } \binom{\lvert\psi\rvert }{\lvert J_{c}\rvert } \nonumber \\
+   &=  (-1)^{\lvert \psi\rvert }\sum_{\psi\subset J_{c}}\log p(I,\psi) 
+     \:,
+\end{align}
+where $I_{\epsilon}$ and $\psi_{\epsilon}$ indicate that their elements are multiplied with $\epsilon$.
+
+Case (2) and (3) are trivial, we leave them to the reader. 
+
+Now let us consider case (4). For this case, we can decompose J into two parts,
+\begin{equation}
+   J=J_{c}\cup \bar{J}_{c}
+\end{equation}
+where again $J_{c}$ is the set of all singletons in $J$ connected with $I$, $\bar{J}_{c}$ is the set of remaining singletons. As the above, we denote $K=I_{\text{max}}-I-J_{c} $ as the set of all singletons which don't belong to $J$ but is connected with $I$. Then
+\begin{align}
+   \lim_{\epsilon \to 0}\log u_{I}&=\lim_{\epsilon \to 0}\sum_{\psi\subset J_{c},\kappa\subset K} (-1)^{\lvert \psi\rvert  +\lvert\kappa\rvert} \log p(I,\psi_{\epsilon},\kappa) \nonumber \\ 
+   &= \sum_{\kappa\subset K}(-1)^{\lvert\kappa\rvert}\log p(I,\kappa)\Biggl(\sum_{\psi\subset J_{c}}(-1)^{\lvert \psi\rvert } \binom{\lvert\psi\rvert }{\lvert J_{c}\rvert } \Biggr)\nonumber \\
+   &=  0
+     \:.
+\end{align}
+The argument for case (5) is similar with case (4), we omit here.
+
+\paragraph{Quickly review of the facet structure of graph associahedra} Given a graph $\Gamma$ and its subgraph $\Gamma_{J}$, construct a new graph $\Gamma_{J}^{\ast}$ called the reconnected complement: If $V$ and $J$ are the sets of nodes of $\Gamma$ and $\Gamma_{J}$ respectively, then $V-J$ is the set of nodes of $\Gamma_{J}^{\ast}$. There is an edge between nodes $a$ and $b$ in $\Gamma_{J}^{\ast}$ if either $\{a, b\}$ or $\{a, b\}\cup J$ is connected in $\Gamma$. If we denote the corresponding graph associahedron for $\Gamma$ by $\mathcal{P}\Gamma$, then each subgraph $\Gamma_{J}$ corresponds a facet of $\mathcal{P}\Gamma$. In particular, this facet is combinatorially equivalent to $\mathcal{P}\Gamma_{J}\times \mathcal{P}\Gamma_{J}^{\ast}$\cite{}.
+
+It can easily check that, under the limit of $u_{J}\to 0$, $u_{I}$ in case (1) give the $u$-variables for $\mathcal{P}\Gamma_{J}$, while  $u_{I}$ in case (2) and (3) give the $u$-variables for $\mathcal{P}\Gamma_{J}^{\ast}$
+
+{\bf A conjecture for $u$-variables of generalized permutahdera (nextohedra)}
+
+For each element $ I\in \mathcal B$, we define $I^{(0)}=\{I\}$ and  $I^{(1)}$ as the set of all $J\supsetneq I $ such that  $I$ is the ``maximal subset'' of $J$ in $\mathcal{B}$ (that is, there is no $K\in \mathcal{B}$ such that $I\subsetneq K\subsetneq J $). Then, we recursively define 
+\begin{equation}
+   I^{(i+1)} = \{I^{(i)}_{a}\cup I^{(i)}_{b}\vert I_{a,b}^{(i)}\in I^{(i)},\text{$I_{a}^{(i)}$ and $I_{b}^{(i)}$ are ``maximal subsets'' of $I^{(i)}_{a}\cup I^{(i)}_{b}$ }\}
+\end{equation} 
+and stop when $\lvert I^{(s)}\rvert =1$. With the defination of $I^{(i)}$, the coresponding $u$-variable is
+\begin{equation}
+   u_{I} =\prod_{i}(-1)^{i} \prod_{I_{a}^{(i)}\in I^{(i)}} p(I_{a}^{(i)})
+\end{equation}
+
+% This conjecture can be extended to generalized permutohedra, but I only have checked the several cases of graph associahedra for now.
+
+% Based on the above conjecture,  there is a statement for the binary geometries corresponding to the facet $u_{I}\to 0$, 
+% that is the $u$-system for the facet $u_{I}\to 0$ is corresponding to the generlaized permutohedra $\mathcal{P}_{I}\otimes \mathcal{P}_{\bar{I}}$ with building sets  
+% \[
+% \mathcal{B}_{I} = \{J\vert J\subset I, J\in \mathcal{B}\}
+% \]
+% and 
+% \[
+% \mathcal{B}_{\bar{I}} = \{J-I\vert  J\in \mathcal{B}-\mathcal{B}_{I} \}
+% \]
+% where $J-I$ means the complement of $J$ with respect to $I$. This statement directly follow from the fact that $u_{I}\to 0$ is equivalent to take $x_{i}\to t x_{i} $ for $i\in I$ then take $t \to 0$
+% )
 
 
 
@@ -949,7 +1015,7 @@ I\subset J\quad \text{or}\quad J\subset I\quad \text{or}\quad (J\cap I=\varnothi
 \]
 For permutohedron, $J\cup I$ is always contained in $\mathscr P_n$ for any $I$ and $J$, so it's compatible if and only if $J\subset I$ or $I\subset J$.
 
-Thus, each $u_I$ is compatible with itself and incompatible with $u^{'}_I$.
+% Thus, each $u_I$ is compatible with itself and incompatible with $u^{'}_I$.
 
 \item  Since, the permutahedron is permutation invariant in all $x_i$'s this should be reflected at the level of $u$'s and all $u_I$ and $u^{'}_{J}$ with the same $|I|$ and $|J| =n-|I|$ should have similar $u$-equations. We see that this is indeed the case :
 
