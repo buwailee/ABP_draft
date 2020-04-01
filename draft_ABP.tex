@@ -941,6 +941,30 @@ and stop when $\lvert I^{(s)}\rvert =1$. With the defination of $I^{(i)}$, the c
    u_{I} =\prod_{i}(-1)^{i} \prod_{I_{a}^{(i)}\in I^{(i)}} p(I_{a}^{(i)})
 \end{equation}
 
+**************
+
+(Zhenjie: A possible way to find some $u$-equations of generalized permutohedra:)
+
+For a generic generalized permutohedra $\mathscr P$, it's usually difficult to solve $S_I$ by $\{F_I\}$  from eq.\eqref{GPfacet} and then get $u$-variables, but we can directly use eq.\eqref{GPfacet} to express $x_I$ by $\{u_I\}$ which give us many algebraic equations of $u$-variables. In fact,
+\[
+\prod_{I\in \mathscr P}x_I^{S_I}=\prod_{J\in \mathscr P}u_J^{F_J}=\prod_{J\in\mathscr P}\prod_{I\subset J,I\in \mathscr P}u_J^{S_I}=\prod_{I\in\mathscr P}\biggl(\prod_{J\supset I,J\in\mathscr P}u_J\bigg)^{S_I},
+\]
+so
+\[
+x_I=\prod_{J\supset I,J\in\mathscr P}u_J
+\]
+for any $I\in \mathscr P$, where we introduce a fake $u$-variable $u_{[0,n]}:=x_{[0,n]}$. We know some algebraic equations of $\{x_I\}$, for example, $x_I+x_J=x_{[0,n]}$ for $I\cap J=\varnothing$ and $I\cup J=[0,n]$, so (I will omit all $\text{sth}\in \mathscr P$ for short.)
+\[
+\prod_{K\supset I}u_K+\prod_{K\supset J}u_K=u_{[0,n]},
+\]
+or (since we always assume that $u_{[0,n]}=x_{[0,n]}\neq 0$)
+\[
+\prod_{I\subset K\neq [0,n]}u_K +
+\prod_{J\subset K\neq [0,n]}u_K = 1.
+\]
+(Zhenjie: I guess all possible $u$-equations are consequences of some algebraic equations of $x_I$ which is in fact we have seen in the calculation of $1-u_I$.)
+
+
 % This conjecture can be extended to generalized permutohedra, but I only have checked the several cases of graph associahedra for now.
 
 % Based on the above conjecture,  there is a statement for the binary geometries corresponding to the facet $u_{I}\to 0$, 
