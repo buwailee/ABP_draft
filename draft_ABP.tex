@@ -1092,16 +1092,24 @@ The $u$ equations are
    &1-u_{234}=u_{1}u_{12}u_{13}u_{123}u_{134} \:, 
 \end{align} 
 \subsection{Permutahedron as a binary geometry}
-In this section we shall try to argue that the permutahedron is a binary geometry. We shall first summarise the following facts about the permutahedron from our discussion in the earlier sections:
+
+\textcolor{red}{(Prashanth: An attempt to prove $P_n$ is binary using Chi's method.)}
+
+In this section we shall try to argue that the permutahedron is a binary geometry. We shall first summarise the following facts about the permutahedron:
 \begin{enumerate}
 \item The $u$-variables for the permutahedron are: 
 \bea
-u_J &=& ~~\prod_{J \subset I} x_I^{(-1)^{|I|-|J|}} \nonumber \\
-u^{'}_J &=& \prod_{{0 \in I}\atop{ \{0,\cdots,n\} - I \subset J}} x_I^{(-1)^{|I|-|J|+mod(n, 2)}} \nonumber
+u_J &=& ~~\prod_{J \subset I} x_I^{(-1)^{|I|-|J|}} \nonumber 
 \eea
-From above it is evident that $u^{'}_{I} = u_{\bar{I}} $ where $\bar{I}=[0,n]-I$ for all subsets $I$ that do not contain $0$. 
-And the $2^{n+1}-2$ facets corresponding to proper subsets of $[0,n]$ correspond to the two copies of the $2^{n}-1$ non-empty subsets of $[1,n]$.
+The above relations can also be inverted to obtain $x_I$ as follows:
 
+For $0 \notin I $
+\bea
+x_I &=& \frac{\prod_{I \subset J} u_{J}}{1-\prod_{I \subset J} u_{J}} \\
+\frac{1}{1+ x_I} &=& \prod_{{J}\atop{J\cap \bar{I} \ne \emptyset}} u_{\bar{J}}
+\eea
+From the above relations it is clear that taking $u_I \rightarrow 0$ for $0 \notin I$ implies $x_J \rightarrow 0$ for all $J \subset I$ and taking $u_\bar{I} \rightarrow 0$ for $0 \in I$ implies $x_J \rightarrow \infty $ for all $I \subset J$.
+In fact we shall argue that there is unique choice of $x_I$'s which we can take to $0$ or $\infty$ which corresponds to setting a particular $u_I \rightarrow 0$ or $u_\bar{I} \rightarrow 0$ respectively.
 \item From the definition of the permutahedron as a Nestohedron we know that $I$ and $J$ are :
 
 % {\bf compatible if} $I\cap J = \emptyset$ or $I\cap J \neq \emptyset$ and either $I \subset J$ or $J \subset I$
@@ -1114,9 +1122,54 @@ I\subset J\quad \text{or}\quad J\subset I\quad \text{or}\quad (J\cap I=\varnothi
 \]
 For permutohedron, $J\cup I$ is always contained in $\mathscr P_n$ for any $I$ and $J$, so it's compatible if and only if $J\subset I$ or $I\subset J$.
 
+The above  follows directly from the following relations amongst $u$ for each $I$ such that $0\notin I$ :
+\bea
+1-\prod_{I \subset J} u_{J} &=& \prod_{{J}\atop{J\cap \bar{I} \ne \emptyset}} u_{\bar{J}} \\
+1-\prod_{J \subset I} u_{\bar{J}} &=& \prod_{I \subset J} u_{J} \prod_{J \subset \bar{I} } u_{\bar{J}}
+\eea
+
 % Thus, each $u_I$ is compatible with itself and incompatible with $u^{'}_I$.
 
-\item  Since, the permutahedron is permutation invariant in all $x_i$'s this should be reflected at the level of $u$'s and all $u_I$ and $u^{'}_{J}$ with the same $|I|$ and $|J| =n-|I|$ should have similar $u$-equations. We see that this is indeed the case :
+\item  Since, the permutahedron is permutation invariant in all $x_i$'s this should be reflected at the level of $u$'s and this is indeed the case as $u_I$ with the same $|I|$ have similar $u$'s. i.e $u_J$ can be obtained from $u_I$ for $|J|=|I|$ by interchange of some of the $x_i$'s.
+
+We shall prove $\mathscr P_{n+1}$ is binary by showing that whenever we take some $u_I \rightarrow 0$ (by taking a unique set of $x_i \rightarrow 0, \infty$) then $u_J \rightarrow 1$ for $J$ incompatible with $I$ and the remaining $u$'s reduce to the $u$'s corresponding to $\matchscr P_k \times \mathscr P_{n-k}$. 
+
+It is enough to consider $u_1, u_{12},\cdots,u_{12...n(n+1)} \rightarrow 0$ and  $u_0, u_{0(n+1)},u_{0,n(n+1)}\cdots,u_{02...n(n+1)} \rightarrow 0$.
+
+We have the following cases:
+\begin{enumerate}
+    \item $u_I \rightarrow 0$ with $0\notin I$ and $|I| < \lfloor \frac{n+1}{2} \rfloor$ i.e $I = \{ \{1\},\{1,2\},\cdots,\{1,2,\cdots, \lfloor \frac{n+1}{2} \rfloor -1 \} \}$
+    
+    In this case we take $x_i \rightarrow t x_i$ for $i=1,\cdots \lfloor \frac{n+1}{2} \rfloor$ and consider the limit $t \rightarrow 0$ to give:
+    \bea
+    u^{(n+1)}_{J \cup  I} &\rightarrow& u_{J}^{((n+1)-|I|)} ~\text{with}~ J\subseteq\bar{I}\\
+     u^{(n+1)}_{K} &\rightarrow& u_{K}^{(|I|-1)} ~\text{with}~ K\subsetneq I
+    \eea
+   which gives $\mathscr P_{(n+1)-|I|} \times \mathscr P_{|I|-1}$ 
+    
+    
+    \item $u_I \rightarrow 0$ with $0\notin I$ and $|I| \ge \lfloor \frac{n+1}{2} \rfloor$ i.e. $I = \{\{1,2,\cdots, \lfloor \frac{n+1}{2} \rfloor\},\cdots,\{1,2,\cdots, (n+1) \} \}$
+     In this case we take $x_i \rightarrow t x_i$ for $i=1,\cdots \lfloor \frac{n+1}{2} \rfloor-1$ and $x_{\lfloor \frac{n+1}{2} \rfloor} \rightarrow t$ and  consider the limit $t \rightarrow 0$ to give:
+    \bea
+    u^{(n+1)}_{J } &\rightarrow& u_{J}^{((n+1)-|I|)} ~\text{with}~ J\subseteq \{1,\cdots,|I|-1\}\\
+     u^{(n+1)}_{J \cup \{|I|\}} &\rightarrow& u_{K \cup\{0\}}^{((n+1)-|I|)} ~\text{with}~ J\subsetneq I\{1,\cdots,|I|-1\}
+    \eea
+     \bea
+    u^{(n+1)}_{K \cup I } &\rightarrow& u_{J}^{(|I|-1)} ~\text{with}~ K\subseteq \{|I|+1,\cdots,n+1\}\\
+     u^{(n+1)}_{K \cup \{0\}\cup I} &\rightarrow& u_{K \cup{0}}^{(|I|-1)} ~\text{with}~ K\subsetneq I\{|I|+1,\cdots,n+1\}
+    \eea
+   which gives $\mathscr P_{(n+1)-|I|} \times \mathscr P_{|I|-1}$ 
+    \item $u_I \rightarrow 0$ with $0\in I$ and $|I| < \lfloor \frac{n+1}{2} \rfloor$ i.e. $I = \{\{0\},\{0,(n+1)\},\cdots,\{0,\lfloor \frac{n+1}{2} \rfloor+2,\cdots,(n+1)\}$
+    In this case we take $x_i \rightarrow \frac{ x_i}{t}$ for $i=1,\cdots \lfloor \frac{n+1}{2} \rfloor$ and $x_{\lfloor \frac{n+1}{2}+1 \rfloor} \rightarrow \frac{1}{t}$ and  consider the limit $t \rightarrow 0$ to give:
+    \item $u_I \rightarrow 0$ with $0\in I$ and $|I| \ge \lfloor \frac{n+1}{2} \rfloor$ i.e. $I = \{\{0,\lfloor \frac{n+1}{2} \rfloor+1,\cdots,(n+1)\},\cdots,\{0,2,\cdots,(n+1)\} \}$
+    In this case we take $x_i \rightarrow \frac{ x_i}{t}$ for $i=1,\cdots \lfloor \frac{n+1}{2} \rfloor$ and $x_{\lfloor \frac{n+1}{2}+1 \rfloor} \rightarrow \frac{1}{t}$ and  consider the limit $t \rightarrow 0$ to give:
+\end{enumerate}
+
+
+
+
+
+
 
 Some of the $u$-equations for the $n$-dimensional permutahderon:\\
 
@@ -1147,8 +1200,8 @@ The other $u$-equations are not two or three term equations and seem to be polyn
 where, $J$ are all sets incompatible with $I$
 
  $K$ are all sets compatible with $I$ excluding itself 
- 
-  $s_J$ are positive integers. 
+ $s_J$ are positive integers. 
+
 \end{enumerate}
 We shall now try to argue ${\mathscr P_n}$ is binary. We proceed inductively by first noticing that 
 \section{Configuration spaces with perfect $u$-equations from degenerating $A_n$ and $B_n$}
