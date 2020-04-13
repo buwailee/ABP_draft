@@ -1108,8 +1108,8 @@ For $0 \notin I $
 x_I &=& \frac{\prod_{I \subset J} u_{J}}{1-\prod_{I \subset J} u_{J}} \\
 \frac{1}{1+ x_I} &=& \prod_{{J}\atop{J\cap \bar{I} \ne \emptyset}} u_{\bar{J}}
 \eea
-From the above relations it is clear that taking $u_I \rightarrow 0$ for $0 \notin I$ implies $x_J \rightarrow 0$ for all $J \subset I$ and taking $u_{\bar{I}} \rightarrow 0$ for $0 \in I$ implies $x_J \rightarrow \infty $ for all $I \subset J$.
-In fact we shall argue that there is unique choice of $x_I$'s which we can take to $0$ or $\infty$ which corresponds to setting a particular $u_I \rightarrow 0$ or $u_{\bar{I}} \rightarrow 0$ respectively.
+From the above relations it is clear that taking $u_I \rightarrow 0$ for $0 \notin I$ implies $x_J \rightarrow 0$ for all $J \subset I$ and taking $u_{\bar{I}} \rightarrow 0$ implies $x_J \rightarrow \infty $ for all $I \subset J$.
+In fact we shall argue that there is unique choice of $x_I$'s which we can take to $0$ or $\infty$ which corresponds to setting only a particular $u_I \rightarrow 0$ or $u_{\bar{I}} \rightarrow 0$ respectively.
 \item From the definition of the permutahedron as a Nestohedron we know that $I$ and $J$ are :
 
 % {\bf compatible if} $I\cap J = \emptyset$ or $I\cap J \neq \emptyset$ and either $I \subset J$ or $J \subset I$
@@ -1132,46 +1132,61 @@ The above  follows directly from the following relations amongst $u$ for each $I
 
 \item  Since, the permutahedron is permutation invariant in all $x_i$'s this should be reflected at the level of $u$'s and this is indeed the case as $u_I$ with the same $|I|$ have similar $u$'s. i.e $u_J$ can be obtained from $u_I$ for $|J|=|I|$ by interchange of some of the $x_i$'s.
 
-We shall prove $\mathscr P_{n+1}$ is binary by showing that whenever we take some $u_I \rightarrow 0$ (by taking a unique set of $x_i \rightarrow 0, \infty$) then $u_J \rightarrow 1$ for $J$ incompatible with $I$ and the remaining $u$'s reduce to the $u$'s corresponding to $\mathscr P_k \times \mathscr P_{n-k}$. 
+We shall prove $\mathscr P_{n+1}$ is binary by showing that whenever we take some $u_I \rightarrow 0$ (by taking a unique set of $x_i \rightarrow 0, \infty$) then $u_J \rightarrow 1$ for $J$ incompatible with $I$ and the remaining $u$'s reduce to the $u$'s corresponding to $\mathscr P_{k-1} \times \mathscr P_{(n+1)-k}$. 
 
-It is enough to consider $u_1, u_{12},\cdots,u_{12...n(n+1)} \rightarrow 0$ and  $u_0, u_{0(n+1)},u_{0,n(n+1)}\cdots,u_{02...n(n+1)} \rightarrow 0$.
+By the argument given above it is sufficient to consider $u_1, u_{12},\cdots,u_{12...n(n+1)} \rightarrow 0$ and $u_0, u_{0(n+1)},u_{0,n(n+1)}\cdots,u_{02...n(n+1)} \rightarrow 0$.
 
 We have the following cases:
 \begin{enumerate}
-    \item $u_I \rightarrow 0$ with $0\notin I$ and $|I| < \lfloor \frac{n+1}{2} \rfloor$ i.e $I = \{ \{1\},\{1,2\},\cdots,\{1,2,\cdots, \lfloor \frac{n+1}{2} \rfloor -1 \} \}$
+    \item $u_I \rightarrow 0$ with $0\notin I$ and $|I| < \lfloor \frac{n+1}{2} \rfloor$ i.e $I =  \{1,2,\cdots, k \}$ with $k= 1,2,\cdots, \lfloor \frac{n+1}{2} \rfloor -1$
     
-    In this case we take $x_i \rightarrow t x_i$ for $i=1,\cdots \lfloor \frac{n+1}{2} \rfloor$ and consider the limit $t \rightarrow 0$ to give:
+    In this case we take $x_i \rightarrow t x_i$ for $i=1,\cdots, k $ and consider the limit $t \rightarrow 0$ to get:
     \bea
-    u^{(n+1)}_{J \cup  I} &\rightarrow& u_{J}^{((n+1)-|I|)} ~\text{with}~ J\subseteq\bar{I}\\
-     u^{(n+1)}_{K} &\rightarrow& u_{K}^{(|I|-1)} ~\text{with}~ K\subsetneq I
+    u^{(n+1)}_{J \cup  I} &\rightarrow& u_{J}^{((n+1)-k )} ~\text{with}~ J\subseteq\bar{I}\\
+     u^{(n+1)}_{K} &\rightarrow& u_{K}^{(k-1)} ~\text{with}~ K\subsetneq I
     \eea
-   which gives $\mathscr P_{(n+1)-|I|} \times \mathscr P_{|I|-1}$ 
+   which is a $\mathscr P_{(n+1)-|I|} \times \mathscr P_{|I|-1}$ 
     
     
-    \item $u_I \rightarrow 0$ with $0\notin I$ and $|I| \ge \lfloor \frac{n+1}{2} \rfloor$ i.e. $I = \{\{1,2,\cdots, \lfloor \frac{n+1}{2} \rfloor\},\cdots,\{1,2,\cdots, (n+1) \} \}$
-     In this case we take $x_i \rightarrow t x_i$ for $i=1,\cdots \lfloor \frac{n+1}{2} \rfloor-1$ and $x_{\lfloor \frac{n+1}{2} \rfloor} \rightarrow t$ and  consider the limit $t \rightarrow 0$ to give:
+    \item $u_I \rightarrow 0$ with $0\notin I$ and $|I| \ge \lfloor \frac{n+1}{2} \rfloor$ i.e. $I = \{1,2,\cdots,k \}$ with $k= \lfloor \frac{n+1}{2} \rfloor,\cdots,(n+1)$
+    
+     In this case we take $x_i \rightarrow t x_i$ for $i=1,\cdots k-1$ and $x_{k} \rightarrow t$ and  consider the limit $t \rightarrow 0$ to get:
     \bea
-    u^{(n+1)}_{J } &\rightarrow& u_{J}^{((n+1)-|I|)} ~\text{with}~ J\subseteq \{1,\cdots,|I|-1\}\\
-     u^{(n+1)}_{J \cup \{|I|\}} &\rightarrow& u_{K \cup\{0\}}^{((n+1)-|I|)} ~\text{with}~ J\subsetneq I\{1,\cdots,|I|-1\}
+    u^{(n+1)}_{J } &\rightarrow& u_{J}^{((n+1)-k)} ~\text{with}~ J\subseteq \{1,\cdots,k-1\}\\
+     u^{(n+1)}_{J \cup \{k\}} &\rightarrow& u_{K \cup\{0\}}^{((n+1)-k)} ~\text{with}~ J\subsetneq \{1,\cdots,k-1\}
     \eea
      \bea
-    u^{(n+1)}_{K \cup I } &\rightarrow& u_{J}^{(|I|-1)} ~\text{with}~ K\subseteq \{|I|+1,\cdots,n+1\}\\
-     u^{(n+1)}_{K \cup \{0\}\cup I} &\rightarrow& u_{K \cup{0}}^{(|I|-1)} ~\text{with}~ K\subsetneq I\{|I|+1,\cdots,n+1\}
+    u^{(n+1)}_{K \cup I } &\rightarrow& u_{J}^{(k-1)} ~\text{with}~ K\subseteq \{k +1,\cdots,n+1\}\\
+     u^{(n+1)}_{K \cup \{0\}\cup I} &\rightarrow& u_{K \cup\{0\}}^{(k-1)} ~\text{with}~ K\subsetneq \{k +1,\cdots,n+1\}
     \eea
-   which gives $\mathscr P_{(n+1)-|I|} \times \mathscr P_{|I|-1}$ 
-    \item $u_I \rightarrow 0$ with $0\in I$ and $|I| < \lfloor \frac{n+1}{2} \rfloor$ i.e. $I = \{\{0\},\{0,(n+1)\},\cdots,\{0,\lfloor \frac{n+1}{2} \rfloor+2,\cdots,(n+1)\}$
-    In this case we take $x_i \rightarrow \frac{ x_i}{t}$ for $i=1,\cdots \lfloor \frac{n+1}{2} \rfloor$ and $x_{\lfloor \frac{n+1}{2}+1 \rfloor} \rightarrow \frac{1}{t}$ and  consider the limit $t \rightarrow 0$ to give:
-    \item $u_I \rightarrow 0$ with $0\in I$ and $|I| \ge \lfloor \frac{n+1}{2} \rfloor$ i.e. $I = \{\{0,\lfloor \frac{n+1}{2} \rfloor+1,\cdots,(n+1)\},\cdots,\{0,2,\cdots,(n+1)\} \}$
-    In this case we take $x_i \rightarrow \frac{ x_i}{t}$ for $i=1,\cdots \lfloor \frac{n+1}{2} \rfloor$ and $x_{\lfloor \frac{n+1}{2}+1 \rfloor} \rightarrow \frac{1}{t}$ and  consider the limit $t \rightarrow 0$ to give:
+   which is a $\mathscr P_{(n+1)-|I|} \times \mathscr P_{|I|-1}$ 
+    \item $u_I \rightarrow 0$ with $0\in I$ and $|I| < \lfloor \frac{n+1}{2} \rfloor$ i.e. $I = \{0,(k+1),\cdots,(n+1)\}$ with $k= \lfloor \frac{n+1}{2} \rfloor+1,\cdots,(n+1)$
+    
+    In this case we take $x_i \rightarrow \frac{ x_i}{t}$ for $i=1,\cdots k-1$ and $x_{k} \rightarrow \frac{1}{t}$ and  consider the limit $t \rightarrow 0$ to get:
+    \bea
+    u^{(n+1)}_{J \cup I } &\rightarrow& u_{J}^{(n+1)-k} ~\text{with}~ J\subseteq \{1,\cdots,(k-1)\}\\
+     u^{(n+1)}_{J \cup \{k\}\cup I} &\rightarrow& u_{J \cup\{0\}}^{(k-1)} ~\text{with}~ J\subsetneq \{1 ,\cdots, k\}
+    \eea
+     \bea
+    u^{(n+1)}_{K} &\rightarrow& u_{K}^{k-1} ~\text{with}~ K\subseteq I
+    \eea
+    which again is a $\mathscr P_{(n+1)-|I|} \times \mathscr P_{|I|-1}$. 
+    \item $u_I \rightarrow 0$ with $0\in I$ and $|I| \ge \lfloor \frac{n+1}{2} \rfloor$ $I = \{0,(k+1),\cdots,(n+1)\}$ with $k= 1,\cdots, \lfloor \frac{n+1}{2} \rfloor+1$.
+    
+    In this case we take $x_i \rightarrow \frac{x_i}{t}$ for $i=1,\cdots, k$ and consider the limit $t \rightarrow 0$ to get:
+    \bea
+    u^{(n+1)}_{J} &\rightarrow& u_{J}^{(n+1)-k} ~\text{with}~ J\subseteq I
+    \eea
+     \bea
+    u^{(n+1)}_{K \cup I} &\rightarrow& u_{K}^{k-1} ~\text{with}~ K\subsetneq \{1,\cdots,k\}
+    \eea
+    
+     which again is a $\mathscr P_{(n+1)-|I|} \times \mathscr P_{|I|-1}$. 
 \end{enumerate}
+This proves that the permutahedron $\mathscr P_n$ is indeed a binary geometry for all $n$.
 
-
-
-
-
-
-
-Some of the $u$-equations for the $n$-dimensional permutahderon:\\
+The above proof did not explicitly use the $u$- equations for $\mathscr P_n$. 
+The $u$-equations for $\mathscr P_n$ are complicated polynomials and Some of them are:\\
 
 For $|I| =n-1$ and $s_K = \begin{cases}  1,~ if K \not\subset I & \\ 2, ~if K \subset I\end{cases}$
 
@@ -1203,7 +1218,7 @@ where, $J$ are all sets incompatible with $I$
  $s_J$ are positive integers. 
 
 \end{enumerate}
-We shall now try to argue ${\mathscr P_n}$ is binary. We proceed inductively by first noticing that 
+ 
 \section{Configuration spaces with perfect $u$-equations from degenerating $A_n$ and $B_n$}
 In this section we shall consider some degenerations of $A_n$ and $B_n$ and show that these form an infinite class of examples of binary geometries with perfect $u$-equations. To do this we shall use the fact that both $A_n$ and $B_n$ are generalised permutahedra and can be realised as a Minkowski sum of coordinate simplices. 
 
@@ -1292,6 +1307,36 @@ U_A=\prod_{a\in A}u_a\prod_{a<b\in A}u_{ab}.
 \subsection{Degenerations of $A_n$ and $B_n$ with perfect $u$ equations} 
 
 {\bf things I wrote in my handwritten notes...}
+
+The degenerations of $A_n$ is given by setting some $c$s in ABHY construction or deleting the corresponding elements in the building set. Note that the building set after deletion doesn't need to be a new building set, \emph{i.e.} a degeneration of $A_n$ may not be a generalized permutohedron. However, we can still ask the following question: are these degenerations binary geometries? 
+Of course, we should require at least that the number of facets of the degeneration of $A_n$ should be equal to the size of the corresponding deleted building set.
+Before answer this question, let's first find all degenerations of $A_n$ with this property.
+
+%For convenience, we abuse the name `building set' for degenerations of $A_n$ in this subsection.
+
+From the following equations for facets $\{F_{ij}\}$ of $A_n$
+\[
+F_{ac}+F_{bd}-F_{bc}-F_{ad}=\sum_{a\leq p<b\atop{c\leq q<d}}c_{pq}
+\]
+for $1\leq a<b<c<d\leq n+3$, ({\bf Zhenjie}: I conjecture that) we find the most economical way to get a degeneration which satisfies the above property is setting all $c$s on the RHS of 
+\begin{align*}
+    &F_{ac}+F_{bd}-F_{ad}=\sum_{a\leq p<b< q<d}c_{pq}\quad \text{for $a<b<c=b+1<d$ }\\
+    \text{or}&\\
+    &F_{1c}+F_{b,n+3}-F_{bc}=\sum_{1\leq p<b\atop{c\leq q<n+3}}c_{pq}\quad \text{for $a=1$ and $d=n+3$}
+\end{align*}
+to be zero, and all wanted degenerations can be got by setting $c$s in several above equations. 
+%We should see what happens when we set $c$s to be zero in only one above equations: 
+{\bf (proof?)}
+
+The basic idea for counting: Suppose that
+\[
+F_{ac}+F_{bd}-F_{ad}=0.
+\]
+Since $F_{ad}$, $F_{bd}$, $F_{ac}\geq 0$, the above equation force $F_{ac}$ and $F_{bd}$ to be zero when $F_{ad}=0$. Therefore, $F_{ad}$ cannot be a true facet of the degeneration. We should count the number of deleted $c$ and such spurious facets. They should be equal. 
+
+(Conjecture: they are all binary.)
+
+(Find those with perfect $u$-eq?)
 
 *******************
 \subsection*{Degenerations which lead to products}
