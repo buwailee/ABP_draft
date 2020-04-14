@@ -1392,12 +1392,15 @@ after setting $c$s in green and purple diamonds to be zero, three facets (black 
 \[
 \{\{0,1,2,3\},\{0,1,2\},\{1,2,3\},\{0,1\},\{2,3\},\{0\},\{3\}\}.
 \]
+One can further check that it's a cube or $A_1^3$.
 
-Suppose $\mathscr D$ is the set of all vanishing facets in the building set, we can read from the mesh that
+Suppose $\mathscr D$ is the set of all vanishing facets in the building set, 
+we can read from the mesh that
 \[
 F_{I'}=\sum_{I\not\in \mathscr D}M_{I'}^IF_I
 \]
-for any $I'\in \mathscr D$, where $M$ is a matrix with non-negative entries. Therefore,
+for any $I'\in \mathscr D$, where $M$ is a matrix with non-negative entries. 
+Therefore,
 \[
 \prod_{I\in \mathscr A_n}u_{I}^{F_{I}}=
 \prod_{I'\in \mathscr D}u_{I'}^{F_{I'}}
@@ -1412,17 +1415,25 @@ so the new $u$-variables of the degeneration are
     \tilde u_{I}=u_I\prod_{I'\in \mathscr D}u_{I'}^{M_{I'}^I}
 \]
 for any $I\not\in \mathscr D$. 
-%From the viewpoint of mesh, the product are taken over all diamonds whose $c$s are all zero, top (respectively, bottom) corner is a deleted element $I'$, bottom (respectively, top) corner is 0 and left or right corner is $I$, because for such diamond $F_{I'}=F_I+\cdots$ or $M^I_{I'}=1$.
+
 For example, in the above example of $A_3$,
 \[
 F_{123}=F_{1}+F_2+F_3, \quad F_{12}=F_1+F_2, \quad F_{23}=F_2+F_3,
 \]
-so 
+so the $u$-variables are
 \begin{align*}
-\tilde u_{1}&=u_1 u_{123} u_{12}=\frac{x_1x_{012}}{x_{12}x_{01}}\frac{x_{123}}{x_{0123}}\frac{x_{12}x_{0123}}{x_{123}x_{012}}=\frac{x_1}{x_{01}},\\
-\tilde u_{2}&=u_2 u_{123} u_{12}u_{23}=\frac{x_2x_{123}}{x_{23}x_{12}}\frac{x_{123}}{x_{0123}}\frac{x_{12}x_{0123}}{x_{123}x_{012}}\frac{x_{23}}{x_{123}}=\frac{x_{2}}{x_{012}},\dots
+\tilde u_{1}&=u_1 u_{123} u_{12}=\frac{x_1}{x_{01}},\quad 
+\tilde u_{2}=u_2 u_{123} u_{12}u_{23}=\frac{x_{2}}{x_{012}},\quad 
+\tilde u_{3}=u_3u_{123}u_{23}=\frac{x_3}{x_{0123}},\\
+\tilde u_{0}&=u_{0}=\frac{x_{0}}{x_{01}},\quad 
+\tilde u_{01}=u_{01}=\frac{x_{01}}{x_{012}},\quad 
+\tilde u_{012}=u_{012}=\frac{x_{012}}{x_{0123}},
 \end{align*}
-
+and they satisfy the following $u$-equations:
+\[
+	\tilde u_1+\tilde u_0=1,\quad \tilde u_2+\tilde u_{01}=1,
+	\quad \tilde u_{3}+\tilde u_{012}=1.
+\]
 
 (Conjecture: they are all binary. In fact, I guess that $\tilde u_I\to 0$ is still given by $x_i\to 0$ for $i\in I$, then Chi's proof can be applied here.)
 
