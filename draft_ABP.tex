@@ -1056,119 +1056,249 @@ degenerations of $B_n$ ...
 
 \section{Stringy canonical forms and $u$-equations for generalized permutahedra}
 In this section we shall argue that  a large subset of generalised permutahedra which are realised as degenerations of permutahderon ${\mathscr P_n}$ are binary geometries. Before we proceed we shall review some details about the generalised permutahedra which we shall use throughout the paper.
-\subsection{Generalized permutohedra} {\bf the definition, facets and combinatorial factorizations, do $P_n$ example in full details.}
-******************************************************************************************
-\subsubsection*{Permutahedron}
- For $x_1,x_2, \cdots, x_{n+1} \in \mathbb{R} $ , the permutahedron ${\mathscr P_n}(x_1,\cdots,x_{n+1})$ is a convex polytope in $\mathbb{R}^{n+1}$ defined as the convex hull of all vectors obtained from $(x_1,x_2, \cdots, x_{n+1})$ by permutations of the coordinates:
- \bea
-{\mathscr P_n}(x_1,x_2, \cdots, x_{n+1}) = {\rm ConvexHull} \{ (x_{w(1)},x_{w(2)}, \cdots, x_{w(n+1)})~ |~ w \in S_{n+1} \}, \nonumber
- \eea
- where $S_{n+1}$ is the symmetric group. 
- 
- The permutahedron has $(n+1)!$ vertices and is of dimension at most $n$ since it lies in the hyperplane 
- \bea
- H_c= \{(t_1,t_2, \cdots, t_{n+1}) ~|~ t_1 + t_2 + \cdots + t_{n+1}= c \} \subset \mathbb{R}^{n+1}, \nonumber
- \eea
-where $c= x_1+x_2+ \cdots +x_{n+1}$.
+\subsection{Generalized permutohedra} 
+A generalised permutahedron is a polytope that obtained as Minkowski sums and diffrences of co-ordinate simplices. 
 
-For $n=1$ and distinct $x_1,x_2$ the permutahedron ${\mathscr P_1}(x_1,x_2)$ is a line. If  $x_1=x_2$ then it degenerates into a single point.
-
-For $n=2$ and distinct $x_1,x_2, x_3$ the permutahedron ${\mathscr P_2}(x_1,x_2, x_3)$ is a hexagon. If two of the $x_i$'s are equal then the permutahedron degenerates into a triangle and if $x_1= x_2 = x_3$ then its degenerates into a single point.
-
-We shall list a few results about permutahedra which shall be useful for later purposes: 
-\begin{itemize}
-\item {\bf Parameter independence:} The combinatorial structure of the permutahedron ${\mathscr P_n} (x_1, \cdots, x_{n+1}) $ does not depend on $ x_1, \cdots, x_{n+1} $ as long as all these are distinct. Henceforth  we will choose $ \{x_1, \cdots, x_{n+1}\} = \{0,1,\cdots,n \} := [0,n ]$. \\
-\item {\bf Facial Structure:} The $(n-k)$ faces of ${\mathscr P_n}$ are in an $1-1$ correspondence with the decomposition of $[0,n]$ into $k$ parts. More precisely, for each $(S_1,\cdots,S_k)$ with $S_i \neq \emptyset ~ \forall i$ and $[0,n] = S_1 \sqcup \cdots \sqcup S_k$ the corresponding face $\pi_{S_1,\cdots,S_k}$ has vertices which are permutations such that the entries $ \{x_i | i \in S_1 \}$ are largest $|S_1|$ numbers in $[0,n]$, $\{x_i | i \in S_2 \}$ are largest $|S_2|$ numbers in $[0,n]$ and so on. 
-
-Further the face $\pi_{S_1,\cdots,S_k}$   is isomorphic to ${\mathscr P_{\left(| S_1|-1\right)} }\times {\mathscr P_{\left(| S_2|-1\right)} } \cdots \times{\mathscr P_{\left(| S_k|-1\right)} } $.
-
-It follows from above that ${\mathscr P_n}$ has $2^{n+1} -2$ facets corresponding to all the non-empty proper subsets of $[0,n]$ for which we have a decomposition $[0,n] = S \sqcup S^c$ and the facets are isomorphic to one of the following product of lower dimensional permutahedra  $ \{ {\mathscr P_{n-1}}, {\mathscr P_{n-2}} \times A_1, \cdots ,{\mathscr P_{\lfloor{n/2 \rfloor}}} \times {\mathscr P_{n-1-\lfloor n/2 \rfloor}}  \} $\footnote {More generally the number of $(n-k)$ facets of ${\mathscr P_n}$ is $ k! S(n,k)$ where $S(n,k)$ is the Stirling number of the second kind which counts the number $k$ partitions of  $I$ and there are $p(n+1,k)$ types where $p(n+1,k)$ is the number of $k$ partitions of $(n+1)$.}.
-
-
-It also follows from above that a face $\pi_{S_1,\cdots,S_k}$ is contained in another face $\pi_{T_1,\cdots,T_l}$ if and only if each $T_i$ is a union of consecutive $S_j$ or equivalently if $(S_1,\cdots,S_k)$ is a refinement of $(T_1,\cdots,T_l)$.
-\item {\bf Minkowski decomposition:}   Let, $\Delta_{[0,n]} = {\rm ConvexHull}(e_1,\cdots,e_{n+1})$ be the standard coordinate simplex in $\mathbb{R}^{n+1}$. For any $I \subset [0,n] $ let $\Delta_I ={\rm ConvexHull}(e_i~|~i\in I)$ denote the face of the $\Delta_{[0,n]}$. The polytope $P_n(\{y_I \})$ obtained as the Minkowski sum of simplices $\Delta_I$ scaled by  parameters $y_I > 0$ for all nonempty subsets $I \subset [n+1]$
- \bea
- P_n(\{y_I \})= \sum_{I \subset[n+1]} y_I . \Delta_I  \nonumber
- \eea
- is the permutahedron ${\mathscr P_n}$
-\end{itemize}
-We shall now talk about generalized permutahedra which are polytopes obtained by deformations of the usual permutahedron i.e., obtained by moving the vertices of the usual permutahedron so that the directions of all the edges are preserved or equivalently translating facets without allowing them to move past vertices which may cause some of the edges to degenerate into points.
-
-\subsubsection*{Generalized permutahedra}
-
-A  generalised permutahedron is obtained by parallel translation of facets of the usual permutahedron it is parametrized  by a collection $\{ z_I\}$ of $2^{n+1}-1$ coordinates, for non-empty sets of $I \subset [0,n] $
- \bea \label{genperm_defi}
- P_n^z(\{ z_I \}) = \left \{ (t_0 , t_1, \cdots , t_{n}) \in \mathbb{R}^{n+1} | \sum_{i=0}^{n} t_i = z_{[0,n]},~ \sum_{i \in I} t_i \geq z_I, {\rm for ~subsets} ~I  \right  \}
- \eea
- If $z_I =z_J$ whenever $|I| =|J|$, then  $ P_n^z(\{ z_I \})$ is the usual permutahedron. 
- 
- Unlike the permutahedron not all generalised permutahedra can be represented as a Minkowski sum of co-ordinate simplices. We shall restrict ourselves to the large class of generalised permutahedra which admit such a realisation which are called Nestohedra which we denote by ${\mathscr N}$. Throughout the paper we shall mean Nestohedra whenever we refer to generalized permutahedra unless stated otherwise.
- \begin{itemize}
- \item {\bf Minkowski decomposition:} Let, $\Delta_{[0,n]} = {\rm ConvexHull}(e_1,\cdots,e_n)$ be the standard coordinate simplex in $\mathbb{R}^{n+1}$. Then we have:
+Let, $\Delta_{[0,n]} = {\rm ConvexHull}(e_1,\cdots,e_n)$ be the standard coordinate simplex in $\mathbb{R}^{n+1}$. Then we have:
   \bea
-{\mathscr N_n}^y(\{y_I \})= \sum y_I . \Delta_I  \nonumber
+{\mathscr P_n}^y(\{y_I \})= \sum y_I . \Delta_I  
  \eea
  for some collection of subsets $I \in [0,n]$
- \end{itemize}
-  \begin{itemize}
- \item{\bf Parameter Independence:} The combinatorial structure of the generalised permutahedron ${\mathscr N_n({y_I})}$ is independent of the parameters $y_I$ and depends only on the collection of subsets $I \in [0,n]$ called the  building set $B$.  \end{itemize}
-A collection of non-empty subsets of $[0,n]$ is called a building set $B$ if it satisfies the following:
+ We shall restrict ourselves to the large class of generalised permutahedra which admit such a realisation only as Minkowski sums i.e., all $y_I \ge 0$ \footnote{This is mainly due to the subtle nature of the Minkowski difference operation, which makes the shape of the resulting polytope dependent on the relative magnitudes of $y_I$'s.}which are called Nestohedra. Throughout the paper we shall mean Nestohedra whenever we refer to generalized permutahedra unless stated otherwise.\\
+ 
+ The combinatorial structure of the generalised permutahedron ${\mathscr P_n({y_I})}$ (Nestohedra) is independent of the parameters $y_I$ and depends only on the collection of subsets $I \in [0,n]$ called the  building set ${\mathbf B}$.  
+A collection of non-empty subsets of $[0,n]$ is called a building set ${\mathbf B}$ if it satisfies the following:
 \begin{compactenum}[\quad (1)]
-    \item If $I,J \in B$ and $I \cap J \neq \phi $, then $I \cup J \in B$.
-    \item $B$ contains all singletons $\{ i\}$ for $i \in S$.
+    \item If $I,J \in {\mathbf B}$ and $I \cap J \neq \phi $, then $I \cup J \in {\mathbf B}$.
+    \item ${\mathbf B}$ contains all singletons $\{ i\}$ for $i \in S$.
 \end{compactenum}
 To describe the combinatorial structure we need the notion of {\it Nested complex} which we shall define now.
 
 \subsubsection*{Nested Complex}
-A subset $N$ in the building set $B$ is called a {\it nested set} if it satisfies the following conditions:
+A subset ${\mathbf N}$ in the building set ${\mathbf B}$ is called a {\it nested set} if it satisfies the following conditions:
 \begin{compactenum}[\quad (1)]
-    \item For any $I,J \in N$, we either have $I \subset J$ or $J\subset I$ or $I$ and $J$ are disjoint.
+    \item For any $I,J \in {\mathbf N}$, we either have $I \subset J$ or $J\subset I$ or $I$ and $J$ are disjoint.
     \item For any collection of $k \geq 2$ disjoint subsets $J_1,J_2,\cdots, J_k \in N$ their union $J_1 \cup \cdots \cup J_k$ is not in B.
-    \item $N$ contains all maximal elements of $B$.
+    \item ${\mathbf N}$ contains all maximal elements of $B$.
 \end{compactenum}
-The {\it nested complex} $\mathcal{N}(B)$ is defined as the poset of the set of all nested sets in $B$ ordered by inclusion.
+The {\it nested complex} ${\mathbf N}({\mathbf B})$ is defined as the poset of the set of all nested sets in ${\mathbf B}$ ordered by inclusion.\\
 
-\begin{itemize}
+ {\bf Facial structure:} 
+ 
+ Let us assume that the set ${\mathbf B}$ associated with a generalised permutahedron ${\mathscr P_n}^{y}$ is a building set on $[0,n]$. Then the poset of faces ${\mathscr P_n}^{y}$ ordered by reverse inclusion is isomorphic to the nested complex ${\mathbf N}({\mathbf B})$. 
 
-\item {\bf Facial structure:} Let us assume that the set $B$ associated with a generalised permutahedron ${\mathscr N_n}^{y}$ is a building set on $[0,n]$. Then the poset of faces ${\mathscr N_n}^{y}$ ordered by reverse inclusion is isomorphic to the nested complex $\mathcal{N}(B)$. 
-
-For each decomposition $[0,n]=  \sqcup_{I \subset N } S_I $ where $S_I$ are non-empty, the face $P_N$ of ${\mathscr N_n}^{y}(y_I)$ associated with the nested set $N \in \mathcal{N}(B)$ is:
+For each decomposition $[0,n]=  \sqcup_{I \subset {\mathbf N} } S_I $ where $S_I$ are non-empty, the face $P_n$ of ${\mathscr P_n}^{y}(y_I)$ associated with the nested set ${\mathbf N} \in {\mathbf N}({\mathbf B})$ is:
 \bea
-P_N = \sum_{{J \subset B}\atop{J \cap S_I \neq \emptyset}} y_{J} \Delta_{J \cap S_I}
+P_n = \sum_{{J \subset {\mathbf B}}\atop{J \cap S_I \neq \emptyset}} y_{J} \Delta_{J \cap S_I}
 \eea
-\end{itemize}
 
-In summary the above results imply that we can look at any collection of subsets of $[0, n]$ which form a building set $B$ and associate  coordinate simplex $\Delta_I$ for each $I \in B$ and resulting Minkowski sum with positive weights $y_I$ generates a generalised permutahedron associated with the building set. Further, the number of facets $N$ of the generalised permutahedron just corresponds to the set of all elements in $B$ excluding the maximal set.  
+In summary the above results mean the following:\\
 
-Let, $m$ denote the number of non-singlet elements in $B$ i.e., the number of linear equations as explained in (1.1) 
+(1) We can look at any collection of subsets of $[0, n]$ which form a building set ${\mathbf B}$ and associate  coordinate simplex $\Delta_I$ for each $I \in {\mathbf B}$ and resulting Minkowski sum with positive weights $y_I$ generates a polytope of dimension $n$ called the generalised permutahedron (Nestohedron) associated with the building set. \\
+
+(2) The number of facets $N$ of the generalised permutahedron just corresponds to the set of all elements in ${\mathbf B}$ excluding the maximal set. \\ 
+
+(3) Two facets corresponding to the sets $I$ and $J$ in ${\mathbf B}$ intersect i.e., are {\it compatible} with each other if and only if  either $I \subset J$,~ $J \subset I$~ or $I \cap J = \emptyset ~{\text and} ~ I \cup J \notin {\mathbf B}$.
+
+Let us look at a couple of examples to appreciate these facts better:\\
+(1) Consider the generalized permutahedron with building set ${\mathbf B}= \{ \{0\},\{1\},\{2\},\{0,1\},\{1,2\},\{0,1,2\} \}$.
+
+The polygon has 5 facets which correspond to the sets $\{ \{0\},\{1\},\{2\},\{0,1\},\{1,2\}\}$ and their compatability is shown in the figure below.
+
+The polytope in this case is the 2d associahedron ${\mathscr A_2}$.\\
+(2) Consider the generalized permutahedron with building set ${\mathbf B}= \{ \{0\},\{1\},\{2\},\{0,1\},\{1,2\},\{0,2\},\{0,1,2\} \}$ 
+
+The polygon has 6 facets which correspond to the sets $\{ \{0\},\{1\},\{2\},\{0,1\},\{1,2\},\{0,2\}\}$ and their compatability is shown in the figure below.
+
+The polytope in this case is the 2d cyclohedron ${\mathscr B_2}$ which also coincides with 2d permutahderon ${\mathscr P_2}$.
+\begin{figure}[H]
+\begin{center}       
+
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,511); %set diagram left start at 0, and has height of 511
+
+%Shape: Regular Polygon [id:dp6636381249952382] 
+\draw   (332.23,134.19) -- (310.06,198.57) -- (241.97,197.38) -- (222.06,132.26) -- (277.84,93.2) -- cycle ;
+%Shape: Regular Polygon [id:dp8232688760864714] 
+\draw   (533.33,149) -- (502.83,201.83) -- (441.83,201.83) -- (411.33,149) -- (441.83,96.17) -- (502.83,96.17) -- cycle ;
+
+% Text Node
+\draw (401.67,176.33) node [anchor=north west][inner sep=0.75pt]   [align=left] {01};
+% Text Node
+\draw (461,212) node [anchor=north west][inner sep=0.75pt]   [align=left] {0};
+% Text Node
+\draw (412,109) node [anchor=north west][inner sep=0.75pt]   [align=left] {1};
+% Text Node
+\draw (463,78) node [anchor=north west][inner sep=0.75pt]   [align=left] {12};
+% Text Node
+\draw (527,101) node [anchor=north west][inner sep=0.75pt]   [align=left] {2};
+% Text Node
+\draw (523,179) node [anchor=north west][inner sep=0.75pt]   [align=left] {02};
+% Text Node
+\draw (268,204) node [anchor=north west][inner sep=0.75pt]   [align=left] {0};
+% Text Node
+\draw (226,96) node [anchor=north west][inner sep=0.75pt]   [align=left] {12};
+% Text Node
+\draw (310,100) node [anchor=north west][inner sep=0.75pt]   [align=left] {1};
+% Text Node
+\draw (336,163) node [anchor=north west][inner sep=0.75pt]   [align=left] {2};
+% Text Node
+\draw (203,160) node [anchor=north west][inner sep=0.75pt]   [align=left] {01};
+% Text Node
+\draw (262,235) node [anchor=north west][inner sep=0.75pt]   [align=left] {(a)};
+% Text Node
+\draw (454,235) node [anchor=north west][inner sep=0.75pt]   [align=left] {(b)};
+% Text Node
+\draw (155,263) node [anchor=north west][inner sep=0.75pt]   [align=left] {Figure showing the compatible\textbackslash incompatible facets of the 2d associahedron  \\ and permutahedron as generalized permutahedra};
+
+
+\end{tikzpicture}
+\end{center}
+\end{figure}
+An improtant fact about generalised permutahedra which makes them particularly interesting is the following:
+Let, $m$ denote the number of non-singlet elements in ${\mathbf B}$ i.e., the number of $c_J$'s as explained in equation (2) 
 \bea
-N &=& |B|-1 \nonumber \\
+N &=& |{\mathbf B}|-1 \nonumber \\
  &=& (n+1+m)-1 \nonumber  \\
  &=& n+m \nonumber
 \eea
 {\bf Number of facets = Number of linear equations + dimension of  gen permutahedron}
  
-Thus, generalised permutahedra have big Polytopes which are simplices and as emphasized in the previous section we can solve for the $u$-variables and examine if they satisfy some kind of $u$-equations.
+Thus, generalised permutahedra have big Polytopes which are simplices. Thus its quite natural to wonder if the associated $u$-variables satisfy some kind of $u$-equations. 
+
+We claim and we shall show in the next section that this indeed the case. Further we show that all these polytopes are binary geometries even though some of them do not admit perfect $u$-equations. 
 
 Here are some interesting examples of generalised permutahedra:
 
-(1) If $B$ consists of only singlets i.e., $B=\{ \{ 0,1,\cdots,n \}, \{ 0 \},\{ 1 \},\cdots ,\{ n \} \}$ then the generalised permutahedron is a Simplex. In this case the relevant $x$ variables are $x_i,~ i=0,\cdots,n$ with $x_0=1$ and $\sum_{i=0}^n x_i$. 
+(1) If ${\mathbf B}$ consists of only singlets i.e., ${\mathbf B}=\{ \{ 0,1,\cdots,n \}, \{ 0 \},\{ 1 \},\cdots ,\{ n \} \}$ then the generalised permutahedron is a Simplex. In this case the relevant $x$ variables are $x_i,~ i=0,\cdots,n$ with $x_0=1$ and $\sum_{i=0}^n x_i$. 
 The Newton polytope of the Minkowski sum is $\prod_{i=1}^{n} x_i (1+\sum_{j=1}^{n} x_j)$ and $u$-variables are 
 $u_i =\frac{ x_i}{1+\sum_{i=1}^n x_i} $
 which satisfy $\sum u_i =1$ as their only $u$-equation. \\
 
-(2) If $B= \{[i] | i=1,\cdots,n+1 \}$ is the complete flag of intervals, then ${\mathscr N_n}^y({\bf Y})$ is the Stanley-Pitman polytope or Hypercube.
+(2) If ${\mathbf B}= \{[i] | i=1,\cdots,n+1 \}$ is the complete flag of intervals, then ${\mathscr P_n}^y({\bf Y})$ is the Stanley-Pitman polytope or Hypercube.
 The Newton polytope of the Minkowski sum is $x_1\cdots x_n (1+x_1) \cdots (1+x_1+\cdots +x_n)$ and $u$-variables are 
 $u_i =\frac{ 1}{1+\sum_{j=1}^{i} x_j} $, ~~$u^{'}_i =\frac{ \sum_{j=1}^{i} x_j}{1+\sum_{j=1}^{i} x_j} $ for $j=1,\cdots,n$ \\
 which satisfy $u_i +u^{'}_{i} =1$ as their $u$-equation. \\
 
-(3) If $B$ corresponds to all the non empty subsets of $[0,n]$ and $Y_I =y_{|I|}$ i.e., the variables $Y_I$ are equal for all subsets of the same cardinality, then ${\mathscr N_n}({\bf Y})$ is the usual permutahedron $P_n$. \\
+(3) If ${\mathbf B}$ corresponds to all the non empty subsets of $[0,n]$ and $Y_I =y_{|I|}$ i.e., the variables $Y_I$ are equal for all subsets of the same cardinality, then ${\mathscr P_n}({\bf Y})$ is the usual permutahedron ${\mathscr P_n}$. \\
 
-(4)If $B=\{ [i,j] | 1\leq  i \leq j \leq n\}$ is the set of consecutive intervals, then ${\mathscr N_n}({\bf Y})$ is the associahedron. \\
+(4)If ${\mathbf B}=\{ [i,j] | 1\leq  i \leq j \leq n\}$ is the set of consecutive intervals, then ${\mathscr P_n}({\bf Y})$ is the associahedron. \\
 
-(5) If $B=\{ [1,i] \cup [j,n] | 1\leq  i \leq j \leq n\}$ is the set of cyclic intervals, then ${\mathscr N_n}({\bf Y})$ is the Cyclohedron.\\
+(5) If ${\mathbf B}=\{ [1,i] \cup [j,n] | 1\leq  i \leq j \leq n\}$ is the set of cyclic intervals, then ${\mathscr P_n}({\bf Y})$ is the Cyclohedron.\\
 
-(6) Let $\Gamma$ be a graph on the vertex set $[0,n]$. Let us assume that $B = B(\Gamma)$ is the set of subsets $I \in [n]$ such that the induced graph $\Gamma$ is connected, then  ${\mathscr N_n}({\bf Y})$ is a graph associahedron.\\
+(6) Let $\Gamma$ be a graph on the vertex set $[0,n]$. Let us assume that ${\mathbf B} = {\mathbf B}(\Gamma)$ is the set of subsets $I \in [n]$ such that the induced graph $\Gamma$ is connected, then  ${\mathscr P_n}({\bf Y})$ is a graph associahedron.
+
+It is clear that any  generalized permutahedron can be obtained as a degeneration of  permutahedron ${\mathscr P_n}$i.e., by removing some elements from its building set. This makes the permutahedron a very important example of generalized permutahedra and we shall devote the rest of this section to studying its properties and proving it is binary.
+\subsubsection*{Permutahedron}
+
+Let, $\Delta_{[0,n]} = {\rm ConvexHull}(e_1,\cdots,e_{n+1})$ be the standard coordinate simplex in $\mathbb{R}^{n+1}$. For any $I \subset [0,n] $ let $\Delta_I ={\rm ConvexHull}(e_i~|~i\in I)$ denote the face of the $\Delta_{[0,n]}$. The polytope $P_n(\{y_I \})$ obtained as the Minkowski sum of simplices $\Delta_I$ scaled by  parameters $y_I > 0$ for all nonempty subsets $I \subset [n+1]$
+ \bea
+ P_n(\{y_I \})= \sum_{I \subset[n+1]} y_I . \Delta_I  
+ \eea
+ is the permutahedron ${\mathscr P_n}$
+
+{\bf Facial Structure:} 
+
+The $(n-k)$ faces of ${\mathscr P_n}$ are in an $1-1$ correspondence with the decomposition of $[0,n]$ into $k$ parts. More precisely, for each $(S_1,\cdots,S_k)$ with $S_i \neq \emptyset ~ \forall i$ and $[0,n] = S_1 \sqcup \cdots \sqcup S_k$ the corresponding face $\pi_{S_1,\cdots,S_k}$ has vertices which are permutations such that the entries $ \{x_i | i \in S_1 \}$ are largest $|S_1|$ numbers in $[0,n]$, $\{x_i | i \in S_2 \}$ are largest $|S_2|$ numbers in $[0,n]$ and so on. 
+
+Further the face $\pi_{S_1,\cdots,S_k}$   is isomorphic to ${\mathscr P_{\left(| S_1|-1\right)} }\times {\mathscr P_{\left(| S_2|-1\right)} } \cdots \times{\mathscr P_{\left(| S_k|-1\right)} } $.
+
+It follows from above that ${\mathscr P_n}$ has $2^{n+1} -2$ facets corresponding to all the non-empty proper subsets of $[0,n]$ for which we have a decomposition $[0,n] = S \sqcup S^c$ and the facets are isomorphic to one of the following product of lower dimensional permutahedra  $ \{ {\mathscr P_{n-1}}, {\mathscr P_{n-2}} \times A_1, \cdots ,{\mathscr P_{\lfloor{n/2 \rfloor}}} \times {\mathscr P_{n-1-\lfloor n/2 \rfloor}}  \} $\footnote {More generally the number of $(n-k)$ facets of ${\mathscr P_n}$ is $ k! S(n,k)$ where $S(n,k)$ is the Stirling number of the second kind which counts the number $k$ partitions of  $I$ and there are $p(n+1,k)$ types where $p(n+1,k)$ is the number of $k$ partitions of $(n+1)$.}.
+
+It also follows from above that a face $\pi_{S_1,\cdots,S_k}$ is contained in another face $\pi_{T_1,\cdots,T_l}$ if and only if each $T_i$ is a union of consecutive $S_j$ or equivalently if $(S_1,\cdots,S_k)$ is a refinement of $(T_1,\cdots,T_l)$.
+
+\section*{ABHY like realisation for the Permutahedron}
+The following set of equations to define the $n$-dimensional Permutahedron: 
+\bea
+C_I = (-1)^{|I|} \left( \sum_{i \in I} X_i - \sum _{{i<j}\atop{i,j \in I}} X_{ij} +\cdots + (-1)^{|I|}  X_I \right) \nonumber
+\eea
+for all non-empty subsets $I \subset \{0,1,\cdots,n\}$ with the understanding that $C_{I} =0$ for all singlets $I$ and $X_{I} =0$ for $I=\{ 0,1,\cdots,n \}$. 
+
+It is clear that
+\bea
+m= \text{No. of  C's }&=& 2^{n+1}-(n+2) \nonumber \\
+N= \text{No. of X's} &=& 2^{n+1}- 2 \nonumber 
+\eea
+Thus we see that $N= d+m$ as expected. We can write down the stringy integral as usual to be 
+\bea
+\int_{\mathbb{R}^{n}_{+}} \prod_{i =1}^{n} d x_i x_i^{\alpha^{'} X_i -1} \prod_{I} \left (\sum_{a\in I} x_a \right) ^{-\alpha^{'} C_I} \nonumber
+\eea 
+where the product is over all non-singlets $ I \subset \{0,1,\cdots,n\}$ with $x_{0} =1$.
+
+Let us look at the $n=2,3$ examples:
+
+\section*{2d permutahedron}
+In this case the building set $B=\{ \{ 0,1,2\},\{ 0,1\},\{0,2\},\{1,2\},\{0\},\{1\},\{2\}\}$ and the relevant $x$ variables are $x_0=1, ~x_1=x, ~x_2=y, ~x_{01}=1+x, ~x_{02}=1+y,~ x_{12}=x+y,~ x_{012}=1+x+y$. 
+
+We can write down the Newton polynomial for the Minkowski sum as $ x_1~ x_2~(1+x_1)~(1+x_2)~(x_1+x_2)~(1+x_1+x_2)$.
+
+The $u$-variables can be written in terms of $x$ variables as:
+\bea
+u_1&=&\frac{x(1+x+y)}{(x+y)(1+x)}, ~ u_2 =\frac{y(1+x+y)}{(x+y)(1+y)},~ u_{12}=\frac{(x+y)}{(1+x+y)}\nonumber \\
+u^{'}_1&=&\frac{(1+y)}{(1+x+y)}, ~~~~~ u^{'}_2=\frac{(1+x)}{(1+x+y)},~~~~~ u^{'}_{12}= \frac{(1+x+y)}{(1+x)(1+y)} \nonumber
+\eea
+The $u$-equations are:
+\bea
+1-u_i &=& (u^{'}_i)^2 u_j u^{'}_{12}, ~~~ 1-u_{12} = u^{'}_{1} u^{'}_{2} u^{'}_{12} \nonumber \\
+1-u^{'}_i &=& u_i u^{'}_j u_{12}, ~~~~~~~ 1-u^{'}_{12} = u_{1} u_{2} (u_{12})^2 \nonumber
+\eea
+where $i=1$ implies $j=2$ and vice versa.
+
+\section*{3d permutahedron}
+In this case the building set $B=\{ \{ 0,1,2,3\},\{ 0,1,2\},\{0,2,3\},\{0,1,3\},\{1,2,3\},\{0,1\},\{0,2\},\{0,3\},\{1,2\} \\ ,\{2,3\},\{1,3\},\{0\},\{1\},\{2\},\{3\}\}$ and the relevant $x$ variables are $x_0=1, ~x_1=x, ~x_2=y, ~x_3=z, ~x_{01}=1+x, ~x_{02}=1+y,~x_{03}=1+z,~ x_{12}=x+y,~x_{13}=x+z,~x_{23}=y+z,~ x_{012}=1+x+y,~ x_{013}=1+x+z,~ x_{023}=1+y+z,~ x_{123}=x+y+z,~ x_{0123}=1+x+y+z$. \\
+
+The $u$ and $u'$-variables can be written interms of $x$ variables as:
+{\scriptsize  \bea
+u_1&=&\frac{x(1+x+y)(1+x+z)(x+y+z)}{(x+y)(x+z)(1+x)(1+x+y+z)}, ~ u_2 =\frac{y(1+x+y)(1+y+z)(x+y+z)}{(x+y)(y+z)(1+y)(1+x+y+z)},~ u_{3}=\frac{z(1+x+z)(1+y+z)(x+y+z)}{(x+z)(y+z)(1+z)(1+x+y+z)},\nonumber \\
+u^{'}_1&=&\frac{(1+y+z)}{(1+x+y+z)}, ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ u^{'}_2 =\frac{(1+x+z)}{(1+x+y+z)},~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ u^{'}_{3}=\frac{(1+x+y)}{(1+x+y+z)},\nonumber \\
+u_{12}&=&\frac{(x+y)(1+x+y+z)}{(1+x+y)(x+y+z)}, ~~~~~~~~~~~~~~~~~~ u_{23} =\frac{(y+z)(1+x+y+z)}{(1+y+z)(x+y+z)},~~~~~~~~~~~~~~~~~~~ u_{13}=\frac{(x+z)(1+x+y+z)}{(1+x+z)(x+y+z)},\nonumber \\
+u^{'}_{12}&=&\frac{(1+z)(1+x+y+z)}{(1+y+z)(1+x+z)}, ~~~~~~~~~~~~~~~~~~ u^{'}_{23} =\frac{(1+x)(1+x+y+z)}{(1+x+y)(1+x+z)},~~~~~~~~~~~~~~~~~~~ u^{'}_{13}=\frac{(1+y)(1+x+y+z)}{(1+x+y))(1+y+z)},\nonumber  \\
+u_{123}&=&\frac{(x+y+z)}{(1+x+y+z)}, ~~~~~~~~~~~~~~~~~~~~~~~~~~~ u^{'}_{123} =\frac{(1+x+y)(1+y+z)}{(1+x)(1+y)(1+z)(1+x+y+z)}\nonumber
+\eea }
+The $u$-equations in this case are:
+{\small  \bea
+1-u_i &=& u_j u_k (u_{jk})^2 (u^{'}_i)^3 (u^{'}_{ij})^2(u^{'}_{ik})^2 u^{'}_{123} \left(1+ u_i u_{ij} u_{ik} u^{'}_{j} u^{'}_{k}  u^{'}_{jk}\right), ~~ 1-u_{ij} = u_k u_{ik} u_{jk} (u^{'}_i)^2 (u^{'}_{j})^2 (u^{'}_{ij})^2 u^{'}_{ik} u^{'}_{jk} u^{'}_{123} \nonumber  \\
+1-u^{'}_i &=& u_i u_{ij} u_{ik} u^{'}_{j} u^{'}_{k}  u^{'}_{jk}, ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 1-u^{'}_{ij} = u_i u_{j}  (u_{ij})^2 u_{ik} u_{jk} (u_{123})^2 (u^{'}_{k})^2 u^{'}_{ik} u^{'}_{jk}  \nonumber \\
+1-u^{'}_{123} &=& u_1 u_{2} u_{3} (u_{12})^2 (u_{23})^2  (u_{13})^2 (u_{123})^3 \left(1+ u^{'}_{123}  u^{'}_1 u^{'}_{2} u^{'}_{3} u^{'}_{12} u^{'}_{23}  u^{'}_{13} \right), 1-u_{123} = u^{'}_1 u^{'}_{2} u^{'}_{3} u^{'}_{12} u^{'}_{23}  u^{'}_{13} u^{'}_{123}   \nonumber
+\eea}
+where $i,j,k \in {1,2,3}$ and $i \neq j \neq k$.
+
+The 8 facets of the 3d permutahedron corresponding to $u_i \rightarrow 0, u^{'}_i \rightarrow 0,u_{123} \rightarrow 0 ~and ~u^{'}_{123} \rightarrow 0$  are all $B_2$'s. Similarly, the 6 facets corresponding to  $u_{ij} \rightarrow 0, u^{'}_{ij} \rightarrow 0$ are all  $A^{2}_1$.
+
+Thus, the 3d permutahedron integral factorizes nicely on all massless poles at finite $\alpha^{'}$ !!
+We shall list a few results about permutahedra which shall be useful for later purposes: 
+\begin{enumerate}
+\item The $u$-variables for the permutahedron are: 
+\bea
+u_J &=& ~~\prod_{J \subset I} x_I^{(-1)^{|I|-|J|}} \nonumber 
+\eea
+The above relations can also be inverted to obtain $x_I$ as follows:
+
+For $0 \notin I $
+\bea
+x_I &=& \frac{\prod_{I \subset J} u_{J}}{1-\prod_{I \subset J} u_{J}} \\
+\frac{1}{1+ x_I} &=& \prod_{{J}\atop{J\cap \bar{I} \ne \emptyset}} u_{\bar{J}}
+\eea
+From the above relations it is clear that taking $u_I \rightarrow 0$ for $0 \notin I$ implies $x_J \rightarrow 0$ for all $J \subset I$ and taking $u_{\bar{I}} \rightarrow 0$ implies $x_J \rightarrow \infty $ for all $I \subset J$.
+In fact we shall argue that there is unique choice of $x_I$'s which we can take to $0$ or $\infty$ which corresponds to setting only a particular $u_I \rightarrow 0$ or $u_{\bar{I}} \rightarrow 0$ respectively.
+\item From the definition of the permutahedron as a Nestohedron we know that $I$ and $J$ are :
+
+% {\bf compatible if} $I\cap J = \emptyset$ or $I\cap J \neq \emptyset$ and either $I \subset J$ or $J \subset I$
+
+% {\bf incompatible if}   $I\cap J \neq \emptyset$ or $I\cap J = \emptyset$ and neither $I \not\subset J$ or $J \not\subset I$
+
+{\bf compatible if and only if} $\{[0,n],I,J\}$ is a nested set, i.e.
+\[
+I\subset J\quad \text{or}\quad J\subset I\quad \text{or}\quad (J\cap I=\varnothing \quad \text{and}\quad J\cup I\not\in \mathscr P_n).
+\]
+For permutohedron, $J\cup I$ is always contained in $\mathscr P_n$ for any $I$ and $J$, so it's compatible if and only if $J\subset I$ or $I\subset J$.
+
+The above  follows directly from the following relations amongst $u$ for each $I$ such that $0\notin I$ :
+\bea
+1-\prod_{I \subset J} u_{J} &=& \prod_{{J}\atop{J\cap \bar{I} \ne \emptyset}} u_{\bar{J}} \\
+1-\prod_{J \subset I} u_{\bar{J}} &=& \prod_{I \subset J} u_{J} \prod_{J \subset \bar{I} } u_{\bar{J}}
+\eea
+
 
 \subsection*{Braid arrangement}
 The braid arrangement in $\mathbb{R}^{n+1}$ consists of $\left({n}\atop{2}\right)$ hyperplanes 
