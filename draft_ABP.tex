@@ -671,52 +671,105 @@ Moreover, a remarkable statement we will make in sec. 3 is that, the configurati
 
 \section{Configuration spaces with perfect $u$-equations from degenerating $A_n$ and $B_n$}
 In this section we shall consider some degenerations of $A_n$ and $B_n$ and show that these form an infinite class of examples of binary geometries with perfect $u$-equations. To do this we shall use the fact that both $A_n$ and $B_n$ are generalised permutahedra and can be realised as a Minkowski sum of coordinate simplices. 
+For future convenience, let's define $[i,j]=\{i,i+1,\dots,j\}$ for 
+$i,j\in \mathbb Z/(n+1)\mathbb Z$.
+
 
 \subsection{$A_n$ and $B_n$ as generalized permutohedra} 
 
 {\bf linear factors, (standard) string integrals, ABHY and $u$ variables, talk about hyperplane arrangement}
 
-Let's define $[i,j]=\{i,i+1,\dots,j\}$ for $i,j\in \mathbb Z/(n+1)\mathbb Z$.
-%For the symbol $X=x,u,S,F$, we also use the notation $X_{ij}:=X_{[i,j-1]}$.
+\subsubsection*{$n$-dimensional associahedron $\mathscr A_n$}
 
-The building set of $A_n$ is $\{[i,j]\,:\, 0\leq i\leq j\leq n\}$.
-The facets are given by eq.\eqref{GPfacet}
+The building set of $\mathscr A_n$ is $\mathbf B= \{[i,j]\,:\, 0\leq i\leq j\leq n\}$.
+The stringy canonical form of this building set $\mathcal I_{\mathbf B}(\{S\})$
+is related with the original string integral eq.\eqref{stringint} by 
 \[
-F^A_{[i,j]}=\sum_{i\leq k\leq l\leq j}S_{[k,l]},
+	z_{j}-z_i=x_{[i,j-1]},
+\]
+so Mandelstam variables are related to $S$ by $s_{ij}=S_{[i,j-1]}$.
+The facets of $\mathscr A_n$ are given by
+\[
+	F_{[i,j]}=\sum_{[k,l]\subset [i,j]}S_{[k,l]},
 \]
 and their solution is 
-\[
-S_{[i,j]}=F^A_{[i,j]}+F^A_{[i+1,j-1]}-F^A_{[i,j-1]}-F^A_{[i+1,j]},
-\]
-where $F^A_{[k,l]}:=0$ when $k>l$ or $[k,l]=[0,n]$. Using this solution to rewrite the integrand
-\[
+\begin{equation}\label{Ansf}
+S_{[i,j]}=F_{[i,j]}+F_{[i+1,j-1]}-F_{[i,j-1]}-F_{[i+1,j]},
+\end{equation}
+where $F_{[k,l]}:=0$ when $k>l$ or $[k,l]=[0,n]$. Using this solution to rewrite 
+the integrand of the stringy canonical form $\mathcal I_{\mathbf B}(\{S\})$
+\begin{align*}
 \prod_{0\leq i\leq j\leq n}x_{[i,j]}^{S_{[i,j]}}
-=\prod_{0\leq i\leq j\leq n}\frac{x_{[i,j]}^{F^A_{[i,j]}}x_{[i,j]}^{F^A_{[i+1,j-1]}}}{x_{[i,j]}^{F^A_{[i,j-1]}}x_{[i,j]}^{F^A_{[i+1,j]}}}
-=
-\prod_{0\leq i\leq j\leq n}x_{[i,j]}^{F^A_{[i,j]}}
-\prod_{1\leq i\leq j\leq n-1}x_{[i-1,j+1]}^{F^A_{[i,j]}}
-\prod_{0\leq i\leq j\leq n-1}x_{[i,j+1]}^{-F^A_{[i,j]}}
-\prod_{1\leq i\leq j\leq n}x_{[i-1,j]}^{-F^A_{[i,j]}},
-\]
+&=\prod_{0\leq i\leq j\leq n}x_{[i,j]}^{F_{[i,j]}}x_{[i,j]}^{F_{[i+1,j-1]}}\bigg /
+x_{[i,j]}^{F_{[i,j-1]}}x_{[i,j]}^{F_{[i+1,j]}}\\
+&=
+\prod_{0\leq i\leq j\leq n}x_{[i,j]}^{F_{[i,j]}}
+\prod_{1\leq i\leq j\leq n-1}x_{[i-1,j+1]}^{F_{[i,j]}}
+\prod_{0\leq i\leq j\leq n-1}x_{[i,j+1]}^{-F_{[i,j]}}
+\prod_{1\leq i\leq j\leq n}x_{[i-1,j]}^{-F_{[i,j]}},
+\end{align*}
 and we get that
 \[
 u_{i,j+2}:=u_{[i,j]}=\frac{x_{[i,j]}x_{[i-1,j+1]}}{x_{[i,j+1]}x_{[i-1,j]}} \quad \text{for $0\leq i\leq j\leq n$,}
 \]
-where $x_{[i,n+1]}:=1$ and  $x_{[-1,j]}:=1$. $u$-equations are
+with $x_{[i,n+1]}:=1$ and $x_{[-1,j]}:=1$, whose $u$-equations are
 \[
 1-u_{ij}=\prod_{(k,l)\not\sim (i,j)}u_{kl}.
 \]
 
-The building set of $B_n$ is $\{[i,i+k]\,:\,0\leq i, k\leq n\}$.
-The facets are given by eq.\eqref{GPfacet}
+The ABHY construction of $\mathscr A_n$ is given by 
 \[
-F^B_{[i,j]}=\sum_{[k,l]\subset [i,j]}S_{[k,l]},
+	S_{[i,j]}=-c_{[i,j]} \,\,\text{ for all $i<j$,}\quad
+	F_{[i,j]}\geq 0 \,\,\text{ for all $i\leq j$},
+\]
+where $c$s are positive numbers. We can use a mesh to represent these conditions.
+For example, the mesh of $\mathscr A_3$ is 
+\begin{center}
+\begin{tikzpicture}
+	\draw[thick] (-2,-1) -- (1,2) -- (4,-1) -- (3,-2) node[below]{0} -- (0,1);
+	\draw[thick] (-1,-2) node[below]{0} -- (2,1);
+	\draw[thick] (-2,-1) -- (-1,-2);
+	\draw[thick] (-1,0) -- (1,-2) node[below]{0}-- (3,0);
+	\node at (-2.5,-1) {$[0,0]$};
+	\node at (-0.65,-1) {$[1,1]$};
+	\node at (1.35,-1) {$[2,2]$};
+	\node at (3.35,-1) {$[3,3]$};
+	\node at (-1.5,0) {$[0,1]$};
+	\node at (0.35,0) {$[1,2]$};
+	\node at (2.35,0) {$[2,3]$};
+	\node at (-0.5,1) {$[0,2]$};
+	\node at (1.35,1) {$[1,3]$};
+	\node at (1,2.2) {$[0,3]$};
+\end{tikzpicture}
+\end{center}
+Each diamond in the mesh whose top corner\footnote{
+It looks different with the usual mesh where label of $c$ follows the left corner
+in each diamond. This is because the mismatch of the correspondence of labels 
+$F_{ij}=F_{[i,j-2]}$ and $s_{ij}=S_{[i,j-1]}$.
+}
+is label by $[i,j]$ represents 
+\[
+	c_{[i,j]}=F_{[i,j-l]}+F_{[i+1,j]}-F_{[i,j]}-F_{[i+1,j-1]},
+\]
+and each big diamond (which is made of several diamonds) gives us an equation
+\[
+	\sum_{i\leq a<j\atop{k<b\leq l}} c_{[a,b]} = 
+	F_{[i,k]}+F_{[j,l]}-F_{[i,l]}-F_{[j,k]}
+\]
+where $F_{[a,b]}:=0$ when $a>b$ or $[a,b]=[0,n]$
+
+\subsubsection*{$n$-dimensional cyclohedron $\mathscr B_n$}
+
+The building set of $\mathscr B_n$ is $\mathbf B=\{[i,i+k]\,:\,0\leq i, k\leq n\}$.
+The facets are given by 
+\[
+F_{[i,j]}=\sum_{[k,l]\subset [i,j]}S_{[k,l]},
 \]
 and their solution is 
 \[
-S_{[i,i]}=F^B_{[i,i]},\quad S_{[i,j]}=F^B_{[i,j]}+F^B_{[i+1,j-1]}-F^B_{[i,j-1]}-F^B_{[i+1,j]}\quad \text{for $i\neq j$},
+S_{[i,i]}=F_{[i,i]},\quad S_{[i,j]}=F_{[i,j]}+F_{[i+1,j-1]}-F_{[i,j-1]}-F_{[i+1,j]}\quad \text{for $i\neq j$},
 \]
-where $F^B_{[i+1,i]}:=0$. Therefore, the $u$-variables are
+where $F_{[i+1,i]}:=0$. Therefore, the $u$-variables are
 \[
 u_i:=u_{[i,i-2]}=\frac{x_{[i,i-2]}}{x_{[0,n]}},\quad 
 u_{i,j+2}:=u_{[i,j]}=\frac{x_{[i,j]}x_{[i-1,j+1]}}{x_{[i,j+1]}x_{[i-1,j]}}
@@ -733,9 +786,9 @@ U_{A,B}=\prod_{a\in A,b\in B}u_{ab},\quad
 U_A=\prod_{a\in A}u_a\prod_{a<b\in A}u_{ab}.
 \]
 
-$B_n$ type cluster stringy integral also comes from a hyperplane arrangement, the Shi arrangement.
-The Shi arrangement contains $n+1$ punctures $\{z_i\}_{i=1,\dots,n+1}$ 
-on the real line with the freedom of global transformation 
+Like $A_n$, $B_n$ type cluster stringy canonical form also comes from a hyperplane 
+arrangement, the Shi arrangement. The Shi arrangement contains $n+1$ punctures 
+$\{z_i\}_{i=1,\dots,n+1}$ on the real line with the freedom of global transformation 
 $z_i\to z_i+a$ which can be used to fix $z_{n+1}=0$. The Shi arrangement is 
 given by the following hyperplanes
 \[
@@ -750,15 +803,14 @@ and its stringy integral is
 where the positive region is given by $0<z_i-z_j<1$ for $1\leq i<j \leq n+1$.
 The $u$-variables of this configuration space are
 \[
-    u_1=1+z_1-z_2,\quad \dots,\quad u_{n}=1+z_{n}-z_{n+1},\quad u_{n+1}=z_{n+1}-z_1
+    u_1=\tilde z_1-z_2,\quad \dots,\quad u_{n}=\tilde z_{n}-z_{n+1},
+    \quad u_{n+1}=z_{n+1}-z_1
 \]
 and 
-\[
-\begin{aligned}
-    u_{ji}&=\frac{(z_{j+1}-z_{i})(z_{i+1}-z_j)}{(z_{j+1}-z_{i+1})(z_i-z_j)}\quad &&\text{for $i<j$},\\
-    u_{ij}&=\frac{(\tilde z_{j+1}-z_{i})(\tilde z_{i+1}-z_j)}{(\tilde z_{j+1}-z_{i+1})(\tilde z_i-z_j)}\quad &&\text{for $i<j$},
-\end{aligned}
-\]
+\begin{align*}
+    u_{ji}&=\frac{(z_{j+1}-z_{i})(z_{i+1}-z_j)}{(z_{j+1}-z_{i+1})(z_i-z_j)}\quad \text{for $i<j$},\\
+    u_{ij}&=\frac{(\tilde z_{j+1}-z_{i})(\tilde z_{i+1}-z_j)}{(\tilde z_{j+1}-z_{i+1})(\tilde z_i-z_j)}\quad \text{for $i<j$},
+\end{align*}
 where $\tilde{z}_i=z_{i+n+1}=z_{i}+1$ and indices live in $\mathbb Z_{2n+2}$.
 %They satisfy the following $u$-equations 
 %\begin{align*}	
@@ -778,48 +830,51 @@ Before answer this question, let's first find all degenerations of $A_n$ with th
 
 %For convenience, we abuse the name `building set' for degenerations of $A_n$ in this subsection.
 
-From the following equations for facets $\{F_{ij}\}$ of $A_n$
+From the following equations for facets $\{F_{[i,j]}\}$ of $A_n$
 \[
-F_{ac}+F_{bd}-F_{bc}-F_{ad}=\sum_{a\leq p<b\atop{c\leq q<d}}c_{pq}
+	F_{[i,k]}+F_{[j,l]}-F_{[i,l]}-F_{[j,k]}=
+	\sum_{i\leq a<j\atop{k<b\leq l}} c_{[a,b]} 
 \]
-for $1\leq a<b<c<d\leq n+3$, an economical way to get a degeneration which satisfies the above property is setting all $c$s on the RHS of 
+where $F_{[a,b]}:=0$ when $a>b$ or $[a,b]=[0,n]$,
+an economical way to get a degeneration which satisfies the above property is setting all $c$s on the RHS of 
 \begin{align*}
-    &F_{ac}+F_{bd}-F_{ad}=\sum_{a\leq p<b< q<d}c_{pq}\quad \text{for $a<b<c=b+1<d$ }\\
-    \text{or}&\\
-    &F_{1c}+F_{b,n+3}-F_{bc}=\sum_{1\leq p<b\atop{c\leq q<n+3}}c_{pq}\quad \text{for $a=1$ and $d=n+3$}
+&F_{[i,j-1]}+F_{[j,l]}-F_{[i,l]}= \sum_{i\leq a<j\leq b\leq l} c_{[a,b]} 
+\quad \text{for $i<j=k+1\leq l$ }\\[-1.5ex]
+\text{or}&\\
+&F_{[0,k]}+F_{[j,n]}-F_{[j,k]}= \sum_{0\leq a<j\atop{k<b\leq n}} c_{[a,b]} 
+\quad \text{for $0<j\leq n$ and $0\leq k<n$}
 \end{align*}
 to be zero, and all wanted degenerations can be got by setting $c$s in several above equations. 
 
 From the viewpoint of mesh, an equation above corresponds to a big diamond whose top or bottom corner and all $c$s are zero. For example,
 \begin{center}
-	\begin{tikzpicture}[baseline={([yshift=-.5ex]current bounding box.center)}]
-		\draw (-2,0) node[left] {$A$} -- (1,-3) node[below] {$0$}
-		-- (3,-1) node[right] {$C$} -- (0,2) node[above] {$B$}-- cycle;
-		\draw (-1,-1) -- (1,1);
-		\draw (-1,1) -- (2,-2);
-		\draw (0,-2) -- (2,0);
-			\node[circle,draw=black, fill=black, inner sep=0pt,minimum size=5pt] at (1,1) {};
-	\node[circle,draw=black, fill=black, inner sep=0pt,minimum size=5pt] at (0,2) {};
-	\node[circle,draw=black, fill=black, inner sep=0pt,minimum size=5pt] at (-1,1) {};
-	\node[circle,draw=black, fill=black, inner sep=0pt,minimum size=5pt] at (0,0) {};
-	\node[circle,draw=black, fill=black, inner sep=0pt,minimum size=5pt] at (1,-1) {};
-	\node[circle,draw=black, fill=black, inner sep=0pt,minimum size=5pt] at (2,0) {};
-	\end{tikzpicture}
-	\qquad \text{or}
-	\qquad
-	\begin{tikzpicture}[baseline={([yshift=-.5ex]current bounding box.center)}]
-		\draw (-2,0) node[left] {$A$} -- (1,-3) node[below] {$B$}
-		-- (3,-1) node[right] {$C$} -- (0,2) node[above] {$0$}-- cycle;
-		\draw (-1,-1) -- (1,1);
-		\draw (-1,1) -- (2,-2);
-		\draw (0,-2) -- (2,0);
-			\node[circle,draw=black, fill=black, inner sep=0pt,minimum size=5pt] at (0,0) {};
-	\node[circle,draw=black, fill=black, inner sep=0pt,minimum size=5pt] at (1,-3) {};
-	\node[circle,draw=black, fill=black, inner sep=0pt,minimum size=5pt] at (-1,-1) {};
-	\node[circle,draw=black, fill=black, inner sep=0pt,minimum size=5pt] at (0,-2) {};
-	\node[circle,draw=black, fill=black, inner sep=0pt,minimum size=5pt] at (2,-2) {};
-	\node[circle,draw=black, fill=black, inner sep=0pt,minimum size=5pt] at (1,-1) {};
-	\end{tikzpicture}
+\begin{tikzpicture}[baseline={([yshift=-.5ex]current bounding box.center)}]
+\draw (-2,0) node[left] {$A$} -- (1,-3) node[below] {$0$}
+	-- (3,-1) node[right] {$C$} -- (0,2) node[above] {$B$}-- cycle;
+\draw (-1,-1) -- (1,1);
+\draw (-1,1) -- (2,-2);
+\draw (0,-2) -- (2,0);
+\node[circle,draw=black, fill=black, inner sep=0pt,minimum size=5pt] at (1,1) {};
+\node[circle,draw=black, fill=black, inner sep=0pt,minimum size=5pt] at (0,2) {};
+\node[circle,draw=black, fill=black, inner sep=0pt,minimum size=5pt] at (-1,1) {};
+\node[circle,draw=black, fill=black, inner sep=0pt,minimum size=5pt] at (0,0) {};
+\node[circle,draw=black, fill=black, inner sep=0pt,minimum size=5pt] at (1,-1) {};
+\node[circle,draw=black, fill=black, inner sep=0pt,minimum size=5pt] at (2,0) {};
+\end{tikzpicture}
+\qquad \text{or}\qquad
+\begin{tikzpicture}[baseline={([yshift=-.5ex]current bounding box.center)}]
+\draw (-2,0) node[left] {$A$} -- (1,-3) node[below] {$B$}
+-- (3,-1) node[right] {$C$} -- (0,2) node[above] {$0$}-- cycle;
+\draw (-1,-1) -- (1,1);
+\draw (-1,1) -- (2,-2);
+\draw (0,-2) -- (2,0);
+\node[circle,draw=black, fill=black, inner sep=0pt,minimum size=5pt] at (0,0) {};
+\node[circle,draw=black, fill=black, inner sep=0pt,minimum size=5pt] at (1,-3) {};
+\node[circle,draw=black, fill=black, inner sep=0pt,minimum size=5pt] at (-1,-1) {};
+\node[circle,draw=black, fill=black, inner sep=0pt,minimum size=5pt] at (0,-2) {};
+\node[circle,draw=black, fill=black, inner sep=0pt,minimum size=5pt] at (2,-2) {};
+\node[circle,draw=black, fill=black, inner sep=0pt,minimum size=5pt] at (1,-1) {};
+\end{tikzpicture}
 \end{center}
 we can see that
 \[
@@ -831,34 +886,34 @@ the number of vanishing facets equals the number of deleted $c$s for degeneratio
 One can use these diamonds to build a degeneration with more vanishing facets whose big polytope is a simplex. For example, in $A_3$
 \begin{center}
 \begin{tikzpicture}
-	\fill[green!30] (2,1) -- (0,-1) -- (1,-2) -- (3,0);
-	\fill[blue!30] (3,0) -- (2,-1) -- (3,-2) -- (4,-1);
-	\draw[thick] (-2,-1) -- (1,2) -- (4,-1) -- (3,-2) -- (0,1);
-	\draw[thick] (-1,-2) -- (2,1);
-	\draw[thick] (-2,-1) -- (-1,-2);
-	\draw[thick] (-1,0) -- (1,-2) -- (3,0);
-	\node[circle,draw=black, fill=black, inner sep=0pt,minimum size=5pt] at (1,0) {};
-	\node[circle,draw=black, fill=black, inner sep=0pt,minimum size=5pt] at (2,1) {};
-	\node[circle,draw=black, fill=black, inner sep=0pt,minimum size=5pt] at (3,0) {};
-	\node at (-2.5,-1) {$13$};
-\node at (-0.5,-1) {$24$};
-\node at (1.5,-1) {$35$};
-\node at (3.5,-1) {$46$};
-\node at (-1.5,0) {$14$};
-\node at (0.5,0) {$25$};
-\node at (2.5,0) {$36$};
-\node at (-0.5,1) {$15$};
-\node at (1.5,1) {$26$};
-\node at (1,2.2) {$16$};
+\fill[green!30] (2,1) -- (0,-1) -- (1,-2) -- (3,0);
+\fill[blue!30] (3,0) -- (2,-1) -- (3,-2) -- (4,-1);
+\draw[thick] (-2,-1) -- (1,2) -- (4,-1) -- (3,-2) -- (0,1);
+\draw[thick] (-1,-2) -- (2,1);
+\draw[thick] (-2,-1) -- (-1,-2);
+\draw[thick] (-1,0) -- (1,-2) -- (3,0);
+\node[circle,draw=black, fill=black, inner sep=0pt,minimum size=5pt] at (1,0) {};
+\node[circle,draw=black, fill=black, inner sep=0pt,minimum size=5pt] at (2,1) {};
+\node[circle,draw=black, fill=black, inner sep=0pt,minimum size=5pt] at (3,0) {};
+\node at (-2.5,-1) {$[0,0]$};
+\node at (-0.65,-1) {$[1,1]$};
+\node at (1.35,-1) {$[2,2]$};
+\node at (3.35,-1) {$[3,3]$};
+\node at (-1.5,0) {$[0,1]$};
+\node at (0.35,0) {$[1,2]$};
+\node at (2.35,0) {$[2,3]$};
+\node at (-0.5,1) {$[0,2]$};
+\node at (1.35,1) {$[1,3]$};
+\node at (1,2.2) {$[0,3]$};
 \end{tikzpicture}
 \end{center}
 after setting $c$s in green and purple diamonds to be zero, three facets (black points) vanish and building set after deletion is 
 \[
-\{16,15,26,14,36,13,46\}.
+	\{[0,3],[0,2],[0,1],[0,0],[1,1],[2,2],[3,3]\}.
 \]
-One can further check that it's a cube or $A_1^3$.
+One can further check that it's a cube (or $A_1^3$).
 
-We can play the game for any degenerations of $A_n$, count black points and deleted $c$s in each degeneration, and find that for $A_2$, $A_3$ and $A_4$, there're respectively $5$, $42$ and $565$ possible degenerations whose big polytopes are simplices. For these degenerations, we can easily find their $u$-variables if their sets of all vanishing facets are known.
+We can play the game for any degenerations of $A_n$, count black points and deleted $c$s in each degeneration, and find that for $A_2$, $A_3$ and $A_4$, there're respectively $4$, $41$ and $580$ possible degenerations whose big polytopes are simplices. For these degenerations, we can easily find their $u$-variables if their sets of all vanishing facets are known.
 
 Suppose $\mathscr D$ is the set of all vanishing facets of a degeneration in the building set, 
 we can read from the mesh that
@@ -882,70 +937,121 @@ so the new $u$-variables of the degeneration are
 \]
 for any $I\not\in \mathscr D$. 
 
-The simplest degenerations of $A_n$ are those with one $c_{i,i+2}$ vanishing. For the one with $c_{i,i+2}=0$, we get 
+The simplest degenerations of $A_n$ are those with one $c_{[i,i+1]}$ vanishing. For the one with $c_{[i,i+1]}=0$, we get 
 \[
-F_{i,i+3}=F_{i,i+2}+F_{i+1,i+3},
+	F_{[i,i+1]}=F_{i}+F_{i+1},
 \]
-so 
+where $F_i=F_{[i,i]}$, so 
 \[
-\tilde u_{i,i+2}=u_{i,i+2} u_{i,i+3},\quad 
-\tilde u_{i+1,i+3}=u_{i+1,i+3} u_{i,i+3},\quad 
-\tilde u_I=u_I \text{ for the other $I\neq (i,i+3)$}.
+	\tilde u_{i}=u_{i} u_{[i,i+1]},\quad 
+	\tilde u_{i+1}=u_{i+1} u_{[i,i+1]},\quad 
+	\tilde u_I=u_I \text{ for the other $I\neq [i,i+1]$}.
 \]
 They satisfy the following $u$-equation
 \[
-1-\tilde u_{i,i+2}=\prod_{j\neq i,i+2,i+3} \tilde u_{i+1,j},\quad 
-1-\tilde u_{i+1,i+3}=\prod_{j\neq i,i+2,i+3} \tilde u_{i+2,j}
+	1-\tilde u_{i}=\prod_{0\leq a\leq i-1}\tilde u_{[a,i-1]}
+	\prod_{i+1< b\leq n} \tilde u_{[i+1,b]},\quad 
+	1-\tilde u_{i+1}=\prod_{0\leq a <i-1} \tilde u_{[a,i]}
+	\prod_{i+2\leq b\leq n} \tilde u_{[i+2,b]},\quad 
 \]
-and $u$-equations for $\{u_{kl}\,:\, (k,l)\neq (i,i+3),(i,i+2),(i+1,i+3)\}$ with the change of variables above. Similarly, one can easily find the $u$-variables and $u$-equations for the degenerations with $c_{i,i+2}=0$ for several $i$.
+and the other $u$-equations are original $u$-equations for
+$\{u_{[i,j]}\,:\, [i,j]\neq [i,i],[i,i+1],[i+1,i+1]\}$ in terms of new variables. Similarly, one can easily find the $u$-variables and $u$-equations for the degenerations with $c_{[i,i+1]}=0$ for several $i$.
 
-The next simplest degenerations of $A_n$ is setting $c_{i-1,i+1}=c_{i,i+2}=c_{i-1,i+2}=0$, we have seen an example in $A_3$ above.
+%The next simplest degenerations of $A_n$ is setting $c_{[i-1,i]}=c_{[i,i+1]}=c_{[i-1,i+1]}=0$ for $1\leq i\leq n-1$, we have seen an example in $A_3$ above. The vanishing facets of this degeneration are
+%\[
+	%F_{[i-1,i+1]}=F_{i-1}+F_i+F_{i+1},\quad F_{[i-1,i]}=F_{i-1}+F_i,
+	%\quad F_{[i,i+1]}=F_i+F_{i+1},
+%\]
+%so $u$-variables of this degeneration are 
+%\[
+	%\tilde u_{i-1}=u_{i-1}u_{[i-1,i+1]}u_{[i-1,i]}, \quad 
+	%\tilde u_{i}=u_iu_{[i-1,i+1]}u_{[i,i+1]},\quad
+	%\tilde u_{i+1}=u_{i+1}u_{[i-1,i+1]}u_{[i,i+1]} 
+%\]
+%and $\tilde u_I=u_I$ for the other $I$. ($u$-eqs...)
 
-% For example, in the above example of $A_3$,
-% \[
-% F_{123}=F_{1}+F_2+F_3, \quad F_{12}=F_1+F_2, \quad F_{23}=F_2+F_3,
-% \]
-% so the $u$-variables are
-% \begin{align*}
-% \tilde u_{1}&=u_1 u_{123} u_{12}=\frac{x_1}{x_{01}},\quad 
-% \tilde u_{2}=u_2 u_{123} u_{12}u_{23}=\frac{x_{2}}{x_{012}},\quad 
-% \tilde u_{3}=u_3u_{123}u_{23}=\frac{x_3}{x_{0123}},\\
-% \tilde u_{0}&=u_{0}=\frac{x_{0}}{x_{01}},\quad 
-% \tilde u_{01}=u_{01}=\frac{x_{01}}{x_{012}},\quad 
-% \tilde u_{012}=u_{012}=\frac{x_{012}}{x_{0123}},
-% \end{align*}
-% and they satisfy the following $u$-equations:
-% \[
-% 	\tilde u_1+\tilde u_0=1,\quad \tilde u_2+\tilde u_{01}=1,
-% 	\quad \tilde u_{3}+\tilde u_{012}=1.
-% \]
+The nest simplest degenerations of $\mathscr A_n$ may be products 
+$\mathscr A_i\times \mathscr A_{n-i}$, which can be realized as the following
+mesh,
+\begin{center}
+\usetikzlibrary{decorations.pathmorphing}
+\begin{tikzpicture}[scale=2]
+\fill[green!20] (0.4498,-0.558) -- (1.2997,-1.4584) -- (2.8779,0.1223) --(2,1);
+\draw (-0.5,-1.5) -- (2,1) -- (4.5,-1.5);
+\draw[decorate,decoration=zigzag] (-0.5,-1.5)--(4.5,-1.5);
+\node at (1.7,-1.3) {$[i,i]$};
+\node at (0.3,-0.4) {$[0,i]$};
+\node at (3.1,0.2) {$[i,n]$};
+\end{tikzpicture}
+\end{center}
+where $c$s in green region vanish, \emph{i.e.} $c_{[a,b]}=0$ for $0\leq a<i<b\leq n$.
+Vanishing facets of this degeneration are
+\[
+F_{[a,b]}=F_{[a,n]}+F_{[0,b]}\quad \text{for $0<a\leq i\leq b<n$},
+\]
+so new $u$-variables are
+\[
+	\tilde u_{[0,b]} = u_{[0,b]}\prod_{a=1}^{i} u_{[a,b]},\quad 
+	\tilde u_{[a,n]} = u_{[a,n]}\prod_{b=i}^{n-1} u_{[a,b]},
+\]
+and $\tilde u_{I}=u_{I}$ for the other $I$. The $u$-equations are the union of 
+$u$-equations of the following two independent meshes
+\begin{center}\footnotesize
+\begin{tikzpicture}[scale=1.5,baseline={([yshift=-.5ex]current bounding box.center)}]
+\draw (0.5,-2.5) -- (3,0) -- (5.5,-2.5);
+\draw (5.5,-2.5) -- (5,-3) -- (2.5,-0.5);
+\draw (5,-2) -- (4,-3) -- (2,-1);
+\draw (4.5,-1.5) -- (3,-3) -- (1.5,-1.5);
+\draw (0.5,-2.5) -- (1,-3) -- (3.5,-0.5);
+\node at (2,-2.8) {$\cdots$};
+\node at (2.6,-2.1) {$\ddots$};
+\node at (3.1,-1.6) {$\ddots$};
+\node at (3.6,-1.1) {$\ddots$};
+\node at (0.3,-2.5) {$[0,0]$};
+\node at (3.1,-2.5) {$[i{-}2,i{-}2]$};
+\node at (4.1,-2.5) {$[i{-}1,i{-}1]$};
+\node at (5.2,-2.5) {$[i,n]$};
+\node at (4.6,-2) {$[i{-}1,n]$};
+\node at (3.6,-2) {$[i {-}2,i{-}1]$};
+\node at (4.2,-1.5) {$[i{-}2,n]$};
+\node at (3.2,-0.5) {$[1,n]$};
+\node at (3,0.2) {$[0,n]$};
+\node at (2.1,-0.5) {$[0,i{-}1]$};
+\node at (1.7,-1) {$[0,i{-}2]$};
+\end{tikzpicture}\quad 
+\begin{tikzpicture}[scale=1.5,baseline={([yshift=-.5ex]current bounding box.center)}]
+\draw (0.5,-2.5) -- (3,0) -- (5.5,-2.5);
+\draw (5.5,-2.5) -- (5,-3) -- (2.5,-0.5);
+\draw (4.5,-1.5) -- (3,-3) -- (1.5,-1.5);
+\draw (4,-1) -- (2,-3) -- (1,-2);
+\draw (0.5,-2.5) -- (1,-3) -- (3.5,-0.5);
+\node at (4,-2.6) {$\cdots$};
+\node[rotate=90] at (3.2,-2.2) {$\ddots$};
+\node[rotate=90] at (2.7,-1.7) {$\ddots$};
+\node[rotate=90] at (2.2,-1.2) {$\ddots$};
+\node at (3,0.2) {$[0,n]$};
+
+\node at (3.9,-0.5) {$[i{+}1,n]$};
+\node at (4.4,-1) {$[i{+}2,n]$};
+\node at (4.9,-1.5) {$[i{+}3,n]$};
+\node at (2.1,-0.5) {$[0,n{-}1]$};
+\node at (1.2,-1.4) {$[0,i{+}2]$};
+\node at (0.2,-2.5) {$[0,i]$};
+\node at (0.6,-2) {$[0,i{+}1]$};
+\node at (1.2,-2.5) {$[i{+}1,i{+}1]$};
+\node at (1.7,-2) {$[i{+}1,i{+}2]$};
+\node at (2.1,-2.5) {$[i{+}2,i{+}2]$};
+\end{tikzpicture}
+\end{center}
 
 
 
 
-(Find those with perfect $u$-eq?)
+(direct proof?)
 
-*******************
-\subsection*{Degenerations which lead to products}
-In this section we provide an answer to the question of which degenerations of $A_n$ and $B_n$ give the most general products of such geometries. We begin by stating the following results about Nestohedra.
+(Find all with perfect $u$-eq?)
 
-The maximal set of a building set $B_{max}$ is the set of all inclusion maximal elements of the building set $B$. A building set $B$ is connected if $B_{max}$ has a single element.
-
-{\bf Theorem:}If $B_1, B_2,\cdots B_n$ are connected subsets of a building set $B$ then the corresponding nestohedron ${\mathscr N_B}$ is isomorphic to the product of the nestohedra ${\mathscr N}_{ B_1} \times{\mathscr N}_{ B_2} \cdots \times {\mathscr N}_{B_n}$.
-
-We can use the above result to construct 	a degeneration of $A_n$ which is a most general product i.e., $\prod_{p_i} A_{p_i}$ such that $\sum_{i} p_{i} = n$. 
-
-Let us consider the  $A_4$ example for which the allowed possibilities are : $A_1^{4}$, $A_1^2 \times A_2$, $A_1 \times A_3$ and $A^{2}_2$.
- 
-For the $A_1^{4}$ the building set is $ \{ {0},{1},{2},{3},{4},{01},{12},{23},{34} \}$ where $\{0,01\} , \{1,12\},\{2,23\},\{3,34\}$ generate the 4 $A_1$'s.
-
-For the $A_1^{2} \times A_2$ the building set is $ \{ {0},{1},{2},{3},{4},{01},{12},{23},{34},{234} \}$ where $\{0,01\} , \{1,12\} $ generate the 2 $A_1$'s and $\{2,3,4,23,34,234\}$ generates the $A_2$'s.
-
-For the $A_1 \times A_3$ the building set is $ \{ {0},{1},{2},{3},{4},{01},{12},{23},{34},{123},{234},{1234} \}$ where $\{0,01\}$ is the generates the $A_1$ and $\{{1},{2},{3},{4},{12},{23},{34},{123},{234},{1234} \}$ generate  $A_3$'s.
-
-For the $A_2^{2}$ the building set is $ \{ {0},{1},{2},{3},{4},{01},{12},{23},{34} ,{012},{234}\}$ where $\{0,1,2,01,12,012\}$  and $\{2,3,4,23,34,234\}$ generate the 2 $A_2$'s.
-
-We can similarly find a degeneration of $A_n,B_n,~or~ {\mathscr P_n}$ which would correspond to any product.
+degenerations of $B_n$ ...
 
 
 \section{Stringy canonical forms and $u$-equations for generalized permutahedra}
@@ -1064,11 +1170,34 @@ which satisfy $u_i +u^{'}_{i} =1$ as their $u$-equation. \\
 
 (6) Let $\Gamma$ be a graph on the vertex set $[0,n]$. Let us assume that $B = B(\Gamma)$ is the set of subsets $I \in [n]$ such that the induced graph $\Gamma$ is connected, then  ${\mathscr N_n}({\bf Y})$ is a graph associahedron.\\
 
-\section*{Braid arrangement}
+\subsection*{Braid arrangement}
 The braid arrangement in $\mathbb{R}^{n+1}$ consists of $\left({n}\atop{2}\right)$ hyperplanes 
 \bea
 z_i =z_j ~~{\rm for ~ all}~~0 \leq i<j \leq n
 \eea 
+
+\subsection*{Degenerations which lead to products}
+In this section we provide an answer to the question of which degenerations of $A_n$ and $B_n$ give the most general products of such geometries. We begin by stating the following results about Nestohedra.
+
+The maximal set of a building set $B_{max}$ is the set of all inclusion maximal elements of the building set $B$. A building set $B$ is connected if $B_{max}$ has a single element.
+
+{\bf Theorem:}If $B_1, B_2,\cdots B_n$ are connected subsets of a building set $B$ then the corresponding nestohedron ${\mathscr N_B}$ is isomorphic to the product of the nestohedra ${\mathscr N}_{ B_1} \times{\mathscr N}_{ B_2} \cdots \times {\mathscr N}_{B_n}$.
+
+We can use the above result to construct 	a degeneration of $A_n$ which is a most general product i.e., $\prod_{p_i} A_{p_i}$ such that $\sum_{i} p_{i} = n$. 
+
+Let us consider the  $A_4$ example for which the allowed possibilities are : $A_1^{4}$, $A_1^2 \times A_2$, $A_1 \times A_3$ and $A^{2}_2$.
+ 
+For the $A_1^{4}$ the building set is $ \{ {0},{1},{2},{3},{4},{01},{12},{23},{34} \}$ where $\{0,01\} , \{1,12\},\{2,23\},\{3,34\}$ generate the 4 $A_1$'s.
+
+For the $A_1^{2} \times A_2$ the building set is $ \{ {0},{1},{2},{3},{4},{01},{12},{23},{34},{234} \}$ where $\{0,01\} , \{1,12\} $ generate the 2 $A_1$'s and $\{2,3,4,23,34,234\}$ generates the $A_2$'s.
+
+For the $A_1 \times A_3$ the building set is $ \{ {0},{1},{2},{3},{4},{01},{12},{23},{34},{123},{234},{1234} \}$ where $\{0,01\}$ is the generates the $A_1$ and $\{{1},{2},{3},{4},{12},{23},{34},{123},{234},{1234} \}$ generate  $A_3$'s.
+
+For the $A_2^{2}$ the building set is $ \{ {0},{1},{2},{3},{4},{01},{12},{23},{34} ,{012},{234}\}$ where $\{0,1,2,01,12,012\}$  and $\{2,3,4,23,34,234\}$ generate the 2 $A_2$'s.
+
+We can similarly find a degeneration of $A_n,B_n,~or~ {\mathscr P_n}$ which would correspond to any product.
+
+
 \subsection{Natural stringy integrals with linear factors} 
 
 {\bf introduce a natural stringy integrals for any generalized stringy canonical forms: variables $x_0=1, x_1, \cdots, x_n$ and define $x_I=\sum_{i \in I} x_i$, the factors are $x_I^{\alpha' S_I}$ (we can say monomials $S_\{i\}=X_i$ and polynomials $S_I=-c_I$. $N=n+m$ and big polytope is a simplex, then general formula for $u$ variables, which is equivalent to ABHY conditions; again $P_n$ in full details and others as degenerations.}
