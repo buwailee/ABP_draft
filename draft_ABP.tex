@@ -767,9 +767,13 @@ F_{[i,j]}=\sum_{[k,l]\subset [i,j]}S_{[k,l]},
 \]
 and their solution is 
 \[
-S_{[i,i]}=F_{[i,i]},\quad S_{[i,j]}=F_{[i,j]}+F_{[i+1,j-1]}-F_{[i,j-1]}-F_{[i+1,j]}\quad \text{for $i\neq j$},
+	S_{[i,i]}=F_{[i,i]},\quad S_{[i,j]}=F_{[i,j]}+F_{[i+1,j-1]}-F_{[i,j-1]}-F_{[i+1,j]}\quad \text{for $i\neq j$ and $[i,j]\neq [0,n]$},
 \]
-where $F_{[i+1,i]}:=0$. Therefore, the $u$-variables are
+and
+\[
+	S_{[0,n]}=F_{[0,n]}-\sum_{i=0}^n F_{[i,i-2]} +\sum_{i=0}^n F_{[i,i-3]},
+\]
+where $F_{[i+1,i]}=F_{[0,n]}=0$. Therefore, the $u$-variables are
 \[
 u_i:=u_{[i,i-2]}=\frac{x_{[i,i-2]}}{x_{[0,n]}},\quad 
 u_{i,j+2}:=u_{[i,j]}=\frac{x_{[i,j]}x_{[i-1,j+1]}}{x_{[i,j+1]}x_{[i-1,j]}}
@@ -785,6 +789,92 @@ where
 U_{A,B}=\prod_{a\in A,b\in B}u_{ab},\quad 
 U_A=\prod_{a\in A}u_a\prod_{a<b\in A}u_{ab}.
 \]
+
+The ABHY construction of $\mathscr B_n$ is similar: $F_{[i,j]}\geq 0$ for all $[i,j]\in\mathbf B$,
+\[
+	F_{[i,j-1]}+F_{[i+1,j]}-F_{[i,j]}-F_{[i+1,j-1]}
+	=c_{[i,j]}\,\,\text{for $i\neq j$ and $[i,j]\neq [0,n]$}, \quad 
+\]
+and 
+\begin{equation}\label{abhyB}
+	c_{[0,n]}=\sum_{i=0}^n F_{[i,i-2]}-\sum_{i=0}^n F_{[i,i-3]},
+\end{equation}
+where $F_{[i+1,i]}=0$ and $c$s are all positive constants. We can also
+use a mesh to represent this conditions. For example, the mesh for $\mathscr B_3$
+is 
+\begin{center}
+\begin{tikzpicture}
+	\draw[thick] (-1,-2) node[below]{$0$} -- (2,1);
+	\draw[thick] (-2,-1) -- (-1,-2);
+	\draw[thick] (-1,0) -- (1,-2) node[below]{$0$}-- (4,1);
+	\draw[thick] (2,1) -- (4,-1) -- (5,-2);
+	\draw[thick] (4,1) -- (6,-1);
+	\draw[thick] (5,-2) node[below]{$0$} -- (7,0) -- (6,1) ;
+	\draw[thick] (-2,-1) -- (0,1) -- (2,-1);
+	\draw[thick] (2,-1) -- (3,-2) node[below]{$0$} -- (6,1);
+	\node at (-2.5,-1) {$[0,0]$};
+	\node at (-0.65,-1) {$[1,1]$};
+	\node at (1.35,-1) {$[2,2]$};
+	\node at (3.35,-1) {$[3,3]$};
+	\node at (5.35,-1) {$[0,0]$};
+	\node at (-1.5,0) {$[0,1]$};
+	\node at (0.35,0) {$[1,2]$};
+	\node at (2.35,0) {$[2,3]$};
+	\node at (4.35,0) {$[3,0]$};
+	\node at (6.35,0) {$[0,1]$};
+	\node at (0,1.2) {$[0,2]$};
+	\node at (2,1.2) {$[1,3]$};
+	\node at (4,1.2) {$[2,0]$};
+	\node at (6,1.2) {$[3,1]$};
+\end{tikzpicture}
+\end{center}
+with an additional equation \eqref{abhyB}. 
+
+%In order to represent this `strange'
+%condition in the mesh, we add a special layer of diamonds on the mesh, for example,
+%the new mesh for $B_3$ is 
+%\begin{center}
+%\begin{tikzpicture}
+	%\draw[thick] (-2,-1) -- (1,2) -- (4,-1) -- (3,-2) node[below]{$0$} -- (0,1);
+	%\draw[thick] (-1,-2) node[below]{$0$} -- (3,2);
+	%\draw[thick] (-2,-1) -- (-1,-2);
+	%\draw[thick] (-1,0) -- (1,-2) node[below]{$0$}-- (5,2);
+	%\draw[thick] (3,2) -- (6,-1) -- (5,-2);
+	%\draw[thick] (5,2) -- (6,1) -- (7,0);
+	%\draw[thick] (4,-1) -- (5,-2) node[below]{$0$} -- (8,1) -- (7,2) -- cycle;
+	%\node at (-2.5,-1) {$[0,0]$};
+	%\node at (-0.65,-1) {$[1,1]$};
+	%\node at (1.35,-1) {$[2,2]$};
+	%\node at (3.35,-1) {$[3,3]$};
+	%\node at (5.35,-1) {$[0,0]$};
+	%\node at (-1.5,0) {$[0,1]$};
+	%\node at (0.35,0) {$[1,2]$};
+	%\node at (2.35,0) {$[2,3]$};
+	%\node at (4.35,0) {$[3,0]$};
+	%\node at (6.35,0) {$[0,1]$};
+	%\node at (-0.5,1) {$[0,2]$};
+	%\node at (1.35,1) {$[1,3]$};
+	%\node at (3.5,1) {$[2,0]$};
+	%\node at (5.5,1) {$[3,1]$};
+	%\node at (7.5,1) {$[0,2]$};
+	%\node at (1,2.2) {$[0]$};
+	%\node at (3,2.2) {$[1]$};
+	%\node at (5,2.2) {$[2]$};
+	%\node at (7,2.2) {$[3]$};
+%\end{tikzpicture}
+%\end{center}
+%each diamond represents a new relation
+%\[
+	%F_{[i,i-2]}+F_{[i+1,i-1]}-2F_{[i+1,i-2]}=2c_{[i]},
+%\]
+%and $\sum_{i=0}^n c_{[i]}=c_{[0,n]}$. (the above equation is meaningless.....)
+
+%Each big diamond gives us an equation
+%\[
+	%\sum_{a\in [i,j-1]\atop{b\in [k+1,l]}} c_{[a,b]} = 
+	%F_{[i,k]}+F_{[j,l]}-F_{[i,l]}-F_{[j,k]}
+%\]
+%where $F_{[i+1,i]}:=0$ and $[i,l],[j,k]\neq [0,n]$.
 
 Like $A_n$, $B_n$ type cluster stringy canonical form also comes from a hyperplane 
 arrangement, the Shi arrangement. The Shi arrangement contains $n+1$ punctures 
@@ -1047,12 +1137,61 @@ $u$-equations of the following two independent meshes
 (better figure?)
 
 One could use this construction of products to produce any finite product $\mathscr A_{i_1}\times \cdots \times \mathscr A_{i_k}$, and this construction is also valid for any generalized permutahderon. 
-The direct proof of this argument for $\mathscr A_n$ is using the global $u$-equations of $\mathscr A_n$. ...
+The direct proof of this argument for $\mathscr A_n$ is using global $u$-equations of $\mathscr A_n$. ...
 
-(Find all with perfect $u$-eq?)
+The story of degenerations of $B_n$ is very similar. 
+% The first thing to do is to find degenerations whose big polytopes are simplices. 
+With the help of the mesh of $\mathscr B_n$, we could get many classes of degenerations with perfect $u$-equations. 
+For example, setting $c_{[i,i+1]}=0$, then
+\[
+	F_{[i,i+1]}=F_{i}+F_{i+1},
+\]
+where $F_i=F_{[i,i]}$, so 
+\[
+	\tilde u_{i}=u_{i} u_{[i,i+1]},\quad 
+	\tilde u_{i+1}=u_{i+1} u_{[i,i+1]},\quad 
+	\tilde u_I=u_I \text{ for the other $I\neq [i,i+1]$}.
+\]
+The $u$-equations of this degeneration are
+\[
+	1-\tilde u_i=\tilde u_{[i+1,i-1]}
+	\prod_{a=i+2}^{i-1}\tilde u_{[a,i-1]}\tilde u_{[i+1,a]},\quad
+	1-\tilde u_{i+1}=
+	\tilde u_{[i+2,i]}\prod_{a=i+2}^{i-1}\tilde u_{[a,i]}\tilde u_{[i+2,a]},
+\]
+and the other $u$-equations are old $u$-equations in terms of new $u$-variables.
 
-The story of degenerations of $B_n$ is very similar. The first thing to do is to find degenerations whose big polytopes are simplices.
+A more interesting degeneration is the product $\mathscr B_i\times \mathscr A_{n-i}$.
+In particular,$\mathscr A_n$ is also a degeneration of $\mathscr B_n$.
 
+(Zhenjie: the only known example for me $\mathscr B_3\to \mathscr B_{2}\times \mathscr A_1$: $c_{[i-1,i]}=c_{[i-1,i+1]}=c_{[i,i+2]}=c_{[i+1,i+2]}=0$)
+
+%\begin{center}
+%\begin{tikzpicture}
+	%\draw[thick] (-1,-2) node[below]{$0$} -- (2,1);
+	%\draw[thick] (-2,-1) -- (-1,-2);
+	%\draw[thick] (-1,0) -- (1,-2) node[below]{$0$}-- (4,1);
+	%\draw[thick] (2,1) -- (4,-1) -- (5,-2);
+	%\draw[thick] (4,1) -- (6,-1);
+	%\draw[thick] (5,-2) node[below]{$0$} -- (7,0) -- (6,1) ;
+	%\draw[thick] (-2,-1) -- (0,1) -- (2,-1);
+	%\draw[thick] (2,-1) -- (3,-2) node[below]{$0$} -- (6,1);
+	%\node at (-2.5,-1) {$[0,0]$};
+	%\node at (-0.65,-1) {$[1,1]$};
+	%\node at (1.35,-1) {$[2,2]$};
+	%\node at (3.35,-1) {$[3,3]$};
+	%\node at (5.35,-1) {$[0,0]$};
+	%\node at (-1.5,0) {$[0,1]$};
+	%\node at (0.35,0) {$[1,2]$};
+	%\node at (2.35,0) {$[2,3]$};
+	%\node at (4.35,0) {$[3,0]$};
+	%\node at (6.35,0) {$[0,1]$};
+	%\node at (0,1.2) {$[0,2]$};
+	%\node at (2,1.2) {$[1,3]$};
+	%\node at (4,1.2) {$[2,0]$};
+	%\node at (6,1.2) {$[3,1]$};
+%\end{tikzpicture}
+%\end{center}
 
 \section{Stringy canonical forms and $u$-equations for generalized permutahedra}
 In this section we shall argue that  a large subset of generalised permutahedra which are realised as degenerations of permutahderon ${\mathscr P_n}$ are binary geometries. Before we proceed we shall review some details about the generalised permutahedra which we shall use throughout the paper.
