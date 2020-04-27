@@ -696,7 +696,9 @@ and their solution is
 \begin{equation}\label{Ansf}
 S_{[i,j]}=F_{[i,j]}+F_{[i+1,j-1]}-F_{[i,j-1]}-F_{[i+1,j]},
 \end{equation}
-where $F_{[k,l]}:=0$ when $k>l$ or $[k,l]=[0,n]$. Using this solution to rewrite 
+where $F_{[k,l]}:=0$ when $k>l$ or $[k,l]=[0,n]$.
+The usual $X$-variable $X_{ij}=\sum_{i\leq k<l<j}s_{kl}$ in string integrals here is $F_{[i,j-2]}$. 
+Using this solution to rewrite 
 the integrand of the stringy canonical form $\mathcal I_{\mathbf B}(\{S\})$
 \begin{align*}
 \prod_{0\leq i\leq j\leq n}x_{[i,j]}^{S_{[i,j]}}
@@ -719,10 +721,10 @@ with $x_{[i,n+1]}:=1$ and $x_{[-1,j]}:=1$, whose $u$-equations are
 
 The ABHY construction of $\mathscr A_n$ is given by 
 \[
-	S_{[i,j]}=-c_{[i,j]} \,\,\text{ for all $i<j$,}\quad
+	S_{[i,j]}=-C_{[i,j]} \,\,\text{ for all $i<j$,}\quad
 	F_{[i,j]}\geq 0 \,\,\text{ for all $i\leq j$},
 \]
-where $c$s are positive numbers. We can use a mesh to represent these conditions.
+where $C$s are positive numbers. We can use a mesh to represent these conditions.
 For example, the mesh of $\mathscr A_3$ is 
 \begin{center}
 \begin{tikzpicture}
@@ -745,11 +747,11 @@ For example, the mesh of $\mathscr A_3$ is
 Each diamond in the mesh whose top corner\footnote{
 It looks different with the usual mesh where label of $c$ follows the left corner
 in each diamond. This is because the mismatch of the correspondence of labels 
-$F_{ij}=F_{[i,j-2]}$ and $s_{ij}=S_{[i,j-1]}$.
+$X_{ij}=F_{[i,j-2]}$ and $s_{ij}=S_{[i,j-1]}$.
 }
 is label by $[i,j]$ represents 
 \[
-	c_{[i,j]}=F_{[i,j-l]}+F_{[i+1,j]}-F_{[i,j]}-F_{[i+1,j-1]},
+	C_{[i,j]}=F_{[i,j-l]}+F_{[i+1,j]}-F_{[i,j]}-F_{[i+1,j-1]},
 \]
 and each big diamond (which is made of several diamonds) gives us an equation
 \[
@@ -789,46 +791,46 @@ where
 U_{A,B}=\prod_{a\in A,b\in B}u_{ab},\quad 
 U_A=\prod_{a\in A}u_a\prod_{a<b\in A}u_{ab}.
 \]
+Since the building set of $\mathscr A_n$ is contained in the building set of $\mathscr B_n$, $\mathscr A_n$ is a degeneration of $\mathscr B_n$.
 
 The ABHY construction of $\mathscr B_n$ is similar: $F_{[i,j]}\geq 0$ for all $[i,j]\in\mathbf B$,
 \[
 	F_{[i,j-1]}+F_{[i+1,j]}-F_{[i,j]}-F_{[i+1,j-1]}
-	=c_{[i,j]}\,\,\text{for $i\neq j$ and $[i,j]\neq [0,n]$}, \quad 
+	=C_{[i,j]}\,\,\text{for $i\neq j$ and $[i,j]\neq [0,n]$}, \quad 
 \]
 and 
 \begin{equation}\label{abhyB}
-	c_{[0,n]}=\sum_{i=0}^n F_{[i,i-2]}-\sum_{i=0}^n F_{[i,i-3]},
+	C_{[0,n]}=\sum_{i=0}^n F_{[i,i-2]}-\sum_{i=0}^n F_{[i,i-3]},
 \end{equation}
-where $F_{[i+1,i]}=0$ and $c$s are all positive constants. We can also
-use a mesh to represent this conditions. For example, the mesh for $\mathscr B_3$
-is 
-\begin{center}
-\begin{tikzpicture}
-	\draw[thick] (-1,-2) node[below]{$0$} -- (2,1);
-	\draw[thick] (-2,-1) -- (-1,-2);
-	\draw[thick] (-1,0) -- (1,-2) node[below]{$0$}-- (4,1);
-	\draw[thick] (2,1) -- (4,-1) -- (5,-2);
-	\draw[thick] (4,1) -- (6,-1);
-	\draw[thick] (5,-2) node[below]{$0$} -- (7,0) -- (6,1) ;
-	\draw[thick] (-2,-1) -- (0,1) -- (2,-1);
-	\draw[thick] (2,-1) -- (3,-2) node[below]{$0$} -- (6,1);
-	\node at (-2.5,-1) {$[0,0]$};
-	\node at (-0.65,-1) {$[1,1]$};
-	\node at (1.35,-1) {$[2,2]$};
-	\node at (3.35,-1) {$[3,3]$};
-	\node at (5.35,-1) {$[0,0]$};
-	\node at (-1.5,0) {$[0,1]$};
-	\node at (0.35,0) {$[1,2]$};
-	\node at (2.35,0) {$[2,3]$};
-	\node at (4.35,0) {$[3,0]$};
-	\node at (6.35,0) {$[0,1]$};
-	\node at (0,1.2) {$[0,2]$};
-	\node at (2,1.2) {$[1,3]$};
-	\node at (4,1.2) {$[2,0]$};
-	\node at (6,1.2) {$[3,1]$};
-\end{tikzpicture}
-\end{center}
-with an additional equation \eqref{abhyB}. 
+where $F_{[i+1,i]}=0$ and $C$s are all positive constants. 
+%We can also use a mesh to represent this conditions. For example, the mesh for $\mathscr B_3$ is 
+%\begin{center}
+%\begin{tikzpicture}
+%	\draw[thick] (-1,-2) node[below]{$0$} -- (2,1);
+%	\draw[thick] (-2,-1) -- (-1,-2);
+%	\draw[thick] (-1,0) -- (1,-2) node[below]{$0$}-- (4,1);
+%	\draw[thick] (2,1) -- (4,-1) -- (5,-2);
+%	\draw[thick] (4,1) -- (6,-1);
+%	\draw[thick] (5,-2) node[below]{$0$} -- (7,0) -- (6,1) ;
+%	\draw[thick] (-2,-1) -- (0,1) -- (2,-1);
+%	\draw[thick] (2,-1) -- (3,-2) node[below]{$0$} -- (6,1);
+%	\node at (-2.5,-1) {$[0,0]$};
+%	\node at (-0.65,-1) {$[1,1]$};
+%	\node at (1.35,-1) {$[2,2]$};
+%	\node at (3.35,-1) {$[3,3]$};
+%	\node at (5.35,-1) {$[0,0]$};
+%	\node at (-1.5,0) {$[0,1]$};
+%	\node at (0.35,0) {$[1,2]$};
+%	\node at (2.35,0) {$[2,3]$};
+%	\node at (4.35,0) {$[3,0]$};
+%	\node at (6.35,0) {$[0,1]$};
+%	\node at (0,1.2) {$[0,2]$};
+%	\node at (2,1.2) {$[1,3]$};
+%	\node at (4,1.2) {$[2,0]$};
+%	\node at (6,1.2) {$[3,1]$};
+%\end{tikzpicture}
+%\end{center}
+%with an additional equation \eqref{abhyB}. 
 
 %In order to represent this `strange'
 %condition in the mesh, we add a special layer of diamonds on the mesh, for example,
@@ -914,7 +916,7 @@ where $\tilde{z}_i=z_{i+n+1}=z_{i}+1$ and indices live in $\mathbb Z_{2n+2}$.
 
 {\bf things I wrote in my handwritten notes...}
 
-The degenerations of $A_n$ is given by setting some $c$s in ABHY construction or deleting the corresponding elements in the building set. Note that the building set after deletion doesn't need to be a new building set, \emph{i.e.} a degeneration of $A_n$ may not be a generalized permutohedron. However, we can still ask the following question: are these degenerations binary geometries? 
+The degenerations of $A_n$ is given by setting some $C$s in ABHY construction or deleting the corresponding elements in the building set. Note that the building set after deletion doesn't need to be a new building set, \emph{i.e.} a degeneration of $A_n$ may not be a generalized permutohedron. However, we can still ask the following question: are these degenerations binary geometries? 
 Of course, we should require at least that the number of facets of the degeneration of $A_n$ should be equal to the size of the corresponding deleted building set minus one, \emph{i.e.} its big polytope is a simplex.
 Before answer this question, let's first find all degenerations of $A_n$ with this property.
 
@@ -923,20 +925,20 @@ Before answer this question, let's first find all degenerations of $A_n$ with th
 From the following equations for facets $\{F_{[i,j]}\}$ of $A_n$
 \[
 	F_{[i,k]}+F_{[j,l]}-F_{[i,l]}-F_{[j,k]}=
-	\sum_{i\leq a<j\atop{k<b\leq l}} c_{[a,b]} 
+	\sum_{i\leq a<j\atop{k<b\leq l}} C_{[a,b]} 
 \]
 where $F_{[a,b]}:=0$ when $a>b$ or $[a,b]=[0,n]$,
-an economical way to get a degeneration which satisfies the above property is setting all $c$s on the RHS of 
+an economical way to get a degeneration which satisfies the above property is setting all $C$s on the RHS of 
 \begin{align*}
-&F_{[i,j-1]}+F_{[j,l]}-F_{[i,l]}= \sum_{i\leq a<j\leq b\leq l} c_{[a,b]} 
+&F_{[i,j-1]}+F_{[j,l]}-F_{[i,l]}= \sum_{i\leq a<j\leq b\leq l} C_{[a,b]} 
 \quad \text{for $i<j=k+1\leq l$ }\\[-1.5ex]
 \text{or}&\\
-&F_{[0,k]}+F_{[j,n]}-F_{[j,k]}= \sum_{0\leq a<j\atop{k<b\leq n}} c_{[a,b]} 
+&F_{[0,k]}+F_{[j,n]}-F_{[j,k]}= \sum_{0\leq a<j\atop{k<b\leq n}} C_{[a,b]} 
 \quad \text{for $0<j\leq n$ and $0\leq k<n$}
 \end{align*}
-to be zero, and all wanted degenerations can be got by setting $c$s in several above equations. 
+to be zero, and all wanted degenerations can be got by setting $C$s in several above equations. 
 
-From the viewpoint of mesh, an equation above corresponds to a big diamond whose top or bottom corner and all $c$s are zero. For example,
+From the viewpoint of mesh, an equation above corresponds to a big diamond whose top or bottom corner and all $C$s are zero. For example,
 \begin{center}
 \begin{tikzpicture}[baseline={([yshift=-.5ex]current bounding box.center)}]
 \draw (-2,0) node[left] {$A$} -- (1,-3) node[below] {$0$}
@@ -971,7 +973,7 @@ we can see that
 A+C-B=0.
 \]
 Since $A,B,C\geq 0$, the above equation forces $A$ and $C$ to vanish when $B=0$. Therefore, $B$ is no longer a facet of the degeneration. Similarly, black points are all vanishing facets in the above example, and generally
-the number of vanishing facets equals the number of deleted $c$s for degenerations of this type.
+the number of vanishing facets equals the number of deleted $C$s for degenerations of this type.
 
 One can use these diamonds to build a degeneration with more vanishing facets whose big polytope is a simplex. For example, in $A_3$
 \begin{center}
@@ -997,13 +999,13 @@ One can use these diamonds to build a degeneration with more vanishing facets wh
 \node at (1,2.2) {$[0,3]$};
 \end{tikzpicture}
 \end{center}
-after setting $c$s in green and purple diamonds to be zero, three facets (black points) vanish and building set after deletion is 
+after setting $C$s in green and purple diamonds to be zero, three facets (black points) vanish and building set after deletion is 
 \[
 	\{[0,3],[0,2],[0,1],[0,0],[1,1],[2,2],[3,3]\}.
 \]
 One can further check that it's a cube (or $A_1^3$).
 
-We can play the game for any degenerations of $A_n$, count black points and deleted $c$s in each degeneration, and find that for $A_2$, $A_3$ and $A_4$, there're respectively $4$, $41$ and $580$ possible degenerations whose big polytopes are simplices. For these degenerations, we can easily find their $u$-variables if their sets of all vanishing facets are known.
+We can play the game for any degenerations of $A_n$, count black points and deleted $C$s in each degeneration, and find that for $A_2$, $A_3$ and $A_4$, there're respectively $4$, $41$ and $580$ possible degenerations whose big polytopes are simplices. For these degenerations, we can easily find their $u$-variables if their sets of all vanishing facets are known.
 
 Suppose $\mathscr D$ is the set of all vanishing facets of a degeneration in the building set, 
 we can read from the mesh that
@@ -1074,7 +1076,7 @@ mesh,
 \node at (3.1,0.2) {$[i,n]$};
 \end{tikzpicture}
 \end{center}
-where $c$s in green region vanish, \emph{i.e.} $c_{[a,b]}=0$ for $0\leq a<i<b\leq n$.
+where $C$s in green region vanish, \emph{i.e.} $c_{[a,b]}=0$ for $0\leq a<i<b\leq n$.
 Vanishing facets of this degeneration are
 \[
 F_{[a,b]}=F_{[a,n]}+F_{[0,b]}\quad \text{for $0<a\leq i\leq b<n$},
@@ -1133,11 +1135,69 @@ $u$-equations of the following two independent meshes
 \node at (2.1,-2.5) {$[i{+}2,i{+}2]$};
 \end{tikzpicture}
 \end{center}
+One could use this construction of products to produce any finite product $\mathscr A_{i_1}\times \cdots \times \mathscr A_{i_k}$.
+The direct proof of this argument for $\mathscr A_n$ is using global $u$-equations \cite{} of $\mathscr A_n$. 
 
-(better figure?)
+We can generalize the simplest cases in another way:
+\begin{center}
+\begin{tikzpicture}[scale=1.5]
+\fill[green!20] (4.44,-1.45) -- (1.3,-1.4584) -- (2.88,0.12) --(2,1);
+\draw (-0.5,-1.5) -- (2,1) -- (4.5,-1.5);
+\draw[decorate,decoration=zigzag] (-0.5,-1.5)--(4.5,-1.5);
+\node at (1.3,-1.3) {$[i,i]$};
+\node at (3.1,0.2) {$[i,n]$};
+\end{tikzpicture}
+\end{center}
+setting 
+\[
+C_{[k,l]}=0 \quad \text{for $0<i\leq k< l\leq n$}.
+\]
+In this case, 
+\[
+F_{[k,l]}=\sum_{m=k}^l F_{[m,m]}
+\]
+for $i\leq k < l \leq n$. Therefore,
+\[
+\tilde u_{[k,k]}=\prod_{i\leq p\leq k\leq q \leq n}u_{[p,q]}=\frac{x_k}{x_{[i-1,k]}}\quad 
+\text{for $k\in [i,n]$},\quad \tilde u_I=u_I\quad \text{for the other $I$},
+\]
+and their $u$-equations are
+\[
+1-\tilde u_{[k,k]}=\prod_{j=0}^{i-1}\tilde u_{[j,k-1]},
+\]
+and the other $u$-equations are old $u$-equations in terms of new variables.
+When $i=1$, the degeneration is $\mathscr A_1^n$.
 
-One could use this construction of products to produce any finite product $\mathscr A_{i_1}\times \cdots \times \mathscr A_{i_k}$, and this construction is also valid for any generalized permutahderon. 
-The direct proof of this argument for $\mathscr A_n$ is using global $u$-equations of $\mathscr A_n$. ...
+Similarly, we can also consider the following degenerations:
+\begin{center}
+\begin{tikzpicture}[scale=1.5]
+\fill[green!20] (3.4,-0.4) -- (2,-0.4) -- (0.6,-0.4) --(2,1);
+%\fill[green!20,decorate,decoration=zigzag] (0.6,-0.4)--(3.4,-0.4);
+\draw (-0.5,-1.5) -- (2,1) -- (4.5,-1.5);
+\draw[decorate,decoration=zigzag] (-0.5,-1.5)--(4.5,-1.5);
+\node at (0.4,-0.2) {$[0,i]$};
+\node at (3.7,-0.2) {$[n-i,n]$};
+\end{tikzpicture}
+\end{center}
+setting
+\[
+C_{[k,l]}=0 \quad \text{for $l-k>i$}.
+\]
+In this case,
+\[
+F_{[k,l]}=F_{[0,l]}+F_{[k,n]}\quad \text{for $l-k\geq i$, $1\leq k\leq n-i-1$ and $i+1\leq l\leq n-1$},
+\]
+then 
+\[
+\tilde u_{[0,l]}=\prod_{j=0}^{l-i+1}  u_{[j,l]},\quad 
+\tilde u_{[k,n]}=\prod_{j=k+i-1}^{n}  u_{[k,j]}.
+\]
+Their $u$-equations are 
+\[
+1-\tilde u_{[0,l]}=\prod_{a=l-i+2}^{l+1}\tilde u_{[a,n]}\cdot\prod_{a=l-i+2}^{l+1}\prod_{b=l+1}^{a+i-2} \tilde u_{[a,b]},\quad
+1-\tilde u_{[k,n]}=\prod_{b=k-1}^{k+i-2}\tilde u_{[0,b]}\cdot \prod_{b=k-1}^{k+i-2}\prod_{a=\max(b-i+2,1)}^{k-1} \tilde u_{[a,b]}.
+\]
+When $i=1$, we will get $\mathscr A_1^n$ again.
 
 The story of degenerations of $B_n$ is very similar. 
 % The first thing to do is to find degenerations whose big polytopes are simplices. 
@@ -1198,14 +1258,14 @@ In this section we shall argue that  a large subset of generalised permutahedra 
 \subsection{Generalized permutohedra} 
 A generalised permutahedron is a polytope that obtained as Minkowski sums and diffrences of co-ordinate simplices. 
 
-Let, $\Delta_{[0,n]} = {\rm ConvexHull}(e_1,\cdots,e_n)$ be the standard coordinate simplex in $\mathbb{R}^{n+1}$. Then we have:
-  \bea
+Let $\Delta_{[0,n]} = {\rm ConvexHull}(e_1,\cdots,e_n)$ be the standard coordinate simplex in $\mathbb{R}^{n+1}$. Then we have:
+\bea
 {\mathscr P_n}^y(\{y_I \})= \sum y_I . \Delta_I  
- \eea
- for some collection of subsets $I \in [0,n]$
- We shall restrict ourselves to the large class of generalised permutahedra which admit such a realisation only as Minkowski sums i.e., all $y_I \ge 0$ \footnote{This is mainly due to the subtle nature of the Minkowski difference operation, which makes the shape of the resulting polytope dependent on the relative magnitudes of $y_I$'s.}which are called Nestohedra. Throughout the paper we shall mean Nestohedra whenever we refer to generalized permutahedra unless stated otherwise.\\
+\eea
+for some collection of subsets $I \in [0,n]$.
+We shall restrict ourselves to the large class of generalised permutahedra which admit such a realisation only as Minkowski sums i.e., all $y_I \ge 0$ \footnote{This is mainly due to the subtle nature of the Minkowski difference operation, which makes the shape of the resulting polytope dependent on the relative magnitudes of $y_I$'s.}which are called Nestohedra. Throughout the paper we shall mean Nestohedra whenever we refer to generalized permutahedra unless stated otherwise.\\
  
- The combinatorial structure of the generalised permutahedron ${\mathscr P_n({y_I})}$ (Nestohedra) is independent of the parameters $y_I$ and depends only on the collection of subsets $I \in [0,n]$ called the  building set ${\mathbf B}$.  
+The combinatorial structure of the generalised permutahedron ${\mathscr P_n({y_I})}$ (Nestohedra) is independent of the parameters $y_I$ and depends only on the collection of subsets $I \in [0,n]$ called the  building set ${\mathbf B}$.  
 A collection of non-empty subsets of $[0,n]$ is called a building set ${\mathbf B}$ if it satisfies the following:
 \begin{compactenum}[\quad (1)]
     \item If $I,J \in {\mathbf B}$ and $I \cap J \neq \phi $, then $I \cup J \in {\mathbf B}$.
@@ -1213,7 +1273,7 @@ A collection of non-empty subsets of $[0,n]$ is called a building set ${\mathbf 
 \end{compactenum}
 To describe the combinatorial structure we need the notion of {\it Nested complex} which we shall define now.
 
-\subsubsection*{Nested Complex}
+\paragraph*{Nested Complex} 
 A subset ${\mathbf N}$ in the building set ${\mathbf B}$ is called a {\it nested set} if it satisfies the following conditions:
 \begin{compactenum}[\quad (1)]
     \item For any $I,J \in {\mathbf N}$, we either have $I \subset J$ or $J\subset I$ or $I$ and $J$ are disjoint.
@@ -1222,37 +1282,40 @@ A subset ${\mathbf N}$ in the building set ${\mathbf B}$ is called a {\it nested
 \end{compactenum}
 The {\it nested complex} ${\mathbf N}({\mathbf B})$ is defined as the poset of the set of all nested sets in ${\mathbf B}$ ordered by inclusion.\\
 
- {\bf Facial structure:} 
- 
- Let us assume that the set ${\mathbf B}$ associated with a generalised permutahedron ${\mathscr P_n}^{y}$ is a building set on $[0,n]$. Then the poset of faces ${\mathscr P_n}^{y}$ ordered by reverse inclusion is isomorphic to the nested complex ${\mathbf N}({\mathbf B})$. 
+\paragraph*{Facial structure} 
+Let us assume that the set ${\mathbf B}$ associated with a generalised permutahedron ${\mathscr P_n}^{y}$ is a building set on $[0,n]$. Then the poset of faces ${\mathscr P_n}^{y}$ ordered by reverse inclusion is isomorphic to the nested complex ${\mathbf N}({\mathbf B})$. 
 
 For each decomposition $[0,n]=  \sqcup_{I \subset {\mathbf N} } S_I $ where $S_I$ are non-empty, the face $P_n$ of ${\mathscr P_n}^{y}(y_I)$ associated with the nested set ${\mathbf N} \in {\mathbf N}({\mathbf B})$ is:
 \bea
 P_n = \sum_{{J \subset {\mathbf B}}\atop{J \cap S_I \neq \emptyset}} y_{J} \Delta_{J \cap S_I}
 \eea
 
-In summary the above results mean the following:\\
+In summary the above results mean the following:
 
-(1) We can look at any collection of subsets of $[0, n]$ which form a building set ${\mathbf B}$ and associate  coordinate simplex $\Delta_I$ for each $I \in {\mathbf B}$ and resulting Minkowski sum with positive weights $y_I$ generates a polytope of dimension $n$ called the generalised permutahedron (Nestohedron) associated with the building set. \\
+\begin{compactitem}
+\item We can look at any collection of subsets of $[0, n]$ which form a building set ${\mathbf B}$ and associate  coordinate simplex $\Delta_I$ for each $I \in {\mathbf B}$ and resulting Minkowski sum with positive weights $y_I$ generates a polytope of dimension $n$ called the generalised permutahedron (Nestohedron) associated with the building set. 
 
-(2) The number of facets $N$ of the generalised permutahedron just corresponds to the set of all elements in ${\mathbf B}$ excluding the maximal set. \\ 
+\item The number of facets $N$ of the generalised permutahedron just corresponds to the set of all elements in ${\mathbf B}$ excluding the maximal set. 
 
-(3) Two facets corresponding to the sets $I$ and $J$ in ${\mathbf B}$ intersect i.e., are {\it compatible} with each other if and only if  either $I \subset J$,~ $J \subset I$~ or $I \cap J = \emptyset ~{\text and} ~ I \cup J \notin {\mathbf B}$.
+\item Two facets corresponding to the sets $I$ and $J$ in ${\mathbf B}$ intersect i.e., are {\it compatible} with each other if and only if  either $I \subset J$,~ $J \subset I$~ or $I \cap J = \emptyset ~{\text and} ~ I \cup J \notin {\mathbf B}$.
+\end{compactitem}
 
-Let us look at a couple of examples to appreciate these facts better:\\
-(1) Consider the generalized permutahedron with building set ${\mathbf B}= \{ \{0\},\{1\},\{2\},\{0,1\},\{1,2\},\{0,1,2\} \}$.
+Let us look at a couple of examples to appreciate these facts better:
 
+(1) Consider the generalized permutahedron with building set 
+\[{\mathbf B}= \{ \{0\},\{1\},\{2\},\{0,1\},\{1,2\},\{0,1,2\} \}.\]
 The polygon has 5 facets which correspond to the sets $\{ \{0\},\{1\},\{2\},\{0,1\},\{1,2\}\}$ and their compatability is shown in the figure below.
 
-The polytope in this case is the 2d associahedron ${\mathscr A_2}$.\\
-(2) Consider the generalized permutahedron with building set ${\mathbf B}= \{ \{0\},\{1\},\{2\},\{0,1\},\{1,2\},\{0,2\},\{0,1,2\} \}$ 
+The polytope in this case is the 2d associahedron ${\mathscr A_2}$.
 
+(2) Consider the generalized permutahedron with building set 
+\[{\mathbf B}= \{ \{0\},\{1\},\{2\},\{0,1\},\{1,2\},\{0,2\},\{0,1,2\} \}.\]
 The polygon has 6 facets which correspond to the sets $\{ \{0\},\{1\},\{2\},\{0,1\},\{1,2\},\{0,2\}\}$ and their compatability is shown in the figure below.
 
 The polytope in this case is the 2d cyclohedron ${\mathscr B_2}$ which also coincides with 2d permutahderon ${\mathscr P_2}$.
+
 \begin{figure}[H]
 \begin{center}       
-
 \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
 %uncomment if require: \path (0,511); %set diagram left start at 0, and has height of 511
 
@@ -1276,9 +1339,9 @@ The polytope in this case is the 2d cyclohedron ${\mathscr B_2}$ which also coin
 % Text Node
 \draw (268,204) node [anchor=north west][inner sep=0.75pt]   [align=left] {0};
 % Text Node
-\draw (226,96) node [anchor=north west][inner sep=0.75pt]   [align=left] {12};
+\draw (226,96) node [anchor=north west][inner sep=0.75pt]   [align=left] {1};
 % Text Node
-\draw (310,100) node [anchor=north west][inner sep=0.75pt]   [align=left] {1};
+\draw (310,100) node [anchor=north west][inner sep=0.75pt]   [align=left] {12};
 % Text Node
 \draw (336,163) node [anchor=north west][inner sep=0.75pt]   [align=left] {2};
 % Text Node
@@ -1289,17 +1352,16 @@ The polytope in this case is the 2d cyclohedron ${\mathscr B_2}$ which also coin
 \draw (454,235) node [anchor=north west][inner sep=0.75pt]   [align=left] {(b)};
 % Text Node
 \draw (155,263) node [anchor=north west][inner sep=0.75pt]   [align=left] {Figure showing the compatible\textbackslash incompatible facets of the 2d associahedron  \\ and permutahedron as generalized permutahedra};
-
-
 \end{tikzpicture}
 \end{center}
 \end{figure}
+
 An improtant fact about generalised permutahedra which makes them particularly interesting is the following:
 Let, $m$ denote the number of non-singlet elements in ${\mathbf B}$ i.e., the number of $c_J$'s as explained in equation (2) 
 \bea
-N &=& |{\mathbf B}|-1 \nonumber \\
- &=& (n+1+m)-1 \nonumber  \\
- &=& n+m \nonumber
+N = |{\mathbf B}|-1 
+ = (n+1+m)-1
+ = n+m \nonumber
 \eea
 {\bf Number of facets = Number of linear equations + dimension of  gen permutahedron}
  
@@ -1321,157 +1383,35 @@ which satisfy $u_i +u^{'}_{i} =1$ as their $u$-equation. \\
 
 (3) If ${\mathbf B}$ corresponds to all the non empty subsets of $[0,n]$ and $Y_I =y_{|I|}$ i.e., the variables $Y_I$ are equal for all subsets of the same cardinality, then ${\mathscr P_n}({\bf Y})$ is the usual permutahedron ${\mathscr P_n}$. \\
 
-(4)If ${\mathbf B}=\{ [i,j] | 1\leq  i \leq j \leq n\}$ is the set of consecutive intervals, then ${\mathscr P_n}({\bf Y})$ is the associahedron. \\
+(4) If ${\mathbf B}=\{ [i,j] | 1\leq  i \leq j \leq n\}$ is the set of consecutive intervals, then ${\mathscr P_n}({\bf Y})$ is the associahedron. \\
 
 (5) If ${\mathbf B}=\{ [1,i] \cup [j,n] | 1\leq  i \leq j \leq n\}$ is the set of cyclic intervals, then ${\mathscr P_n}({\bf Y})$ is the Cyclohedron.\\
 
 (6) Let $\Gamma$ be a graph on the vertex set $[0,n]$. Let us assume that ${\mathbf B} = {\mathbf B}(\Gamma)$ is the set of subsets $I \in [n]$ such that the induced graph $\Gamma$ is connected, then  ${\mathscr P_n}({\bf Y})$ is a graph associahedron.
 
 It is clear that any  generalized permutahedron can be obtained as a degeneration of  permutahedron ${\mathscr P_n}$i.e., by removing some elements from its building set. This makes the permutahedron a very important example of generalized permutahedra and we shall devote the rest of this section to studying its properties and proving it is binary.
-\subsubsection*{Permutahedron}
 
-Let, $\Delta_{[0,n]} = {\rm ConvexHull}(e_1,\cdots,e_{n+1})$ be the standard coordinate simplex in $\mathbb{R}^{n+1}$. For any $I \subset [0,n] $ let $\Delta_I ={\rm ConvexHull}(e_i~|~i\in I)$ denote the face of the $\Delta_{[0,n]}$. The polytope $P_n(\{y_I \})$ obtained as the Minkowski sum of simplices $\Delta_I$ scaled by  parameters $y_I > 0$ for all nonempty subsets $I \subset [n+1]$
- \bea
- P_n(\{y_I \})= \sum_{I \subset[n+1]} y_I . \Delta_I  
- \eea
- is the permutahedron ${\mathscr P_n}$
-
-{\bf Facial Structure:} 
-
-The $(n-k)$ faces of ${\mathscr P_n}$ are in an $1-1$ correspondence with the decomposition of $[0,n]$ into $k$ parts. More precisely, for each $(S_1,\cdots,S_k)$ with $S_i \neq \emptyset ~ \forall i$ and $[0,n] = S_1 \sqcup \cdots \sqcup S_k$ the corresponding face $\pi_{S_1,\cdots,S_k}$ has vertices which are permutations such that the entries $ \{x_i | i \in S_1 \}$ are largest $|S_1|$ numbers in $[0,n]$, $\{x_i | i \in S_2 \}$ are largest $|S_2|$ numbers in $[0,n]$ and so on. 
-
-Further the face $\pi_{S_1,\cdots,S_k}$   is isomorphic to ${\mathscr P_{\left(| S_1|-1\right)} }\times {\mathscr P_{\left(| S_2|-1\right)} } \cdots \times{\mathscr P_{\left(| S_k|-1\right)} } $.
-
-It follows from above that ${\mathscr P_n}$ has $2^{n+1} -2$ facets corresponding to all the non-empty proper subsets of $[0,n]$ for which we have a decomposition $[0,n] = S \sqcup S^c$ and the facets are isomorphic to one of the following product of lower dimensional permutahedra  $ \{ {\mathscr P_{n-1}}, {\mathscr P_{n-2}} \times A_1, \cdots ,{\mathscr P_{\lfloor{n/2 \rfloor}}} \times {\mathscr P_{n-1-\lfloor n/2 \rfloor}}  \} $\footnote {More generally the number of $(n-k)$ facets of ${\mathscr P_n}$ is $ k! S(n,k)$ where $S(n,k)$ is the Stirling number of the second kind which counts the number $k$ partitions of  $I$ and there are $p(n+1,k)$ types where $p(n+1,k)$ is the number of $k$ partitions of $(n+1)$.}.
-
-It also follows from above that a face $\pi_{S_1,\cdots,S_k}$ is contained in another face $\pi_{T_1,\cdots,T_l}$ if and only if each $T_i$ is a union of consecutive $S_j$ or equivalently if $(S_1,\cdots,S_k)$ is a refinement of $(T_1,\cdots,T_l)$.
-
-\section*{ABHY like realisation for the Permutahedron}
-The following set of equations to define the $n$-dimensional Permutahedron: 
-\bea
-C_I = (-1)^{|I|} \left( \sum_{i \in I} F_i - \sum _{{i<j}\atop{i,j \in I}} F_{ij} +\cdots + (-1)^{|I|}  F_I \right) \nonumber
-\eea
-for all non-empty subsets $I \subset \{0,1,\cdots,n\}$ with the understanding that $C_{I} =0$ for all singlets $I$ and $F_{I} =0$ for $I=\{ 0,1,\cdots,n \}$. 
-
-It is clear that
-\bea
-m= \text{No. of  C's }&=& 2^{n+1}-(n+2) \nonumber \\
-N= \text{No. of F's} &=& 2^{n+1}- 2 \nonumber 
-\eea
-Thus we see that $N= d+m$ as expected. We can write down the stringy integral as usual to be 
-\bea
-\int_{\mathbb{R}^{n}_{+}} \prod_{i =1}^{n} d x_i x_i^{\alpha^{'} F_i -1} \prod_{I} \left (\sum_{a\in I} x_a \right) ^{-\alpha^{'} C_I} \nonumber
-\eea 
-where the product is over all non-singlets $ I \subset \{0,1,\cdots,n\}$ with $x_{0} =1$.
-
-Let us look at the $n=2,3$ examples:
-
-\section*{2d permutahedron}
-In this case the building set $B=\{ \{ 0,1,2\},\{ 0,1\},\{0,2\},\{1,2\},\{0\},\{1\},\{2\}\}$ and the relevant $x$ variables are $x_0=1, ~x_1=x, ~x_2=y, ~x_{01}=1+x, ~x_{02}=1+y,~ x_{12}=x+y,~ x_{012}=1+x+y$. 
-
-We can write down the Newton polynomial for the Minkowski sum as $ x_1~ x_2~(1+x_1)~(1+x_2)~(x_1+x_2)~(1+x_1+x_2)$.
-
-The $u$-variables can be written in terms of $x$ variables as:
-\bea
-u_1&=&\frac{x(1+x+y)}{(x+y)(1+x)}, ~ u_2 =\frac{y(1+x+y)}{(x+y)(1+y)},~ u_{12}=\frac{(x+y)}{(1+x+y)}\nonumber \\
-u_{02}&=&\frac{(1+y)}{(1+x+y)}, ~~~~~ u_{01}=\frac{(1+x)}{(1+x+y)},~~~~~ u_{0}= \frac{(1+x+y)}{(1+x)(1+y)} \nonumber
-\eea
-The $u$-equations are:
-\bea
-1-u_i &=& (u_{0j})^2 u_j u_{0}, ~~~ 1-u_{12} = u_{02} u_{01} u_{0} \nonumber \\
-1-u_{0 j} &=& u_i u_{0 i} u_{12}, ~~~~~~~ 1-u_{0} = u_{1} u_{2} (u_{12})^2 \nonumber
-\eea
-where $i=1$ implies $j=2$ and vice versa.
-
-\section*{3d permutahedron}
-In this case the building set $B=\{ \{ 0,1,2,3\},\{ 0,1,2\},\{0,2,3\},\{0,1,3\},\{1,2,3\},\{0,1\},\{0,2\},\{0,3\},\{1,2\} \\ ,\{2,3\},\{1,3\},\{0\},\{1\},\{2\},\{3\}\}$ and the relevant $x$ variables are $x_0=1, ~x_1=x, ~x_2=y, ~x_3=z, ~x_{01}=1+x, ~x_{02}=1+y,~x_{03}=1+z,~ x_{12}=x+y,~x_{13}=x+z,~x_{23}=y+z,~ x_{012}=1+x+y,~ x_{013}=1+x+z,~ x_{023}=1+y+z,~ x_{123}=x+y+z,~ x_{0123}=1+x+y+z$. \\
-
-The $u$ and $u'$-variables can be written interms of $x$ variables as:
-{\scriptsize  \bea
-u_1&=&\frac{x(1+x+y)(1+x+z)(x+y+z)}{(x+y)(x+z)(1+x)(1+x+y+z)}, ~ u_2 =\frac{y(1+x+y)(1+y+z)(x+y+z)}{(x+y)(y+z)(1+y)(1+x+y+z)},~ u_{3}=\frac{z(1+x+z)(1+y+z)(x+y+z)}{(x+z)(y+z)(1+z)(1+x+y+z)},\nonumber \\
-u_{023}&=&\frac{(1+y+z)}{(1+x+y+z)}, ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ u_{013} =\frac{(1+x+z)}{(1+x+y+z)},~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ u_{012}=\frac{(1+x+y)}{(1+x+y+z)},\nonumber \\
-u_{12}&=&\frac{(x+y)(1+x+y+z)}{(1+x+y)(x+y+z)}, ~~~~~~~~~~~~~~~~~~ u_{23} =\frac{(y+z)(1+x+y+z)}{(1+y+z)(x+y+z)},~~~~~~~~~~~~~~~~~~~ u_{13}=\frac{(x+z)(1+x+y+z)}{(1+x+z)(x+y+z)},\nonumber \\
-u_{03}&=&\frac{(1+z)(1+x+y+z)}{(1+y+z)(1+x+z)}, ~~~~~~~~~~~~~~~~~~ u_{01} =\frac{(1+x)(1+x+y+z)}{(1+x+y)(1+x+z)},~~~~~~~~~~~~~~~~~~~ u_{02}=\frac{(1+y)(1+x+y+z)}{(1+x+y))(1+y+z)},\nonumber  \\
-u_{123}&=&\frac{(x+y+z)}{(1+x+y+z)}, ~~~~~~~~~~~~~~~~~~~~~~~~~~~ u_{0} =\frac{(1+x+y)(1+y+z)}{(1+x)(1+y)(1+z)(1+x+y+z)}\nonumber
-\eea }
-The $u$-equations in this case are:
-{\small  \bea
-1-u_i &=& u_j u_k (u_{jk})^2 (u_{0jk})^3 (u_{0k})^2(u_{0 j})^2 u_{0} \left(1+ u_i u_{ij} u_{ik} u_{0ik} u^_{0ij}  u_{0i}\right),  1-u_{ij} = u_k u_{ik} u_{jk} (u_{0jk})^2 (u_{0ik})^2 (u_{0 k})^2 u_{0 j} u_{0 i} u_{0} \nonumber  \\
-1-u_{0 j k} &=& u_i u_{ij} u_{ik} u_{0 i k} u_{0 i j}  u_{0 i}, ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 1-u_{0 k} = u_i u_{j}  (u_{ij})^2 u_{ik} u_{jk} (u_{123})^2 (u_{0 i j})^2 u_{0 j} u_{0 i}  \nonumber \\
-1-u_{0} &=& u_1 u_{2} u_{3} (u_{12})^2 (u_{23})^2  (u_{13})^2 (u_{123})^3 \left(1+ u_{0}  u_{023} u_{013} u_{012} u_{03} u_{01}  u_{02} \right), 1-u_{123} = u_{023} u_{013} u_{012} u_{03} u_{01}  u_{02} u_{0}   \nonumber
-\eea}
-where $i,j,k \in {1,2,3}$ and $i \neq j \neq k$.
-
-The 8 facets of the 3d permutahedron corresponding to $u_i \rightarrow 0, u_{0jk} \rightarrow 0,u_{123} \rightarrow 0 ~and ~u_{0} \rightarrow 0$  are all $B_2$'s. Similarly, the 6 facets corresponding to  $u_{ij} \rightarrow 0, u_{0k} \rightarrow 0$ are all  $A^{2}_1$.
-
-Thus, the 3d permutahedron integral factorizes nicely on all massless poles at finite $\alpha^{'}$ !!
-We shall list a few results about permutahedra which shall be useful for later purposes: 
-\begin{enumerate}
-\item The $u$-variables for the permutahedron are: 
-\bea
-u_J &=& ~~\prod_{J \subset I} x_I^{(-1)^{|I|-|J|}} \nonumber 
-\eea
-The above relations can also be inverted to obtain $x_I$ as follows:
-
-For $0 \notin I $
-\bea
-x_I &=& \frac{\prod_{I \subset J} u_{J}}{1-\prod_{I \subset J} u_{J}} \\
-\frac{1}{1+ x_I} &=& \prod_{{J}\atop{J\cap \bar{I} \ne \emptyset}} u_{\bar{J}}
-\eea
-From the above relations it is clear that taking $u_I \rightarrow 0$ for $0 \notin I$ implies $x_J \rightarrow 0$ for all $J \subset I$ and taking $u_{\bar{I}} \rightarrow 0$ implies $x_J \rightarrow \infty $ for all $I \subset J$.
-In fact we shall argue that there is unique choice of $x_I$'s which we can take to $0$ or $\infty$ which corresponds to setting only a particular $u_I \rightarrow 0$ or $u_{\bar{I}} \rightarrow 0$ respectively.
-\item From the definition of the permutahedron as a Nestohedron we know that $I$ and $J$ are :
-
-% {\bf compatible if} $I\cap J = \emptyset$ or $I\cap J \neq \emptyset$ and either $I \subset J$ or $J \subset I$
-
-% {\bf incompatible if}   $I\cap J \neq \emptyset$ or $I\cap J = \emptyset$ and neither $I \not\subset J$ or $J \not\subset I$
-
-{\bf compatible if and only if} $\{[0,n],I,J\}$ is a nested set, i.e.
-\[
-I\subset J\quad \text{or}\quad J\subset I\quad \text{or}\quad (J\cap I=\varnothing \quad \text{and}\quad J\cup I\not\in \mathscr P_n).
-\]
-For permutohedron, $J\cup I$ is always contained in $\mathscr P_n$ for any $I$ and $J$, so it's compatible if and only if $J\subset I$ or $I\subset J$.
-
-The above  follows directly from the following relations amongst $u$ for each $I$ such that $0\notin I$ :
-\bea
-1-\prod_{I \subset J} u_{J} &=& \prod_{{J}\atop{J\cap \bar{I} \ne \emptyset}} u_{\bar{J}} \\
-1-\prod_{J \subset I} u_{\bar{J}} &=& \prod_{I \subset J} u_{J} \prod_{J \subset \bar{I} } u_{\bar{J}}
-\eea
-\end{enumerate}
-
-\subsection*{Braid arrangement}
-The braid arrangement in $\mathbb{R}^{n+1}$ consists of $\left({n}\atop{2}\right)$ hyperplanes 
-\bea
-z_i =z_j ~~{\rm for ~ all}~~0 \leq i<j \leq n
-\eea 
-
-\subsection*{Degenerations which lead to products}
-In this section we provide an answer to the question of which degenerations of $A_n$ and $B_n$ give the most general products of such geometries. We begin by stating the following results about Nestohedra.
-
-The maximal set of a building set $B_{max}$ is the set of all inclusion maximal elements of the building set $B$. A building set $B$ is connected if $B_{max}$ has a single element.
-
-{\bf Theorem:}If $B_1, B_2,\cdots B_n$ are connected subsets of a building set $B$ then the corresponding nestohedron ${\mathscr N_B}$ is isomorphic to the product of the nestohedra ${\mathscr N}_{ B_1} \times{\mathscr N}_{ B_2} \cdots \times {\mathscr N}_{B_n}$.
-
-We can use the above result to construct 	a degeneration of $A_n$ which is a most general product i.e., $\prod_{p_i} A_{p_i}$ such that $\sum_{i} p_{i} = n$. 
-
-Let us consider the  $A_4$ example for which the allowed possibilities are : $A_1^{4}$, $A_1^2 \times A_2$, $A_1 \times A_3$ and $A^{2}_2$.
  
-For the $A_1^{4}$ the building set is $ \{ {0},{1},{2},{3},{4},{01},{12},{23},{34} \}$ where $\{0,01\} , \{1,12\},\{2,23\},\{3,34\}$ generate the 4 $A_1$'s.
 
-For the $A_1^{2} \times A_2$ the building set is $ \{ {0},{1},{2},{3},{4},{01},{12},{23},{34},{234} \}$ where $\{0,01\} , \{1,12\} $ generate the 2 $A_1$'s and $\{2,3,4,23,34,234\}$ generates the $A_2$'s.
+% This conjecture can be extended to generalized permutohedra, but I only have checked the several cases of graph associahedra for now.
 
-For the $A_1 \times A_3$ the building set is $ \{ {0},{1},{2},{3},{4},{01},{12},{23},{34},{123},{234},{1234} \}$ where $\{0,01\}$ is the generates the $A_1$ and $\{{1},{2},{3},{4},{12},{23},{34},{123},{234},{1234} \}$ generate  $A_3$'s.
+% Based on the above conjecture,  there is a statement for the binary geometries corresponding to the facet $u_{I}\to 0$, 
+% that is the $u$-system for the facet $u_{I}\to 0$ is corresponding to the generlaized permutohedra $\mathcal{P}_{I}\otimes \mathcal{P}_{\bar{I}}$ with building sets  
+% \[
+% \mathcal{B}_{I} = \{J\vert J\subset I, J\in \mathcal{B}\}
+% \]
+% and 
+% \[
+% \mathcal{B}_{\bar{I}} = \{J-I\vert  J\in \mathcal{B}-\mathcal{B}_{I} \}
+% \]
+% where $J-I$ means the complement of $J$ with respect to $I$. This statement directly follow from the fact that $u_{I}\to 0$ is equivalent to take $x_{i}\to t x_{i} $ for $i\in I$ then take $t \to 0$
+% )
 
-For the $A_2^{2}$ the building set is $ \{ {0},{1},{2},{3},{4},{01},{12},{23},{34} ,{012},{234}\}$ where $\{0,1,2,01,12,012\}$  and $\{2,3,4,23,34,234\}$ generate the 2 $A_2$'s.
+\newpage
 
-We can similarly find a degeneration of $A_n,B_n,~or~ {\mathscr P_n}$ which would correspond to any product.
+\subsection{$\mathscr{P}_{n}$ as a binary geometry}
 
-
-\subsection{Natural stringy integrals with linear factors} 
-
-{\bf introduce a natural stringy integrals for any generalized stringy canonical forms: variables $x_0=1, x_1, \cdots, x_n$ and define $x_I=\sum_{i \in I} x_i$, the factors are $x_I^{\alpha' S_I}$ (we can say monomials $S_\{i\}=X_i$ and polynomials $S_I=-c_I$. $N=n+m$ and big polytope is a simplex, then general formula for $u$ variables, which is equivalent to ABHY conditions; again $P_n$ in full details and others as degenerations.}
-
-*******************
+\subsubsection{String canonical forms and ABHY conditions for $\mathscr{P}_{n}$}
 
 In the last subsection, we have seen that any $n$-dimensional generalized 
 permutahedron can be constructed by a Minkowski sum of some simplices labeled by
@@ -1538,10 +1478,26 @@ then
 	\prod_{I\supset J}(x_I^{(-1)^{|J|-|I|}})^{F_J}
 \]
 gives that
-\[
-	u_I=\prod_{J\supset I}x_J^{(-1)^{|I|-|J|}}.
-\]
-For example, the $u$-variables of $\mathscr P_2$ are
+\begin{equation}
+  u_I=\prod_{J\supset I}x_J^{(-1)^{|I|-|J|}}. \label{uvarforPn}
+\end{equation}
+
+The following set of equations to define the $n$-dimensional Permutahedron: 
+\bea
+C_I = (-1)^{|I|} \left( \sum_{i \in I} S_i - \sum _{{i<j}\atop{i,j \in I}} S_{ij} +\cdots + (-1)^{|I|}  S_I \right) \nonumber
+\eea
+for all non-empty subsets $I \subset \{0,1,\cdots,n\}$ with the understanding that $C_{I} =0$ for all singlets $I$ and $F_{I} =0$ for $I=\{ 0,1,\cdots,n \}$. 
+%It is clear that
+%\bea
+%m= \text{No. of  C's }&=& 2^{n+1}-(n+2) \nonumber \\
+%N= \text{No. of F's} &=& 2^{n+1}- 2 \nonumber 
+%\eea
+%Thus we see that $N= d+m$ as expected.
+
+Let us look at the $n=2,3$ examples:
+
+\paragraph*{2d permutahedron}
+In this case, the $u$-variables can be written in terms of $x$ variables as:
 \[
 	u_{0}  = \frac{x_0 x_{012}}{x_{01}x_{02}},\quad 
 	u_{1}  = \frac{x_1 x_{012}}{x_{01}x_{12}},\quad
@@ -1550,7 +1506,7 @@ For example, the $u$-variables of $\mathscr P_2$ are
 	u_{02} = \frac{x_{02}}{x_{012}},\quad
 	u_{12} = \frac{x_{12}}{x_{012}}.
 \]
-They satisfy the following equations
+The $u$-equations are:
 \begin{align*}
 	&1-u_{0}=u_{1} u_{2} u_{12}^2,
 	1-u_{1}=u_{0} u_{2} u_{02}^2,
@@ -1559,50 +1515,54 @@ They satisfy the following equations
 	1-u_{02}=u_{1} u_{01} u_{12},
 	1-u_{12}=u_{0} u_{01} u_{02}.
 \end{align*}
-We will discuss these $u$-equations in the next subsection.
+where are the same as the $u$ equations for $\mathscr{B}_{2}$
 
-For permutahedra, we can give a ABHY construction from eq.\eqref{SinF} by setting 
-$S_I=-c_I$ for any non-singleton $I\in \mathscr P_n$, where $c_I$ are positive 
-constants, and a ABHY polytope is given by 
-\begin{equation}\label{ABHY}
-	F_I\geq 0,\quad -c_I=\sum_{J\neq \varnothing,J\subset I}(-1)^{|J|-|I|}F_J
-\end{equation}
-in $\{S_i=F_i\,:\,1\leq i\leq n\}$-space, where the last equation is a gauge fixing. 
-According to eq.\eqref{genperm_defi}, this polytope is a $n$-dimensional 
-permutahedron $\mathscr P_n$. {\bf (???)}
-The ABHY construction of any generalized permutohedra can be obtained by 
-setting $c_I=0$ for all $I$ not in the building set.
+\paragraph*{3d permutahedron}
+In this case, 
+the $u$-variables can be written interms of $x$ variables as:
+%the building set $B=\{ \{ 0,1,2,3\},\{ 0,1,2\},\{0,2,3\},\{0,1,3\},\{1,2,3\},\{0,1\},\{0,2\},\{0,3\},\{1,2\} \\ ,\{2,3\},\{1,3\},\{0\},\{1\},\{2\},\{3\}\}$.
+\begin{align}
+  u_{0} &= \frac{x_{0}x_{012}x_{013}x_{023}}{x_{01}x_{02}x_{03}x_{0123}} \:,\qquad  
+  u_{01} = \frac{x_{01}x_{0123}}{x_{012}x_{013}} \:, \\
+  u_{02} &= \frac{x_{02}x_{0123}}{x_{012}x_{023}}\:, \qquad 
+  u_{012} = \frac{x_{012}}{x_{0123}}\:,
+\end{align}
+and their cyclic. The $u$-equations are
+\begin{align}
+  1-u_{0} &= u_1 u_{2} u_{3} u_{12}^2 u_{23}^2  u_{13}^2 u_{123}^3 \left(1+ u_{0}  u_{023} u_{013} u_{012} u_{03} u_{01}  u_{02} \right)\:,  \\
+  1-u_{0 1} &= u_{2} u_{3}  u_{23}^2 u_{12} u_{13} u_{123}^2 u_{023}^2 u_{02} u_{03} \:,\\
+  1-u_{02} &= u_{1}u_{3} u_{13}^{2}u_{12}u_{23} u_{123}^{2} u_{013}^{2}u_{01}u_{03} \:,\\
+ 1-u_{012} &= u_3 u_{03}u_{13} u_{23} u_{0 1 3} u_{0 2 3} u_{123}  \:,
+ %1-u_{0 j k} &=& u_i u_{ij} u_{ik} u_{0 i k} u_{0 i j}  u_{0 i}
+\end{align}
+and their cyclic. 
 
-For example, the building set of $\mathscr A_2$ is $\mathscr P_2-\{\{0,2\}\}$,
-its ABHY construction can be obtained from $\mathscr P_2$ by setting $c_{02}=0$, 
-\[
-	0=-c_{02}=F_{02}-F_2,
-\]
-therefore the whole ABHY conditions for $\mathscr A_2$ is 
-\[
-	-c_{01}=F_{01}-F_0-F_1,\quad -c_{12}=F_{12}-F_1-F_2,\quad 
-	-c_{012}=-F_{01}-F_{12}+F_1,\quad F_I\geq 0,
-\]
-and its solution in $(F_1,F_2)$ space is 
-\[
-	\left\{\begin{aligned}
-		F_1&\geq 0,F_2\geq 0\\
-		F_0&=c_{01}+c_{12}+c_{012}-F_1-F_2\geq 0,\\
-		F_{12}&=F_1+F_2-c_{12}\geq 0,\\
-		F_{01}&=c_{012}+c_{12}-F_2\geq 0.
-	\end{aligned}\right.
-\]
+The 8 facets of the 3d permutahedron corresponding to $u_i \rightarrow 0, u_{0jk} \rightarrow 0,u_{123} \rightarrow 0 ~and ~u_{0} \rightarrow 0$  are all $B_2$'s. Similarly, the 6 facets corresponding to  $u_{ij} \rightarrow 0, u_{0k} \rightarrow 0$ are all  $A^{2}_1$.
+Thus, the 3d permutahedron integral factorizes nicely on all massless poles at finite $\alpha^{'}$!.
 
-\subsection{Binary geometries and $u$ equations}
 
-% {\bf argue in general to have binary geometries we must have $1-u=\prod u' p(\{u\})$ with $p(u=0)=1$, conjecture that this is true of ALL gen. perm. Show it for gen. perm. more examples?}
+% {\scriptsize  \bea
+% u_1&=&\frac{x(1+x+y)(1+x+z)(x+y+z)}{(x+y)(x+z)(1+x)(1+x+y+z)}, ~ u_2 =\frac{y(1+x+y)(1+y+z)(x+y+z)}{(x+y)(y+z)(1+y)(1+x+y+z)},~ u_{3}=\frac{z(1+x+z)(1+y+z)(x+y+z)}{(x+z)(y+z)(1+z)(1+x+y+z)},\nonumber \\
+% u_{023}&=&\frac{(1+y+z)}{(1+x+y+z)}, ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ u_{013} =\frac{(1+x+z)}{(1+x+y+z)},~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ u_{012}=\frac{(1+x+y)}{(1+x+y+z)},\nonumber \\
+% u_{12}&=&\frac{(x+y)(1+x+y+z)}{(1+x+y)(x+y+z)}, ~~~~~~~~~~~~~~~~~~ u_{23} =\frac{(y+z)(1+x+y+z)}{(1+y+z)(x+y+z)},~~~~~~~~~~~~~~~~~~~ u_{13}=\frac{(x+z)(1+x+y+z)}{(1+x+z)(x+y+z)},\nonumber \\
+% u_{03}&=&\frac{(1+z)(1+x+y+z)}{(1+y+z)(1+x+z)}, ~~~~~~~~~~~~~~~~~~ u_{01} =\frac{(1+x)(1+x+y+z)}{(1+x+y)(1+x+z)},~~~~~~~~~~~~~~~~~~~ u_{02}=\frac{(1+y)(1+x+y+z)}{(1+x+y))(1+y+z)},\nonumber  \\
+% u_{123}&=&\frac{(x+y+z)}{(1+x+y+z)}, ~~~~~~~~~~~~~~~~~~~~~~~~~~~ u_{0} =\frac{(1+x+y)(1+y+z)}{(1+x)(1+y)(1+z)(1+x+y+z)}\nonumber
+% \eea }
+% The $u$-equations in this case are:
+% {\scriptsize \bea
+% 1-u_i &=& u_j u_k (u_{jk})^2 (u_{0jk})^3 (u_{0k})^2(u_{0 j})^2 u_{0} \left(1+ u_i u_{ij} u_{ik} u_{0ik} u_{0ij}  u_{0i}\right),  1-u_{ij} = u_k u_{ik} u_{jk} (u_{0jk})^2 (u_{0ik})^2 (u_{0 k})^2 u_{0 j} u_{0 i} u_{0} \nonumber  \\
+% 1-u_{0 j k} &=& u_i u_{ij} u_{ik} u_{0 i k} u_{0 i j}  u_{0 i}, ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 1-u_{0 k} = u_i u_{j}  (u_{ij})^2 u_{ik} u_{jk} (u_{123})^2 (u_{0 i j})^2 u_{0 j} u_{0 i}  \nonumber \\
+% 1-u_{0} &=& u_1 u_{2} u_{3} (u_{12})^2 (u_{23})^2  (u_{13})^2 (u_{123})^3 \left(1+ u_{0}  u_{023} u_{013} u_{012} u_{03} u_{01}  u_{02} \right), 1-u_{123} = u_{023} u_{013} u_{012} u_{03} u_{01}  u_{02} u_{0}  
+% \eea}
+% where $i,j,k \in {1,2,3}$ and $i \neq j \neq k$.
+
 
 \subsubsection{The binary aspects of $u$-variables for permutohedra}
 
-Here we will show that the $u_{I}$'s for the permutahderon $\mathscr{P}_{n}$, which is defined as 
-\begin{equation}
-   u_{I}:= \prod_{J\supset I}x_J^{(-1)^{|I|-|J|}} \:, \label{uforpn}
-\end{equation}
+Here we will show that the $u_{I}$'s for the permutahderon $\mathscr{P}_{n}$, which is defined by eq.\eqref{uvarforPn},
+% \begin{equation}
+%    u_{I}:= \prod_{J\supset I}x_J^{(-1)^{|I|-|J|}} \:, \label{uforpn}
+% \end{equation}
 have the desired binary property, that is, $u_{I}$ and $u_{J}$ are compatible if and only if $I \subset J$ or $J\subset I$, otherwise, they are incompatible. Forthermore, we will show that the $u$-variables compatible with $u_{I}$ will become the $u$-variables for the facet $\mathscr{P}_{\lvert I \rvert-1}\times \mathscr{P}_{n-\lvert I\rvert}$ as $u_{I}$ gose to 0.
 % In other words, this means that $u_{I}$ and $u_{J}$ are incompatible if $I$ and $J$ are one of the following two cases:
 % \begin{enumerate}[resume]
@@ -1610,14 +1570,14 @@ have the desired binary property, that is, $u_{I}$ and $u_{J}$ are compatible if
 %    \item $I\cap J \neq \emptyset,I, J $ \:.
 % \end{enumerate}
 
-A crucial observation here is that $u_{I}\to 0$ is equivalent to $x_{I}\to 0 $ according to \eqref{uforpn} since all $x_{i}$ are positive. We can approach this limit by replacing $x_{i}$ with $ \epsilon x_{i}$ for all $i\in I$ then taking $\epsilon \to 0$. Then the remaining task is just to consider the behaviour of the other $u_{J}$'s under this limit. 
+A crucial observation here is that $u_{I}\to 0$ is equivalent to $x_{I}\to 0 $ according to \eqref{uvarforPn} since all $x_{i}$ are positive. We can approach this limit by replacing $x_{i}$ with $ \epsilon x_{i}$ for all $i\in I$ then taking $\epsilon \to 0$. Then the remaining task is just to consider the behaviour of the other $u_{J}$'s under this limit. 
 % In the following arrangement, it is convenient to introduce 
 % \begin{equation}
 %   p(J_{1},J_{2},\cdots,J_{n}):= \sum_{j\in J } x_{j} \:.
 % \end{equation}
 % where $J= \bigcup_{a=1}^{n} J_{a}$
 
-Let us first show that the $u$-variables incompatible with $u_{I}$ become 1 as $u_{I}$ goes to 0. It is obvious that $u_{I}$ and $u_{J}$ are incompatible if either (1) $I\cap J=  \varnothing$  or (2) $I\cap J \neq \varnothing,I, J $. For the first case, let us denote $K=[0,n]-(I\cup J)$ as the complement set of $[0,n]$ with respect to $I\cup J$. Then we find the logarithm of $u_{J}$ can be written as 
+Let us first show that the $u$-variables incompatible with $u_{I}$ become 1 as $u_{I}$ goes to 0. It is obvious that $u_{I}$ and $u_{J}$ are incompatible if either (1) $I\cap J=  \varnothing$  or (2) $I\cap J \neq \varnothing,I, J $. For the first case, let us denote $K=[0,n]-I-J$ as the complement set of $[0,n]$ with respect to $I\cup J$. Then we find the logarithm of $u_{J}$ can be written as 
 \begin{equation}
      \log u_{J} = \sum_{\kappa\subset K,\psi\subset I} (-1)^{\lvert\kappa\rvert+\lvert \psi\rvert }\log (x_{J}+x_{ \kappa} +x_{ \psi} )\:. \label{1incompuvarforPn}
 \end{equation}
@@ -1629,9 +1589,9 @@ where the binomial expansion of $(1-1)^{\lvert I \rvert}$ has been used. For the
 \begin{equation}
    \log u_{J} = \sum_{\psi'\subset I',\kappa\subset K}(-1)^{\lvert \psi' \rvert+ \lvert \kappa\rvert}  \log (x_{J'}+ x_{(I\cap J)}+x_{ \psi'}+x_{\kappa })
 \end{equation}
-where $I'=I-J$, $J'=J-I$ and $K=[0,n]-(I\cup J)$. Then a similar argument as in \eqref{incompn1} gives $\log u_{J}\to 0$ under the limits of all $x_{i}\to 0$ with $i\in I$.
+where $I'=I-J$, $J'=J-I$ and $K=[0,n]-(I\cup J)$. Then a similar argument as in \eqref{incompn1} gives $\log u_{J}\to 0$ under the limit of all $x_{i}\to 0$ with $i\in I$.
 
-Now let us consider the behaviour of compatible $u$-variables under this limit. For $J\subset I$, we again introduce $I'=I-J$ and $K=[0,n]-I$, then the logarithm of $u_{J}$ can be written as 
+Now let us consider the behaviour of compatible $u$-variables under this limit. For $J\subset I$, we again introduce $I'=I-J$ and $K=[0,n]-I$, then the logarithm of $u_{J}$ can written as 
 \begin{equation}
      \log u_{J}=\sum_{\psi'\subset I', \kappa \subset K} (-1)^{\lvert \psi'\rvert +\lvert \kappa \rvert} \log (x_{J}+x_{\psi'}+x_{\kappa})
 \end{equation}
@@ -1649,95 +1609,20 @@ Obviously, the expression in the last line of \eqref{subP1} is exactly the $u$-v
 \end{equation}
 where $K=[0,n]-J$, which is exactly the $u$-variable for the permutahderon $\mathscr{P}_{n-\lvert I\rvert}$
 
+\subsubsection{$u$-equations of ${\mathscr P_n}$}
 
-\subsubsection{The binary aspects of $u$-variables for generalized permutohedra}
-
-Inspired by the $u$-variables for permutahdera, we come up with the $u$-variables for generalized permutohedra. To this end, let us define the generating set $\mathbf{I}$ for $I\in\mathbf{B}$ as the set of the minimum extensions of $I$ on $\mathbf{B}$, that is there is no $J\in\mathbf{B}$ such that $I\subsetneq J\subsetneq I_{a}$ for any $I_{a}\in \mathbf{I}$. Then, the $u$-variables for the generalized permutohedron with building set $\mathbf{B}$ are 
-\begin{equation}
-   \log u_{I} :=  \log x_{I}- \sum_{I_{a}\in \mathbf{I}} \log x_{I_{a}}+\cdots +(-1)^{k}\sum _{I_{a_{1}},\cdots,I_{a_{k}}\in \mathbf{I}} \log x_{I_{a_{1}}\cup\cdots \cup I_{a_{k}}} +\cdots \:. \label{uvarforgenpermu}
-\end{equation}
-It is easy to check that the $u$-variables for associahedra, cyclohedra and permutohedra defined above can be viewed as the special cases of \eqref{uvarforgenpermu}. Let us give another slight nontrivial example to illustrate this defination.
-
-\paragraph{Example:} For the generalized permutahderon with building set 
+For a permutohedra $\mathscr P_n$, we can directly use eq.\eqref{GPfacet} to express $x_I$ by $\{u_I\}$ which gives us many algebraic equations of $u$-variables:
 \[
-\mathbf{B}=\{\{0\},\{1\},\{2\},\{3\},\{0,1,2\},\{1,3\},\{0,1,2,3\}\},
-\]
-the corresponding $u$-variables are
-\begin{gather*}
-   u_{0}=\frac{x_{0}}{x_{012}} \:,\quad  u_{1}=\frac{x_{1}x_{0123}}{x_{012}x_{13}} \:,\quad 
-   u_{2}=\frac{x_{2}}{x_{012}} \:, \quad u_{3}=\frac{x_{3}}{x_{13}} \\
-   u_{012}=\frac{x_{012}}{x_{0123}}\:,\qquad u_{13}=\frac{x_{13}}{x_{0123}} \:, \quad 
-\end{gather*}
-
-For generalized permutahdera, $u_{I}$ and $u_{J}$ are incompatible if $I$ and $J$ are one of the following two cases:
-\begin{enumerate}
-   \item $I\cap J=\varnothing$ and $I\cup J \in \mathbf{B}$ \:, 
-   \item $I\cap J \neq \varnothing,I, J $ \:,
-\end{enumerate}
-while $u_{I}$ and $u_{J}$ are compatible if $I$ and $J$ are one of the following three cases:
-\begin{enumerate}[resume]
-   \item $J\subset I$\:,
-   \item $I\subset J$ \:,
-   \item $I\cap J=\varnothing$ and $I\cup J \notin \mathbf{B}$ \:.
-\end{enumerate}
-We will follow the argument in the cases of permutahdera: replacing $x_{i}$ with $ \epsilon x_{i}$ for all $i\in I$ and taking $\epsilon \to 0$, then considering the behaviour of the other $u_{J}$'s under this limit case by case. For future convenience, we assume that the generating set $\mathbf{J}$ for $J$ has $s$ elements denoted by $J_{a}$ with $a\in[1,s]$, and introduce 
-\begin{equation}
-   p(J_{1},\ldots,J_{r}) = \sum_{a\in J_{1}\cup\cdots\cup J_{r}}x_{a}
-\end{equation}
-
-For case (1), some elements in $\mathbf{J}$ are subsets of $I\cup J$ since $I\cup J \in \mathbf{B}$ (an extreme case is that  $I\cup J$ is one element in $\mathbf{J}$, but the argument is the same). Without loss of generality, we denote such elements by $J_{1},\ldots J_{s'}$. Then the logarithm of $u_{J}$ can be written as 
-\begin{equation}
-   \log u_{J}= \sum_{\substack {1 \leq a_{1}<\cdots<a_{k}\leq s'\\ s'<b_{1}<\cdots b_{l}\leq s}}(-1)^{k+l}\log\Bigl( x_{J}+ p(J_{a_{1}}-J,\ldots,J_{a_{k}}-J) + p(J_{b_{1}}-J,\ldots, J_{b_{l}}-J)\Bigr) \:. \label{logu1}
-\end{equation}
-Since the second term in eq.\eqref{logu1} goes to 0 under the limits of $x_{i}\to 0$ with $i\in I$, $\log u_{J}$ goes to 0 under this limit as in eq.\eqref{1incompuvarforPn}. The whole argument can be carried over to case (2) by replacing $x_{J}$ with $x_{I\cap J}+ x_{J-I}$.
-
-For case (3), we again denote $J_{1},\ldots J_{s'}$ as the elements in $\mathbf{J}$ which are subsets of $ I$. After replacing $x_{i}$ with $\epsilon x_{i}$ for $i\in I$, we find the limit of $\log u_{J}$ as $\epsilon \to 0$ is
-\begin{align}
-  &\quad \lim_{\epsilon\to 0}  \sum_{\substack {1 \leq a_{1}<\cdots<a_{k}\leq s'\\ s'<b_{1}<\cdots b_{l}\leq s}}(-1)^{k+l}\log\Bigl( \epsilon x_{J}+\epsilon p(J_{a_{1}}-J,\ldots,J_{a_{k}}-J) + p(J_{b_{1}}-J,\ldots, J_{b_{l}}-J)\Bigr) \nonumber \\
-  &=\sum_{\substack {1 \leq a_{1}<\cdots<a_{k}\leq s'}}(-1)^{k}\log\Bigl( x_{J}+ p(J_{a_{1}}-J,\ldots,J_{a_{k}}-J) \Bigr). 
-\end{align}
-Remarkably, they are $u$-variables for the generalized permutohedron with the building set
-\begin{equation}
-   \mathbf{B}_{I} = \{J\in\mathbf{B} \vert J\subset I\}.
-\end{equation}
-
-Case (4) and (5) are quite trivial. For case (4), the limit behaviour of $u_{J}$ as $x_{I}\to 0$ can be simply obtained by replacing each $x_{K}$ in eq.\eqref{uvarforgenpermu} with $x_{K-I}$. For case (5), $u_{J}$ is  independent of $x_{i}$ with $i\in I$. Remarkably, they are $u$-variables for the generalized permutohedron with the building set
-\begin{equation}
-   \mathbf{B}_{\bar{I}} = \{J-I \vert J\subset I\}.
-\end{equation}
-
-
-
-% This conjecture can be extended to generalized permutohedra, but I only have checked the several cases of graph associahedra for now.
-
-% Based on the above conjecture,  there is a statement for the binary geometries corresponding to the facet $u_{I}\to 0$, 
-% that is the $u$-system for the facet $u_{I}\to 0$ is corresponding to the generlaized permutohedra $\mathcal{P}_{I}\otimes \mathcal{P}_{\bar{I}}$ with building sets  
-% \[
-% \mathcal{B}_{I} = \{J\vert J\subset I, J\in \mathcal{B}\}
-% \]
-% and 
-% \[
-% \mathcal{B}_{\bar{I}} = \{J-I\vert  J\in \mathcal{B}-\mathcal{B}_{I} \}
-% \]
-% where $J-I$ means the complement of $J$ with respect to $I$. This statement directly follow from the fact that $u_{I}\to 0$ is equivalent to take $x_{i}\to t x_{i} $ for $i\in I$ then take $t \to 0$
-% )
-
-\subsection{u eqs}
-
-({\bf Zhenjie}: A possible way to find some $u$-equations of generalized permutohedra)
-
-For a generic generalized permutohedra $\mathscr P$, it's usually difficult to solve $S_I$ by $\{F_I\}$  from eq.\eqref{GPfacet} and then get $u$-variables in terms of $\{x_I\}$, but we can directly use eq.\eqref{GPfacet} to express $x_I$ by $\{u_I\}$ which gives us many algebraic equations of $u$-variables. In fact,
-\[
-\prod_{I\in \mathscr P}x_I^{S_I}=\prod_{J\in \mathscr P}u_J^{F_J}=\prod_{J\in\mathscr P}\prod_{I\subset J,I\in \mathscr P}u_J^{S_I}=\prod_{I\in\mathscr P}\biggl(\prod_{J\supset I,J\in\mathscr P}u_J\bigg)^{S_I},
+\prod_{I}x_I^{S_I}=\prod_{J}u_J^{F_J}=\prod_{J}\prod_{I\subset J}u_J^{S_I}=\prod_{I}\biggl(\prod_{J\supset I}u_J\bigg)^{S_I},
 \]
 so
-\begin{equation}
-x_I=\prod_{J\supset I,J\in\mathscr P}u_J
+\begin{equation}\label{xinu}
+x_I=\prod_{J\supset I}u_J
 \end{equation}
-for any $I\in \mathscr P$, where we introduce a fake $u$-variable 
+for any $I\in \mathscr P_n$, where we introduce a fake $u$-variable 
 $u_{[0,n]}:=x_{[0,n]}$. We know some algebraic equations of $\{x_I\}$, 
 for example, linear equations $x_I+x_J=x_{I\cup J}$ for $I\cap J=\varnothing$, 
-so (I will omit all $\text{sth}\in \mathscr P$ for convenience.)
+so
 \begin{equation*}
 	\prod_{K\supset I}u_K+\prod_{K\supset J}u_K=\prod_{K\supset I\cup J}u_K
 \end{equation*}
@@ -1746,27 +1631,50 @@ or equivalently
 \prod_{I\subset K,K\not\supset I\cup J}u_K +
 \prod_{J\subset K,K\not\supset I\cup J}u_K = 1.
 \end{equation}
-({\bf Zhenjie}: I conjecture that all possible $u$-equations are consequences of 
-some algebraic equations of $x_I$ which is in fact we have seen in 
-the calculation of $1-u_I$. For example, the nonlinear equation (although it's
-the consequence of linear equations)
-\[
-	x_0x_{012}+x_1x_2=x_{01}x_{02}
-\]
-tells us the $u$-equation of $u_0$ of 2d permutohedron $\mathscr P_2$. Therefore,
-another related conjecture is that the variety generated by $u$-equations 
-is the one generated by eq.(\theequation) for all disjoint $I$, $J\in \mathscr P$ 
-in $u$-space. Can we prove that generalized permutohedra are binary geometries in
-this way?
-)
 
-For permutohedron $\mathscr P_n$, I conjecture that
+Let us consider the $2 d$ example for which the relations are :
+\bea
+1-u_1 u_{12} &=&u_0 u_{02}, ~~1-u_2 u_{12} =u_0 u_{01},~~1-u_{12}= u_0 u_{01} u_{02} \nonumber \\
+1- u_{01}&=& u_{0}u_1 u_{01}u_{12},~~1-u_0 u_{02}= u_{0}u_2 u_{02} u_{12}
+\eea
+By rewriting $(1-u_i)= (1-u_i u_{12})-u_i(1-u_{12}))$ we can get $u$-equations for $u_i$ with $i=1,2$. Similarly by rewriting $(1-u_0)=(1-u_0 u_{01} u_{02})-u_0 (1-u_{01})-u_0 u_{01}(1-u_{02}) $ we can get the $u$-equation for $u_0$
+\bea
+1-u_1&=&u_0 u_{02}(1-u_1 u_{01}), ~~1-u_2 =u_0 u_{01}(1-u_2 u_{02}),~~1-u_{12}= u_0 u_{01} u_{02} \nonumber \\
+1- u_{01}&=& u_{0}u_1 u_{01}u_{12},~~1-u_0 u_{02}= u_{0}u_2 u_{02} u_{12}~~1-u_0=u_1 u_{12}(1-u_0 u_{01})
+\eea
+More generally we can rewrite 
+\bea
+(1-u_I)= (1- \prod_{I \subset J} u_I) -u_I(1-u_{I_1})-u_I u_{I_1}(1-u_{I_2})-\cdots-\prod_{I \subsetneq [1~n]}(1-u_{12\cdots n})
+\eea
+Since $I \subsetneq I_1,I_2$ $|I|< |I_1|,|I_2|$ thus we already know the $u$-equations for $I_1,I_2,\cdots,[1,n]$ as we recursively find them starting from $|I|=n$.
+
+A nice fact about the $u$-equations we obtain is that $1-u_I$ are all at most linear and multi term in $u_I$ for any $n$.
+However, they do not make the factorization manifest at the level of $u$-equations as we take some $u_I \rightarrow 0$.
+The $u$-equations for $\mathscr{P}_n$ which make factorization manifest are complicated polynomials of order $n-|I|-1$ in the corresponding $u$'s. Thus, the most general $u$-equations can be conjectured to be:
+\bea
+1-u_{I} = \prod_{J} u^{s_J}_{J} F(u_I, u_J,u_K) 
+\eea
+where, $J$ are all sets incompatible with $I$, $K$ are all sets compatible with $I$ excluding itself and $s_J$ are positive integers. $F(u_I, u_J,u_K) $ is polynomial of degree $n-|I|-1$ in $u_I$ and we conjecture that $F(u_I =0, u_J,u_K) = 1$ which makes $\mathscr{P}_n$ binary as we proved using a different method in the previous section. But we do not have a closed form expression for $F(u_I, u_J,u_K)$ for all $n$.
+
+Some of the simplest ones are:\\
+
+For $|I| =n-1$ and $s_K = \begin{cases}  1,~ if K \not\subset I & \\ 2, ~if K \subset I\end{cases}$
+
+\bea
+1-u_{I} &=& \prod_ {S - I \subset J } u_{J} \prod_ {K \cap I \ne \Phi } (u_{\bar{K}})^{s_K}  \nonumber \\
+1-u_{12\cdots n} &=& \prod_ {{I \subset S}\atop {I \ne \Phi}} u_{\bar{I}} \nonumber
+\eea
+and for $|I| =n-2$ with $ \bar{I} = \{i, j\}$
+\bea
+1-u_{I}= u_i u_j u^{2}_{ij} \prod_{J \subset I} u_{J \cup \{i\}} u_{J \cup \{j\}} u^{2}_{J \cup \{i,j\}} \prod_{K \subset S-I} (u_{\bar{K}})^{3} (u_{\bar{K \cup \{i\}}})^{2}  (u_{\bar{K \cup\{j\}}})^{2}  u_{\bar{K\cup \{i,j\}}} \left( 1+ u_{\bar{\{i\}}} u_{\bar{\{j\}}} u^{'}_{\bar{\{ij\}}} \prod_{I \subset L} u_L \right)                       \nonumber
+\eea
+
+Using eq.\eqref{xinu}, we can say more on $u$-equations,
 \[
 1-u_I=1-\prod_{J\supset I}x_J^{(-1)^{|J|-|I|}}=\frac{\prod_{|J|-|I| \text{ odd}; J\supset I}x_J-\prod_{|J|-|I| \text{ even}; J\supset I}x_J}{\prod_{|J|-|I| \text{ odd}; J\supset I}x_J}
 =\frac{f_{I,n}\prod_{i\not\in I}x_i}{\prod_{|J|-|I| \text{ odd}; J\supset I}x_J},
 \]
-where $f_{I,n}$ is an irreducible polynomial with positive coefficients. It's easy to see $x_i$ for $i\not\in I$ is a factor of the numerator by setting $x_i=0$, but it's not obvious whether $f_{I,n}$ is irreducible. I've checked many examples, and corresponding polynomials $f_{I,n}$ are always irreducible.
-
+where $f_{I,n}$ is a polynomial with positive coefficients. It's easy to see $x_i$ for $i\not\in I$ is a factor of the numerator by setting $x_i=0$.
 From
 \[
 \prod_{i\not\in I}x_i=\prod_J u_J^{|J|-|I\cap J|}
@@ -1792,105 +1700,167 @@ The product $\prod_{J\not\supset I} u_J^{|J|-|I\cap J|}$ has appeared in all kno
 It's not symmetric when $|I|\neq |J|$.
 
 
-\subsection{Permutahedron as a binary geometry}
-
-\textcolor{red}{(Prashanth: An attempt to prove $P_n$ is binary using Chi's method.)}
-
-In this section we shall try to argue that the permutahedron is a binary geometry.
-
-Since, the permutahedron is permutation invariant in all $x_i$'s this should be reflected at the level of $u$'s and this is indeed the case as $u_I$ with the same $|I|$ have similar $u$'s. i.e $u_J$ can be obtained from $u_I$ for $|J|=|I|$ by interchange of some of the $x_i$'s.
-
-We shall prove $\mathscr P_{n+1}$ is binary by showing that whenever we take some $u_I \rightarrow 0$ (by taking a unique set of $x_i \rightarrow 0, \infty$) then $u_J \rightarrow 1$ for $J$ incompatible with $I$ and the remaining $u$'s reduce to the $u$'s corresponding to $\mathscr P_{k-1} \times \mathscr P_{(n+1)-k}$. 
-
-By the argument given above it is sufficient to consider $u_1, u_{12},\cdots,u_{12...n(n+1)} \rightarrow 0$ and $u_0, u_{0(n+1)},u_{0,n(n+1)}\cdots,u_{02...n(n+1)} \rightarrow 0$.
-
-We have the following cases:
-\begin{enumerate}
-    \item $u_I \rightarrow 0$ with $0\notin I$ and $|I| < \lfloor \frac{n+1}{2} \rfloor$ i.e $I =  \{1,2,\cdots, k \}$ with $k= 1,2,\cdots, \lfloor \frac{n+1}{2} \rfloor -1$
-    
-    In this case we take $x_i \rightarrow t x_i$ for $i=1,\cdots, k $ and consider the limit $t \rightarrow 0$ to get:
-    \bea
-    u^{(n+1)}_{J \cup  I} &\rightarrow& u_{J}^{((n+1)-k )} ~\text{with}~ J\subseteq\bar{I}\\
-     u^{(n+1)}_{K} &\rightarrow& u_{K}^{(k-1)} ~\text{with}~ K\subsetneq I
-    \eea
-   which is a $\mathscr P_{(n+1)-|I|} \times \mathscr P_{|I|-1}$ 
-    
-    
-    \item $u_I \rightarrow 0$ with $0\notin I$ and $|I| \ge \lfloor \frac{n+1}{2} \rfloor$ i.e. $I = \{1,2,\cdots,k \}$ with $k= \lfloor \frac{n+1}{2} \rfloor,\cdots,(n+1)$
-    
-     In this case we take $x_i \rightarrow t x_i$ for $i=1,\cdots k-1$ and $x_{k} \rightarrow t$ and  consider the limit $t \rightarrow 0$ to get:
-    \bea
-    u^{(n+1)}_{J } &\rightarrow& u_{J}^{((n+1)-k)} ~\text{with}~ J\subseteq \{1,\cdots,k-1\}\\
-     u^{(n+1)}_{J \cup \{k\}} &\rightarrow& u_{K \cup\{0\}}^{((n+1)-k)} ~\text{with}~ J\subsetneq \{1,\cdots,k-1\}
-    \eea
-     \bea
-    u^{(n+1)}_{K \cup I } &\rightarrow& u_{J}^{(k-1)} ~\text{with}~ K\subseteq \{k +1,\cdots,n+1\}\\
-     u^{(n+1)}_{K \cup \{0\}\cup I} &\rightarrow& u_{K \cup\{0\}}^{(k-1)} ~\text{with}~ K\subsetneq \{k +1,\cdots,n+1\}
-    \eea
-   which is a $\mathscr P_{(n+1)-|I|} \times \mathscr P_{|I|-1}$ 
-    \item $u_I \rightarrow 0$ with $0\in I$ and $|I| < \lfloor \frac{n+1}{2} \rfloor$ i.e. $I = \{0,(k+1),\cdots,(n+1)\}$ with $k= \lfloor \frac{n+1}{2} \rfloor+1,\cdots,(n+1)$
-    
-    In this case we take $x_i \rightarrow \frac{ x_i}{t}$ for $i=1,\cdots k-1$ and $x_{k} \rightarrow \frac{1}{t}$ and  consider the limit $t \rightarrow 0$ to get:
-    \bea
-    u^{(n+1)}_{J \cup I } &\rightarrow& u_{J}^{(n+1)-k} ~\text{with}~ J\subseteq \{1,\cdots,(k-1)\}\\
-     u^{(n+1)}_{J \cup \{k\}\cup I} &\rightarrow& u_{J \cup\{0\}}^{(k-1)} ~\text{with}~ J\subsetneq \{1 ,\cdots, k\}
-    \eea
-     \bea
-    u^{(n+1)}_{K} &\rightarrow& u_{K}^{k-1} ~\text{with}~ K\subseteq I
-    \eea
-    which again is a $\mathscr P_{(n+1)-|I|} \times \mathscr P_{|I|-1}$. 
-    \item $u_I \rightarrow 0$ with $0\in I$ and $|I| \ge \lfloor \frac{n+1}{2} \rfloor$ $I = \{0,(k+1),\cdots,(n+1)\}$ with $k= 1,\cdots, \lfloor \frac{n+1}{2} \rfloor+1$.
-    
-    In this case we take $x_i \rightarrow \frac{x_i}{t}$ for $i=1,\cdots, k$ and consider the limit $t \rightarrow 0$ to get:
-    \bea
-    u^{(n+1)}_{J} &\rightarrow& u_{J}^{(n+1)-k} ~\text{with}~ J\subseteq I
-    \eea
-     \bea
-    u^{(n+1)}_{K \cup I} &\rightarrow& u_{K}^{k-1} ~\text{with}~ K\subsetneq \{1,\cdots,k\}
-    \eea
-    
-     which again is a $\mathscr P_{(n+1)-|I|} \times \mathscr P_{|I|-1}$. 
-\end{enumerate}
-This proves that the permutahedron $\mathscr P_n$ is indeed a binary geometry for all $n$.
-
-The above proof did not explicitly use the $u$- equations for $\mathscr P_n$. 
-The $u$-equations for $\mathscr P_n$ are complicated polynomials and Some of them are:\\
-
-For $|I| =n-1$ and $s_K = \begin{cases}  1,~ if K \not\subset I & \\ 2, ~if K \subset I\end{cases}$
-
-\bea
-1-u_{I} &=& \prod_ {S - I \subset J } u_{J} \prod_ {K \cap I \ne \Phi } (u^{'}_{K})^{s_K}  \nonumber \\
-1-u_{12\cdots n} &=& \prod_ {{I \subset S}\atop {I \ne \Phi}} u^{'}_{I} \nonumber
-\eea
-
-For $t_J = \begin{cases}  1,~ if I  \not\subset J & \\ 2, ~if I \subset J \end{cases}$
-
-\bea
-1-u^{'}_{i} &=& \prod_ {\{ i \} \subset J } u_{J} \prod_ {K \subset S- \{i\} } u^{'}_{K} \nonumber \\
-1-u^{'}_{i j} &=& \prod_ {\{i,j \}\cap J \ne \Phi} u^{t_J}_{J} \prod_ {K \subset S-\{i, j \} } (u^{'}_{K})^{2} u^{'}_{K \cup {i}} u^{'}_{K \cup{j} } \nonumber 
-\eea
-
-and for $|I| =n-2$ with $S- I = \{i, j\}$
-
-\bea
-1-u_{I}= u_i u_j u^{2}_{ij} \prod_{J \subset I} u_{J \cup \{i\}} u_{J \cup \{j\}} u^{2}_{J \cup \{i,j\}} \prod_{K \subset S-I} (u^{'}_K)^{3} (u^{'}_{K \cup \{i\}})^{2}  (u^{'}_{K \cup\{j\}})^{2}  u^{'}_{K\cup \{i,j\}} \left( 1+ u^{'}_i u^{'}_j u^{'}_{ij} \prod_{I \subset L} u_L \right)                       \nonumber
-\eea
-   
-The other $u$-equations are not two or three term equations and seem to be polynomials of order $|I|=n-2$ in the corresponding $u$'s. Thus, the most general $u$-equations can be conjectured to be:
-\bea
-1-u_{I} = \prod_{J} u^{s_J}_{J} P_{|I|}(u_I, u_J,u_K) 
-\eea
-where, $J$ are all sets incompatible with $I$
-
- $K$ are all sets compatible with $I$ excluding itself 
- $s_J$ are positive integers. 
-
+We conjecture (and have checked upto $n=6$) that we can solve the $u$-equations in terms of $u_1,u_{12},\cdots,u_{12\cdots n} $ for the rest of the $u$'s.
  
-\section*{A degeneration of ${\mathescr P_n}$ with perfect $u$-equations}
+ \bea
+\int_{\mathbb{R}^{n}_{+}} \prod_{i =1}^{n} \frac{d x_i}{x_i} \prod_{I} \left(x_I \right) ^{-\alpha^{'} S_I} &=& \int_{\mathbb{R}^{n}_{+}} \prod_{i =1}^{n} \frac{d x_i}{x_i} \prod_{\alpha} \left(u_I \right) ^{-\alpha^{'} F_{\alpha}} \\
+&=&\int_{[0,1]^n} \prod_{i =1}^{n} \frac{d u_{1\cdots i}}{u_{1\cdots i}(1-u_{1\cdots i})} \prod_{\alpha} \left(u_I(u_{1\cdots i}) \right) ^{-\alpha^{'} F_{\alpha}}
+\eea 
+ 
+\subsubsection{Degenerations of ${\mathscr P_n}$ which lead to  products}
+
+In this section we provide an answer to the question of which degenerations of $\mathscr{P_n}$ give the most general products of such geometries. We begin by stating the following results about Nestohedra.
+
+The maximal set of a building set $B_{max}$ is the set of all inclusion maximal elements of the building set $B$. A building set $B$ is connected if $B_{max}$ has a single element.
+
+{\bf Theorem:} If $B_1, B_2,\cdots B_n$ are connected subsets of a building set $B$ then the corresponding nestohedron ${\mathscr N_B}$ is isomorphic to the product of the nestohedra ${\mathscr N}_{ B_1} \times{\mathscr N}_{ B_2} \cdots \times {\mathscr N}_{B_n}$.
+
+We can use the above result to construct a degeneration of  ${\mathscr P_n}$ which are the most general products i.e., $\prod_{p_i} X_{p_i}$ such that $\sum^{k}_{i=1} p_{i} = n$ and $X = {\mathscr A} ,{\mathscr B}, {\mathscr P }$ by dividing the $(n+1)$ singlets into $k$ parts $\{0,\cdots,p_1\}, \{p_1,\cdots,p_1+p_2\},\cdots \{\sum^{k-1}_{i=1}p_{i},\cdots,\sum^{k}_{i=1}p_{i}= n\}$ and constructing the corresponding $X_{p_i}$'s which we denote by $X_{p_i}\left(\sum^{(i-1)}_{j=1}p_{j},\cdots,\sum^{i}_{j=1}p_{j}\right).$ 
+
+Let us consider the $P_4$ example for which the allowed possibilities are : $A_1^{4}$, $A_1^2 \times A_2$, $A_1 \times A_3$, $A^{2}_2$, $A_1^2 \times B_2$, $A_1 \times B_3$,$A_1 \times P_3$,$ A_2\times B_2$ and $B^{2}_2$.
+ 
+For $A_1^{4}$ the building set is $ \{ {0},{1},{2},{3},{4},{01},{12},{23},{34} \}$ where $\{0,01\} , \{1,12\},\{2,23\},\{3,34\}$ generate the 4 $A_1$'s which we denote as $A_1(0,1) \times A_1(1,2) \times A_1(2,3) \times A_1(3,4) $.
+
+For $A_1^{2} \times A_2$ the building set is $ \{ {0},{1},{2},{3},{4},{01},{12},{23},{34},{234} \}$ generated by $A_1(0,1)\times A_1(1,2) \times A_2(2,3,4)$'s.
+
+For  $A_1 \times A_3$ the building set is $ \{ {0},{1},{2},{3},{4},{01},{12},{23},{34},{123},{234},{1234} \}$ generated by  $A_1(0,1)\times A_3(1,2,3,4)$.
+
+For  $A_2^{2}$ the building set is $ \{ {0},{1},{2},{3},{4},{01},{12},{23},{34} ,{012},{234}\}$ generated by $A_2(0,1,2)\times A_2(2,3,4)$
+
+For $A_1^{2} \times B_2$ the building set is $ \{ {0},{1},{2},{3},{4},{01},{12},{23},{34},{24},{234} \}$ generated by $A_1(0,1)\times A_1(1,2) \times B_2(2,3,4)$'s.
+
+For $A_1 \times B_3$ the building set is $ \{ {0},{1},{2},{3},{4},{01},{12},{23},{34},{14},{123},{234},{134},{124},{1234} \}$ generated by  $A_1(0,1)\times B_3(1,2,3,4)$.
+
+For $A_1 \times P_3$ the building set is $ \{ {0},{1},{2},{3},{4},{01},{12},{23},{34},{14},{13},{24},{123},{234},{134},{124},{1234} \}$ generated by  $A_1(0,1)\times P_3(1,2,3,4)$.
+
+For $A_2 \times B_2$ the building set is $ \{ {0},{1},{2},{3},{4},{01},{12},{23},{34},{24},{012},{234}\}$ generated by $A_2(0,1,2)\times B_2(2,3,4)$
+
+For $B_2^{2}$ the building set is $ \{ {0},{1},{2},{3},{4},{01},{12},{02},{23},{34},{24} ,{012},{234}\}$ generated by $B_2(0,1,2)\times B_2(2,3,4)$
+
+We can similarly find a degeneration of ${\mathscr P_n}$ which would correspond to any product.
+
+
+\subsection{Binary aspects of generalized Permutohedra}
+
+
+
+Inspired by the $u$-variables for permutahdera, we come up with the $u$-variables for generalized permutohedra. To this end, we first find all minimum extensions $I_{a}$ of $I$ in $\mathbf{B}$, that is there is no $J\in\mathbf{B}$ such that $I\subsetneq J\subsetneq I_{a}$, and we denote the collection of these extensions by $\mathscr{G}_{I}$. Then, the $u$-variables for the generalized permutohedron with building set $\mathbf{B}$ are
+\begin{equation}
+   \log u_{I} :=  \log x_{I} +(-1)^{k}\sum _{\varnothing\neq\{I_{a_{1}},\cdots,I_{a_{k}}\}\subset \mathscr{G}_{I}} \log x(I_{a_{1}},\ldots, I_{a_{k}})  \label{uvarforgenpermu}
+\end{equation}
+where the sum is over all nonemepty subsets of $\mathscr{G}_{I}$, and we introduce
+\[
+x(I_{a_{1}},\ldots,I_{a_{k}}):=x_{I_{a_{1}}\cup \cdots \cup I_{a_{k}}}   
+\]
+to avoid too many subscripts. Obviously, an equivalent form of eq.\eqref{uvarforgenpermu} is
+\begin{equation}
+   \log u_{I} := (-1)^{k}\sum _{\{I_{a_{1}},\cdots,I_{a_{k}}\}\subset \mathscr{G}_{I}} \log \bigl(x_{I}+x(I_{a_{1}}-I,\ldots, I_{a_{k}}-I)\bigr)  \label{uvarforgenpermu1}
+\end{equation}
+It is easy to check that the $u$-variables for simplices, hypertubes, associahedra, cyclohedra and permutohedra defined above can be viewed as the special cases of \eqref{uvarforgenpermu}:
+\begin{enumerate}
+   \item For a $n$-dimensional simplex, $\mathscr{G}_{\{i\}}=\{[0,n]\}$ for every singleton $\{i\}$.
+   \item For a $n$-dimensional hypertube, $\mathscr{G}_{\{0\}}=\{[0,1]\}$, $\mathscr{G}_{\{i\neq 0\}}=\{[0,i]\}$ and $\mathscr{G}_{[0,i]}=\{[0,i+1]\}$.
+   \item For a $n$-dimensional associahedron,
+   \[
+   \mathscr{G}_{[i,j]}=\begin{cases}
+      \{[i-1,j],[i,j+1]\}   & \quad \text{if $i\neq 0$ and $j\neq n $}\\
+      \{[0,j+1]\} &\quad \text{if $i= 0$ and $j\neq n $} \\
+      \{[i-1,j]\} &\quad \text{if $i\neq 0$ and $j= n $}
+   \end{cases}   
+   \]
+   \item For a $n$-dimensional cyclohedron, $\mathscr{G}_{[i,j]}=\{[i-1,j],[i,j+1]\}$
+   \item For a $n$-dimensional permutohedron, $\mathscr{G}_{I}=\{I\cup\{j\}\vert j\in [0,n]-I \}$
+\end{enumerate}
+
+% \paragraph{Example:} For the generalized permutahderon with building set 
+% \[
+% \mathbf{B}=\{\{0\},\{1\},\{2\},\{3\},\{0,1,2\},\{1,3\},\{0,1,2,3\}\},
+% \]
+% the corresponding $u$-variables are
+% \begin{gather*}
+%    u_{0}=\frac{x_{0}}{x_{012}} \:,\quad  u_{1}=\frac{x_{1}x_{0123}}{x_{012}x_{13}} \:,\quad 
+%    u_{2}=\frac{x_{2}}{x_{012}} \:, \quad u_{3}=\frac{x_{3}}{x_{13}} \\
+%    u_{012}=\frac{x_{012}}{x_{0123}}\:,\qquad u_{13}=\frac{x_{13}}{x_{0123}} \:, \quad 
+% \end{gather*}
+
+For generalized permutahdera, $u_{I}$ and $u_{J}$ are incompatible if $I$ and $J$ are one of the following two cases:
+\begin{enumerate}
+   \item $I\cap J=\varnothing$ and $I\cup J \in \mathbf{B}$ \:, 
+   \item $I\cap J \neq \varnothing,I, J $ \:,
+\end{enumerate}
+while $u_{I}$ and $u_{J}$ are compatible if $I$ and $J$ are one of the following three cases:
+\begin{enumerate}[resume]
+   \item $J\subset I$\:,
+   \item $I\subset J$ \:,
+   \item $I\cap J=\varnothing$ and $I\cup J \notin \mathbf{B}$ \:.
+\end{enumerate}
+We will follow the argument in the cases of permutahdera: replacing $x_{i}$ with $ \epsilon x_{i}$ for all $i\in I$ and taking $\epsilon \to 0$, then considering the behaviour of the other $u_{J}$'s under this limit case by case. 
+% For future convenience, we assume that the generating set $\mathbf{J}$ for $J$ has $s$ elements denoted by $J_{a}$ with $a\in[1,s]$, and introduce 
+% \begin{equation}
+%    p(J_{1},\ldots,J_{r}) = \sum_{a\in J_{1}\cup\cdots\cup J_{r}}x_{a}
+% \end{equation}
+
+For case (1), some elements in $\mathscr{G}_{J}$ are subsets of $I\cup J$ since $I\cup J \in \mathbf{B}$. We denote the collection of such elements by $\mathscr{G}^{I\cup J}_{J}$. Then the logarithm of $u_{J}$ can be written as 
+\begin{equation}
+   \log u_{J}= \sum_{\substack {\{J_{a_{1}},\ldots,J_{a_{k}}\}\subset \mathscr{G}^{I\cup J}_{J}\\ \{J_{b_{1}},\ldots J_{b_{l}}\}\subset \mathscr{G}_{J}-\mathscr{G}^{I\cup J}_{J}}}(-1)^{k+l}\log\Bigl( x_{J}+ x(J_{a_{1}}-J,\ldots,J_{a_{k}}-J, J_{b_{1}}-J,\ldots, J_{b_{l}}-J)\Bigr) \:. \label{logu1}
+\end{equation}
+Since the second term in eq.\eqref{logu1} goes to $x(J_{b_{1}}-J-I,\ldots, J_{b_{l}}-J-I)$ under the limits of $x_{i}\to 0$ with $i\in I$, $\log u_{J}$ goes to 0 under this limit as in eq.\eqref{1incompuvarforPn}. The whole argument can be carried over to case (2) by replacing $x_{J}$ with $x_{I\cap J}+ x_{J-I}$.
+
+For case (3), we again denote $\mathscr{G}^{I}_{J}$ as the collection of the elements in $\mathscr{G}_{J}$ which are subsets of $ I$. After replacing $x_{i}$ with $\epsilon x_{i}$ for $i\in I$, we find the limit of $\log u_{J}$ as $\epsilon \to 0$ is
+\begin{align}
+  &\quad \lim_{\epsilon\to 0}  \sum_{\substack {\{J_{a_{1}},\ldots,J_{a_{k}}\}\subset \mathscr{G}^{I}_{J}\\ \{J_{b_{1}},\ldots J_{b_{l}}\}\subset \mathscr{G}_{J}-\mathscr{G}^{I}_{J}}}(-1)^{k+l}\log\Bigl( \epsilon x_{J}+\epsilon x(J_{a_{1}}{-}J,\ldots,J_{a_{k}}{-}J,(J_{b_{1}}{-}J)\cap I,\ldots, (J_{b_{l}}{-}J)\cap I) \nonumber \\
+  & \qquad \qquad\qquad \qquad \qquad \qquad    + x (J_{b_{1}}{-}I,\ldots,J_{b_{l}}{-}I)\Bigr) \nonumber  \\
+  &=\sum_{\{J_{a_{1}},\ldots,J_{a_{k}}\}\subset \mathscr{G}_{J}^{I}} (-1)^{k+l}\log\Bigl( x_{J}+ x(J_{a_{1}}{-}J,\ldots,J_{a_{k}}{-}J) \Bigr). 
+\end{align}
+Remarkably, they are $u$-variables for the generalized permutohedron with the building set
+\begin{equation}
+   \mathbf{B}_{I} = \{J \vert J\subset I, J\in \mathbf{B}\}.
+\end{equation}
+
+Case (4) and (5) are quite trivial. For case (4), the limit behaviour of $u_{J}$ as $x_{I}\to 0$ can be simply obtained by replacing each $x_{K}$ in eq.\eqref{uvarforgenpermu} with $x_{K-I}$. For case (5), $u_{J}$ is  independent of $x_{i}$ with $i\in I$. Remarkably, they are $u$-variables for the generalized permutohedron with the building set
+\begin{equation}
+   \mathbf{B}_{\bar{I}} = \{J-I \vert J\in \mathbf{B}\}.
+\end{equation}
+
+
+
+
+We start with the Cayley graph proposed in \cite{} and further studied in \cite{}. In \cite{}, the ABHY realization for general Cayley graphs have been proposed, here we will use several examples to illustrate that the binary geometries exist for general Cayley graphs. The first Cayley graph which is nether associahedron nor permutahderon is so-called  ``next-to-$A_{3}$'', in terms of generalized permutahdera, the building set for next-to-$A_{3}$ is 
+\begin{equation}
+   \mathscr{NA}_{3}=\{\{1,2,3,4\},\{1,2,3\},\{1,3,4\},\{2,3,4\},\{1,2\},\{1,3\},\{2,3\},\{3,4\},\{1\},\{2\},\{3\},\{4\}\}
+\end{equation}
+
+the $u$ variables are 
+\begin{align}
+   &u_{1}=\frac{x_{1}x_{123}}{x_{12}x_{13}} \:, \quad  u_{2}=\frac{x_{2}x_{123}}{x_{12}x_{23}} \:,  \quad 
+   u_{3}=\frac{x_{3}x_{134}x_{234}x_{123}}{x_{34}x_{13}x_{23}x_{1234}} \:, \quad 
+   u_{4}=\frac{x_{4}}{x_{34}} \\
+   &u_{12}=\frac{x_{12}}{x_{123}} \:, \quad u_{13}=\frac{x_{13}x_{1234}}{x_{134}x_{123}} \:,\quad 
+   u_{23}=\frac{x_{23}x_{1234}}{x_{123}x_{234}} \:, \quad u_{34}=\frac{x_{34}x_{1234}}{x_{134}x_{234}} \\
+   &u_{123}=\frac{x_{123}}{x_{1234}} \:, \quad u_{134}=\frac{x_{134}}{x_{1234}} \:, \quad 
+   u_{234}=\frac{x_{234}}{x_{1234}}
+\end{align}
+The $u$ equations are
+\begin{align}
+   &1-u_{1}=u_{2}u_{3}u_{23}^{2}u_{34}u_{234}^{2} \:, \\
+   &1-u_{2}=u_{1}u_{3}u_{13}^{2}u_{34}u_{134}^{2} \:, \\
+   &1-u_{3}= u_{1}u_{2}u_{4}u_{12}^{2}(1+u_{3}u_{13}u_{23}u_{34}u_{123}u_{134}u_{234}) \:, \\
+   &1-u_{4}=u_{3}u_{13}u_{23}u_{123}  \:, \\
+   &1-u_{12} =u_{3}u_{13}u_{23}u_{34}u_{134}u_{234} \:, \\
+   &1-u_{13} =u_{2}u_{4}u_{12}u_{23}u_{34}u_{234}^{2} \:, \\
+   &1-u_{23}= u_{1}u_{4}u_{12}u_{13}u_{34}u_{134}^{2} \:, \\
+   &1-u_{34}= u_{1}u_{2}u_{12}^{2}u_{13}u_{23}u_{123}^{2} \:, \\
+   &1-u_{123}=u_{4}u_{34}u_{134}u_{234} \:, \\
+   &1-u_{134}=u_{2}u_{12}u_{23}u_{123}u_{234} \:, \\
+   &1-u_{234}=u_{1}u_{12}u_{13}u_{123}u_{134} \:, 
+\end{align} 
+
+
+\subsection {Binary geometries with non-linear factors}
 We can also consider general Minkowski sums of non-simplices and see if these also give us any instance of polytopes with perfect $u$ equations. One such case is the following:
 
 We consider the Minkowski sum of $n-1$ $A_2$'s with following Newton polynomial :
-\bea \label {new}
+\bea \label{new}
 \prod_{i=1}^{n} (1+x_i ) \prod_{i=1}^{n-1} (1+x_i +x_i x_{i+1}) 
 \eea 
 This gives a family of simple $n$-dimensional polytopes with $3n-1$ facets  and Pell number $P_n$ (~recursively defined as $ P_n=2 P_{n-1} +P_{n-2}$ with $P_1=1,~ P_2=2$) of vertices which we shall call $X_n$. 
@@ -1900,7 +1870,7 @@ We can solve for $u$-variables for this family and we get :
 u_1 &=& \frac{p_n}{q_n}, ~u_2 = \frac{p_{n-1}q_n}{p_{n-1,n}},~u_3 = \frac{p_{n-2}q_{n-1}}{p_{n-2,n-1}}, \cdots,
 u_{n-2} = \frac{p_1 q_2}{p_{12}}, ~u_{n-1} = \frac{p_{2}q_3}{p_{23}},~u_n = \frac{p_{3}q_{4}}{p_{34}}, \nonumber \\
 u_{n+1} &=& \frac{1}{q_1}, ~u_{n+2} = \frac{p_{12}}{q_{1}q_{2}},~u_{n+3} = \frac{q_{1}}{p_{23}}, \cdots,
-u_{3n-1} = \frac{ q_{n-1}}{p_{n-1n}} \nonumber
+u_{3n-1} = \frac{ q_{n-1}}{p_{n-1n}} 
 \eea
 where $p_i =x_i$, $q_i= 1+x_i$ and $p_{i~i+1}=1+x_i+ x_i x_{i+1}$.
 
@@ -1915,26 +1885,26 @@ There are exactly 4 $u$'s which have $1-u$ is product of 2 u's:
 u_{2} u_{3} , n=3\\
 u_{1} u_{4} , n=4\\
 u_{1} u_{2} , n\geq 5
-\end{cases} \nonumber 
+\end{cases} 
 \eea
 The facets corresponding to setting any of these $u \to 0$ is $X_{n-1}$.
 
 There are exactly $n-3$ $u$'s which have $1-u$ is product of 4 u's:
 \bea
 1-u_{n+4} =u_{n} u_{n+2}u_{n+4} u_{n+6} ~~and~~
-1-u_{n+6+ 2 i} =u_{n-3-i} u_{n+4+2 i} u_{n+5+2 i} u_{n+8+2 i}~ for~i=0,\cdots,(n-5) \nonumber 
+1-u_{n+6+ 2 i} =u_{n-3-i} u_{n+4+2 i} u_{n+5+2 i} u_{n+8+2 i}~ for~i=0,\cdots,(n-5) 
 \eea
 The facets corresponding to setting any of these $u \to 0$ is $A^{m}_1 \times X_{n-m-1}$.
 
 All the other $2n-2$ $u$'s correspond to $1-u$ is product of 3 u's and we do not yet have a complete classification of the facets.
 
-We can also replace the first the first term in the Newton polynomial \eqref{ new} with $(1+x_1+ x_2)$ and we get an identical system of $u$-equations
+We can also replace the first the first term in the Newton polynomial \eqref{new} with $(1+x_1+ x_2)$ and we get an identical system of $u$-equations
 
 \bea
 u_1 &=& \frac{p_n}{q_n}, ~u_2 = \frac{p_{n-1}q_n}{p_{n-1,n}},~u_3 = \frac{p_{n-2}q_{n-1}}{p_{n-2,n-1}}, \cdots,
 u_{n-3} = \frac{p_4 q_5}{p_{45}}, ~u_{n-2} = \frac{p_{1}}{q_{1}},~u_{n-1} = \frac{p_{2}q_{3}}{p_{23}},~u_{n} = \frac{p_{3}q_{4}}{p_{34}}, \nonumber \\
 u_{n+1} &=& \frac{q_2}{p_{12}}, ~u_{n+2} = \frac{q_{1}}{p_{12}},~u_{n+3} = \frac{p_{23}}{q_{2}q_{3}}, \cdots,
-u_{3n-1} = \frac{ p_{12}}{q_{1}q_{2}} \nonumber
+u_{3n-1} = \frac{ p_{12}}{q_{1}q_{2}} 
 \eea
 where $p_i =x_i$, $q_i= 1+x_i$ and $p_{i~i+1}=1+x_i+ x_i x_{i+1}$ with $p_{12}= 1+x_1+x_2$.
 
@@ -1956,13 +1926,11 @@ The facets corresponding to setting any of these $u \to 0$ is $X_{n-1}$.
 There are exactly $n-3$ $u$'s which have $1-u$ is product of 4 u's:
 \bea
 1-u_{n+3} =u_{n} u_{n+2}u_{n+5} u_{3n-1} ~~and~~
-1-u_{n+5+ 2 i} =u_{n-3-i} u_{n+3+2 i} u_{n+4+2 i} u_{n+7+2 i}~ for~i=0,\cdots,(n-5) \nonumber 
+1-u_{n+5+ 2 i} =u_{n-3-i} u_{n+3+2 i} u_{n+4+2 i} u_{n+7+2 i}~ for~i=0,\cdots,(n-5) \nonumber
 \eea
-It would be nice to see if these also correspond to some degeneration of the associahedron or if they  are generalised permutahedra. 
+It would be nice to see if these also correspond to degenerations of some generalised permutahedra. 
 
-
-
-\newpage
+ \newpage
 \section{Discussions}
 There are several interesting open questions, like the question of  whether degenerations of other cluster types (in particular $C_n$ and $D_n$ can also give binary geometries with (perfect?) $u$-equations.\\\\
 \noindent
