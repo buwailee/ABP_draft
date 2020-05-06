@@ -21,7 +21,7 @@
 \usepackage[skip=10pt]{caption} % example skip set to 2pt
 \usepackage{comment}
 
-
+%\usepackage{enumerate}
 \usepackage{enumitem} 
 
 
@@ -431,7 +431,7 @@
 \vspace*{5.0ex}
 \centerline{\bf Abstract} \bigskip
 
-In \cite{} the study of stringy canonical forms and binary geometries with ``perfect'' u equations, associated with the scattering of particles and strings was initiated. In this paper we continue the study of binary geometries and find two large classes of new examples.  The first class corresponds to degenerations of $A_n$ and $B_n$ (associahedra and cyclohedra respectively) which have perfect $u$-equations. The second class corresponds to a large subset of  generalized permutahedra which can be realised as degenerations of the permutahedron $P_n$ which are binary positive geometries despite not having perfect $u$-equations. Both these large classes of examples have stringy integrals which factorise at any finite $\alpha^{'}$  on all the massless poles.
+In \cite{Arkani-Hamed:2019mrd} the study of stringy canonical forms and binary geometries with ``perfect'' $u$-equations, associated with the scattering of particles and strings was initiated. In this paper we continue the study of binary geometries and find two large classes of new examples.  The first class corresponds to degenerations of $A_n$ and $B_n$ (associahedra and cyclohedra respectively) which have perfect $u$-equations. The second class corresponds to a large subset of  generalized permutahedra which can be realised as degenerations of the permutahedron $P_n$ which are binary positive geometries despite not having perfect $u$-equations. Both these large classes of examples have stringy integrals which factorise at any finite $\alpha^{'}$  on all the massless poles.
 
 
 
@@ -446,7 +446,7 @@ In \cite{} the study of stringy canonical forms and binary geometries with ``per
 \newpage
 \section{Introduction}
 
-In \cite{} the notion of {\it stringy canonical forms} were introduced as a general framework for generalizing tree-level string amplitudes, or integrals over the moduli space ${\cal M}_{0, n}$. Various nice properties of string amplitudes and their field-theory limits, such as factorizations for $\alpha' \to 0$ limit and finite $\alpha'$, channel duality and exponent softness, scattering equations, {\it etc.} all naturally extend to stringy canonical forms. To briefly summarize the idea, let's begin with the disk integral for open-string amplitudes with ordering $(1,2,\cdots, n)$:
+In \cite{Arkani-Hamed:2019mrd} the notion of {\it stringy canonical forms} were introduced as a general framework for generalizing tree-level string amplitudes, or integrals over the moduli space ${\cal M}_{0, n}$. Various nice properties of string amplitudes and their field-theory limits, such as factorizations for $\alpha' \to 0$ limit and finite $\alpha'$, channel duality and exponent softness, scattering equations, {\it etc.} all naturally extend to stringy canonical forms. To briefly summarize the idea, let's begin with the disk integral for open-string amplitudes with ordering $(1,2,\cdots, n)$:
 \begin{equation}\label{stringint}
 {\cal I}^{\rm open-string}_{1,2,\cdots,n} (\{s\}):=\int_{\mathcal M_{0,n}^+}
 \frac{\mathrm d^{n}z}{\mathrm{SL}(2,\mathbb{R})} \prod_{i=1}^{n}\frac{1}{z_{i}-z_{i{+}1}}
@@ -457,18 +457,18 @@ With a positive parameterization $\{x_1,\dots,x_{n-3}\}$ of $\mathcal M_{0,n}^+$
 this canonical form becomes $\prod_{i=1}^{n-3}\mathrm d \log x_i$, and the Koba-Nieson factor $\prod_{i<j}(z_j-z_i)^{\alpha' s_{i j}}$ becomes a product of powers of polynomials with 
 non-negative coefficients~\cite{}: $\prod_i x_i^{\alpha' X_i} \prod_I p_I(x)^{-\alpha' c_I}$. Note that we have factored out $n{-}3$ monomials, $x_i$, and left with $n(n{-}3)/2-(n{-}3)$ positive polynomials $p_I(x)$, with exponents $X_i$'s and $c_I$'s given by linear combinations of the Mandelstam variables $s_{i,j}$. 
 
-\paragraph{Stringy canonical forms} Motivated by this rewriting of string integral~\eqref{stringint}, we define a general stringy integral as a $d$-dimensional integral~\cite{}
+\paragraph{Stringy canonical forms} Motivated by this rewriting of string integral~\eqref{stringint}, we define a general stringy integral as a $d$-dimensional integral~\cite{Arkani-Hamed:2019mrd}
 \begin{equation}\label{stringycanonicalform}
 	\mathcal I (\mathbf X,\{c\})=
 	\int_{\mathbb R_+^d}\prod_{i=1}^d \frac{\mathrm d x_i}{x_i}x_i^{\alpha'X_i}
 	\prod_{I=1}^m p_I(x)^{-\alpha' c_I},
 \end{equation}
-where we allow $m$ arbitrary Laurent polynomial with non-negative coefficients, $p_I(x)$, and without loss of generality we assume exponents $X_i>0$ and $c_I>0$~\footnote{These are ``positive" stringy canonical forms, which are integrals over $\mathbb R_+^d$. We can also consider ``complex" case with the integrand mod-squared and integrated over $\mathbb C^d$, which are generalizations of closed-string amplitudes~\cite{}.}. 
+where we allow $m$ arbitrary Laurent polynomial with non-negative coefficients, $p_I(x)$, and without loss of generality we assume exponents $X_i>0$ and $c_I>0$~\footnote{These are ``positive'' stringy canonical forms, which are integrals over $\mathbb R_+^d$. We can also consider ``complex'' case with the integrand mod-squared and integrated over $\mathbb C^d$, which are generalizations of closed-string amplitudes~\cite{}.}. 
 
 Any integral of the form \eqref{stringycanonicalform} inherits various remarkable properties of string amplitudes \eqref{stringint}, which all depend on the existence of a polytope $\mathcal P:=\sum_I c_I N[p_I]$; here $N[p_I]$ is the Newton polytope of the polynomial $p_I$, and we take the (weighted) Minkowski sum~\cite{}. First of all, one can show that the integral \eqref{stringycanonicalform} is convergent if and only if $\mathbf X=(X_1,\dots,X_d)$ is in the interior of the polytope $\mathcal P$ (we assume that ${\cal P}$ is $d$ dimensional). The leading order of the integral in its $\alpha'$ expansion, dressed with $d^d \mathbf X$, is given by the canonical form of the polytope, ${\Omega}(\cal P)$, thus it can be viewed as $\alpha'$-deformation of $\Omega(\cal P)$ (hence the name ``stringy canonical form"). Generically the poles of $\Omega(\cal P)$ are given by equations of
 facets for $\mathcal P$, which are also poles of the integral at finite $\alpha'$, and the residue on any such pole is given by a stringy canonical form defined for that facet (see~\cite{} for details). 
 
-For the string integral \eqref{stringint}, ${\cal P}$ is nothing but the ABHY associahedron~\cite{}, whose canonical form gives bi-adjoint $\phi^3$ amplitude as the $\alpha'\to 0$ limit of \eqref{stringint}~\cite{}. The poles are the planar variables $X_{i,j}$, on which \eqref{stringint} factorizes into lower-point integrals even for finite $\alpha'$. Moreover, the saddle point equations as $\alpha' \to \infty$ can be written as $X_i=\sum_I c_I \partial \log p_I/\partial \log x_i$ for $i=1,\cdots, d$; they provide a diffeomorphism from the integration domain to ${\cal P}$, thus $\Omega(\mathcal P)$ can be computed as a pushforward of $\prod_i d\log x_i$ via summing over the saddle points~\cite{}. In particular, for the string integral \eqref{stringint}, the scattering equations provide a map from ${\cal M}_{0,n}^+$ to ABHY associahedron, and the pushforward is equivalent to the CHY formula for $\phi^3$ amplitude~\cite{}. 
+For the string integral \eqref{stringint}, ${\cal P}$ is nothing but the ABHY associahedron~\cite{Arkani-Hamed:2017mur}, whose canonical form gives bi-adjoint $\phi^3$ amplitude as the $\alpha'\to 0$ limit of \eqref{stringint}~\cite{}. The poles are the planar variables $X_{i,j}$, on which \eqref{stringint} factorizes into lower-point integrals even for finite $\alpha'$. Moreover, the saddle point equations as $\alpha' \to \infty$ can be written as $X_i=\sum_I c_I \partial \log p_I/\partial \log x_i$ for $i=1,\cdots, d$; they provide a diffeomorphism from the integration domain to ${\cal P}$, thus $\Omega(\mathcal P)$ can be computed as a pushforward of $\prod_i d\log x_i$ via summing over the saddle points~\cite{Arkani-Hamed:2017tmz}. In particular, for the string integral \eqref{stringint}, the scattering equations provide a map from ${\cal M}_{0,n}^+$ to ABHY associahedron, and the pushforward is equivalent to the CHY formula for $\phi^3$ amplitude~\cite{}. 
 
 \paragraph{Configuration spaces} One way to describe the combinatorics of the polytope ${\cal P}$ is through the {\it configuration space}, {\it e.g.} as blow-up of $\mathbb R_+^D$ in the $\mathbf x$-space. However, it is usually difficult to use $\mathbf x$ for this, even for the string integrals \eqref{stringint}. For example, a facet usually corresponds to a complicated limit process with $x \to 0$ or $\infty$. As proposed in~\cite{}, an elegant way to realize ${\cal P}$ in configuration space is by introducing a set of constrained $u$ variables $\{u_\alpha\}$. The configuration space is the variety defined by a set of polynomial equations satisfied by $\{u_\alpha\}$ (or $u$ equations), and the polytope ${\cal P}$ can be realized combinatorially by $\{u_\alpha \geq 0\}$. 
 %facet is simply given by an equation $u_A=0$. 
@@ -487,7 +487,7 @@ inside this polyhedron. Dually, we can describe the big polyhedron by its vertic
 $\{V_J^\alpha\}_{1\leq \alpha \leq v}$ are its non-zero vertices ($v$ denotes the number of vertices), a point $\mathbf S$ inside 
 the polyhedron can be written as $S_J = F_\alpha V^\alpha_J$ with non-negative coefficients 
 $\{F_\alpha\}_{1\leq \alpha \leq v}$.  Therefore, the integral $\mathcal I(\mathbf S)$
-can be seen as a function of ``dual coordinates" $\{F_A\}$ which encourages us to 
+can be seen as a function of ``dual coordinates'' $\{F_\alpha\}$ which encourages us to 
 rewrite the integral to make it manifest by (here we collectively denote $p_J=(x_1, \cdots, x_d, p_1, \cdots, p_m)$)~\footnote{Note that one can indeed treat the monomials $x_i^{\alpha' X_i}$ on the equal footing as polynomials, since Minkowski sum w.r.t. them amounts to merely translating the polytope $c_I N[p_I]$ by $-X_i$ in the $i$-th direction~\cite{}.}. 
 
 \begin{equation}
@@ -1062,7 +1062,7 @@ $\{u_{[i,j]}\,:\, [i,j]\neq [i,i],[i,i+1],[i+1,i+1]\}$ in terms of new variables
 %\]
 %and $\tilde u_I=u_I$ for the other $I$. ($u$-eqs...)
 
-The nest simplest degenerations of $\mathscr A_n$ may be products 
+The next simplest degenerations of $\mathscr A_n$ may be products 
 $\mathscr A_i\times \mathscr A_{n-i}$, which can be realized as the following
 mesh,
 \begin{center}
@@ -1252,7 +1252,7 @@ In particular,$\mathscr A_n$ is also a degeneration of $\mathscr B_n$.
 	%\node at (6,1.2) {$[3,1]$};
 %\end{tikzpicture}
 %\end{center}
-
+\newpage
 \section{Stringy canonical forms and $u$-equations for generalized permutahedra}
 In this section we shall argue that  a large subset of generalised permutahedra which are realised as degenerations of permutahderon ${\mathscr P_n}$ are binary geometries. Before we proceed we shall review some details about the generalised permutahedra which we shall use throughout the paper.
 \subsection{Generalized permutohedra} 
@@ -1263,7 +1263,7 @@ Let $\Delta_{[0,n]} = {\rm ConvexHull}(e_1,\cdots,e_n)$ be the standard coordina
 {\mathscr P_n}^y(\{y_I \})= \sum y_I . \Delta_I  
 \eea
 for some collection of subsets $I \in [0,n]$.
-We shall restrict ourselves to the large class of generalised permutahedra which admit such a realisation only as Minkowski sums i.e., all $y_I \ge 0$ \footnote{This is mainly due to the subtle nature of the Minkowski difference operation, which makes the shape of the resulting polytope dependent on the relative magnitudes of $y_I$'s.}which are called Nestohedra. Throughout the paper we shall mean Nestohedra whenever we refer to generalized permutahedra unless stated otherwise.\\
+We shall restrict ourselves to the large class of generalised permutahedra which admit such a realisation only as Minkowski sums except translations i.e, $y_I \ge 0$ for all non-singlets $I$\footnote{This is mainly due to the subtle nature of the Minkowski difference operation, which makes the shape of the resulting polytope dependent on the relative magnitudes of $y_I$'s. We allow $y_I$ for singlets to be  negative as it is only a translation and to connect with \eqref{intgenperm}.}which are called Nestohedra. Throughout the paper we shall mean Nestohedra or products of Nestohedra whenever we refer to generalized permutahedra unless stated otherwise.\\
  
 The combinatorial structure of the generalised permutahedron ${\mathscr P_n({y_I})}$ (Nestohedra) is independent of the parameters $y_I$ and depends only on the collection of subsets $I \in [0,n]$ called the  building set ${\mathbf B}$.  
 A collection of non-empty subsets of $[0,n]$ is called a building set ${\mathbf B}$ if it satisfies the following:
@@ -1271,26 +1271,7 @@ A collection of non-empty subsets of $[0,n]$ is called a building set ${\mathbf 
     \item If $I,J \in {\mathbf B}$ and $I \cap J \neq \phi $, then $I \cup J \in {\mathbf B}$.
     \item ${\mathbf B}$ contains all singletons $\{ i\}$ for $i \in S$.
 \end{compactenum}
-To describe the combinatorial structure we need the notion of {\it Nested complex} which we shall define now.
-
-\paragraph*{Nested Complex} 
-A subset ${\mathbf N}$ in the building set ${\mathbf B}$ is called a {\it nested set} if it satisfies the following conditions:
-\begin{compactenum}[\quad (1)]
-    \item For any $I,J \in {\mathbf N}$, we either have $I \subset J$ or $J\subset I$ or $I$ and $J$ are disjoint.
-    \item For any collection of $k \geq 2$ disjoint subsets $J_1,J_2,\cdots, J_k \in N$ their union $J_1 \cup \cdots \cup J_k$ is not in B.
-    \item ${\mathbf N}$ contains all maximal elements of $B$.
-\end{compactenum}
-The {\it nested complex} ${\mathbf N}({\mathbf B})$ is defined as the poset of the set of all nested sets in ${\mathbf B}$ ordered by inclusion.\\
-
-\paragraph*{Facial structure} 
-Let us assume that the set ${\mathbf B}$ associated with a generalised permutahedron ${\mathscr P_n}^{y}$ is a building set on $[0,n]$. Then the poset of faces ${\mathscr P_n}^{y}$ ordered by reverse inclusion is isomorphic to the nested complex ${\mathbf N}({\mathbf B})$. 
-
-For each decomposition $[0,n]=  \sqcup_{I \subset {\mathbf N} } S_I $ where $S_I$ are non-empty, the face $P_n$ of ${\mathscr P_n}^{y}(y_I)$ associated with the nested set ${\mathbf N} \in {\mathbf N}({\mathbf B})$ is:
-\bea
-P_n = \sum_{{J \subset {\mathbf B}}\atop{J \cap S_I \neq \emptyset}} y_{J} \Delta_{J \cap S_I}
-\eea
-
-In summary the above results mean the following:
+To describe the combinatorial structure we need the notion of {\it Nested complex} which shall be defined in appendix \ref{appendix: A}. We shall only sumarize the nessecary results here and let the reader interested in the details refer appendix \ref{appendix: A}.
 
 \begin{compactitem}
 \item We can look at any collection of subsets of $[0, n]$ which form a building set ${\mathbf B}$ and associate  coordinate simplex $\Delta_I$ for each $I \in {\mathbf B}$ and resulting Minkowski sum with positive weights $y_I$ generates a polytope of dimension $n$ called the generalised permutahedron (Nestohedron) associated with the building set. 
@@ -1356,16 +1337,7 @@ The polytope in this case is the 2d cyclohedron ${\mathscr B_2}$ which also coin
 \end{center}
 \end{figure}
 
-An improtant fact about generalised permutahedra which makes them particularly interesting is the following:
-Let, $m$ denote the number of non-singlet elements in ${\mathbf B}$ i.e., the number of $c_J$'s as explained in equation (2) 
-\bea
-N = |{\mathbf B}|-1 
- = (n+1+m)-1
- = n+m \nonumber
-\eea
-{\bf Number of facets = Number of linear equations + dimension of  gen permutahedron}
- 
-Thus, generalised permutahedra have big Polytopes which are simplices. Thus its quite natural to wonder if the associated $u$-variables satisfy some kind of $u$-equations. 
+Generalised permutahedra have big Polytopes which are simplices. Thus its quite natural to wonder if the associated $u$-variables satisfy some kind of $u$-equations. 
 
 We claim and we shall show in the next section that this indeed the case. Further we show that all these polytopes are binary geometries even though some of them do not admit perfect $u$-equations. 
 
@@ -1376,16 +1348,16 @@ The Newton polytope of the Minkowski sum is $\prod_{i=1}^{n} x_i (1+\sum_{j=1}^{
 $u_i =\frac{ x_i}{1+\sum_{i=1}^n x_i} $
 which satisfy $\sum u_i =1$ as their only $u$-equation. \\
 
-(2) If ${\mathbf B}= \{[i] | i=1,\cdots,n+1 \}$ is the complete flag of intervals, then ${\mathscr P_n}^y({\bf Y})$ is the Stanley-Pitman polytope or Hypercube.
+(2) If ${\mathbf B}= \{[i] | i=0,\cdots,n \}$ is the complete flag of intervals, then ${\mathscr P_n}^y({\bf Y})$ is the Stanley-Pitman polytope or Hypercube.
 The Newton polytope of the Minkowski sum is $x_1\cdots x_n (1+x_1) \cdots (1+x_1+\cdots +x_n)$ and $u$-variables are 
 $u_i =\frac{ 1}{1+\sum_{j=1}^{i} x_j} $, ~~$u^{'}_i =\frac{ \sum_{j=1}^{i} x_j}{1+\sum_{j=1}^{i} x_j} $ for $j=1,\cdots,n$ \\
 which satisfy $u_i +u^{'}_{i} =1$ as their $u$-equation. \\
 
 (3) If ${\mathbf B}$ corresponds to all the non empty subsets of $[0,n]$ and $Y_I =y_{|I|}$ i.e., the variables $Y_I$ are equal for all subsets of the same cardinality, then ${\mathscr P_n}({\bf Y})$ is the usual permutahedron ${\mathscr P_n}$. \\
 
-(4) If ${\mathbf B}=\{ [i,j] | 1\leq  i \leq j \leq n\}$ is the set of consecutive intervals, then ${\mathscr P_n}({\bf Y})$ is the associahedron. \\
+(4) If ${\mathbf B}=\{ [i,j] | 0\leq  i \leq j \leq n\}$ is the set of consecutive intervals, then ${\mathscr P_n}({\bf Y})$ is the associahedron. \\
 
-(5) If ${\mathbf B}=\{ [1,i] \cup [j,n] | 1\leq  i \leq j \leq n\}$ is the set of cyclic intervals, then ${\mathscr P_n}({\bf Y})$ is the Cyclohedron.\\
+(5) If ${\mathbf B}=\{ [1,i] \cup [j,n] | 0 \leq  i \leq j \leq n\}$ is the set of cyclic intervals, then ${\mathscr P_n}({\bf Y})$ is the Cyclohedron.\\
 
 (6) Let $\Gamma$ be a graph on the vertex set $[0,n]$. Let us assume that ${\mathbf B} = {\mathbf B}(\Gamma)$ is the set of subsets $I \in [n]$ such that the induced graph $\Gamma$ is connected, then  ${\mathscr P_n}({\bf Y})$ is a graph associahedron.
 
@@ -1416,15 +1388,14 @@ It is clear that any  generalized permutahedron can be obtained as a degeneratio
 In the last subsection, we have seen that any $n$-dimensional generalized 
 permutahedron can be constructed by a Minkowski sum of some simplices labeled by
 subsets of $[0,n]$. For a simplex labeled by a subset $I$, 
-it is natrual to associate the linear polynomial $x_I=\sum_{i\in I}x_i$ whose Newton polytope is the corresponding simplex. Therefore, we can write down a natrual stringy canonical form for the generalized permutahedron with the building set 
-$\mathscr P$
+it is natrual to associate the linear polynomial $x_I=\sum_{i\in I}x_i$ whose Newton polytope is the corresponding simplex. Therefore, we can write down a natrual stringy canonical form for the generalized permutahedron with the building set $\mathbf{B}$
 \begin{equation} \label{stringyintforgenpermutohedron}
-   \mathcal I_{\mathscr P}(\{S_I\})=\int_{\mathbb R^{n}_+}
+   \mathcal I_{\mathbf{B}}(\{S_I\})=\int_{\mathbb R^{n}_+}
 	\frac{\prod_{i=0}^n \mathrm{d}\log x_i}
-	{\operatorname{GL}(1)_+}\prod_{I\in\mathscr P}x_I^{\alpha' S_I},
+	{\operatorname{GL}(1)_+}\prod_{I\in\mathbf{B}}x_I^{\alpha' S_I},
 \end{equation}
 where the global $\operatorname{GL}(1)_+$ redundance $x_i\mapsto a x_i$ require that 
-$\sum_{I\in\mathscr P}S_I = 0$. 
+$\sum_{I\in\mathbf{B}}S_I = 0$. 
 
 Generally, we can consider an arbitrary set of subsets of $[0,n]$ in eq.\eqref{stringyintforgenpermutohedron}. 
 However, the big polytope for such integral in general is not a simplex.
@@ -1436,26 +1407,25 @@ $W^J_A$ of facets and then get $S_J=F_A(W^{-1})^A_J\geq 0$ and
 its $u$-variables $u_A=\prod_J p_J^{(W^{-1})^A_J}$.
 
 Let's first write down equations of facets of a generalised permutahedron
-with the building set $\mathscr P$. The polytope of 
-eq.\eqref{stringyintforgenpermutohedron} is given by the Minkowski sum
+with the building set $\mathbf{B}$. The polytope of eq.\eqref{stringyintforgenpermutohedron} is given by the Minkowski sum
 \[
-	- \sum_{I\in\mathscr P,|I|>1}S_I.\Delta_I
+	- \sum_{I\in\mathbf{B},|I|>1}S_I.\Delta_I
 \]
 in $(S_0,\dots,S_n)$-space, where $\Delta_I=\operatorname{ConvexHull}
 (\{e_i\}_{i\in I})$. Meanwhile, we know from the last subsection that the facet 
 labeled by a nested set $\{[0,n],I\}$ is given by
 \begin{align*}
 	\biggl\{(S_0,S_1,\dots,S_n)\in \mathbb R^{n+1}\,\bigg |\,
-		\sum_{i\in I}S_i = -\sum_{J\subset I,|J|>1,J\in \mathscr P}S_J,
+		\sum_{i\in I}S_i = -\sum_{J\subset I,|J|>1,J\in \mathbf{B}}S_J,
 		\quad
-		&\sum_{i=0}^nS_i=-\sum_{J\in \mathscr P,|J|>1}S_J,\\
-		&\sum_{i\in K}S_i\geq -\sum_{J\subset I,|J|>1,J\in \mathscr P}S_J
+		&\sum_{i=0}^nS_i=-\sum_{J\in \mathbf{B},|J|>1}S_J,\\
+		&\sum_{i\in K}S_i\geq -\sum_{J\subset I,|J|>1,J\in \mathbf{B}}S_J
 	\biggr\},
 \end{align*}
-where the second constrain is just $\sum_{I\in \mathscr P}S_I=0$, so the equation 
+where the second constrain is just $\sum_{I\in \mathbf{B}}S_I=0$, so the equation 
 of this facet is 
 \begin{equation}\label{GPfacet}
-	F_I:=\sum_{J\subset I,J\in\mathscr P}S_J=0.
+	F_I:=\sum_{J\subset I,J\in\mathbf{B}}S_J=0.
 \end{equation}
 
 Within all generalized permutahedra, the original permutahedron is quite simple
@@ -1468,25 +1438,32 @@ solution for permutahedron $\mathscr P_n$ is
 \begin{equation}\label{SinF}
 	S_I=\sum_{J\neq \varnothing,J\subset I} (-1)^{|J|-|I|}F_J,
 \end{equation}
-then
+This give us the following ABHY construction for $\mathscr{P}_{n}$:
+\begin{equation}
+    F_{I}>0 \qquad  \text{for all non-empty proper subsets of $[0,n]$ }
+\end{equation}
+and
+\begin{equation}
+    C_I = (-1)^{|I|} \left( \sum_{i \in I} X_i - \sum _{{i<j}\atop{i,j \in I}} X_{ij} +\cdots + (-1)^{|I|}  X_I \right) \text{ are positive constants.}
+\end{equation}
+Using the picture of big polytope, this also gives $u$-variables
+\begin{equation}
+  u_I=\prod_{J\supset I}x_J^{(-1)^{|I|-|J|}}. \label{uvarforPn}
+\end{equation}
+since
 \[
 	\prod_{I\neq \varnothing,I\subset [0,n]}u_I^{F_I}=
 	\prod_{I\neq \varnothing,I\subset [0,n]}x_I^{S_I}=
 	\prod_{\varnothing\neq J\subset I\subset [0,n]}
 	x_I^{(-1)^{|J|-|I|}F_J}=
 	\prod_{J\neq \varnothing,J\subset [0,n]}
-	\prod_{I\supset J}(x_I^{(-1)^{|J|-|I|}})^{F_J}
+	\prod_{I\supset J}(x_I^{(-1)^{|J|-|I|}})^{F_J}.
 \]
-gives that
-\begin{equation}
-  u_I=\prod_{J\supset I}x_J^{(-1)^{|I|-|J|}}. \label{uvarforPn}
-\end{equation}
-
-The following set of equations to define the $n$-dimensional Permutahedron: 
-\bea
-C_I = (-1)^{|I|} \left( \sum_{i \in I} S_i - \sum _{{i<j}\atop{i,j \in I}} S_{ij} +\cdots + (-1)^{|I|}  S_I \right) \nonumber
-\eea
-for all non-empty subsets $I \subset \{0,1,\cdots,n\}$ with the understanding that $C_{I} =0$ for all singlets $I$ and $F_{I} =0$ for $I=\{ 0,1,\cdots,n \}$. 
+% The following set of equations define the $n$-dimensional Permutahedron: 
+% \bea
+% C_I = (-1)^{|I|} \left( \sum_{i \in I} S_i - \sum _{{i<j}\atop{i,j \in I}} S_{ij} +\cdots + (-1)^{|I|}  S_I \right) \nonumber
+% \eea
+% for all non-empty subsets $I \subset \{0,1,\cdots,n\}$ with the understanding that $C_{I} =0$ for all singlets $I$ and $F_{I} =0$ for $I=\{ 0,1,\cdots,n \}$. 
 %It is clear that
 %\bea
 %m= \text{No. of  C's }&=& 2^{n+1}-(n+2) \nonumber \\
@@ -1537,8 +1514,8 @@ and their cyclic. The $u$-equations are
 \end{align}
 and their cyclic. 
 
-The 8 facets of the 3d permutahedron corresponding to $u_i \rightarrow 0, u_{0jk} \rightarrow 0,u_{123} \rightarrow 0 ~and ~u_{0} \rightarrow 0$  are all $B_2$'s. Similarly, the 6 facets corresponding to  $u_{ij} \rightarrow 0, u_{0k} \rightarrow 0$ are all  $A^{2}_1$.
-Thus, the 3d permutahedron integral factorizes nicely on all massless poles at finite $\alpha^{'}$!.
+The 8 facets of the 3d permutahedron corresponding to $u_i \rightarrow 0$ and $u_{ijk} \rightarrow 0$ are all $\mathscr{B}_2$. Similarly, the 6 facets corresponding to  $u_{ij} \rightarrow 0$ are all  $\mathscr{A}^{2}_1$.
+Thus, the 3d permutahedron integral factorizes nicely on all massless poles at finite $\alpha'$!.
 
 
 % {\scriptsize  \bea
@@ -1671,10 +1648,16 @@ and for $|I| =n-2$ with $ \bar{I} = \{i, j\}$
 
 Using eq.\eqref{xinu}, we can say more on $u$-equations,
 \[
-1-u_I=1-\prod_{J\supset I}x_J^{(-1)^{|J|-|I|}}=\frac{\prod_{|J|-|I| \text{ odd}; J\supset I}x_J-\prod_{|J|-|I| \text{ even}; J\supset I}x_J}{\prod_{|J|-|I| \text{ odd}; J\supset I}x_J}
-=\frac{f_{I,n}\prod_{i\not\in I}x_i}{\prod_{|J|-|I| \text{ odd}; J\supset I}x_J},
+1-u_I=1-\prod_{J\supset I}x_J^{(-1)^{|J|-|I|}}=\frac{\prod_{|J|-|I| \text{ odd}; J\supset I}x_J-\prod_{|J|-|I| \text{ even}; J\supset I}x_J}{\prod_{|J|-|I| \text{ odd}; J\supset I}x_J}=:\frac{N_{I,n}(x)}{\prod_{|J|-|I| \text{ odd}; J\supset I}x_J},
 \]
-where $f_{I,n}$ is a polynomial with positive coefficients. It's easy to see $x_i$ for $i\not\in I$ is a factor of the numerator by setting $x_i=0$.
+where $N_{I,n}(x)$ is a polynomial of degree $D_{I,n}=2^{|\bar I|-1}$.
+It's easy to see that $x_i$ for $i\not\in I$ is a factor of $N_{I,n}(x)$ by setting $x_i=0$, so we can define a new polynomial $f_{I,n}$ of degree $D_{I,n}-|\bar I|$ with non-negative coefficients such that
+\[
+N_{I,n}(x)=f_{I,n}(x)\prod_{i\not\in I}x_i.
+\]
+It's not so obvious that $x_i$ for $i\not\in I$ is not a factor of $f_{I,n}$, which means that the above factorization of $N_{I,n}$ is reasonable. In fact, the $(D_{I,n}-|\bar I|)$-th derivative of $N_{I,n}$ with respect to $x_I$ is $a_{I,n}\prod_{i\not\in I}x_i$, 
+where $a_{I,n}$ is a positive integer. It's conjectured that $a_{I,n}=(|\bar I|-1)!=(n-|I|)!$.
+
 From
 \[
 \prod_{i\not\in I}x_i=\prod_J u_J^{|J|-|I\cap J|}
@@ -1686,19 +1669,24 @@ From
 then
 \[
 \prod_{i\not\in I}x_i\bigg/\prod_{|J|-|I| \text{ odd}; J\supset I}x_J
-=\prod_{J\not\supset I} u_J^{|J|-|I\cap J|}\prod_{J\supsetneq I} u_J^{|J|-|I|-2^{|J|-|I|-1}}.
+=\prod_{J\not\supset I} u_J^{|J|-|I\cap J|}\prod_{J\supsetneq I} u_J^{|J|-|I|-2^{|J|-|I|-1}}
 \]
-Since $|J|-|I|-2^{|J|-|I|-1}\leq 0$, it's natural to conjecture that
-\begin{equation}
-1-u_I=g(u)\prod_{J\not\supset I} u_J^{|J|-|I\cap J|},
+is a rational function of $x$.
+Since $|J|-|I|-2^{|J|-|I|-1}\leq 0$, it's natural to rewrite that
+\begin{equation}\label{ueqofPn}
+1-u_I=g_{I,n}\prod_{J\not\supset I} u_J^{|J|-|I\cap J|},
 \end{equation}
-where $g$ is a polynomial.
-The product $\prod_{J\not\supset I} u_J^{|J|-|I\cap J|}$ has appeared in all known examples with right powers. It's clear that any compatible $u_J$ for $J\subset I$ doesn't appear in the product because $I\cap J=J$. Thus, the final conjecture is about the compatibility degree:
+where 
 \[
-(I||J)=|J|-|I\cap J|\text{ for $I\not\subset J$},\quad  (I||J)=0 \text{ for $I\subset J$}.
+g_{I,n}:=f_{I,n}\bigg /\prod_{J\supsetneq I} u_J^{2^{|J|-|I|-1}-(|J|-|I|)}
+=f_{I,n}\bigg /\prod_{J\supset I, |J|-|I|\, \text{odd}\atop{|J|-|I|\geq 3}} x_J.
 \]
-It's not symmetric when $|I|\neq |J|$.
-
+We conjecture that $g$ is a polynomial of $u$ with non-negative coefficients.
+The product $\prod_{J\not\supset I} u_J^{|J|-|I\cap J|}$ has appeared in all known examples with right powers. It's clear that any compatible $u_J$ for $J\subset I$ doesn't appear in the product because $I\cap J=J$. Thus, there's a conjecture about the compatibility degree:
+\[
+I||J=|J|-|I\cap J|\text{ for $I\not\subset J$},\quad  I||J=0 \text{ for $I\subset J$}.
+\]
+It's not symmetric when $|I|\neq |J|$. 
 
 We conjecture (and have checked upto $n=6$) that we can solve the $u$-equations in terms of $u_1,u_{12},\cdots,u_{12\cdots n} $ for the rest of the $u$'s.
  
@@ -1706,45 +1694,14 @@ We conjecture (and have checked upto $n=6$) that we can solve the $u$-equations 
 \int_{\mathbb{R}^{n}_{+}} \prod_{i =1}^{n} \frac{d x_i}{x_i} \prod_{I} \left(x_I \right) ^{-\alpha^{'} S_I} &=& \int_{\mathbb{R}^{n}_{+}} \prod_{i =1}^{n} \frac{d x_i}{x_i} \prod_{\alpha} \left(u_I \right) ^{-\alpha^{'} F_{\alpha}} \\
 &=&\int_{[0,1]^n} \prod_{i =1}^{n} \frac{d u_{1\cdots i}}{u_{1\cdots i}(1-u_{1\cdots i})} \prod_{\alpha} \left(u_I(u_{1\cdots i}) \right) ^{-\alpha^{'} F_{\alpha}}
 \eea 
- 
-\subsubsection{Degenerations of ${\mathscr P_n}$ which lead to  products}
 
-In this section we provide an answer to the question of which degenerations of $\mathscr{P_n}$ give the most general products of such geometries. We begin by stating the following results about Nestohedra.
-
-The maximal set of a building set $B_{max}$ is the set of all inclusion maximal elements of the building set $B$. A building set $B$ is connected if $B_{max}$ has a single element.
-
-{\bf Theorem:} If $B_1, B_2,\cdots B_n$ are connected subsets of a building set $B$ then the corresponding nestohedron ${\mathscr N_B}$ is isomorphic to the product of the nestohedra ${\mathscr N}_{ B_1} \times{\mathscr N}_{ B_2} \cdots \times {\mathscr N}_{B_n}$.
-
-We can use the above result to construct a degeneration of  ${\mathscr P_n}$ which are the most general products i.e., $\prod_{p_i} X_{p_i}$ such that $\sum^{k}_{i=1} p_{i} = n$ and $X = {\mathscr A} ,{\mathscr B}, {\mathscr P }$ by dividing the $(n+1)$ singlets into $k$ parts $\{0,\cdots,p_1\}, \{p_1,\cdots,p_1+p_2\},\cdots \{\sum^{k-1}_{i=1}p_{i},\cdots,\sum^{k}_{i=1}p_{i}= n\}$ and constructing the corresponding $X_{p_i}$'s which we denote by $X_{p_i}\left(\sum^{(i-1)}_{j=1}p_{j},\cdots,\sum^{i}_{j=1}p_{j}\right).$ 
-
-Let us consider the $P_4$ example for which the allowed possibilities are : $A_1^{4}$, $A_1^2 \times A_2$, $A_1 \times A_3$, $A^{2}_2$, $A_1^2 \times B_2$, $A_1 \times B_3$,$A_1 \times P_3$,$ A_2\times B_2$ and $B^{2}_2$.
- 
-For $A_1^{4}$ the building set is $ \{ {0},{1},{2},{3},{4},{01},{12},{23},{34} \}$ where $\{0,01\} , \{1,12\},\{2,23\},\{3,34\}$ generate the 4 $A_1$'s which we denote as $A_1(0,1) \times A_1(1,2) \times A_1(2,3) \times A_1(3,4) $.
-
-For $A_1^{2} \times A_2$ the building set is $ \{ {0},{1},{2},{3},{4},{01},{12},{23},{34},{234} \}$ generated by $A_1(0,1)\times A_1(1,2) \times A_2(2,3,4)$'s.
-
-For  $A_1 \times A_3$ the building set is $ \{ {0},{1},{2},{3},{4},{01},{12},{23},{34},{123},{234},{1234} \}$ generated by  $A_1(0,1)\times A_3(1,2,3,4)$.
-
-For  $A_2^{2}$ the building set is $ \{ {0},{1},{2},{3},{4},{01},{12},{23},{34} ,{012},{234}\}$ generated by $A_2(0,1,2)\times A_2(2,3,4)$
-
-For $A_1^{2} \times B_2$ the building set is $ \{ {0},{1},{2},{3},{4},{01},{12},{23},{34},{24},{234} \}$ generated by $A_1(0,1)\times A_1(1,2) \times B_2(2,3,4)$'s.
-
-For $A_1 \times B_3$ the building set is $ \{ {0},{1},{2},{3},{4},{01},{12},{23},{34},{14},{123},{234},{134},{124},{1234} \}$ generated by  $A_1(0,1)\times B_3(1,2,3,4)$.
-
-For $A_1 \times P_3$ the building set is $ \{ {0},{1},{2},{3},{4},{01},{12},{23},{34},{14},{13},{24},{123},{234},{134},{124},{1234} \}$ generated by  $A_1(0,1)\times P_3(1,2,3,4)$.
-
-For $A_2 \times B_2$ the building set is $ \{ {0},{1},{2},{3},{4},{01},{12},{23},{34},{24},{012},{234}\}$ generated by $A_2(0,1,2)\times B_2(2,3,4)$
-
-For $B_2^{2}$ the building set is $ \{ {0},{1},{2},{3},{4},{01},{12},{02},{23},{34},{24} ,{012},{234}\}$ generated by $B_2(0,1,2)\times B_2(2,3,4)$
-
-We can similarly find a degeneration of ${\mathscr P_n}$ which would correspond to any product.
 
 
 \subsection{Binary aspects of generalized Permutohedra}
 
 
 
-Inspired by the $u$-variables for permutahdera, we come up with the $u$-variables for generalized permutohedra. To this end, we first find all minimum extensions $I_{a}$ of $I$ in $\mathbf{B}$, that is there is no $J\in\mathbf{B}$ such that $I\subsetneq J\subsetneq I_{a}$, and we denote the collection of these extensions by $\mathscr{G}_{I}$. Then, the $u$-variables for the generalized permutohedron with building set $\mathbf{B}$ are
+Inspired by the $u$-variables for permutahdera, we directly come up with the $u$-variables for generalized permutohedra. To this end, we first find all minimum extensions $I_{a}$ of $I$ in $\mathbf{B}$, that is there is no $J\in\mathbf{B}$ such that $I\subsetneq J\subsetneq I_{a}$, and we denote the collection of these extensions by $\mathscr{G}_{I}$. Then, the $u$-variables for the generalized permutohedron with building set $\mathbf{B}$ are
 \begin{equation}
    \log u_{I} :=  \log x_{I} +(-1)^{k}\sum _{\varnothing\neq\{I_{a_{1}},\cdots,I_{a_{k}}\}\subset \mathscr{G}_{I}} \log x(I_{a_{1}},\ldots, I_{a_{k}})  \label{uvarforgenpermu}
 \end{equation}
@@ -1757,7 +1714,7 @@ to avoid too many subscripts. Obviously, an equivalent form of eq.\eqref{uvarfor
    \log u_{I} := (-1)^{k}\sum _{\{I_{a_{1}},\cdots,I_{a_{k}}\}\subset \mathscr{G}_{I}} \log \bigl(x_{I}+x(I_{a_{1}}-I,\ldots, I_{a_{k}}-I)\bigr)  \label{uvarforgenpermu1}
 \end{equation}
 It is easy to check that the $u$-variables for simplices, hypertubes, associahedra, cyclohedra and permutohedra defined above can be viewed as the special cases of \eqref{uvarforgenpermu}:
-\begin{enumerate}
+\begin{enumerate}[label=(\roman*)]
    \item For a $n$-dimensional simplex, $\mathscr{G}_{\{i\}}=\{[0,n]\}$ for every singleton $\{i\}$.
    \item For a $n$-dimensional hypertube, $\mathscr{G}_{\{0\}}=\{[0,1]\}$, $\mathscr{G}_{\{i\neq 0\}}=\{[0,i]\}$ and $\mathscr{G}_{[0,i]}=\{[0,i+1]\}$.
    \item For a $n$-dimensional associahedron,
@@ -1823,9 +1780,7 @@ Case (4) and (5) are quite trivial. For case (4), the limit behaviour of $u_{J}$
 \end{equation}
 
 
-
-
-We start with the Cayley graph proposed in \cite{} and further studied in \cite{}. In \cite{}, the ABHY realization for general Cayley graphs have been proposed, here we will use several examples to illustrate that the binary geometries exist for general Cayley graphs. The first Cayley graph which is nether associahedron nor permutahderon is so-called  ``next-to-$A_{3}$'', in terms of generalized permutahdera, the building set for next-to-$A_{3}$ is 
+\paragraph{Example}  We start with the Cayley graph proposed in \cite{} and further studied in \cite{}. In \cite{}, the ABHY realization for general Cayley graphs have been proposed, here we will use several examples of Cayley graphs to illustrate that the binary geometries exist for general permutohedra. The first Cayley graph which is nether associahedron nor permutahderon is so-called  ``next-to-$A_{3}$'', in terms of generalized permutahdera, the building set for next-to-$A_{3}$ is 
 \begin{equation}
    \mathscr{NA}_{3}=\{\{1,2,3,4\},\{1,2,3\},\{1,3,4\},\{2,3,4\},\{1,2\},\{1,3\},\{2,3\},\{3,4\},\{1\},\{2\},\{3\},\{4\}\}
 \end{equation}
@@ -1936,7 +1891,65 @@ There are several interesting open questions, like the question of  whether dege
 \noindent
 Though many examples of degenerations of $A_n$ and $B_n$ were products of lower dimensional objects of the same type, there were examples where we got non-trivial degenerations which did not factor. We would like to completely classify these cases and this would settle the question of identifying all the ``atoms'' of binary geometries with perfect $u$-equations. One class of examples which is certainly of both mathematical and physical interest in this context are the Stokes polytopes (and more generally Accordiohedra).
 
-\section{Appendix}
+\newpage
+
+\appendix 
+\section{Appendix: Nested Complex}\label{appendix: A} 
+
+A subset ${\mathbf N}$ in the building set ${\mathbf B}$ is called a {\it nested set} if it satisfies the following conditions:
+\begin{compactenum}[\quad (1)]
+    \item For any $I,J \in {\mathbf N}$, we either have $I \subset J$ or $J\subset I$ or $I$ and $J$ are disjoint.
+    \item For any collection of $k \geq 2$ disjoint subsets $J_1,J_2,\cdots, J_k \in N$ their union $J_1 \cup \cdots \cup J_k$ is not in B.
+    \item ${\mathbf N}$ contains all maximal elements of $B$.
+\end{compactenum}
+The {\it nested complex} ${\mathbf N}({\mathbf B})$ is defined as the poset of the set of all nested sets in ${\mathbf B}$ ordered by inclusion.\\
+
+\paragraph*{Facial structure} 
+Let us assume that the set ${\mathbf B}$ associated with a generalised permutahedron ${\mathscr P_n}^{y}$ is a building set on $[0,n]$. Then the poset of faces ${\mathscr P_n}^{y}$ ordered by reverse inclusion is isomorphic to the nested complex ${\mathbf N}({\mathbf B})$. 
+
+The face $P_N$ of ${\mathscr P_n(y)}$ associated with the nested set $N \in \mathcal{N}(B)$ is given by:
+\bea
+P_N = \left \{ \right (t_1,\cdots,t_{n}) \in \mathbb{R}^{n} | \sum_{i \in I} t_i =y_{I}~{\rm for}~I \in N; ~ \sum_{i \in J}~t_i \geq y_J,~ {\rm for} ~J \in B  )\}
+\eea
+In particular the dimension of the face $P_N$ equals $n+1-|N|$.\\ 
+Another description of the faces is the following: 
+
+For each decomposition $[0,n]=  \sqcup_{I \subset {\mathbf N} } S_I $ where $S_I$ are non-empty, the face $P_N$ of ${\mathscr P_N}^{y}(y_I)$ associated with the nested set ${\mathbf N} \in {\mathbf N}({\mathbf B})$ is:
+\bea
+P_N = \sum_{{J \subset {\mathbf B}}\atop{J \cap S_I \neq \emptyset}} y_{J} \Delta_{J \cap S_I}
+\eea
+\subsubsection{Degenerations of ${\mathscr P_n}$ which lead to  products}
+
+In this section we provide an answer to the question of which degenerations of $\mathscr{P_n}$ give the most general products of such geometries. We begin by stating the following results about Nestohedra.
+
+The maximal set of a building set $B_{max}$ is the set of all inclusion maximal elements of the building set $B$. A building set $B$ is connected if $B_{max}$ has a single element.
+
+{\bf Theorem:} If $B_1, B_2,\cdots B_n$ are connected subsets of a building set $B$ then the corresponding nestohedron ${\mathscr N_B}$ is isomorphic to the product of the nestohedra ${\mathscr N}_{ B_1} \times{\mathscr N}_{ B_2} \cdots \times {\mathscr N}_{B_n}$.
+
+We can use the above result to construct a degeneration of  ${\mathscr P_n}$ which are the most general products i.e., $\prod_{p_i} X_{p_i}$ such that $\sum^{k}_{i=1} p_{i} = n$ and $X = {\mathscr A} ,{\mathscr B}, {\mathscr P }$ by dividing the $(n+1)$ singlets into $k$ parts $\{0,\cdots,p_1\}, \{p_1,\cdots,p_1+p_2\},\cdots \{\sum^{k-1}_{i=1}p_{i},\cdots,\sum^{k}_{i=1}p_{i}= n\}$ and constructing the corresponding $X_{p_i}$'s which we denote by $X_{p_i}\left(\sum^{(i-1)}_{j=1}p_{j},\cdots,\sum^{i}_{j=1}p_{j}\right).$ 
+
+Let us consider the $P_4$ example for which the allowed possibilities are : $A_1^{4}$, $A_1^2 \times A_2$, $A_1 \times A_3$, $A^{2}_2$, $A_1^2 \times B_2$, $A_1 \times B_3$,$A_1 \times P_3$,$ A_2\times B_2$ and $B^{2}_2$.
+ 
+For $A_1^{4}$ the building set is $ \{ {0},{1},{2},{3},{4},{01},{12},{23},{34} \}$ where $\{0,01\} , \{1,12\},\{2,23\},\{3,34\}$ generate the 4 $A_1$'s which we denote as $A_1(0,1) \times A_1(1,2) \times A_1(2,3) \times A_1(3,4) $.
+
+For $A_1^{2} \times A_2$ the building set is $ \{ {0},{1},{2},{3},{4},{01},{12},{23},{34},{234} \}$ generated by $A_1(0,1)\times A_1(1,2) \times A_2(2,3,4)$'s.
+
+For  $A_1 \times A_3$ the building set is $ \{ {0},{1},{2},{3},{4},{01},{12},{23},{34},{123},{234},{1234} \}$ generated by  $A_1(0,1)\times A_3(1,2,3,4)$.
+
+For  $A_2^{2}$ the building set is $ \{ {0},{1},{2},{3},{4},{01},{12},{23},{34} ,{012},{234}\}$ generated by $A_2(0,1,2)\times A_2(2,3,4)$
+
+For $A_1^{2} \times B_2$ the building set is $ \{ {0},{1},{2},{3},{4},{01},{12},{23},{34},{24},{234} \}$ generated by $A_1(0,1)\times A_1(1,2) \times B_2(2,3,4)$'s.
+
+For $A_1 \times B_3$ the building set is $ \{ {0},{1},{2},{3},{4},{01},{12},{23},{34},{14},{123},{234},{134},{124},{1234} \}$ generated by  $A_1(0,1)\times B_3(1,2,3,4)$.
+
+For $A_1 \times P_3$ the building set is $ \{ {0},{1},{2},{3},{4},{01},{12},{23},{34},{14},{13},{24},{123},{234},{134},{124},{1234} \}$ generated by  $A_1(0,1)\times P_3(1,2,3,4)$.
+
+For $A_2 \times B_2$ the building set is $ \{ {0},{1},{2},{3},{4},{01},{12},{23},{34},{24},{012},{234}\}$ generated by $A_2(0,1,2)\times B_2(2,3,4)$
+
+For $B_2^{2}$ the building set is $ \{ {0},{1},{2},{3},{4},{01},{12},{02},{23},{34},{24} ,{012},{234}\}$ generated by $B_2(0,1,2)\times B_2(2,3,4)$
+
+We can similarly find a degeneration of ${\mathscr P_n}$ which would correspond to any product.
+
 
 \section*{4d permutahedron}
 The $u$ variables for the 4d permutahedron are:
@@ -2191,6 +2204,6 @@ The other $u$-equations are not two or three term equations and seem to be some 
 
  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \bibliographystyle{utphys}
-\bibliography{final}
+\bibliography{draft_ABP}
 \end{document}
  
