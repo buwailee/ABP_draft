@@ -398,7 +398,7 @@
 
 \begin{center}
 
-{\Large \bf  Binary geometries: Associahedra, Cyclohedra and (Generalized) Permutahedra}
+{\Large \bf Stringy canonical forms and binary geometries from associahedra, cyclohedra and generalized permutohedra}
 
 
 \end{center}
@@ -431,7 +431,8 @@
 \vspace*{5.0ex}
 \centerline{\bf Abstract} \bigskip
 
-In \cite{Arkani-Hamed:2019mrd} the study of stringy canonical forms and binary geometries with ``perfect'' $u$-equations, associated with the scattering of particles and strings was initiated. In this paper we continue the study of binary geometries and find two large classes of new examples.  The first class corresponds to degenerations of $A_n$ and $B_n$ (associahedra and cyclohedra respectively) which have perfect $u$-equations. The second class corresponds to a large subset of  generalized permutahedra which can be realised as degenerations of the permutahedron $P_n$ which are binary positive geometries despite not having perfect $u$-equations. Both these large classes of examples have stringy integrals which factorise at any finite $\alpha^{'}$  on all the massless poles.
+Stringy canonical forms are a class of integrals that provide $\alpha'$-deformations of the canonical form of any polytopes. For generalized associahedra of finite-type cluster algebra, there exist completely rigid stringy integrals, whose configuration spaces are the so-called binary geometries, and for classical types are associated with (generalized) scattering of particles and strings. In this paper we propose a large class of rigid stringy canonical forms for another class of polytopes, generalized permutohedra, which also include associahedra and cyclohedra as special cases (type $A_n$ and $B_n$ generalized associahedra). Remarkably, we find that the configuration spaces of such integrals are also binary geometries, which were suspected to exist for generalized associahedra only. For any generalized permutohedron that can be written as Minkowski sum of coordinate simplices, we show that its rigid stringy integral factorizes into products of lower integrals for massless poles at finite $\alpha'$, and the configuration space is binary although the $u$ equations take a more general form than those ``perfect'' ones for cluster cases. Moreover, we provide an infinite class of examples obtained by degenerations of type $A_n$ and $B_n$ integrals, which have perfect $u$ equations as well. Our results provide yet another family of generalizations of the usual string integral and moduli space, whose physical interpretations remain to be explored. 
+
 
 
 
@@ -444,18 +445,18 @@ In \cite{Arkani-Hamed:2019mrd} the study of stringy canonical forms and binary g
 \tableofcontents
 
 \newpage
-\section{Introduction}
 
-In \cite{Arkani-Hamed:2019mrd} the notion of {\it stringy canonical forms} were introduced as a general framework for generalizing tree-level string amplitudes, or integrals over the moduli space ${\cal M}_{0, n}$. Various nice properties of string amplitudes and their field-theory limits, such as factorizations for $\alpha' \to 0$ limit and finite $\alpha'$, channel duality and exponent softness, scattering equations, {\it etc.} all naturally extend to stringy canonical forms. To briefly summarize the idea, let's begin with the disk integral for open-string amplitudes with ordering $(1,2,\cdots, n)$:
+\section{Introduction}
+In \cite{Arkani-Hamed:2019mrd} the notion of {\it stringy canonical forms} was introduced which provides vast generalizations of tree-level string amplitudes as integrals over the moduli space ${\cal M}_{0, n}$~\footnote{The study of these types of integrals perhaps dates back to Euler, and more recently they are studied in various contexts, see~\cite{Mellin, Eulermellin, Panzer:2019yxl}. }. Various nice properties of string amplitudes and their field-theory limits, such as factorizations for $\alpha' \to 0$ limit and finite $\alpha'$, channel duality and exponential softness at UV, scattering equations, {\it etc.} all naturally extend to stringy canonical forms. To briefly summarize the idea, let's begin with the disk integral for the open-string amplitudes with ordering $(1,2,\dots, n)$:
 \begin{equation}\label{stringint}
-{\cal I}^{\rm open-string}_{1,2,\cdots,n} (\{s\}):=\int_{\mathcal M_{0,n}^+}
+{\cal I}^{\rm open-string}_{1,2,\dots,n} (\{s\}):=\int_{\mathcal M_{0,n}^+}
 \frac{\mathrm d^{n}z}{\mathrm{SL}(2,\mathbb{R})} \prod_{i=1}^{n}\frac{1}{z_{i}-z_{i{+}1}}
 \prod_{i<j}(z_j{-}z_i)^{\alpha' s_{ij}},
 \end{equation}
-where $\mathcal M_{0,n}^+$ is the positive part of moduli space for the ordering, and $\mathsf{PT}_n:=\frac{\mathrm d^{n}z}{\mathrm{SL}(2,\mathbb{R})} \prod_{i=1}^{n}\frac{1}{z_{i}-z_{i+1}}$ its canonical form~\cite{};  %each factor  $(z_j-z_i)$ in the Kobe-Nieson factor $\prod_{i<j}(z_j-z_i)^{\alpha' s_{ij}}$ is a nowhere vanishing function on $\mathcal M_{0,n}^+$.
-With a positive parameterization $\{x_1,\dots,x_{n-3}\}$ of $\mathcal M_{0,n}^+$, 
-this canonical form becomes $\prod_{i=1}^{n-3}\mathrm d \log x_i$, and the Koba-Nieson factor $\prod_{i<j}(z_j-z_i)^{\alpha' s_{i j}}$ becomes a product of powers of polynomials with 
-non-negative coefficients~\cite{}: $\prod_i x_i^{\alpha' X_i} \prod_I p_I(x)^{-\alpha' c_I}$. Note that we have factored out $n{-}3$ monomials, $x_i$, and left with $n(n{-}3)/2-(n{-}3)$ positive polynomials $p_I(x)$, with exponents $X_i$'s and $c_I$'s given by linear combinations of the Mandelstam variables $s_{i,j}$. 
+where $\mathcal M_{0,n}^+$ is the positive part of moduli space for the ordering, and $\mathsf{PT}_n:=\frac{\mathrm d^{n}z}{\mathrm{SL}(2,\mathbb{R})} \prod_{i=1}^{n}\frac{1}{z_{i}-z_{i+1}}$ its canonical form~\cite{Arkani-Hamed:2017mur}.  %each factor  $(z_j-z_i)$ in the Kobe-Nieson factor $\prod_{i<j}(z_j-z_i)^{\alpha' s_{ij}}$ is a nowhere vanishing function on $\mathcal M_{0,n}^+$.
+With a positive parametrization $\{x_1,\dots,x_{n-3}\}$ of $\mathcal M_{0,n}^+$, 
+this canonical form becomes $\prod_{i=1}^{n-3}\mathrm d \log x_i$, and the Koba-Nielsen factor $\prod_{i<j}(z_j-z_i)^{\alpha' s_{i j}}$ becomes a product of powers of polynomials with 
+non-negative coefficients~\cite{Arkani-Hamed:2019mrd}: $\prod_i x_i^{\alpha' X_i} \prod_I p_I(x)^{-\alpha' c_I}$. Note that we have factored out $n{-}3$ monomials, $x_i$, and left with $n(n{-}3)/2-(n{-}3)$ positive polynomials $p_I(x)$, with exponents $X_i$'s and $c_I$'s given by linear combinations of the Mandelstam variables $s_{i,j}$. 
 
 \paragraph{Stringy canonical forms} Motivated by this rewriting of string integral~\eqref{stringint}, we define a general stringy integral as a $d$-dimensional integral~\cite{Arkani-Hamed:2019mrd}
 \begin{equation}\label{stringycanonicalform}
@@ -463,14 +464,14 @@ non-negative coefficients~\cite{}: $\prod_i x_i^{\alpha' X_i} \prod_I p_I(x)^{-\
 	\int_{\mathbb R_+^d}\prod_{i=1}^d \frac{\mathrm d x_i}{x_i}x_i^{\alpha'X_i}
 	\prod_{I=1}^m p_I(x)^{-\alpha' c_I},
 \end{equation}
-where we allow $m$ arbitrary Laurent polynomial with non-negative coefficients, $p_I(x)$, and without loss of generality we assume exponents $X_i>0$ and $c_I>0$~\footnote{These are ``positive'' stringy canonical forms, which are integrals over $\mathbb R_+^d$. We can also consider ``complex'' case with the integrand mod-squared and integrated over $\mathbb C^d$, which are generalizations of closed-string amplitudes~\cite{}.}. 
+where we allow $m$ arbitrary Laurent polynomials with non-negative coefficients, $p_I(x)$, and without loss of generality we assume exponents $X_i>0$ and $c_I>0$~\footnote{These are ``positive'' stringy canonical forms, which are integrals over $\mathbb R_+^d$. We can also consider ``complex'' cases with the integrand mod-squared and integrated over $\mathbb C^d$, which are generalizations of closed-string amplitudes~\cite{Arkani-Hamed:2019mrd}.}. 
 
-Any integral of the form \eqref{stringycanonicalform} inherits various remarkable properties of string amplitudes \eqref{stringint}, which all depend on the existence of a polytope $\mathcal P:=\sum_I c_I N[p_I]$; here $N[p_I]$ is the Newton polytope of the polynomial $p_I$, and we take the (weighted) Minkowski sum~\cite{}. First of all, one can show that the integral \eqref{stringycanonicalform} is convergent if and only if $\mathbf X=(X_1,\dots,X_d)$ is in the interior of the polytope $\mathcal P$ (we assume that ${\cal P}$ is $d$ dimensional). The leading order of the integral in its $\alpha'$ expansion, dressed with $d^d \mathbf X$, is given by the canonical form of the polytope, ${\Omega}(\cal P)$, thus it can be viewed as $\alpha'$-deformation of $\Omega(\cal P)$ (hence the name ``stringy canonical form"). Generically the poles of $\Omega(\cal P)$ are given by equations of
-facets for $\mathcal P$, which are also poles of the integral at finite $\alpha'$, and the residue on any such pole is given by a stringy canonical form defined for that facet (see~\cite{} for details). 
+Any integral of the form \eqref{stringycanonicalform} inherits various remarkable properties of string amplitudes \eqref{stringint}, which all depends on the existence of a polytope $\mathcal P:=\sum_I c_I N[p_I]$; here $N[p_I]$ is the Newton polytope of the polynomial $p_I$, and we take the (weighted) Minkowski sum~\cite{Arkani-Hamed:2019mrd}. First of all, one can show that the integral \eqref{stringycanonicalform} is convergent if and only if $\mathbf X=(X_1,\dots,X_d)$ is in the interior of the polytope $\mathcal P$ (we assume that ${\cal P}$ is $d$ dimensional). The leading order of the integral in its $\alpha'$ expansion, dressed with $d^d \mathbf X$, is given by the canonical form of the polytope, ${\Omega}(\cal P)$, thus it can be viewed as an $\alpha'$-deformation of $\Omega(\cal P)$ (hence the name ``stringy canonical form''). Generically the poles of $\Omega(\cal P)$ are given by equations of
+facets for $\mathcal P$, which are also poles of the integral at finite $\alpha'$, and the residue on any such pole is given by a stringy canonical form defined for that facet (see~\cite{Arkani-Hamed:2019mrd} for details). 
 
-For the string integral \eqref{stringint}, ${\cal P}$ is nothing but the ABHY associahedron~\cite{Arkani-Hamed:2017mur}, whose canonical form gives bi-adjoint $\phi^3$ amplitude as the $\alpha'\to 0$ limit of \eqref{stringint}~\cite{}. The poles are the planar variables $X_{i,j}$, on which \eqref{stringint} factorizes into lower-point integrals even for finite $\alpha'$. Moreover, the saddle point equations as $\alpha' \to \infty$ can be written as $X_i=\sum_I c_I \partial \log p_I/\partial \log x_i$ for $i=1,\cdots, d$; they provide a diffeomorphism from the integration domain to ${\cal P}$, thus $\Omega(\mathcal P)$ can be computed as a pushforward of $\prod_i d\log x_i$ via summing over the saddle points~\cite{Arkani-Hamed:2017tmz}. In particular, for the string integral \eqref{stringint}, the scattering equations provide a map from ${\cal M}_{0,n}^+$ to ABHY associahedron, and the pushforward is equivalent to the CHY formula for $\phi^3$ amplitude~\cite{}. 
+For the string integral \eqref{stringint}, ${\cal P}$ is nothing but the ABHY associahedron~\cite{Arkani-Hamed:2017mur}, whose canonical form gives bi-adjoint $\phi^3$ amplitude as the $\alpha'\to 0$ limit of \eqref{stringint}~\cite{Cachazo:2013iea}. The poles are the planar variables $X_{i,j}$, on which \eqref{stringint} factorizes into lower-point integrals even for finite $\alpha'$. Moreover, the saddle point equations as $\alpha' \to \infty$ can be written as $X_i=\sum_I c_I \partial \log p_I/\partial \log x_i$ for $i=1,\dots, d$; they provide a diffeomorphism from the integration domain to ${\cal P}$, thus $\Omega(\mathcal P)$ can be computed as a pushforward of $\prod_i d\log x_i$ via summing over the saddle points~\cite{Arkani-Hamed:2017tmz}. In particular, for the string integral \eqref{stringint}, the scattering equations provide a map from ${\cal M}_{0,n}^+$ to ABHY associahedron, and the pushforward is equivalent to the CHY formula for $\phi^3$ amplitude~\cite{Cachazo:2013hca,Cachazo:2013iea}. 
 
-\paragraph{Configuration spaces} One way to describe the combinatorics of the polytope ${\cal P}$ is through the {\it configuration space}, {\it e.g.} as blow-up of $\mathbb R_+^D$ in the $\mathbf x$-space. However, it is usually difficult to use $\mathbf x$ for this, even for the string integrals \eqref{stringint}. For example, a facet usually corresponds to a complicated limit process with $x \to 0$ or $\infty$. As proposed in~\cite{}, an elegant way to realize ${\cal P}$ in configuration space is by introducing a set of constrained $u$ variables $\{u_\alpha\}$. The configuration space is the variety defined by a set of polynomial equations satisfied by $\{u_\alpha\}$ (or $u$ equations), and the polytope ${\cal P}$ can be realized combinatorially by $\{u_\alpha \geq 0\}$. 
+\paragraph{Configuration spaces} One way to describe the combinatorics of the polytope ${\cal P}$ is through the {\it configuration space}, {\it e.g.} as the blow-up of $\mathbb R_+^D$ in the $\mathbf x$-space. However, it is usually difficult to use $\mathbf x$ for this, even for the string integrals \eqref{stringint}. For example, a facet usually corresponds to a complicated limit process with $x \to 0$ or $\infty$. As proposed in~\cite{Arkani-Hamed:2019plo}, an elegant way to realize ${\cal P}$ in configuration space is by introducing a set of constrained $u$ variables $\{u_\alpha\}$. The configuration space is the variety defined by a set of polynomial equations satisfied by $\{u_\alpha\}$ (or $u$ equations), and the polytope ${\cal P}$ can be realized combinatorially by $\{u_\alpha \geq 0\}$. 
 %facet is simply given by an equation $u_A=0$. 
 To define the $u$ variables, we first construct the so-called \textit{big polyhedron} in the space $\mathbf S:=(X_1,\dots,X_d,-c_1,\dots,-c_m) \in \mathbb R^{d{+}m}$.  %then $\{u_A\}$ 
 %\[
@@ -488,8 +489,7 @@ $\{V_J^\alpha\}_{1\leq \alpha \leq v}$ are its non-zero vertices ($v$ denotes th
 the polyhedron can be written as $S_J = F_\alpha V^\alpha_J$ with non-negative coefficients 
 $\{F_\alpha\}_{1\leq \alpha \leq v}$.  Therefore, the integral $\mathcal I(\mathbf S)$
 can be seen as a function of ``dual coordinates'' $\{F_\alpha\}$ which encourages us to 
-rewrite the integral to make it manifest by (here we collectively denote $p_J=(x_1, \cdots, x_d, p_1, \cdots, p_m)$)~\footnote{Note that one can indeed treat the monomials $x_i^{\alpha' X_i}$ on the equal footing as polynomials, since Minkowski sum w.r.t. them amounts to merely translating the polytope $c_I N[p_I]$ by $-X_i$ in the $i$-th direction~\cite{}.}. 
-
+rewrite the integral to make it manifest by (here we collectively denote $p_J=(x_1, \cdots, x_d, p_1, \cdots, p_m)$)~\footnote{Note that one can indeed treat the monomials $x_i^{\alpha' X_i}$ on the equal footing as polynomials, since Minkowski sum w.r.t. them amounts to merely translating the polytope $c_I N[p_I]$ by $-X_i$ in the $i$-th direction~\cite{Arkani-Hamed:2019mrd}.}
 \begin{equation}
 	\mathcal I(\mathbf F)=
 	\int_{\mathbb R_+^d} \prod_{i=1}^d \frac{d x_i}{x_i}~%\frac{\mathrm d x_1\cdots \mathrm d x_n}{x_1\cdots x_n}
@@ -500,22 +500,21 @@ rewrite the integral to make it manifest by (here we collectively denote $p_J=(x
 \end{equation}
 where we introduce a new set of variables $u_\alpha = \prod_J p_J^{V_J^\alpha}$ for 
 $\alpha=1,\dots, v$. Note that there's no unique way to write $S_J=F_\alpha V_J^\alpha$ if the big polyhedron is not a simplex, \textit{i.e.} $v>d+m$, and in this case,
-$u$-variables $\{u_\alpha \}$ are not independent. Therefore, it is an important special case when the big polyhedron is a simplex, \textit{i.e.} $N=v=d+m$, where $N$ is 
+$u$ variables $\{u_\alpha \}$ are not independent. Therefore, it is an important special case when the big polyhedron is a simplex, \textit{i.e.} $N=v=d+m$, where $N$ is 
 the number of facets of the big polyhedron or the original polytope $\mathcal P$,
 and inequalities $F_\alpha=S_J(V^{-1})^J_\alpha \geq 0$ are exactly the inequalities $W_a^J S_J\geq 0$ up to resales $F_\alpha \mapsto t F_\alpha$ for non-zero factors $t$, because
-there's no nontrivial linear isometry from the simplex to itself besides permutations of vertices. Therefore, we identity the label of facets $a$ with the label of 
-vertices $A$ and get $V=W^{-1}$. Furthermore, every facet of the original polytope $\mathcal P$ can be associated with a single $u_\alpha$ going to zero. 
+there's no nontrivial linear isometry from the simplex to itself besides permutations of vertices. Therefore, we identity the label of facets $\alpha$ with the label of 
+vertices $J$ and get $V=W^{-1}$. Furthermore, every facet of the original polytope $\mathcal P$ can be associated with a single $u_\alpha$ going to zero. 
 %Generally, the big polyhedron of a stringy integral is not necessary to be a simplex. 
 
-\paragraph{Cluster stringy integrals and binary geometries} A class of very special integrals belong to this case~\cite{}: stringy canonical forms for generalized associahedra of finite-type cluster algebras, namely $A_n$, $B_n$, $C_n$, $D_n$, and exceptional cases ($E_6$, $E_7$, $E_8$, $F_4$, $G_2$). These ``cluster stringy integrals"~\cite{}, and the associated ``cluster configuration space"~\cite{}, turn out to be much more special and rigid extensions of string amplitudes \eqref{stringint} and the moduli space ${\cal M}_{0,n}$, which correspond to the case of type $A_{n{-}3}$. The leading order of such an integral is given by canonical function of the corresponding generalized associahedra, whose combinatorics is attached to the Dynkin diagram (each facet is given by removing a node), {\it e.g.} $D_n \to D_m \times A_{n{-}1{-}m}$ or $A_{n{-}1}$~\cite{}. Even at finite $\alpha'$, it has the remarkable factorization property tied to the Dynkin diagram. Moreover, for type $B/C$ (known as ``cyclohedron") and $D$, the leading order is associated with one-loop bi-adjoint $\phi^3$ amplitudes. 
+\paragraph{Cluster stringy integrals and binary geometries} A class of very special integrals belong to this case~\cite{Arkani-Hamed:2019plo}: stringy canonical forms for generalized associahedra of finite-type cluster algebras, namely $A_n$, $B_n$, $C_n$, $D_n$, and exceptional cases ($E_6$, $E_7$, $E_8$, $F_4$, $G_2$). These ``cluster string integrals''~\cite{Arkani-Hamed:2019plo}, and the associated ``cluster configuration spaces''~\cite{Arkani-Hamed:2019plo,Arkani-Hamed:tobeappear}, turn out to be much more special and rigid extensions of string amplitudes \eqref{stringint} and the moduli space ${\cal M}_{0,n}$, which correspond to the case of type $A_{n{-}3}$. The leading order of such an integral is given by canonical function of the corresponding generalized associahedra, whose combinatorics is attached to the Dynkin diagram (each facet is given by removing a node), {\it e.g.} $D_n \to D_m \times A_{n{-}1{-}m}$ or $A_{n{-}1}$~\cite{Arkani-Hamed:2019plo}. Even at finite $\alpha'$, it has the remarkable factorization property tied to the Dynkin diagram. Moreover, for type $B/C$ (known as ``cyclohedron'') and $D$, the leading orders are associated with tadpole emission and one-loop bi-adjoint $\phi^3$ amplitudes, respectively.
 
-These nice properties become manifest in the configuration space: not only the big polyhedron is a simplex, the $u$-equations are of very special form:
+These nice properties become manifest in the configuration space: not only the big polyhedron is a simplex, the $u$ equations are of very special form:
 \begin{equation}\label{perfectu}
-	1-u_\alpha=\prod_{\beta} u_\beta^{(\beta|\alpha)},
+	1-u_\alpha=\prod_{\beta} u_\beta^{(\beta||\alpha)},
 \end{equation}
-where the product is over all $N$ variables ($N$ facets), and the integer $(\beta | \alpha)\geq 0$ is the so-called compatibility degree defined in the corresponding cluster algebra~\cite{}.
-%Varieties defined by $u$-equations associated with finite type clusters  are called cluster configuration spaces. 
-We see that when $u_\alpha$ (for a facet $\alpha$) goes to $0$, it forces all the $u_\beta$ with $\beta | \alpha>0$ goes to $1$ (for facets $\beta$ are exactly those {\it incompatible} with $\alpha$); the remaining $u$'s that are compatible with $u_\alpha$ satisfy $u$ equations for the facet, which factorizes as removing a node of the Dynkin diagram. Therefore, we say that the configuration space is a {\it binary geometry}. Note that this is true also for the complex case, and if we further require all $u$ variables to be positive, we have $0<u<1$ which gives the positive configuration space~\cite{}. The binary property is what guarantees the stringy integral to factorize even at finite $\alpha'$: on the pole $X_\alpha \to 0$, $u_\alpha\to 0$ forces all incompatible $u_\beta\to 1$ which decoupled from $\prod u^{\alpha' X}$, and the integral becomes the factorized one for the facet $\alpha$. 
+where the product is over all $N$ variables ($N$ facets), and the integer $(\beta || \alpha)\geq 0$ is the so-called compatibility degree defined in the corresponding cluster algebra~\cite{Zelevinskysys}. Varieties defined by $u$ equations associated with finite type clusters  are called cluster configuration spaces.
+We see that when $u_\alpha$ (for a facet $\alpha$) goes to $0$, it forces all the $u_\beta$ with $\beta || \alpha>0$ goes to $1$ (for facets $\beta$ are exactly those {\it incompatible} with $\alpha$); the remaining $u$'s that are compatible with $u_\alpha$ satisfy $u$ equations for the facet, which factorizes as removing a node of the Dynkin diagram. Therefore, we say that the configuration space is a {\it binary geometry}. Note that this is true also for the complex case, and if we further require all $u$ variables to be positive, we have $0<u<1$ which gives the positive configuration space~\cite{Arkani-Hamed:2020cig}. The binary property is what guarantees the stringy integral to factorize even at finite $\alpha'$: on the pole $X_\alpha \to 0$, $u_\alpha\to 0$ forces all incompatible $u_\beta\to 1$ which decoupled from $\prod u^{\alpha' X}$, and the integral becomes the factorized one for the facet $\alpha$. 
 
 For example, the string integral \eqref{stringint} corresponds to type $A_{n{-}3}$, %and we can use a positive parametrization $z_i=1+x_2+\cdots+x_{i{-}1}$ for $i=2,3,\cdots, n{-}1$ (with gauge fixing $z_1=0, z_2=1$ and $z_n=\infty$). The integral is rewritten as
 %\[
@@ -523,51 +522,55 @@ For example, the string integral \eqref{stringint} corresponds to type $A_{n{-}3
 %	\frac{\mathrm dx_2\cdots \mathrm dx_{n-2}}{x_2\cdots x_{n-2}}
 %	\prod_{i<j} p_{ij}^{\alpha' s_{ij}},
 %\] where $p_{ij}=x_i+\cdots+x_{j-1}$. 
-and the $N=n(n{-}3)/2$ $u$ variables of this configuration space are~\cite{}
+and the $N=n(n{-}3)/2$ $u$ variables of this configuration space are~\cite{Arkani-Hamed:2020cig}
 \[
 	u_{i j}=\frac{(z_{i-1}-z_j)(z_i-z_{j-1})}{(z_i-z_j)(z_{i-1}-z_{j-1})},
 \]
-and they satisfy the $u$-equations
-\[
-	1-u_{ij}=\prod_{(k,l)\not\sim (i,j)}u_{kl},
-\]
-where $(i,j)\not\sim (k,l)$ means that the diagonals $(i,j)$ and $(k,l)$ of $n$-gon are crossed, thus the two facets are incompatible (note here compatibility degree is just $0$ or $1$).  For $u_{i,j}\to 0$, all incompatible $u_{k,l} \to 1$, and the remaining $u$'s fall into those of the two polygons divided by $(i,j)$, with their own $u$ equations. The Koba-Nilesen factor becomes $\prod_{i,j} u_{i,j}^{\alpha' X_{i,j}}$ where $X_{i,j}$ are planar variables for the facets of ABHY associahedron, which makes the factorization of string amplitude at finite $\alpha'$ manifest. All these generalize to integrals and configuration spaces for finite type cluster algebra. 
+and they satisfy the $u$ equations (see {\it e.g.}~\cite{Brown:2009qja})
+\begin{equation}\label{Aueq}
+	1-u_{ij}=\prod_{(k,l)\not\sim (i,j)} u_{kl},
+\end{equation}
+where $(i,j)\not\sim (k,l)$ means that the diagonals $(i,j)$ and $(k,l)$ of $n$-gon are crossed, thus the two facets are incompatible (note here compatibility degree is just $0$ or $1$).  For $u_{i,j}\to 0$, all incompatible $u_{k,l} \to 1$, and the remaining $u$'s fall into those of the two polygons divided by $(i,j)$, with their own $u$ equations. The Koba-Nielsen factor becomes $\prod_{i,j} u_{i,j}^{\alpha' X_{i,j}}$ where $X_{i,j}$ are planar variables for the facets of ABHY associahedron, which makes the factorization of string amplitude at finite $\alpha'$ manifest. All these generalize to integrals and configuration spaces for finite type cluster algebras. 
 
 \subsection{Summary of main results}
 
-It is a natural question to ask if binary geometries, whose stringy integrals factorize at any finite $\alpha^{'}$, are extremely special and can only be products of generalized associahedra of finite type. In this paper we answer the question in the negative by providing infinitely many new examples of binary geometries. Before proceeding, we remark that $u$ equations of the form \eqref{perfectu} (which we refer to as ``perfect" $u$ equations) imply binary geometries, but the converse is not true. Broadly speaking, for a $n$-dimensional polytope ${\cal P}$ where each facet is associated with a $u$ variable,  if for any $u_\alpha\to 0$, we have for all incompatible facets $\beta$, $u_\beta \to 1$, then we regard such an $n$-dimensional variety (defined by the $u$ equations) as a binary geometry. From this definition, we see that one can realize simplex as a binary geometry since all facets are compatible with each other. Consider $u$ equations for a $n$-dimensional simplex with facets labelled by $\alpha=0,1,\cdots, n$
+It is a natural question to ask if binary geometries, whose stringy integrals factorize at any finite $\alpha'$, are extremely special and can only be products of generalized associahedra of finite type. In this paper we answer the question in the negative by providing infinitely many new examples of binary geometries. Before proceeding, we remark that $u$ equations of the form \eqref{perfectu} (which we refer to as ``perfect'' $u$ equations) imply binary geometries, but the converse is not true. Broadly speaking, for a $n$-dimensional polytope ${\cal P}$ where each facet is associated with a $u$ variable, if for any $u_\alpha\to 0$, we have for all incompatible facets $\beta$, $u_\beta \to 1$, then such an $n$-dimensional variety (defined by the $u$ equations) is a binary geometry. From this definition, we see that the simplest example of binary geometry is a simplex, where all facets are compatible with each other. One can realize the configurations space by the following $u$ equations for a $n$-dimensional simplex with facets labelled by $\alpha=0,1,\dots, n$:
 \[
 1-u_\alpha=\sum_{\beta \neq \alpha} u_\beta\,.
 \] 
-As $u_\alpha\to 1$, there is no $u\to 1$, and all $n$ remaining $u$ variables satisfy the same equations for that facet, which is an $(n{-}1)$-dim simplex. Although this example is trivial, it does show that we do not necessarily need perfect $u$ equations to have binary geometries. Generically, for a $n$-dimensional polytope ${\cal P}$ with $N$ facets,  have an $n$-dimensional configuration space defined by $u$ equations
+As $u_\alpha\to 0$, there is no $u\to 1$, and all $n$ remaining $u$ variables satisfy the same equations for that facet, which is an $(n{-}1)$-dim simplex. Although this example is trivial, it does show that we do not necessarily need perfect $u$ equations to have binary geometries. Generically,  a $n$-dimensional polytope ${\cal P}$ with $N$ facets have an $n$-dimensional configuration space defined by $u$ equations
 \be\label{genueq}
-1-u_\alpha=p_\alpha(\{u\}) \prod_\beta u_\beta^{\beta|\alpha} 
+1-u_\alpha=p_\alpha(\{u\}) \prod_\beta u_\beta^{\beta||\alpha} 
 \ee
-where $\beta |\alpha \geq 0$ are integers which vanishes for $\beta$ compatible with $\alpha$, and $p_\alpha(\{u\})$ is an arbitrary polynomial which must equal to unity on the facet $\alpha$, $p_\alpha (\{u\})|_{u_\alpha=0}=1$. When $u_\alpha \to 0$, since it appears on the RHS ofequation with $1-u_\beta$ for any incompatible $\beta$, we have $u_\beta\to 1$ for any polynomial $p_\beta (\{u\})$. However, in the equation with $1-u_\alpha$, since all the incompatible $u_\beta \to 1$ we find $p_\alpha (\{u\})|_{u_\alpha=0}=1$ (where we evaluate the polynomial at $u_\alpha=0$ and all incompatible $u_\beta=1$). For cluster configuration spaces, we have perfect $u$ equations with $p_\alpha=1$ for all $\alpha$.
+where $\beta ||\alpha \geq 0$ are integers which vanishes for $\beta$ compatible with $\alpha$, and $p_\alpha(\{u\})$ is an arbitrary polynomial which must equal to unity on the facet $\alpha$, $p_\alpha (\{u\})|_{u_\alpha=0}=1$. When $u_\alpha \to 0$, since it appears on the RHS of equation with $1-u_\beta$ for any incompatible $\beta$, we have $u_\beta\to 1$ for any polynomial $p_\beta (\{u\})$. However, in the equation with $1-u_\alpha$, since all the incompatible $u_\beta \to 1$ we find $p_\alpha (\{u\})|_{u_\alpha=0}=1$ (where we evaluate the polynomial at $u_\alpha=0$ and all incompatible $u_\beta=1$). For cluster configuration spaces, we have perfect $u$ equations with $p_\alpha=1$ for all $\alpha$.
 
-As the main result of the paper, we present infinitely many new examples of binary geometries which have $u$ equations of the form \eqref{genueq}, and (also infinitely) many of them with perfect $u$ equations. The key is to consider a class of stringy integrals for {\it generalized permutohedra} that can be realized as Minkowski sum of coordinate simplices as follows (more details will be given later). Given the label set $[0,n]=\{0,1,\cdots, n\}$, we define a {\it building set} $\mathbf B$ as a collection of subsets $I \subset [0,n]$ that satisfy (1). if $I, J \in {\mathbf B}$ and $I\cap J\neq \emptyset$, then $I\cup J \in {\mathbf B}$, and (2). it contains all {\it singletons} $\{i\}$. For each subset $I$ we have a simplex $\Delta_I$ as the convex hull of unit vectors ${\bf e}_i$ with $i\in I$, and the generalized permutohedron ${\mathscr P}(\mathbf B)$ is given by (weighted) Minkowski sum of $\Delta_I$ (defined on a $n$-dimensional hyperplane of the $(n{+}1)$-dim space)~\cite{}.  It is very natural to define stringy canonical form for such a building set $\mathbf B$: for each subset $I$, we have the simplest {\it linear} polynomial $x_I:=\sum_{i\in I} x_i$ (for singletons, $x_{\{i\}}=x_i$ are the coordinates), and
+As the main result of the paper, we present infinitely many new examples of binary geometries which have $u$ equations of the form \eqref{genueq}, and (also infinitely) many of them with perfect $u$ equations. The key idea to consider a class of stringy integrals for {\it generalized permutohedra} that can be realized as the Minkowski sum of coordinate simplices as follows (more details will be given later). Given the label set $[0,n]=\{0,1,\dots, n\}$, we define a {\it building set} $\mathbf B$ as a collection of subsets $I \subset [0,n]$ that satisfy (1). if $I, J \in {\mathbf B}$ and $I\cap J\neq \varnothing$, then $I\cup J \in {\mathbf B}$, and (2). it contains all {\it singletons} $\{i\}$. For each subset $I$ we have a simplex $\Delta_I$ as the convex hull of unit vectors ${\bf e}_i$ with $i\in I$, and the generalized permutohedron ${\mathscr P}(\mathbf B)$ is given by (weighted) Minkowski sum of $\Delta_I$ (defined on a $n$-dimensional hyperplane of the $(n{+}1)$-dim space)~\cite{Postnikov:2005}.  It is very natural to define stringy canonical form for such a building set $\mathbf B$: for each subset $I$, we have the simplest {\it linear} polynomial $x_I:=\sum_{i\in I} x_i$ (for singletons, $x_{\{i\}}=x_i$ are the coordinates), and
 \begin{equation}\label{intgenperm}
-{\cal I}_{\mathbf B}(\{S\}):=\int_{\mathbb R_+^n}\frac{1}{{\rm vol}~GL(1)} \prod_{i=0}^n \frac{d x_i}{x_i} %x_i^{S_i}
+{\cal I}_{\mathbf B}(\{S\}):=(\alpha')^n~\int_{\mathbb R_+^n}\frac{1}{{\rm vol}~GL(1)} \prod_{i=0}^n \frac{d x_i}{x_i} %x_i^{S_i}
 \prod_{I \in {\mathbf B}} x_I^{\alpha' S_I}\,,
 \end{equation}
-where the integration domain is defined projectively, {\it i.e.} up to a $GL(1)$ redundancy which can be fixed by fixing, say, $x_0=1$; the exponents $S_I$ satisfy $\sum_I S_I=0$ (if we fix the gauge by $x_0=1$, $S_0$ drops out and the rest $S_I$ are independent). By construction, ${\cal I}_{\mathbf B}$ is indeed the stringy canonical form for the generalized permutohedron $\sum_I S_I N[x_I]=\sum_I S_I \Delta_I={\mathscr P}(\mathbf B)$. Note that one can split the product as $\prod_I x_I^{\alpha' S_I}=\prod_{i=1}^n x_i^{\alpha' X_i} \prod_I^m x_I^{-\alpha' c_I}$ with $X_i:=S_{\{i\}}$ for singletons, $-c_I=S_I$ for non-singleton $I$'s (we denote their total number as $m$), and it suffices to take the Minkowski sum w.r.t. the non-singelton $I$'s, since the singleton ones are merely translating the polytope. 
+where the integration domain is defined projectively, {\it i.e.} up to a $GL(1)$ redundancy thus the exponents $S_I$ satisfy $\sum_I S_I=0$ (one can fix the gauge by choosing {\it e.g.} $x_0=1$, then $S_0$ drops out and the remaining $S_I$ are independent). By construction, ${\cal I}_{\mathbf B}$ is a stringy canonical form for the generalized permutohedron $\sum_I S_I {\bf N} [x_I]=\sum_I S_I \Delta_I={\mathscr P}(\mathbf B)$, and the leading order is given by the volume of its dual. Note that one can split the product as $\prod_I x_I^{\alpha' S_I}=\prod_{i=1}^n x_i^{\alpha' X_i} \prod_I^m x_I^{-\alpha' c_I}$ with $X_i:=S_{\{i\}}$ for singletons, $-C_I=S_I$ for non-singleton $I$'s (we denote their total number as $m$), and it suffices to take the Minkowski sum w.r.t. the non-singelton $I$'s, since the singleton ones are merely translating the polytope. Let's first present the simplest example with building set ${\mathbf B}$ given by all the singletons $\{i\}$ and $[0,n]$. In this case, ${\mathscr P}(\mathbb B)=c {\bf N} [\sum_{i=0}^n x_i]$ is the $n$-dim simplex (we denote $c:=C_{[0, n]}$), given by $X_i \geq 0$ with one (ABHY) constraint $\sum_{i=1}^n X_i=c$. It is straightforward to see that the $u$ variables are $u_i=\frac{x_i}{x_{[0,n]}}=\frac{x_i}{\sum_i x_i}$ and they satisfy $\sum_{i=0}^d u_i=1$ as expected. In this case, the integral is trivial to perform, which yields a generalization of beta function to higher dimensions:
+\[
+{\cal I}^{\rm simplex}_n=\frac{\prod_{i=1}^n \Gamma(\alpha' X_i)\Gamma(\alpha'(c- \sum_i X_i))}{\Gamma(\alpha'c)}:=B\left(\alpha' X_1, \dots, \alpha' X_n,\alpha'\left(c- \sum_i X_i\right)\right)\,,
+\]
 
-Let's list three examples of ${\mathscr P} (\mathbf B)$ and ${\cal I}_{\mathbf B}$ which will be our main examples throughout the paper. 
+The most important three examples of ${\mathscr P} (\mathbf B)$ and ${\cal I}_{\mathbf B}$, which will be studied in detail throughout the paper, are summarized here:
 \begin{itemize}
-\item Consider $\mathbf B$ as the collection of all $n(n{+}3)/2+1$ consecutive intervals within $[0,n]$, ${\mathscr P}(\mathbf B) \equiv {\mathscr A}_n$ is the $n$-dim associahedron, \eqref{intgenperm} is nothing but $(n{+}3)$-pt string integral \eqref{stringint}; {\it e.g.} for $n=2$, ${\mathbf B}=\{\{i\}, \{0,1\}, \{1,2\}, \{0,1,2\}\}$, and we have a pentagon ${\mathscr A}_2$.
+\item Consider $\mathbf B$ as the collection of all $n(n{+}3)/2+1$ consecutive intervals of $[0,n]$, ${\mathscr P}(\mathbf B) \equiv {\mathscr A}_n$ is the $n$-dim associahedron, \eqref{intgenperm} is nothing but $(n{+}3)$-pt string integral \eqref{stringint}; {\it e.g.} for $n=2$, ${\mathbf B}=\{\{i\}, \{0,1\}, \{1,2\}, \{0,1,2\}\}$, and we have a pentagon ${\mathscr A}_2$.
 \item Consider $\mathbf B$ as the collection of all $n(n{+}1)+1$ cyclic intervals of $[0,n]$ which can wrap around $n$, ${\mathscr P} (\mathbf B) \equiv {\mathscr B}_n$ is the $n$-dim cyclohedron, and in sec. 2 we will show that non-trivially \eqref{intgenperm} is the cluster stringy integral for type $B_n$ (not that for type $C_n$); {\it e.g.} $n=2$, ${\mathbf B}=\{\{i\}, \{0,1\}, \{1,2\}, \{2,0\}, \{0,1,2\}\}$, and we have a hexagon ${\mathscr B}_2$.
-\item Consider $\mathbf B$ as the collection of all $2^{n{+}1}-1$ subsets of $[0,n]$, ${\mathscr P}(\mathbf B) \equiv {\mathscr P}_n$ is the $n$-dim permutohedron (for $n=2$, it coincide with ${\mathscr B}_2$ the hexagon). All generalized permutohedra (and their stringy integrals) can be obtained from (that of) ${\mathscr P}_n$. 
+\item Consider $\mathbf B$ as the collection of all $2^{n{+}1}-1$ subsets of $[0,n]$, ${\mathscr P}(\mathbf B) \equiv {\mathscr P}_n$ is the $n$-dim permutohedron (for $n=2$, it coincides with ${\mathscr B}_2$). All generalized permutohedra (and their stringy integrals) can be obtained from (that of) ${\mathscr P}_n$. 
 \end{itemize}
 
-Although associahedra and cyclohedra are special cases of generalized permutohedra, it is interesting that \eqref{intgenperm} in these cases turn out to be exactly cluster stringy integrals of type $A$ and $B$! It is not completely surprising since these are the only two cases of cluster configuration spaces that can be identified with hyperplane arrangement (which is consistent with the linear polynomials), while {\it e.g.} for type $C$ we do not know such a hyperplane arrangement and for type $D_4$ {\it etc.} we know this is impossible from point-count argument~\cite{}. In sec. 2, we will go further and discover more binary geometries with perfect $u$ equations, which can be obtained by ``degenerating" type $A$ and $B$ integrals by requiring certain $S_I=0$ (for example, type $A$ integral is in fact a degeneration of the type $B$ integral, which was not obvious before). Some of these cases are products of lower-dim $A$'s and $B$'s, but we will see entirely new binary geometries with perfect $u$ equations. 
+Although associahedra and cyclohedra are special cases of generalized permutohedra, it is interesting that \eqref{intgenperm} in these cases turn out to be exactly cluster stringy integrals of type $A$ and $B$! It is not completely surprising since these are the only two cases of cluster configuration spaces that can be identified with hyperplane arrangement~\cite{Arkani-Hamed:tobeappear}, which is consistent with the fact that here we only have linear polynomials $x_I$. In sec. 2, we will go further and discover more binary geometries with perfect $u$ equations, which can be obtained by ``degenerating'' type $A$ and $B$ integrals by requiring certain $S_I=0$ (for example, type $A$ integral is in fact a degeneration of the type $B$ integral, which was not obvious before). Some of these cases are products of lower-dim $A$'s and $B$'s, but we will see entirely new binary geometries with perfect $u$ equations. 
 
-Moreover, a remarkable statement we will make in sec. 3 is that, the configuration space for any ${\cal I}_{\mathbf B}$ is always binary, which means that any $u_\alpha \to 0$ forces all the incompatible ones $u_\beta\to 1$. As we will see explicitly with ${\mathscr P}_n$, its $u$ equations indeed take the form of \eqref{genueq}, which is no longer perfect for $n>2$, but the space is binary and the integral factorizes as product of lower-dim permutohedron integrals at finite $\alpha'$!. Note that an important feature of any generalized permutohedron is that its facets are labelled by all subsets $I$ in ${\mathbf B}$ except for the complete set $[0,n]$, and on each facet it factorizes as product of two generalized permutohedra. The total number of facets $N$ equals $|{\mathbf B}|-1=n+m$, thus the big polyhedron is indeed a simplex as expected. In sec. 3, we will present the formula for $u$ variables for any generalized permutohedron (which is equivalent to the formula for its ABHY-like realization), from which the binary and factorization properties follows. 
-%These fall broadly into two classes, the first of which corresponds to the permutahedron $P_n$ and more generally generalised permutahedra which do not have perfect $u$-equations but are still binary. The second class corresponds to various degenerations of the associahedra and cyclohedra which are binary geometries with perfect $u$-equations. In both these cases the configuration space can be realised as hyperplane arrangements and we discuss how this allows to understand why some degenerations give us binary geometries with perfect $u$-equations while others do not.
+
+Moreover, a remarkable statement we will make in sec. 3 is that, the configuration space for any ${\cal I}_{\mathbf B}$ is always binary, which means that any $u_\alpha \to 0$ forces all the incompatible ones $u_\beta\to 1$. As we will see explicitly with ${\mathscr P}_n$, its $u$ equations indeed take the form of \eqref{genueq}, which is no longer perfect for $n>2$, but the space is binary and the integral factorizes as a product of lower-dim permutohedron integrals at finite $\alpha'$! Note that an important feature of any generalized permutohedron is that its facets are labelled by all subsets $I$ in ${\mathbf B}$ except for the complete set $[0,n]$, and on each facet it factorizes as a product of two generalized permutohedra. The total number of facets $N$ equals $|{\mathbf B}|-1=n+m$, thus the big polyhedron is indeed a simplex as expected. In sec. 3, we will present the formula for $u$ variables for any generalized permutohedron (which is equivalent to the formula for its ABHY-like realization), from which the binary and factorization properties follow.
+%These fall broadly into two classes, the first of which corresponds to the permutohedron $P_n$ and more generally generalized permutohedra which do not have perfect $u$ equations but are still binary. The second class corresponds to various degenerations of the associahedra and cyclohedra which are binary geometries with perfect $u$ equations. In both these cases the configuration space can be realised as hyperplane arrangements and we discuss how this allows to understand why some degenerations give us binary geometries with perfect $u$ equations while others do not.
 
 
 %\subsection{Invitation: stringy canonical forms and cluster configuration spaces}
 
-%{\bf review of stringy canonical forms, mention big polytopes and $u$ variables in general; then specify to cluster string integrals, then cluster configuration spaces with perfect $u$ equations, do $A_n$, $B_n$ examples; define "binary geometries"}
+%{\bf review of stringy canonical forms, mention big polytopes and $u$ variables in general; then specify to cluster string integrals, then cluster configuration spaces with perfect $u$ equations, do $A_n$, $B_n$ examples; define ''binary geometries''}
 
 %Stringy canonical forms (or stringy integral) are generalizations of tree level string integrals
 %\begin{equation}\label{stringint}
@@ -595,7 +598,7 @@ Moreover, a remarkable statement we will make in sec. 3 is that, the configurati
 %polynomial with non-negative coefficients in the integral.
 
 %Many remarkable aspects of string integral, \textit{e.g.} field-theory limit, 
-%factorization, scattering equations, $u$-variables ..., can be carried to
+%factorization, scattering equations, $u$ variables ..., can be carried to
 %stringy canonical forms. Almost all of these aspects are related to a hidden 
 %polytope $\mathcal P=\sum_I c_I N[p_I]$ of string canonical form 
 %eq.\eqref{stringycanonicalform}, where $N[p_I]$ is the Newton polytope of $p_I$ and 
@@ -638,7 +641,7 @@ Moreover, a remarkable statement we will make in sec. 3 is that, the configurati
 %\prod_{0\leq i<j \leq n}(z_i-z_j)^{s_{ij}}(1-z_i+z_j)^{t_{ij}},
 %\]
 %where the positive region is given by $0<z_i-z_j<1$ for $1\leq i<j \leq n+1$.
-%The $u$-variables of this configuration space are
+%The $u$ variables of this configuration space are
 %\[
 %    u_1=1+z_1-z_2,\quad \dots,\quad u_{n}=1+z_{n}-z_{n+1},\quad u_{n+1}=z_{n+1}-z_1
 %\]
@@ -650,7 +653,7 @@ Moreover, a remarkable statement we will make in sec. 3 is that, the configurati
 %\end{aligned}
 %\]
 %where $\tilde{z}_i=z_{i+n+1}=z_{i}+1$ and indices live in $\mathbb Z_{2n+2}$.
-%They satisfy the following $u$-equations 
+%They satisfy the following $u$ equations 
 %\begin{align*}	
 %1-u_{ij}&=\prod\limits_{j\prec k \prec i}u_k^2 u_{ki}u_{jk}\!\!\prod\limits_{j\prec k\prec l\prec i}u_{kl}^2\!\!\prod\limits_{\substack{j\prec k\prec i\\i\prec l\prec j}}u_{kl}u_{lk},\\
 %1-u_{i}&=\prod\limits_{j\neq i}u_j \prod_{i\prec j\prec k\prec i}u_{jk},
@@ -664,68 +667,47 @@ Moreover, a remarkable statement we will make in sec. 3 is that, the configurati
 %\]
 %where $f_i$ are polynomials such that $f_i(\dots,u_i=0,\dots)=1$.
 
-
-*******************
-
-\newpage
-
-\section{Configuration spaces with perfect $u$-equations from degenerating $A_n$ and $B_n$}
-In this section we shall consider some degenerations of $A_n$ and $B_n$ and show that these form an infinite class of examples of binary geometries with perfect $u$-equations. To do this we shall use the fact that both $A_n$ and $B_n$ are generalised permutahedra and can be realised as a Minkowski sum of coordinate simplices. 
-For future convenience, let's define $[i,j]=\{i,i+1,\dots,j\}$ for 
-$i,j\in \mathbb Z/(n+1)\mathbb Z$.
+\section{Configuration spaces with perfect $u$ equations from degenerating ${\mathscr A_n}$ and ${\mathscr B_n}$}
+In this section we shall consider some degenerations of ${\mathscr A_n}$ and ${\mathscr B_n}$ and show that there are an infinite class of examples of binary geometries with perfect $u$ equations. To do this we shall use the fact that both ${\mathscr A_n}$ and ${\mathscr B_n}$ can be realised as a Minkowski sum of coordinate simplices. %For future convenience, let's define $[i,j]=\{i,i+1,\dots,j\}$ for $i,j\in \mathbb Z/(n+1)\mathbb Z$.
 
 
-\subsection{$A_n$ and $B_n$ as generalized permutohedra} 
-
-{\bf linear factors, (standard) string integrals, ABHY and $u$ variables, talk about hyperplane arrangement}
-
-\subsubsection*{$n$-dimensional associahedron $\mathscr A_n$}
-
-The building set of $\mathscr A_n$ is $\mathbf B= \{[i,j]\,:\, 0\leq i\leq j\leq n\}$.
+\subsection{${\mathscr A_n}$ and ${\mathscr B_n}$ as generalized permutohedra} 
+\paragraph {Associahedron $\mathscr A_n$} The building set of $\mathscr A_n$ is $\mathbf B= \{[i,j]\,:\, 0\leq i\leq j\leq n\}$.
 The stringy canonical form of this building set $\mathcal I_{\mathbf B}(\{S\})$
 is related with the original string integral eq.\eqref{stringint} by 
 \[
-	z_{j}-z_i=x_{[i,j-1]},
+	z_j-z_i=x_{[i,j-1]},
 \]
 so Mandelstam variables are related to $S$ by $s_{ij}=S_{[i,j-1]}$.
 The facets of $\mathscr A_n$ are given by
 \[
 	F_{[i,j]}=\sum_{[k,l]\subset [i,j]}S_{[k,l]},
 \]
-and their solution is 
+and their solution is (a rewriting of ABHY conditions in our notation):
 \begin{equation}\label{Ansf}
 S_{[i,j]}=F_{[i,j]}+F_{[i+1,j-1]}-F_{[i,j-1]}-F_{[i+1,j]},
 \end{equation}
-where $F_{[k,l]}:=0$ when $k>l$ or $[k,l]=[0,n]$.
-The usual $X$-variable $X_{ij}=\sum_{i\leq k<l<j}s_{kl}$ in string integrals here is $F_{[i,j-2]}$. 
-Using this solution to rewrite 
-the integrand of the stringy canonical form $\mathcal I_{\mathbf B}(\{S\})$
+where $F_{[k,l]}:=0$ when $k>l$ or $[k,l]=[0,n]$ and the usual planar $X$ variables $X_{ij}%=\sum_{i\leq k<l<j}s_{kl}
+$ is $F_{[i,j-2]}$. Using this solution to rewrite the integrand of the stringy canonical form $\mathcal I_{\mathbf B}(\{S\})$
 \begin{align*}
 \prod_{0\leq i\leq j\leq n}x_{[i,j]}^{S_{[i,j]}}
 &=\prod_{0\leq i\leq j\leq n}x_{[i,j]}^{F_{[i,j]}}x_{[i,j]}^{F_{[i+1,j-1]}}\bigg /
-x_{[i,j]}^{F_{[i,j-1]}}x_{[i,j]}^{F_{[i+1,j]}}\\
-&=
-\prod_{0\leq i\leq j\leq n}x_{[i,j]}^{F_{[i,j]}}
-\prod_{1\leq i\leq j\leq n-1}x_{[i-1,j+1]}^{F_{[i,j]}}
-\prod_{0\leq i\leq j\leq n-1}x_{[i,j+1]}^{-F_{[i,j]}}
-\prod_{1\leq i\leq j\leq n}x_{[i-1,j]}^{-F_{[i,j]}},
+x_{[i,j]}^{F_{[i,j-1]}}x_{[i,j]}^{F_{[i+1,j]}}%\\
+%&=\prod_{0\leq i\leq j\leq n}x_{[i,j]}^{F_{[i,j]}} \prod_{1\leq i\leq j\leq n-1}x_{[i-1,j+1]}^{F_{[i,j]}} \prod_{0\leq i\leq j\leq n-1}x_{[i,j+1]}^{-F_{[i,j]}} \prod_{1\leq i\leq j\leq n}x_{[i-1,j]}^{-F_{[i,j]}},
 \end{align*}
-and we get that
-\[
-u_{i,j+2}:=u_{[i,j]}=\frac{x_{[i,j]}x_{[i-1,j+1]}}{x_{[i,j+1]}x_{[i-1,j]}} \quad \text{for $0\leq i\leq j\leq n$,}
-\]
-with $x_{[i,n+1]}:=1$ and $x_{[-1,j]}:=1$, whose $u$-equations are
-\[
-1-u_{ij}=\prod_{(k,l)\not\sim (i,j)}u_{kl}.
-\]
+and we get that the $u$ variables easily:
+\begin{equation}
+ u_{i,j+2}:=u_{[i,j]}=\frac{x_{[i,j]}x_{[i-1,j+1]}}{x_{[i,j+1]}x_{[i-1,j]}} \quad \text{for $0\leq i\leq j\leq n$,}   \label{uvarforAn}
+\end{equation}
+with $x_{[i,n+1]}:=1$ and $x_{[-1,j]}:=1$, and it is straightforward to see that they satisfy $u$ equations \eqref{Aueq}.
+%\[ 1-u_{ij}=\prod_{(k,l)\not\sim (i,j)}u_{kl}. \]
 
 The ABHY construction of $\mathscr A_n$ is given by 
 \[
 	S_{[i,j]}=-C_{[i,j]} \,\,\text{ for all $i<j$,}\quad
 	F_{[i,j]}\geq 0 \,\,\text{ for all $i\leq j$},
 \]
-where $C$s are positive numbers. We can use a mesh to represent these conditions.
-For example, the mesh of $\mathscr A_3$ is 
+where $C$'s are positive numbers. As first introduced in~\cite{Arkani-Hamed:2019vag}, it is convenient and illuminating to represent these conditions in a meash diagram of $1+1$-D lattice. For example, we can have the following mesh for ABHY realization of $\mathscr A_3$:  
 \begin{center}
 \begin{tikzpicture}
 	\draw[thick] (-2,-1) -- (1,2) -- (4,-1) -- (3,-2) node[below]{0} -- (0,1);
@@ -744,26 +726,22 @@ For example, the mesh of $\mathscr A_3$ is
 	\node at (1,2.2) {$[0,3]$};
 \end{tikzpicture}
 \end{center}
-Each diamond in the mesh whose top corner\footnote{
-It looks different with the usual mesh where label of $c$ follows the left corner
+where each diamond is labelled by $[i,j]$ of the top corner~\footnote{
+It looks different with the usual mesh of $\mathscr A_n$~\cite{Arkani-Hamed:2019vag} where label of $c$ follows the left corner
 in each diamond. This is because the mismatch of the correspondence of labels 
 $X_{ij}=F_{[i,j-2]}$ and $s_{ij}=S_{[i,j-1]}$.
-}
-is label by $[i,j]$ represents 
-\[
-	C_{[i,j]}=F_{[i,j-l]}+F_{[i+1,j]}-F_{[i,j]}-F_{[i+1,j-1]},
-\]
-and each big diamond (which is made of several diamonds) gives us an equation
+}, and it gives
+\begin{equation}\label{CinFA}
+	C_{[i,j]}=F_{[i,j-l]}+F_{[i+1,j]}-F_{[i,j]}-F_{[i+1,j-1]}\,.
+\end{equation}
+For each causal diamond, we have the Gauss law:
 \[
 	\sum_{i\leq a<j\atop{k<b\leq l}} c_{[a,b]} = 
 	F_{[i,k]}+F_{[j,l]}-F_{[i,l]}-F_{[j,k]}
 \]
 where $F_{[a,b]}:=0$ when $a>b$ or $[a,b]=[0,n]$
 
-\subsubsection*{$n$-dimensional cyclohedron $\mathscr B_n$}
-
-The building set of $\mathscr B_n$ is $\mathbf B=\{[i,i+k]\,:\,0\leq i, k\leq n\}$.
-The facets are given by 
+\paragraph{Cyclohedron $\mathscr B_n$} The building set of $\mathscr B_n$ is $\mathbf B=\{[i,i+k]\,:\,0\leq i, k\leq n\}$ where the labels are understood to be mod $n+1$. The facets are given by 
 \[
 F_{[i,j]}=\sum_{[k,l]\subset [i,j]}S_{[k,l]},
 \]
@@ -775,34 +753,31 @@ and
 \[
 	S_{[0,n]}=F_{[0,n]}-\sum_{i=0}^n F_{[i,i-2]} +\sum_{i=0}^n F_{[i,i-3]},
 \]
-where $F_{[i+1,i]}=F_{[0,n]}=0$. Therefore, the $u$-variables are
-\[
-u_i:=u_{[i,i-2]}=\frac{x_{[i,i-2]}}{x_{[0,n]}},\quad 
+where $F_{[i+1,i]}=F_{[0,n]}=0$. Therefore, the $u$ variables are
+\begin{equation}
+   u_i:=u_{[i,i-2]}=\frac{x_{[i,i-2]}}{x_{[0,n]}},\quad 
 u_{i,j+2}:=u_{[i,j]}=\frac{x_{[i,j]}x_{[i-1,j+1]}}{x_{[i,j+1]}x_{[i-1,j]}}
-\quad \text{for $i-j\neq 2$}.
-\]
-$u$-equations are
-\[
+\quad \text{for $i-j\neq 2$}.  \label{uvarforBn}
+\end{equation}
+It is straightforward to work out the $u$ equations, which can be put in a compact form~\cite{Arkani-Hamed:2019plo}
+\begin{equation}\label{Bueq}
 1-u_i=U_{[i+1,i-1]},\quad 
 1-u_{ij}=U_{[i+1,j],[j+1,i-1]}U_{[j+1,i-1],[i,j-1]}U^2_{[j+1,i-1]},
-\]
-where 
+\end{equation}
+where we introduce the notation 
 \[
 U_{A,B}=\prod_{a\in A,b\in B}u_{ab},\quad 
 U_A=\prod_{a\in A}u_a\prod_{a<b\in A}u_{ab}.
 \]
-Since the building set of $\mathscr A_n$ is contained in the building set of $\mathscr B_n$, $\mathscr A_n$ is a degeneration of $\mathscr B_n$.
 
-The ABHY construction of $\mathscr B_n$ is similar: $F_{[i,j]}\geq 0$ for all $[i,j]\in\mathbf B$,
-\[
-	F_{[i,j-1]}+F_{[i+1,j]}-F_{[i,j]}-F_{[i+1,j-1]}
-	=C_{[i,j]}\,\,\text{for $i\neq j$ and $[i,j]\neq [0,n]$}, \quad 
-\]
-and 
+Since the building set of $\mathscr A_n$ is contained in the building set of $\mathscr B_n$, $\mathscr A_n$ is a degeneration of $\mathscr B_n$, which was not obvious in the previous construction of $\mathscr B_n$.  
+
+The ABHY construction of $\mathscr B_n$ is similar: $F_{[i,j]}\geq 0$ for all $[i,j]\in\mathbf B$ and for $i\neq j$
 \begin{equation}\label{abhyB}
-	C_{[0,n]}=\sum_{i=0}^n F_{[i,i-2]}-\sum_{i=0}^n F_{[i,i-3]},
+F_{[i,j-1]}+F_{[i+1,j]}-F_{[i,j]}-F_{[i+1,j-1]}
+	=C_{[i,j]}\,\,\text{for $[i,j]\neq [0,n]$}, \quad C_{[0,n]}=\sum_{i=0}^n F_{[i,i-2]}-\sum_{i=0}^n F_{[i,i-3]},
 \end{equation}
-where $F_{[i+1,i]}=0$ and $C$s are all positive constants. 
+where $F_{[i+1,i]}=0$ and the $C$'s are all positive constants. 
 %We can also use a mesh to represent this conditions. For example, the mesh for $\mathscr B_3$ is 
 %\begin{center}
 %\begin{tikzpicture}
@@ -879,7 +854,7 @@ where $F_{[i+1,i]}=0$ and $C$s are all positive constants.
 %where $F_{[i+1,i]}:=0$ and $[i,l],[j,k]\neq [0,n]$.
 
 Like $A_n$, $B_n$ type cluster stringy canonical form also comes from a hyperplane 
-arrangement, the Shi arrangement. The Shi arrangement contains $n+1$ punctures 
+arrangement, the Shi arrangement~\cite{shi1986kazhdan}. The Shi arrangement contains $n+1$ punctures 
 $\{z_i\}_{i=1,\dots,n+1}$ on the real line with the freedom of global transformation 
 $z_i\to z_i+a$ which can be used to fix $z_{n+1}=0$. The Shi arrangement is 
 given by the following hyperplanes
@@ -887,24 +862,21 @@ given by the following hyperplanes
 	z_i-z_j=0\quad \text{and}\quad z_i-z_j=1\quad \text{for $1\leq i<j\leq n+1$},
 \]
 and its stringy integral is 
-\[
+\begin{equation}
 \mathcal I_n = \int_{1>z_1>z_2>\cdots >z_n>0}
 \frac{\mathrm dz_1\cdots \mathrm dz_{n}}{(1-z_1)(z_1-z_2)\cdots (z_{n}-0)}
 \prod_{0\leq i<j \leq n}(z_i-z_j)^{s_{ij}}(1-z_i+z_j)^{t_{ij}},
-\]
+\end{equation}
 where the positive region is given by $0<z_i-z_j<1$ for $1\leq i<j \leq n+1$.
-The $u$-variables of this configuration space are
-\[
-    u_1=\tilde z_1-z_2,\quad \dots,\quad u_{n}=\tilde z_{n}-z_{n+1},
-    \quad u_{n+1}=z_{n+1}-z_1
-\]
-and 
+We can also write the $u$ variables in terms of the $z$'s:
 \begin{align*}
-    u_{ji}&=\frac{(z_{j+1}-z_{i})(z_{i+1}-z_j)}{(z_{j+1}-z_{i+1})(z_i-z_j)}\quad \text{for $i<j$},\\
-    u_{ij}&=\frac{(\tilde z_{j+1}-z_{i})(\tilde z_{i+1}-z_j)}{(\tilde z_{j+1}-z_{i+1})(\tilde z_i-z_j)}\quad \text{for $i<j$},
+    &u_1=\tilde z_1-z_2,\quad \dots,\quad u_{n}=\tilde z_{n}-z_{n+1},
+    \quad u_{n+1}=z_{n+1}-z_1,\\
+    &u_{ji}=\frac{(z_{j+1}-z_{i})(z_{i+1}-z_j)}{(z_{j+1}-z_{i+1})(z_i-z_j)}\quad \text{for $i<j$},\\
+    &u_{ij}=\frac{(\tilde z_{j+1}-z_{i})(\tilde z_{i+1}-z_j)}{(\tilde z_{j+1}-z_{i+1})(\tilde z_i-z_j)}\quad \text{for $i<j$},
 \end{align*}
 where $\tilde{z}_i=z_{i+n+1}=z_{i}+1$ and indices live in $\mathbb Z_{2n+2}$.
-%They satisfy the following $u$-equations 
+%They satisfy the following $u$ equations 
 %\begin{align*}	
 %1-u_{ij}&=\prod\limits_{j\prec k \prec i}u_k^2 u_{ki}u_{jk}\!\!\prod\limits_{j\prec k\prec l\prec i}u_{kl}^2\!\!\prod\limits_{\substack{j\prec k\prec i\\i\prec l\prec j}}u_{kl}u_{lk},\\
 %1-u_{i}&=\prod\limits_{j\neq i}u_j \prod_{i\prec j\prec k\prec i}u_{jk},
@@ -912,35 +884,33 @@ where $\tilde{z}_i=z_{i+n+1}=z_{i}+1$ and indices live in $\mathbb Z_{2n+2}$.
 %where labels are vertices of a $n$-gon and $\prec$ is the counterclockwise order on
 %the $n$-gon.
 
-\subsection{Degenerations of $A_n$ and $B_n$ with perfect $u$ equations} 
+\subsection{Degenerations of $\mathscr A_n$ with perfect $u$ equations} 
 
-{\bf things I wrote in my handwritten notes...}
-
-The degenerations of $A_n$ is given by setting some $C$s in ABHY construction or deleting the corresponding elements in the building set. Note that the building set after deletion doesn't need to be a new building set, \emph{i.e.} a degeneration of $A_n$ may not be a generalized permutohedron. However, we can still ask the following question: are these degenerations binary geometries? 
-Of course, we should require at least that the number of facets of the degeneration of $A_n$ should be equal to the size of the corresponding deleted building set minus one, \emph{i.e.} its big polytope is a simplex.
-Before answer this question, let's first find all degenerations of $A_n$ with this property.
+The degenerations of $\mathscr A_n$ are given by setting some $C$'s in ABHY construction to zero or deleting the corresponding elements in the building set. Note that the building set after deletion doesn't need to be a new building set, \emph{i.e.} a degeneration of $\mathscr A_n$ may not be a generalized permutohedron. However, we can still ask the following question: are these degenerations binary geometries? 
+Of course, we should require at least that the number of facets of the degeneration of $\mathscr A_n$ should be equal to the size of the corresponding deleted building set minus one, \emph{i.e.} its big polyhedron is a simplex.
+Before answer this question, let's first try to find all degenerations of $\mathscr A_n$ with this property.
 
 %For convenience, we abuse the name `building set' for degenerations of $A_n$ in this subsection.
 
-From the following equations for facets $\{F_{[i,j]}\}$ of $A_n$
+From the following equations for facets $\{F_{[i,j]}\}$ of $\mathscr A_n$
 \[
 	F_{[i,k]}+F_{[j,l]}-F_{[i,l]}-F_{[j,k]}=
 	\sum_{i\leq a<j\atop{k<b\leq l}} C_{[a,b]} 
 \]
 where $F_{[a,b]}:=0$ when $a>b$ or $[a,b]=[0,n]$,
-an economical way to get a degeneration which satisfies the above property is setting all $C$s on the RHS of 
-\begin{align*}
+an standard way to get a degeneration whose big polyhedron is a simplex is setting all $C$'s on the RHS of 
+\begin{align}
 &F_{[i,j-1]}+F_{[j,l]}-F_{[i,l]}= \sum_{i\leq a<j\leq b\leq l} C_{[a,b]} 
-\quad \text{for $i<j=k+1\leq l$ }\\[-1.5ex]
-\text{or}&\\
+\quad \text{for $i<j=k+1\leq l$ }\\\nonumber
+%\text{or}&\\
 &F_{[0,k]}+F_{[j,n]}-F_{[j,k]}= \sum_{0\leq a<j\atop{k<b\leq n}} C_{[a,b]} 
 \quad \text{for $0<j\leq n$ and $0\leq k<n$}
-\end{align*}
-to be zero, and all wanted degenerations can be got by setting $C$s in several above equations. 
+\end{align}
+to be zero, and all wanted degenerations can be got by setting $C$'s to zero in several equations above. 
 
-From the viewpoint of mesh, an equation above corresponds to a big diamond whose top or bottom corner and all $C$s are zero. For example,
+From the viewpoint of the mesh picture, an equation above corresponds to a big diamond whose top or bottom corner and all $C$'s are zero. For example,
 \begin{center}
-\begin{tikzpicture}[baseline={([yshift=-.5ex]current bounding box.center)}]
+\begin{tikzpicture}[scale=0.75,baseline={([yshift=-.5ex]current bounding box.center)}]
 \draw (-2,0) node[left] {$A$} -- (1,-3) node[below] {$0$}
 	-- (3,-1) node[right] {$C$} -- (0,2) node[above] {$B$}-- cycle;
 \draw (-1,-1) -- (1,1);
@@ -954,7 +924,7 @@ From the viewpoint of mesh, an equation above corresponds to a big diamond whose
 \node[circle,draw=black, fill=black, inner sep=0pt,minimum size=5pt] at (2,0) {};
 \end{tikzpicture}
 \qquad \text{or}\qquad
-\begin{tikzpicture}[baseline={([yshift=-.5ex]current bounding box.center)}]
+\begin{tikzpicture}[scale=0.75,baseline={([yshift=-.5ex]current bounding box.center)}]
 \draw (-2,0) node[left] {$A$} -- (1,-3) node[below] {$B$}
 -- (3,-1) node[right] {$C$} -- (0,2) node[above] {$0$}-- cycle;
 \draw (-1,-1) -- (1,1);
@@ -973,9 +943,9 @@ we can see that
 A+C-B=0.
 \]
 Since $A,B,C\geq 0$, the above equation forces $A$ and $C$ to vanish when $B=0$. Therefore, $B$ is no longer a facet of the degeneration. Similarly, black points are all vanishing facets in the above example, and generally
-the number of vanishing facets equals the number of deleted $C$s for degenerations of this type.
+the number of vanishing facets equals the number of deleted $C$'s for degenerations of this type.
 
-One can use these diamonds to build a degeneration with more vanishing facets whose big polytope is a simplex. For example, in $A_3$
+One can use these diamonds to build a degeneration with more vanishing facets whose big polyhedron is a simplex. For example, in $\mathscr A_3$
 \begin{center}
 \begin{tikzpicture}
 \fill[green!30] (2,1) -- (0,-1) -- (1,-2) -- (3,0);
@@ -999,21 +969,20 @@ One can use these diamonds to build a degeneration with more vanishing facets wh
 \node at (1,2.2) {$[0,3]$};
 \end{tikzpicture}
 \end{center}
-after setting $C$s in green and purple diamonds to be zero, three facets (black points) vanish and building set after deletion is 
+after setting $C$'s in green and purple diamonds to be zero, three facets (black points) vanish and building set after deletion is 
 \[
 	\{[0,3],[0,2],[0,1],[0,0],[1,1],[2,2],[3,3]\}.
 \]
-One can further check that it's a cube (or $A_1^3$).
+One can further check that it's a cube (or $\mathscr A_1^3$).
 
-We can play the game for any degenerations of $A_n$, count black points and deleted $C$s in each degeneration, and find that for $A_2$, $A_3$ and $A_4$, there're respectively $4$, $41$ and $580$ possible degenerations whose big polytopes are simplices. For these degenerations, we can easily find their $u$-variables if their sets of all vanishing facets are known.
+We can play the game for any degenerations of $\mathscr A_n$, count black points and deleted $C$'s in each degeneration, and find that for $\mathscr A_2$, $\mathscr A_3$ and $\mathscr A_4$, there're respectively $4$, $41$ and $580$ possible degenerations whose big polyhedra are simplices. For these degenerations, we can easily find their $u$ variables if the set of all vanishing facets are known.
 
 Suppose $\mathscr D$ is the set of all vanishing facets of a degeneration in the building set, 
 we can read from the mesh that
 \[
 F_{I'}=\sum_{I\not\in \mathscr D}M_{I'}^IF_I
 \]
-for any $I'\in \mathscr D$, where $M$ is a matrix with non-negative entries. 
-Therefore,
+for any $I'\in \mathscr D$, where $M$ is a matrix with non-negative entries. Therefore,
 \[
 \prod_{I\in \mathscr A_n}u_{I}^{F_{I}}=
 \prod_{I'\in \mathscr D}u_{I'}^{F_{I'}}
@@ -1023,38 +992,35 @@ Therefore,
 u_I\prod_{I'\in \mathscr D}u_{I'}^{M_{I'}^I}
 \bigg)^{F_I},
 \]
-so the new $u$-variables of the degeneration are
-\[
+so the new $u$ variables of the degeneration are
+\begin{equation}
     \tilde u_{I}=u_I\prod_{I'\in \mathscr D}u_{I'}^{M_{I'}^I}
-\]
-for any $I\not\in \mathscr D$. 
-
-The simplest degenerations of $A_n$ are those with one $c_{[i,i+1]}$ vanishing. For the one with $c_{[i,i+1]}=0$, we get 
+\end{equation}
+for any $I\not\in \mathscr D$.  The simplest degenerations of $\mathscr A_n$ are those with one $C_{[i,i+1]}$ vanishing, where we get 
 \[
 	F_{[i,i+1]}=F_{i}+F_{i+1},
 \]
-where $F_i=F_{[i,i]}$, so 
+with $F_i=F_{[i,i]}$, and we find the $u$ variables become
 \[
 	\tilde u_{i}=u_{i} u_{[i,i+1]},\quad 
 	\tilde u_{i+1}=u_{i+1} u_{[i,i+1]},\quad 
 	\tilde u_I=u_I \text{ for the other $I\neq [i,i+1]$}.
 \]
-They satisfy the following $u$-equation
-\[
+They satisfy the following $u$ equation
+\begin{equation}
 	1-\tilde u_{i}=\prod_{0\leq a\leq i-1}\tilde u_{[a,i-1]}
 	\prod_{i+1< b\leq n} \tilde u_{[i+1,b]},\quad 
 	1-\tilde u_{i+1}=\prod_{0\leq a <i-1} \tilde u_{[a,i]}
 	\prod_{i+2\leq b\leq n} \tilde u_{[i+2,b]},\quad 
-\]
-and the other $u$-equations are original $u$-equations for
-$\{u_{[i,j]}\,:\, [i,j]\neq [i,i],[i,i+1],[i+1,i+1]\}$ in terms of new variables. Similarly, one can easily find the $u$-variables and $u$-equations for the degenerations with $c_{[i,i+1]}=0$ for several $i$.
+\end{equation}
+and the other $u$ equations are original $u$ equations for $\{u_{[i,j]}\,:\, [i,j]\neq [i,i],[i,i+1],[i+1,i+1]\}$ in terms of new variables. Similarly, one can easily find the $u$ variables and $u$ equations for the degenerations with $C_{[i,i+1]}=0$ for several $i$.
 
 %The next simplest degenerations of $A_n$ is setting $c_{[i-1,i]}=c_{[i,i+1]}=c_{[i-1,i+1]}=0$ for $1\leq i\leq n-1$, we have seen an example in $A_3$ above. The vanishing facets of this degeneration are
 %\[
 	%F_{[i-1,i+1]}=F_{i-1}+F_i+F_{i+1},\quad F_{[i-1,i]}=F_{i-1}+F_i,
 	%\quad F_{[i,i+1]}=F_i+F_{i+1},
 %\]
-%so $u$-variables of this degeneration are 
+%so $u$ variables of this degeneration are 
 %\[
 	%\tilde u_{i-1}=u_{i-1}u_{[i-1,i+1]}u_{[i-1,i]}, \quad 
 	%\tilde u_{i}=u_iu_{[i-1,i+1]}u_{[i,i+1]},\quad
@@ -1076,18 +1042,18 @@ mesh,
 \node at (3.1,0.2) {$[i,n]$};
 \end{tikzpicture}
 \end{center}
-where $C$s in green region vanish, \emph{i.e.} $c_{[a,b]}=0$ for $0\leq a<i<b\leq n$.
+where $C$'s in green region vanish, \emph{i.e.} $C_{[a,b]}=0$ for $0\leq a<i<b\leq n$.
 Vanishing facets of this degeneration are
 \[
 F_{[a,b]}=F_{[a,n]}+F_{[0,b]}\quad \text{for $0<a\leq i\leq b<n$},
 \]
-so new $u$-variables are
-\[
+so new $u$ variables are
+\begin{equation}
 	\tilde u_{[0,b]} = u_{[0,b]}\prod_{a=1}^{i} u_{[a,b]},\quad 
 	\tilde u_{[a,n]} = u_{[a,n]}\prod_{b=i}^{n-1} u_{[a,b]},
-\]
-and $\tilde u_{I}=u_{I}$ for the other $I$. The $u$-equations are the union of 
-$u$-equations of the following two independent meshes
+\end{equation}
+and $\tilde u_{I}=u_{I}$ for the other $I$. The $u$ equations are the union of 
+$u$ equations of the following two independent meshes
 \begin{center}\footnotesize
 \begin{tikzpicture}[scale=1.5,baseline={([yshift=-.5ex]current bounding box.center)}]
 \draw (0.5,-2.5) -- (3,0) -- (5.5,-2.5);
@@ -1136,7 +1102,7 @@ $u$-equations of the following two independent meshes
 \end{tikzpicture}
 \end{center}
 One could use this construction of products to produce any finite product $\mathscr A_{i_1}\times \cdots \times \mathscr A_{i_k}$.
-The direct proof of this argument for $\mathscr A_n$ is using global $u$-equations \cite{} of $\mathscr A_n$. 
+The direct proof of this argument for $\mathscr A_n$ is using extended $u$ equations \cite{Brown:2009qja,Arkani-Hamed:2019plo} of $\mathscr A_n$. 
 
 We can generalize the simplest cases in another way:
 \begin{center}
@@ -1161,11 +1127,11 @@ for $i\leq k < l \leq n$. Therefore,
 \tilde u_{[k,k]}=\prod_{i\leq p\leq k\leq q \leq n}u_{[p,q]}=\frac{x_k}{x_{[i-1,k]}}\quad 
 \text{for $k\in [i,n]$},\quad \tilde u_I=u_I\quad \text{for the other $I$},
 \]
-and their $u$-equations are
-\[
+and their $u$ equations are
+\begin{equation}
 1-\tilde u_{[k,k]}=\prod_{j=0}^{i-1}\tilde u_{[j,k-1]},
-\]
-and the other $u$-equations are old $u$-equations in terms of new variables.
+\end{equation}
+and the other $u$ equations are old $u$ equations in terms of new variables.
 When $i=1$, the degeneration is $\mathscr A_1^n$.
 
 Similarly, we can also consider the following degenerations:
@@ -1192,17 +1158,22 @@ then
 \tilde u_{[0,l]}=\prod_{j=0}^{l-i+1}  u_{[j,l]},\quad 
 \tilde u_{[k,n]}=\prod_{j=k+i-1}^{n}  u_{[k,j]}.
 \]
-Their $u$-equations are 
-\[
+Their $u$ equations are 
+\begin{equation}
 1-\tilde u_{[0,l]}=\prod_{a=l-i+2}^{l+1}\tilde u_{[a,n]}\cdot\prod_{a=l-i+2}^{l+1}\prod_{b=l+1}^{a+i-2} \tilde u_{[a,b]},\quad
 1-\tilde u_{[k,n]}=\prod_{b=k-1}^{k+i-2}\tilde u_{[0,b]}\cdot \prod_{b=k-1}^{k+i-2}\prod_{a=\max(b-i+2,1)}^{k-1} \tilde u_{[a,b]}.
-\]
-When $i=1$, we will get $\mathscr A_1^n$ again.
+\end{equation}
+When $i=1$, we get $\mathscr A_1^n$ again.
 
-The story of degenerations of $B_n$ is very similar. 
-% The first thing to do is to find degenerations whose big polytopes are simplices. 
-With the help of the mesh of $\mathscr B_n$, we could get many classes of degenerations with perfect $u$-equations. 
-For example, setting $c_{[i,i+1]}=0$, then
+
+\subsection{Degenerations of $\mathscr B_n$ and products}
+\subsubsection{Degenerations of $\mathscr B_n$}
+
+The general treatment of degenerations of $\mathscr B_n$ is more difficult than $\mathscr A_n$ because it has a long ABHY condition eq.\eqref{abhyB}. Here we only show some examples of degenerations of $\mathscr B_n$ with perfect $u$ equations.
+
+The first degeneration of $\mathscr B_n$ with perfect $u$ equations is $\mathscr A_n$ because the building set of $\mathscr A_n$ is contained in the building set of $\mathscr B_n$.
+
+The simplest degenerations of $\mathscr B_n$ are those with $C_{[i,i+1]}=0$. For which we get,
 \[
 	F_{[i,i+1]}=F_{i}+F_{i+1},
 \]
@@ -1212,19 +1183,81 @@ where $F_i=F_{[i,i]}$, so
 	\tilde u_{i+1}=u_{i+1} u_{[i,i+1]},\quad 
 	\tilde u_I=u_I \text{ for the other $I\neq [i,i+1]$}.
 \]
-The $u$-equations of this degeneration are
+The $u$ equations of this degeneration are
 \[
-	1-\tilde u_i=\tilde u_{[i+1,i-1]}
-	\prod_{a=i+2}^{i-1}\tilde u_{[a,i-1]}\tilde u_{[i+1,a]},\quad
+	1-\tilde u_i=\tilde u_{[i+1,i-1]}^2\tilde u_{[i-1,i-1]}
+	\prod_{a=i+2}^{i-2}\tilde u_{[a,i-1]}\tilde u_{[i+1,a]},\quad
 	1-\tilde u_{i+1}=
-	\tilde u_{[i+2,i]}\prod_{a=i+2}^{i-1}\tilde u_{[a,i]}\tilde u_{[i+2,a]},
+	\tilde u_{[i+2,i]}^2\tilde u_{[i+2,i+2]}\prod_{a=i+3}^{i-1}\tilde u_{[a,i]}\tilde u_{[i+2,a]},
 \]
-and the other $u$-equations are old $u$-equations in terms of new $u$-variables.
+and the other $u$ equations are old $u$ equations in terms of new $u$ variables.
 
-A more interesting degeneration is the product $\mathscr B_i\times \mathscr A_{n-i}$.
-In particular,$\mathscr A_n$ is also a degeneration of $\mathscr B_n$.
+The above degeneration corresponds to deleting an element in $\mathscr B_n$, and the following degeneration corresponds to adding an element to $\mathscr A_n$. 
 
-(Zhenjie: the only known example for me $\mathscr B_3\to \mathscr B_{2}\times \mathscr A_1$: $c_{[i-1,i]}=c_{[i-1,i+1]}=c_{[i,i+2]}=c_{[i+1,i+2]}=0$)
+Consider the building set obtained by adding the set $K_i=[0,i]\cup [i+2,n]$ to $\mathscr A_n$. It is also a degeneration of $\mathscr B_n$ by setting the other $C$'s to be zero. It's easy to solve equations of the facets and get that 
+\[
+C_{K_i}=F_{[0,i]}+F_{[i+2,n]}-F_{K_i},\quad 
+C_{[0,n]}=F_{K_i}+F_{[0,n-1]}+F_{[1,n-1]}-F_{[1,n-1]}-F_{[0,i]}-F_{[i+2,n]},
+\]
+the other $C_I$ are given by eq.\eqref{CinFA}. Therefore, new $u$ variables are
+\[
+\tilde u_{K_i}=\frac{x_{K_i}}{x_{[0,n]}},\quad 
+\tilde u_{[0,i]}=\frac{x_{[0,n]}}{x_{K_i}}u_{[0,i]},\quad 
+\tilde u_{[i+2,n]}=\frac{x_{[0,n]}}{x_{K_i}}u_{[i+2,n]},
+\]
+and the other $\tilde u_I$ is equal to $u_I$. The $u$ equations are
+\[
+1-\tilde u_{K_i}=\prod_{I\ni i+1}\tilde u_I,\quad
+1-\tilde u_{[0,i]}=\prod_{J}\tilde u_J^{J||[0,i]}\prod_{K\supset [i+2,n]}\tilde u_K,\quad 
+1-\tilde u_{[i+2,n]}=\prod_{J}\tilde u_J^{J||[i+2,n]}\prod_{K\supset [0,i]}\tilde u_K, 
+\]
+where $I||J$ are compatability degree of $I$ and $J$ in $\mathscr A_n$,
+and the other $u$ equations are corresponding $u$ equations for $\mathscr A_n$ in new variables. 
+
+For example, adding $K_0$ to $\mathscr A_2$ we get $\mathscr B_2$, and  adding $K_0$ to $\mathscr A_3$ gives the following $u$ equations
+\begin{align*}
+1-\tilde u_{3}&=\tilde u_{2} \tilde u_{12} \tilde u_{012}&
+1-\tilde u_{01}&=\tilde u_{2} \tilde u_{12} \tilde u_{23} \tilde u_{023} \tilde u_{123}\\
+1-\tilde u_{1}&=\tilde u_{0} \tilde u_{2} \tilde u_{23} \tilde u_{023}^2&
+1-\tilde u_{2}&=\tilde u_{1} \tilde u_{3} \tilde u_{01}\\
+1-\tilde u_{012}&=\tilde u_{3} \tilde u_{23} \tilde u_{023} \tilde u_{123}&
+1-\tilde u_{023}&=\tilde u_{1} \tilde u_{01} \tilde u_{12} \tilde u_{012} \tilde u_{123}\\
+1-\tilde u_{123}&=\tilde u_{0} \tilde u_{01} \tilde u_{012} \tilde u_{023}&
+1-\tilde u_{0}&=\tilde u_{1} \tilde u_{12} \tilde u_{23} \tilde u_{123}^2\\
+1-\tilde u_{12}&=\tilde u_{0} \tilde u_{3} \tilde u_{01} \tilde u_{23} \tilde u_{023}^2&
+1-\tilde u_{23}&=\tilde u_{0} \tilde u_{1} \tilde u_{01}^2 \tilde u_{12} \tilde u_{012}^2.
+\end{align*}
+
+More generally we can consider adding a triangle namely $\cup_{l=0}^{k-1}\cup_{m=l}^{k-1} K_{i,l,m}$ with $K_{i,l,m}=\{[0,i+l]\cup [i+2+m,n] \}$ and $k=1,\dots,(n-1)$ to the building set of $\mathscr{A}_n$.
+For $k=1$ we get the previous example and for $k=n-1$ we get ${\mathscr B_n}$.
+
+Without loss of generality we shall consider only the $i=0$ case and we shall denote $K_{0,l,m}$ by just $K_{l,m}$.
+The $u$ variables are
+\bea
+\tilde u_{K_{l,m}}=\begin{cases} \frac{x_{K_{l,m}}}{x_{[0,n]}},~~~~~~ {\rm if} ~m=l \\
+\frac{x_{K_{l,m}} x_{K_{l+1,m-1}}}{x_{K_{l+1,m}}x_{K_{l,m-1}}}
+,~ m\neq l \end{cases}\quad 
+\tilde u_{[0,l]}=\frac{u_{[0,l]}}{\prod_{j=0}^{k-l-1} \tilde u_{K_{l,l+j}}},\quad 
+\tilde u_{[m+2,n]}=\frac{u_{[m+2,n]}}{\prod_{j=0}^{m}\tilde u_{K_{j,m}}},
+\eea
+with the  understanding that $K_{1,0}=K_{2,0}=[0,n]$ and the other $\tilde u_I$ is equal to $u_I$. 
+
+The $u$ equations are:
+\begin{align*}
+1-\tilde u_{[0,l]}&=\left(\prod_{i=0}^{l-1} \prod_{j=i+1}^{k+1}  \tilde u_{[0,i]\cup [j,n]} \prod_{j=i+1}^{l+1} \tilde u_{[0,i]\cup [j,n]}\right) \left(\prod_{i=1}^{l+1} \prod_{j=l+1}^{n}\tilde u_{[i,j]} \right) \left(\prod_{i=1}^{k+1} \tilde u_{[i,n]} \right),\\\\
+1-\tilde u_{[m+2,n]}&=\left( \prod_{j=0}^{m}\tilde u_{[0,j]} \prod_{i=1}^{n-m-1}\tilde u_{[0,m+i]}^2 \right) \left( \prod_{i=m+1}^{n-1}\prod_{j=1}^{m+1}\tilde u_{[j,i]} \right) \left(\prod_{j=0}^{k-m-2} \prod_{i=1}^{m} \tilde u_{[0,i]\cup [3+j+m, n]} \prod_{i= m+1}^{j+m+1} \tilde u_{[0,i]\cup [3+j+m,n]}^2 \right) \\\\
+1-\tilde u_{K_{l,m}}&=\left(\prod_{a=0}^1\prod_{i=l+1}^{n}\tilde u_{[a,i]}\right) \left(\prod_{{\tiny {K_{l',m'} \not\subset K_{l,m}}\atop{K_{l,m} \not\subset K_{l',m'}} }} \tilde u_{K_{l',m'}}^{(l',m')||(l,m)}\right)\left(\prod_{j=2}^{m+1} \prod_{i=l+1}^{n} \tilde u_{[j,i]} \right)\times 
+\begin{cases}
+ 1, ~{\rm if} ~ l=m  \\
+ \prod_{i=0}^{l+1} \prod_{j=m+1}^n \tilde u_{[i,j]},~ {\rm if}~l \neq m
+\end{cases}
+\end{align*}
+where $(l',m')||(l,m)$ is the compatability degree of $K_{l,m}$ with respect to $K_{l',m'}$ in $\mathscr B_n$ with the understanding that $\tilde u_{[0,n]}=1$ and the other $u$ equations are corresponding $u$ equations for $\mathscr A_n$ in new variables.
+
+%A more interesting degeneration is the product $\mathscr B_i\times \mathscr A_{n-i}$.
+%In particular,$\mathscr A_n$ is also a degeneration of $\mathscr B_n$.
+
+%(Zhenjie: the only known example for me $\mathscr B_3\to \mathscr B_{2}\times \mathscr A_1$: $c_{[i-1,i]}=c_{[i-1,i+1]}=c_{[i,i+2]}=c_{[i+1,i+2]}=0$)
 
 %\begin{center}
 %\begin{tikzpicture}
@@ -1252,51 +1285,104 @@ In particular,$\mathscr A_n$ is also a degeneration of $\mathscr B_n$.
 	%\node at (6,1.2) {$[3,1]$};
 %\end{tikzpicture}
 %\end{center}
-\newpage
-\section{Stringy canonical forms and $u$-equations for generalized permutahedra}
-In this section we shall argue that  a large subset of generalised permutahedra which are realised as degenerations of permutahderon ${\mathscr P_n}$ are binary geometries. Before we proceed we shall review some details about the generalised permutahedra which we shall use throughout the paper.
-\subsection{Generalized permutohedra} 
-A generalised permutahedron is a polytope that obtained as Minkowski sums and diffrences of co-ordinate simplices. 
+\subsubsection{Products of ${\mathscr A}$ and $\mathscr{B}$}
+We can also construct binary geometries which are of the type $\prod_{i=1}^n X_i$ where $X_i={\mathscr A_i}~{\rm or}~{\mathscr B_i}$ which are not necessarily degenerations of ${\mathscr A}~{\rm or}~{\mathscr B}$. Without loss of generality we consider only the case ${\mathscr A_n}\times {\mathscr B_m}$. We can do this in a couple of simple ways as follows:
 
-Let $\Delta_{[0,n]} = {\rm ConvexHull}(e_1,\cdots,e_n)$ be the standard coordinate simplex in $\mathbb{R}^{n+1}$. Then we have:
+(1) We consider the building set $\mathbf{B}_{1}\cup \mathbf{B}_{2}$ with $\mathbf B_1= \{[i,j]\,:\, 0\leq i\leq j\leq n\}$ and $\mathbf B_2= \{[i,i+k]\,:\, n\leq i, k \leq m+n\}$. Notice that these are just the building sets of ${\mathscr A_n}$ and ${\mathscr B_m}$ respectively.
+
+If $\mathbf{B}_{1}$ and $\mathbf{B}_{2}$ were disjoint then its obvious that the stringy integral ${\cal I}_{\mathbf B}$ in \eqref{stringycanonicalform} directly factorizes into ${\cal I}_{\mathbf B_1}\times {\cal I}_{\mathbf B_2}$, however the singlet $\{n\}$ belongs to both $B_1$ and $B_2$. But by rescaling the variables in $B_2$ by $x_i \rightarrow x_n x_i$ for all $i=n+1,\dots,n+m $ it is straightforward to see that the ${\cal I}_{\mathbf B}$ does indeed factorize into ${\cal I}_{\mathbf B_1}\times {\cal I}_{\mathbf B_2}$ with $x_n$ playing the role of $x_0=1$ in $B_2$.
+
+Notice that the above proof did not use the fact that ${\mathbf B_1}, {\mathbf B_2}$ were building sets of ${\mathscr A},~{\mathscr B}$ and can easily be carried forward to obtain any product of generalized permutohedra. The interested reader may refer appendix (\ref{appendix:A}) for details.
+
+
+(2) Consider the building set  $\mathbf{B}_{1}\cup \mathbf{B}_{2}$ with $\mathbf{B}_{1}=\{[i,i{+}k]\,:\,0\leq i, k\leq m\}$ and $\mathbf{B}_{2}=\{[i,j]: m<i<j\leq n+m \}\cup \{[0,i]:  m\leq i\leq n+m\}$. $\mathbf{B}_{1}$ is obviously the building set for $\mathscr{B}_{m}$, while $\mathbf{B}_{2}$ can be viewed as the building set for $\mathscr{A}_{n}$ by identifying $[0,n]$ as a \emph{singleton} in $\mathbf{B}_{2}$. Due to this identification, one can easily write down the $u$ variables separately for $\mathbf{B}_{1}$ and $\mathbf{B}_{2}$, and check that these $u$ variables satisfy the $u$ equations for $\mathscr{A}_{n}\times \mathscr{B}_{m}$.
+
+\section{Stringy canonical forms and binary geometries for generalized permutohedra}
+In this section we shall argue that a large class of generalized permutohedra which are realised as degenerations of permutohedron ${\mathscr P_n}$ are binary geometries. Before we proceed we shall review some details about the generalized permutohedra \cite{Postnikov:2005,Postnikov:2006} which we shall use throughout the paper.
+\subsection{Generalized permutohedra}\label{GP}
+A generalized permutohedron is a polytope that can obtained be as Minkowski sums and differences of co-ordinate simplices. 
+
+Let $\Delta_{[0,n]} = \operatorname{ConvexHull}(e_1,\dots,e_n)$ be the standard coordinate simplex in $\mathbb{R}^{n+1}$. Then we have:
 \bea
-{\mathscr P_n}^y(\{y_I \})= \sum y_I . \Delta_I  
+{\mathscr P_n}(\{y_I \})= \sum y_I . \Delta_I  
 \eea
 for some collection of subsets $I \in [0,n]$.
-We shall restrict ourselves to the large class of generalised permutahedra which admit such a realisation only as Minkowski sums except translations i.e, $y_I \ge 0$ for all non-singlets $I$\footnote{This is mainly due to the subtle nature of the Minkowski difference operation, which makes the shape of the resulting polytope dependent on the relative magnitudes of $y_I$'s. We allow $y_I$ for singlets to be  negative as it is only a translation and to connect with \eqref{intgenperm}.}which are called Nestohedra. Throughout the paper we shall mean Nestohedra or products of Nestohedra whenever we refer to generalized permutahedra unless stated otherwise.\\
- 
-The combinatorial structure of the generalised permutahedron ${\mathscr P_n({y_I})}$ (Nestohedra) is independent of the parameters $y_I$ and depends only on the collection of subsets $I \in [0,n]$ called the  building set ${\mathbf B}$.  
-A collection of non-empty subsets of $[0,n]$ is called a building set ${\mathbf B}$ if it satisfies the following:
+We shall restrict ourselves to the large class of generalized permutohedra which admit such a realisation only as Minkowski sums except translations i.e, $y_I \ge 0$ for all non-singlets $I$\footnote{This is mainly due to the subtle nature of the Minkowski difference operation, which makes the shape of the resulting polytope dependent on the relative magnitudes of $y_I$'s. We allow $y_I$ for singlets to be  negative as it is only a translation and to connect with \eqref{intgenperm}.} which are called Nestohedra. Throughout the paper we shall mean Nestohedra or products of Nestohedra whenever we refer to generalized permutohedra.
+
+The combinatorial structure of the generalized permutohedron ${\mathscr P_n(\{y_I\})}$ (Nestohedra) is independent of $y_I$ and depends only on the collection of subsets $I \in [0,n]$ of the  building set ${\mathbf B}$, which is 
+a collection of non-empty subsets of $[0,n]$ satisfying the following: %is called a building set ${\mathbf B} if it satisfies the following:
 \begin{compactenum}[\quad (1)]
-    \item If $I,J \in {\mathbf B}$ and $I \cap J \neq \phi $, then $I \cup J \in {\mathbf B}$.
+    \item If $I,J \in {\mathbf B}$ and $I \cap J \neq \varnothing $, then $I \cup J \in {\mathbf B}$.
     \item ${\mathbf B}$ contains all singletons $\{ i\}$ for $i \in S$.
 \end{compactenum}
-To describe the combinatorial structure we need the notion of {\it Nested complex} which shall be defined in appendix \ref{appendix: A}. We shall only sumarize the nessecary results here and let the reader interested in the details refer appendix \ref{appendix: A}.
+Here are some interesting examples of generalized permutohedra:
+\begin{itemize}
+    \item  If ${\mathbf B}= \{[i] | i=0,\dots,n \}$ is the complete flag of intervals, then ${\mathscr P_n(\{y_I\})}$ is the Stanley-Pitman polytope or Hypercube.
+    \item If ${\mathbf B}$ corresponds to all the non empty subsets of $[0,n]$ and $Y_I =y_{|I|}$ i.e., the variables $Y_I$ are equal for all subsets of the same cardinality, then ${\mathscr P_n(\{y_I\})}$ is the usual permutohedron ${\mathscr P_n}$. 
+    \item If ${\mathbf B}=\{ [i,j] | 0\leq  i \leq j \leq n\}$ is the set of consecutive intervals, then ${\mathscr P_n(\{y_I\})}$ is the associahedron ${\mathscr A_n}$. 
+    \item If  $\mathbf B=\{[i,i+k]\,:\,0\leq i, k\leq n\}$ is the set of cyclic intervals, then ${\mathscr P_n(\{y_I\})}$ is the cyclohedron ${\mathscr B_n}$.
+    \item Let $\Gamma$ be a graph on the vertex set $[0,n]$. Let us assume that ${\mathbf B} = {\mathbf B}(\Gamma)$ is the set of subsets $I \in [0,n]$ such that the induced graph $\Gamma$ is connected, then  ${\mathscr P_n(\{y_I\})}$ is a graph associahedron.
+\end{itemize}
 
-\begin{compactitem}
-\item We can look at any collection of subsets of $[0, n]$ which form a building set ${\mathbf B}$ and associate  coordinate simplex $\Delta_I$ for each $I \in {\mathbf B}$ and resulting Minkowski sum with positive weights $y_I$ generates a polytope of dimension $n$ called the generalised permutahedron (Nestohedron) associated with the building set. 
 
-\item The number of facets $N$ of the generalised permutahedron just corresponds to the set of all elements in ${\mathbf B}$ excluding the maximal set. 
+\paragraph{Nested complex} To describe the combinatorial structure we need the notion of {\it Nested complex}. We shall only summarize the necessary results here and let the reader interested in the details to refer \cite{Postnikov:2005,Postnikov:2006}.
+A subset ${\mathbf N}$ in the building set ${\mathbf B}$ is called a {\it nested set} if it satisfies the following conditions:
+\begin{compactenum}[\quad (1)]
+    \item For any $I,J \in {\mathbf N}$, we either have $I \subset J$ or $J\subset I$ or $I$ and $J$ are disjoint.
+    \item For any collection of $k \geq 2$ disjoint subsets $J_1,J_2,\dots, J_k \in \mathbf N$ their union $J_1 \cup \cdots \cup J_k$ is not in $\mathbf B$.
+    \item ${\mathbf N}$ contains all maximal elements of $\mathbf B$.
+\end{compactenum}
+The {\it nested complex} ${\mathbf N}({\mathbf B})$ is defined as the poset of the set of all nested sets in ${\mathbf B}$ ordered by inclusion.
+\paragraph*{Facial structure} 
+Let us assume that the set ${\mathbf B}$ associated with a generalized permutohedron ${\mathscr P_n(\{y_I\})}$ is a building set on $[0,n]$. \emph{Then the poset of faces ${\mathscr P_n(\{y_I\})}$ ordered by reverse inclusion is isomorphic to the nested complex ${\mathbf N}({\mathbf B})$}. 
 
-\item Two facets corresponding to the sets $I$ and $J$ in ${\mathbf B}$ intersect i.e., are {\it compatible} with each other if and only if  either $I \subset J$,~ $J \subset I$~ or $I \cap J = \emptyset ~{\text and} ~ I \cup J \notin {\mathbf B}$.
-\end{compactitem}
+In particular, it means that (1) the number of facets $N$ of the generalized permutohedron just corresponds to the set of all elements in ${\mathbf B}$ excluding the maximal element, and (2) two facets corresponding to the sets $I$ and $J$ in ${\mathbf B}$ intersect i.e., are {\it compatible} with each other if and only if  either $I \subset J$,~ $J \subset I$~ or $I \cap J = \varnothing ~{\text and} ~ I \cup J \notin {\mathbf B}$.
 
-Let us look at a couple of examples to appreciate these facts better:
+The face $P_\mathbf{N}$ of ${\mathscr P_n(\{y_I\})}$ associated with the nested set $\mathbf{N} \in \mathbf{N}(\mathbf{B})$ is given by
+\bea\label{deffacet}
+P_{\mathbf{N}} = \bigl\{ (t_0,\dots,t_{n}) \in \mathbb{R}^{n+1} | \sum_{i \in I} t_i =z_{I}~{\rm for}~I \in \mathbf{N}; ~ \sum_{i \in J}~t_i \geq z_J,~ {\rm for} ~J \in \mathbf{B}  \bigr\} \:,
+\eea
+where $z_I=\sum_{J\subset I,J\in\mathbf B}y_J$ for $I\in \mathbf B$ and coordinate simplices $\{\Delta_I\}_{I\in\mathbf B}$ are living in $\{t_i\}_{0\leq i\leq n}$-space.
+In particular, the equation of the facet labeled by nested set $\{[0,n],I\}$ of ${\mathscr P_n(\{y_I\})}$ is given by
+\begin{equation}\label{eqoffacet}
+\sum_{i\in I}t_i=\sum_{J\subset I,J\in\mathbf B}y_J.
+\end{equation}
 
-(1) Consider the generalized permutahedron with building set 
+Another description of the faces is the following: for each decomposition $[0,n]=  \sqcup_{I \subset {\mathbf N} } S_I $ where $S_I$ are non-empty, the face $P_\mathbf{N}$ of ${\mathscr P_n(\{y_I\})}$ associated with the nested set ${\mathbf N} \in {\mathbf N}({\mathbf B})$ is
+\bea
+P_\mathbf{N} = \sum_{{J \subset {\mathbf B}}\atop{J \cap S_I \neq \varnothing}} y_{J} \Delta_{J \cap S_I} \:.
+\eea
+In particular each facet of $\mathscr{P}_{n}(\{y\})$ corresponding to a set $I \in \mathbf{B}$ is isomorphic to the product $\mathscr{P}_{ \mathbf{B}_{I}} \times \mathscr{P}_{\mathbf{B}_{\bar{I}}}$ of generalized permutohedra corresponding to the building sets 
+\begin{equation}\label{BI}
+    \mathbf{B}_{I} = \{J \vert J\subset I, J\in \mathbf{B}\}
+\end{equation}
+and
+\begin{equation} \label{BIbar}
+    \mathbf{B}_{\bar{I}}=\{J-I \vert J\in \mathbf{B}\}
+\end{equation}
+
+
+% \begin{compactitem}
+% \item We can look at any collection of subsets of $[0, n]$ which form a building set ${\mathbf B}$ and associate  coordinate simplex $\Delta_I$ for each $I \in {\mathbf B}$ and resulting Minkowski sum with positive weights $y_I$ generates a polytope of dimension $n$ called the generalized permutohedron (Nestohedron) associated with the building set. 
+
+% \item The number of facets $N$ of the generalized permutohedron just corresponds to the set of all elements in ${\mathbf B}$ excluding the maximal set. 
+
+% \item Two facets corresponding to the sets $I$ and $J$ in ${\mathbf B}$ intersect i.e., are {\it compatible} with each other if and only if  either $I \subset J$,~ $J \subset I$~ or $I \cap J = \varnothing ~{\text and} ~ I \cup J \notin {\mathbf B}$.
+% \end{compactitem}
+
+Let us look at a couple of examples to appreciate these facts better: \\
+(1) Consider the 2d associahedron with building set 
 \[{\mathbf B}= \{ \{0\},\{1\},\{2\},\{0,1\},\{1,2\},\{0,1,2\} \}.\]
-The polygon has 5 facets which correspond to the sets $\{ \{0\},\{1\},\{2\},\{0,1\},\{1,2\}\}$ and their compatability is shown in the figure below.
-
-The polytope in this case is the 2d associahedron ${\mathscr A_2}$.
-
-(2) Consider the generalized permutahedron with building set 
+This polygon has 5 facets which correspond to the sets $\{ \{0\},\{1\},\{2\},\{0,1\},\{1,2\}\}$ and their compatability is shown in the figure below. \\
+%The polytope in this case is the 2d associahedron ${\mathscr A_2}$.\\
+(2) Consider the 2d cyclohedron/permutohedron with building set 
 \[{\mathbf B}= \{ \{0\},\{1\},\{2\},\{0,1\},\{1,2\},\{0,2\},\{0,1,2\} \}.\]
-The polygon has 6 facets which correspond to the sets $\{ \{0\},\{1\},\{2\},\{0,1\},\{1,2\},\{0,2\}\}$ and their compatability is shown in the figure below.
+This polygon has 6 facets which correspond to the sets $\{ \{0\},\{1\},\{2\},\{0,1\},\{1,2\},\{0,2\}\}$ and their compatability is shown in the figure below.
 
-The polytope in this case is the 2d cyclohedron ${\mathscr B_2}$ which also coincides with 2d permutahderon ${\mathscr P_2}$.
+%The polytope in this case is the 2d cyclohedron ${\mathscr B_2}$ which also coincides with 2d permutohedron ${\mathscr P_2}$.
 
 \begin{figure}[H]
-\begin{center}       
+\begin{center}
 \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
 %uncomment if require: \path (0,511); %set diagram left start at 0, and has height of 511
 
@@ -1332,38 +1418,27 @@ The polytope in this case is the 2d cyclohedron ${\mathscr B_2}$ which also coin
 % Text Node
 \draw (454,235) node [anchor=north west][inner sep=0.75pt]   [align=left] {(b)};
 % Text Node
-\draw (155,263) node [anchor=north west][inner sep=0.75pt]   [align=left] {Figure showing the compatible\textbackslash incompatible facets of the 2d associahedron  \\ and permutahedron as generalized permutahedra};
+% \draw (155,263) node [anchor=north west][inner sep=0.75pt]   [align=left] {Figure showing the compatible\textbackslash incompatible facets of the 2d associahedron  \\ and permutohedron as generalized permutohedra};
 \end{tikzpicture}
 \end{center}
+\caption{Compatible\textbackslash incompatible facets of the 2d associahedron (a) and permutohedron (b) as generalized permutohedra}
 \end{figure}
 
-Generalised permutahedra have big Polytopes which are simplices. Thus its quite natural to wonder if the associated $u$-variables satisfy some kind of $u$-equations. 
+\vspace{1ex}
 
-We claim and we shall show in the next section that this indeed the case. Further we show that all these polytopes are binary geometries even though some of them do not admit perfect $u$-equations. 
+Generalized permutohedra have big polyhedra which are simplices. Thus its quite natural to wonder if the associated $u$ variables satisfy some kind of $u$ equations. We claim and we shall show in the next section that this indeed the case. Further we show that all these polytopes are binary geometries even though some of them do not admit perfect $u$ equations. 
 
-Here are some interesting examples of generalised permutahedra:
+% Here are some interesting examples of generalized permutohedra:
 
-(1) If ${\mathbf B}$ consists of only singlets i.e., ${\mathbf B}=\{ \{ 0,1,\cdots,n \}, \{ 0 \},\{ 1 \},\cdots ,\{ n \} \}$ then the generalised permutahedron is a Simplex. In this case the relevant $x$ variables are $x_i,~ i=0,\cdots,n$ with $x_0=1$ and $\sum_{i=0}^n x_i$. 
-The Newton polytope of the Minkowski sum is $\prod_{i=1}^{n} x_i (1+\sum_{j=1}^{n} x_j)$ and $u$-variables are 
-$u_i =\frac{ x_i}{1+\sum_{i=1}^n x_i} $
-which satisfy $\sum u_i =1$ as their only $u$-equation. \\
+% (1) If ${\mathbf B}= \{[i] | i=0,\cdots,n \}$ is the complete flag of intervals, then ${\mathscr P_n(y)}$ is the Stanley-Pitman polytope or Hypercube.
 
-(2) If ${\mathbf B}= \{[i] | i=0,\cdots,n \}$ is the complete flag of intervals, then ${\mathscr P_n}^y({\bf Y})$ is the Stanley-Pitman polytope or Hypercube.
-The Newton polytope of the Minkowski sum is $x_1\cdots x_n (1+x_1) \cdots (1+x_1+\cdots +x_n)$ and $u$-variables are 
-$u_i =\frac{ 1}{1+\sum_{j=1}^{i} x_j} $, ~~$u^{'}_i =\frac{ \sum_{j=1}^{i} x_j}{1+\sum_{j=1}^{i} x_j} $ for $j=1,\cdots,n$ \\
-which satisfy $u_i +u^{'}_{i} =1$ as their $u$-equation. \\
+% (2) If ${\mathbf B}$ corresponds to all the non empty subsets of $[0,n]$ and $Y_I =y_{|I|}$ i.e., the variables $Y_I$ are equal for all subsets of the same cardinality, then ${\mathscr P_n(y)}$ is the usual permutohedron ${\mathscr P_n}$. 
 
-(3) If ${\mathbf B}$ corresponds to all the non empty subsets of $[0,n]$ and $Y_I =y_{|I|}$ i.e., the variables $Y_I$ are equal for all subsets of the same cardinality, then ${\mathscr P_n}({\bf Y})$ is the usual permutahedron ${\mathscr P_n}$. \\
+% (3) If ${\mathbf B}=\{ [i,j] | 0\leq  i \leq j \leq n\}$ is the set of consecutive intervals, then ${\mathscr P_n(y)}$ is the associahedron. 
 
-(4) If ${\mathbf B}=\{ [i,j] | 0\leq  i \leq j \leq n\}$ is the set of consecutive intervals, then ${\mathscr P_n}({\bf Y})$ is the associahedron. \\
+% (4) If ${\mathbf B}=\{ [1,i] \cup [j,n] | 0 \leq  i \leq j \leq n\}$ is the set of cyclic intervals, then ${\mathscr P_n(y)}$ is the cyclohedron.
 
-(5) If ${\mathbf B}=\{ [1,i] \cup [j,n] | 0 \leq  i \leq j \leq n\}$ is the set of cyclic intervals, then ${\mathscr P_n}({\bf Y})$ is the Cyclohedron.\\
-
-(6) Let $\Gamma$ be a graph on the vertex set $[0,n]$. Let us assume that ${\mathbf B} = {\mathbf B}(\Gamma)$ is the set of subsets $I \in [n]$ such that the induced graph $\Gamma$ is connected, then  ${\mathscr P_n}({\bf Y})$ is a graph associahedron.
-
-It is clear that any  generalized permutahedron can be obtained as a degeneration of  permutahedron ${\mathscr P_n}$i.e., by removing some elements from its building set. This makes the permutahedron a very important example of generalized permutahedra and we shall devote the rest of this section to studying its properties and proving it is binary.
-
- 
+% (5) Let $\Gamma$ be a graph on the vertex set $[0,n]$. Let us assume that ${\mathbf B} = {\mathbf B}(\Gamma)$ is the set of subsets $I \in [0,n]$ such that the induced graph $\Gamma$ is connected, then  ${\mathscr P_n(y)}$ is a graph associahedron.
 
 % This conjecture can be extended to generalized permutohedra, but I only have checked the several cases of graph associahedra for now.
 
@@ -1379,87 +1454,113 @@ It is clear that any  generalized permutahedron can be obtained as a degeneratio
 % where $J-I$ means the complement of $J$ with respect to $I$. This statement directly follow from the fact that $u_{I}\to 0$ is equivalent to take $x_{i}\to t x_{i} $ for $i\in I$ then take $t \to 0$
 % )
 
-\newpage
+\subsection{ABHY-like realizations and $u$ variables for generalized permutohedra}
 
-\subsection{$\mathscr{P}_{n}$ as a binary geometry}
-
-\subsubsection{String canonical forms and ABHY conditions for $\mathscr{P}_{n}$}
-
-In the last subsection, we have seen that any $n$-dimensional generalized 
-permutahedron can be constructed by a Minkowski sum of some simplices labeled by
-subsets of $[0,n]$. For a simplex labeled by a subset $I$, 
-it is natrual to associate the linear polynomial $x_I=\sum_{i\in I}x_i$ whose Newton polytope is the corresponding simplex. Therefore, we can write down a natrual stringy canonical form for the generalized permutahedron with the building set $\mathbf{B}$
-\begin{equation} \label{stringyintforgenpermutohedron}
-   \mathcal I_{\mathbf{B}}(\{S_I\})=\int_{\mathbb R^{n}_+}
-	\frac{\prod_{i=0}^n \mathrm{d}\log x_i}
-	{\operatorname{GL}(1)_+}\prod_{I\in\mathbf{B}}x_I^{\alpha' S_I},
-\end{equation}
-where the global $\operatorname{GL}(1)_+$ redundance $x_i\mapsto a x_i$ require that 
-$\sum_{I\in\mathbf{B}}S_I = 0$. 
-
-Generally, we can consider an arbitrary set of subsets of $[0,n]$ in eq.\eqref{stringyintforgenpermutohedron}. 
-However, the big polytope for such integral in general is not a simplex.
-It's highly non-trivial to figure out all such sets whose big polytopes are simplices,
-but we can easily see that every generalized permutahedron satisfies $N=n+m$
-because each facet $F_I$ is given by a nested set $\{[0,n],I\}$ for $I\neq [0,n]$.
-Therefore, for a generalized permutahedron $\mathscr P$, we can write down the matrix 
-$W^J_A$ of facets and then get $S_J=F_A(W^{-1})^A_J\geq 0$ and 
-its $u$-variables $u_A=\prod_J p_J^{(W^{-1})^A_J}$.
-
-Let's first write down equations of facets of a generalised permutahedron
-with the building set $\mathbf{B}$. The polytope of eq.\eqref{stringyintforgenpermutohedron} is given by the Minkowski sum
+%We have seen that any $n$-dimensional generalized permutohedron can be constructed by a Minkowski sum of simplices labeled by subsets in the building set $\mathbf{B}$, which satisfy the conditions given above. 
+As we mentioned earlier, one can write down a natural stringy integral \eqref{intgenperm} for generalized permutahedron $\mathscr{P}(\bf B)$,
+%it is a highly non-trivial fact about generalized permutohedra that the number of facets is given by $N=n+m$, where $m$ is the number of non-singletons in $\bf B$. 
+%because each facet $F_I$ is given by a nested set $\{[0,n],I\}$ for $I\neq [0,n]$.
+and its polytope is given by the Minkowski sum
 \[
-	- \sum_{I\in\mathbf{B},|I|>1}S_I.\Delta_I
+	\mathscr P_n(\{-S_I\,|\,I\in \mathbf B,\,|I|>1\}) =- \sum_{I\in\mathbf{B},|I|>1}S_I.\Delta_I,
 \]
-in $(S_0,\dots,S_n)$-space, where $\Delta_I=\operatorname{ConvexHull}
-(\{e_i\}_{i\in I})$. Meanwhile, we know from the last subsection that the facet 
-labeled by a nested set $\{[0,n],I\}$ is given by
-\begin{align*}
-	\biggl\{(S_0,S_1,\dots,S_n)\in \mathbb R^{n+1}\,\bigg |\,
-		\sum_{i\in I}S_i = -\sum_{J\subset I,|J|>1,J\in \mathbf{B}}S_J,
-		\quad
-		&\sum_{i=0}^nS_i=-\sum_{J\in \mathbf{B},|J|>1}S_J,\\
-		&\sum_{i\in K}S_i\geq -\sum_{J\subset I,|J|>1,J\in \mathbf{B}}S_J
-	\biggr\},
-\end{align*}
-where the second constrain is just $\sum_{I\in \mathbf{B}}S_I=0$, so the equation 
-of this facet is 
+where $\Delta_I=\operatorname{ConvexHull}
+(\{e_i\}_{i\in I})$ is the coordinate simplex in $(S_0,\dots,S_n)$-space, so the equation of the facet labeled by $I$ is given by eq.\eqref{eqoffacet}:
 \begin{equation}\label{GPfacet}
 	F_I:=\sum_{J\subset I,J\in\mathbf{B}}S_J=0.
 \end{equation}
+From the previous subsection we know that the big polyhedron of a generalized permutohedron is a simplex.
+Therefore, we can write down the matrix $W^J_A$ of the facets and obtain  
+\[
+S_J=F_A(W^{-1})^A_J
+\]
+and 
+its $u$ variables 
+\[ u_A=\prod_J x_J^{(W^{-1})^A_J}. \] 
 
-Within all generalized permutahedra, the original permutahedron is quite simple
-and important because any other generalized permutahedron can be degenerated from
-permutahedron by setting some $S_I$ to be zero.
-The building set of the $n$-dimensional permutahedron $\mathscr P_n$ is 
+Within generalized permutohedra, the original permutohedron is quite simple and important because any other generalized permutohedron can be obtained as a degenerated of the permutohedron.
+The building set of the $n$-dimensional permutohedron $\mathscr P_n$ is 
 the set of all non-empty subsets of $[0,n]$. 
-To get $u$-equations, we should solve $S_J$ by $F_J$ from eq.\eqref{GPfacet}, the 
-solution for permutahedron $\mathscr P_n$ is 
+To get $u$ equations, we should solve for $S_J$ from $F_J$ in eq.\eqref{GPfacet}, the 
+solution for the permutohedron $\mathscr P_n$ is 
 \begin{equation}\label{SinF}
-	S_I=\sum_{J\neq \varnothing,J\subset I} (-1)^{|J|-|I|}F_J,
+	S_I=\sum_{J\subset I} (-1)^{|J|-|I|}F_J,
 \end{equation}
-This give us the following ABHY construction for $\mathscr{P}_{n}$:
-\begin{equation}
-    F_{I}>0 \qquad  \text{for all non-empty proper subsets of $[0,n]$ }
+This gives us the following ABHY polytope:
+setting 
+$S_I=-C_I$ for any non-singleton $I\in \mathscr P_n$, where $C_I$ are positive 
+constants, and the polytope is given by the alternating sum
+\begin{equation}\label{ABHY}
+	F_I\geq 0,\quad -C_I=\sum_{J\neq \varnothing,J\subset I}(-1)^{|J|-|I|}F_J
 \end{equation}
-and
-\begin{equation}
-    C_I = (-1)^{|I|} \left( \sum_{i \in I} X_i - \sum _{{i<j}\atop{i,j \in I}} X_{ij} +\cdots + (-1)^{|I|}  X_I \right) \text{ are positive constants.}
-\end{equation}
-Using the picture of big polytope, this also gives $u$-variables
+in the $\{F_I\}$-space.
+By eq.\eqref{deffacet}, this polytope is the $n$-dimensional 
+permutohedron $\mathscr P_n(\{C_I\})$, and it is nice that it admits a simple ABHY-like realization.
+The ABHY construction of any generalized permutohedron can be obtained by 
+setting $C_I=0$ in $\mathscr P_n(\{C_I\})$ for all $I$ not in its building set.
+
+For example, the building set of $\mathscr A_2$ is $\mathbf B(\mathscr P_2)-\{\{0,2\}\}$,
+its ABHY construction can be obtained from $\mathscr P_2$ by setting $C_{02}=0$, 
+\[
+	0=-C_{02}=F_{02}-F_2,
+\]
+therefore the whole ABHY conditions for $\mathscr A_2$ is 
+\[
+	-C_{01}=F_{01}-F_0-F_1,\quad -C_{12}=F_{12}-F_1-F_2,\quad 
+	-C_{012}=-F_{01}-F_{12}+F_1,\quad F_I\geq 0,
+\]
+and its solution in $(F_1,F_2)$-space is 
+\[
+	\left\{\begin{aligned}
+		F_1&\geq 0,F_2\geq 0\\
+		F_0&=C_{01}+C_{12}+C_{012}-F_1-F_2\geq 0,\\
+		F_{12}&=F_1+F_2-C_{12}\geq 0,\\
+		F_{01}&=C_{012}+C_{12}-F_2\geq 0.
+	\end{aligned}\right.
+\]
+
+For another example, consider the building set
+\[
+\mathbf{B}=\{\{0\},\{1\},\{2\},\{3\},\{0,1,2\},\{1,3\},\{0,1,2,3\}\}.
+\]
+It's a degeneration of $\mathscr P_3$, where
+\[
+C_{01},C_{02},C_{03},C_{12},C_{23},C_{013},C_{023},C_{123}=0.
+\]
+Its $u$ variables and $u$ equations can be found at the end of section (\ref{sect3.4}). By solving the ABHY conditions for these $C_I=0$, we get the vanishing facets
+\begin{align*}
+&F_{0i}=F_0+F_i,\quad F_{12}=F_1+F_2,\quad F_{23}=F_2+F3,\\
+&F_{013}=F_{13}+F_0,\quad F_{023}=F_0+F_2+F_3,\quad F_{123}=F_2+F_{13},
+\end{align*}
+and the remaining ABHY conditions
+\[
+C_{13}=F_1+F_3-F_{13},\quad C_{012}=F_{0}+F_{1}+F_2-F_{012},
+\quad C_{0123}=F_{012}+F_{13}-F_1,
+\]
+its solution in $(F_1,F_2,F_3)$-space is 
+\[
+	\left\{\begin{aligned}
+		F_1&\geq 0,F_2\geq 0,F_3\geq 0\\
+		F_0&=C_{012}+C_{0123}+C_{13}-F_1-F_2-F_3\geq 0,\\
+		F_{13}&=F_1+F_3-C_{13}\geq 0,\\
+		F_{012}&=C_{0123}+C_{13}-F_3\geq 0.
+	\end{aligned}\right.
+\]
+
+Thanks to eq.\eqref{SinF}, using the picture of big polyhedron, it gives $u$ variables of permutohedron $\mathscr P_n$
 \begin{equation}
   u_I=\prod_{J\supset I}x_J^{(-1)^{|I|-|J|}}. \label{uvarforPn}
 \end{equation}
 since
 \[
-	\prod_{I\neq \varnothing,I\subset [0,n]}u_I^{F_I}=
-	\prod_{I\neq \varnothing,I\subset [0,n]}x_I^{S_I}=
-	\prod_{\varnothing\neq J\subset I\subset [0,n]}
+	\prod_{I\subset [0,n]}u_I^{F_I}=
+	\prod_{I\subset [0,n]}x_I^{S_I}=
+	\prod_{ J\subset I\subset [0,n]}
 	x_I^{(-1)^{|J|-|I|}F_J}=
-	\prod_{J\neq \varnothing,J\subset [0,n]}
+	\prod_{J\subset [0,n]}
 	\prod_{I\supset J}(x_I^{(-1)^{|J|-|I|}})^{F_J}.
 \]
-% The following set of equations define the $n$-dimensional Permutahedron: 
+% The following set of equations define the $n$-dimensional permutohedron: 
 % \bea
 % C_I = (-1)^{|I|} \left( \sum_{i \in I} S_i - \sum _{{i<j}\atop{i,j \in I}} S_{ij} +\cdots + (-1)^{|I|}  S_I \right) \nonumber
 % \eea
@@ -1470,11 +1571,10 @@ since
 %N= \text{No. of F's} &=& 2^{n+1}- 2 \nonumber 
 %\eea
 %Thus we see that $N= d+m$ as expected.
-
 Let us look at the $n=2,3$ examples:
 
-\paragraph*{2d permutahedron}
-In this case, the $u$-variables can be written in terms of $x$ variables as:
+\paragraph*{2d permutohedron}
+In this case, the $u$ variables can be written in terms of $x$ variables as:
 \[
 	u_{0}  = \frac{x_0 x_{012}}{x_{01}x_{02}},\quad 
 	u_{1}  = \frac{x_1 x_{012}}{x_{01}x_{12}},\quad
@@ -1483,39 +1583,39 @@ In this case, the $u$-variables can be written in terms of $x$ variables as:
 	u_{02} = \frac{x_{02}}{x_{012}},\quad
 	u_{12} = \frac{x_{12}}{x_{012}}.
 \]
-The $u$-equations are:
-\begin{align*}
+The $u$ equations are:
+\begin{align}\label{perm2}
 	&1-u_{0}=u_{1} u_{2} u_{12}^2,
 	1-u_{1}=u_{0} u_{2} u_{02}^2,
-	1-u_{2}=u_{0} u_{1} u_{01}^2,\\
+	1-u_{2}=u_{0} u_{1} u_{01}^2,\nonumber\\
 	&1-u_{01}=u_{2} u_{02} u_{12},
 	1-u_{02}=u_{1} u_{01} u_{12},
 	1-u_{12}=u_{0} u_{01} u_{02}.
-\end{align*}
-where are the same as the $u$ equations for $\mathscr{B}_{2}$
-
-\paragraph*{3d permutahedron}
-In this case, 
-the $u$-variables can be written interms of $x$ variables as:
-%the building set $B=\{ \{ 0,1,2,3\},\{ 0,1,2\},\{0,2,3\},\{0,1,3\},\{1,2,3\},\{0,1\},\{0,2\},\{0,3\},\{1,2\} \\ ,\{2,3\},\{1,3\},\{0\},\{1\},\{2\},\{3\}\}$.
-\begin{align}
-  u_{0} &= \frac{x_{0}x_{012}x_{013}x_{023}}{x_{01}x_{02}x_{03}x_{0123}} \:,\qquad  
-  u_{01} = \frac{x_{01}x_{0123}}{x_{012}x_{013}} \:, \\
-  u_{02} &= \frac{x_{02}x_{0123}}{x_{012}x_{023}}\:, \qquad 
-  u_{012} = \frac{x_{012}}{x_{0123}}\:,
 \end{align}
-and their cyclic. The $u$-equations are
-\begin{align}
-  1-u_{0} &= u_1 u_{2} u_{3} u_{12}^2 u_{23}^2  u_{13}^2 u_{123}^3 \left(1+ u_{0}  u_{023} u_{013} u_{012} u_{03} u_{01}  u_{02} \right)\:,  \\
-  1-u_{0 1} &= u_{2} u_{3}  u_{23}^2 u_{12} u_{13} u_{123}^2 u_{023}^2 u_{02} u_{03} \:,\\
-  1-u_{02} &= u_{1}u_{3} u_{13}^{2}u_{12}u_{23} u_{123}^{2} u_{013}^{2}u_{01}u_{03} \:,\\
+which are the same as the $u$ equations for $\mathscr{B}_{2}$.
+
+\paragraph*{3d permutohedron}
+In this case, 
+the $u$ variables can be written in terms of $x$ variables as:
+%the building set $B=\{ \{ 0,1,2,3\},\{ 0,1,2\},\{0,2,3\},\{0,1,3\},\{1,2,3\},\{0,1\},\{0,2\},\{0,3\},\{1,2\} \\ ,\{2,3\},\{1,3\},\{0\},\{1\},\{2\},\{3\}\}$.
+\begin{align*}
+  u_{0} = \frac{x_{0}x_{012}x_{013}x_{023}}{x_{01}x_{02}x_{03}x_{0123}} \:,\qquad  
+  u_{01} = \frac{x_{01}x_{0123}}{x_{012}x_{013}} \:,\qquad
+  u_{02} = \frac{x_{02}x_{0123}}{x_{012}x_{023}}\:, \qquad 
+  u_{012} = \frac{x_{012}}{x_{0123}},
+\end{align*}
+and their cyclic permutations. The $u$ equations are
+\begin{align}\label{perm3}
+  1-u_{0} &= u_1 u_{2} u_{3} u_{12}^2 u_{23}^2  u_{13}^2 u_{123}^3 \left(1+ u_{0}  u_{023} u_{013} u_{012} u_{03} u_{01}  u_{02} \right)\:,  \nonumber\\
+  1-u_{0 1} &= u_{2} u_{3}  u_{23}^2 u_{12} u_{13} u_{123}^2 u_{023}^2 u_{02} u_{03} \:,\nonumber\\
+  1-u_{02} &= u_{1}u_{3} u_{13}^{2}u_{12}u_{23} u_{123}^{2} u_{013}^{2}u_{01}u_{03} \:,\nonumber\\
  1-u_{012} &= u_3 u_{03}u_{13} u_{23} u_{0 1 3} u_{0 2 3} u_{123}  \:,
  %1-u_{0 j k} &=& u_i u_{ij} u_{ik} u_{0 i k} u_{0 i j}  u_{0 i}
 \end{align}
-and their cyclic. 
+and their cyclic permutations.The $u$ variables and $u$ equations of $\mathscr P_4$ can be found in appendix (\ref{appendix:B}). 
 
-The 8 facets of the 3d permutahedron corresponding to $u_i \rightarrow 0$ and $u_{ijk} \rightarrow 0$ are all $\mathscr{B}_2$. Similarly, the 6 facets corresponding to  $u_{ij} \rightarrow 0$ are all  $\mathscr{A}^{2}_1$.
-Thus, the 3d permutahedron integral factorizes nicely on all massless poles at finite $\alpha'$!.
+%The 8 facets of the 3d permutohedron corresponding to $u_i \rightarrow 0$ and $u_{ijk} \rightarrow 0$ are all $\mathscr{B}_2$. Similarly, the 6 facets corresponding to  $u_{ij} \rightarrow 0$ are all  $\mathscr{A}^{2}_1$.
+%Thus, the 3d permutohedron integral factorizes nicely on all massless poles at finite $\alpha'$!.
 
 
 % {\scriptsize  \bea
@@ -1525,7 +1625,7 @@ Thus, the 3d permutahedron integral factorizes nicely on all massless poles at f
 % u_{03}&=&\frac{(1+z)(1+x+y+z)}{(1+y+z)(1+x+z)}, ~~~~~~~~~~~~~~~~~~ u_{01} =\frac{(1+x)(1+x+y+z)}{(1+x+y)(1+x+z)},~~~~~~~~~~~~~~~~~~~ u_{02}=\frac{(1+y)(1+x+y+z)}{(1+x+y))(1+y+z)},\nonumber  \\
 % u_{123}&=&\frac{(x+y+z)}{(1+x+y+z)}, ~~~~~~~~~~~~~~~~~~~~~~~~~~~ u_{0} =\frac{(1+x+y)(1+y+z)}{(1+x)(1+y)(1+z)(1+x+y+z)}\nonumber
 % \eea }
-% The $u$-equations in this case are:
+% The $u$ equations in this case are:
 % {\scriptsize \bea
 % 1-u_i &=& u_j u_k (u_{jk})^2 (u_{0jk})^3 (u_{0k})^2(u_{0 j})^2 u_{0} \left(1+ u_i u_{ij} u_{ik} u_{0ik} u_{0ij}  u_{0i}\right),  1-u_{ij} = u_k u_{ik} u_{jk} (u_{0jk})^2 (u_{0ik})^2 (u_{0 k})^2 u_{0 j} u_{0 i} u_{0} \nonumber  \\
 % 1-u_{0 j k} &=& u_i u_{ij} u_{ik} u_{0 i k} u_{0 i j}  u_{0 i}, ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 1-u_{0 k} = u_i u_{j}  (u_{ij})^2 u_{ik} u_{jk} (u_{123})^2 (u_{0 i j})^2 u_{0 j} u_{0 i}  \nonumber \\
@@ -1534,17 +1634,17 @@ Thus, the 3d permutahedron integral factorizes nicely on all massless poles at f
 % where $i,j,k \in {1,2,3}$ and $i \neq j \neq k$.
 
 
-\subsubsection{The binary aspects of $u$-variables for permutohedra}
+\subsection{Permutohedra as binary geometries}
 
-Here we will show that the $u_{I}$'s for the permutahderon $\mathscr{P}_{n}$, which is defined by eq.\eqref{uvarforPn},
+Int this subsection, we will show that the $u_{I}$'s for the permutohedron $\mathscr{P}_{n}$, which are defined by eq.\eqref{uvarforPn},
 % \begin{equation}
 %    u_{I}:= \prod_{J\supset I}x_J^{(-1)^{|I|-|J|}} \:, \label{uforpn}
 % \end{equation}
-have the desired binary property, that is, $u_{I}$ and $u_{J}$ are compatible if and only if $I \subset J$ or $J\subset I$, otherwise, they are incompatible. Forthermore, we will show that the $u$-variables compatible with $u_{I}$ will become the $u$-variables for the facet $\mathscr{P}_{\lvert I \rvert-1}\times \mathscr{P}_{n-\lvert I\rvert}$ as $u_{I}$ gose to 0.
+have the desired binary property. Recall that $u_{I}$ and $u_{J}$ are compatible if and only if $I \subset J$ or $J\subset I$, otherwise they are incompatible. We will see that as  $u_{I} \to 0$, all the incompatible $u_J \to 1$. Furthermore, we will show that the $u$ variables compatible with $u_{I}$ become the $u$ variables for the facet $\mathscr{P}_{\lvert I \rvert-1}\times \mathscr{P}_{n-\lvert I\rvert}$. 
 % In other words, this means that $u_{I}$ and $u_{J}$ are incompatible if $I$ and $J$ are one of the following two cases:
 % \begin{enumerate}[resume]
-%    \item $I\cap J=\emptyset$ and $I\cup J \in \mathcal{B}$ \:, 
-%    \item $I\cap J \neq \emptyset,I, J $ \:.
+%    \item $I\cap J=\varnothing$ and $I\cup J \in \mathcal{B}$ \:, 
+%    \item $I\cap J \neq \varnothing,I, J $ \:.
 % \end{enumerate}
 
 A crucial observation here is that $u_{I}\to 0$ is equivalent to $x_{I}\to 0 $ according to \eqref{uvarforPn} since all $x_{i}$ are positive. We can approach this limit by replacing $x_{i}$ with $ \epsilon x_{i}$ for all $i\in I$ then taking $\epsilon \to 0$. Then the remaining task is just to consider the behaviour of the other $u_{J}$'s under this limit. 
@@ -1554,13 +1654,13 @@ A crucial observation here is that $u_{I}\to 0$ is equivalent to $x_{I}\to 0 $ a
 % \end{equation}
 % where $J= \bigcup_{a=1}^{n} J_{a}$
 
-Let us first show that the $u$-variables incompatible with $u_{I}$ become 1 as $u_{I}$ goes to 0. It is obvious that $u_{I}$ and $u_{J}$ are incompatible if either (1) $I\cap J=  \varnothing$  or (2) $I\cap J \neq \varnothing,I, J $. For the first case, let us denote $K=[0,n]-I-J$ as the complement set of $[0,n]$ with respect to $I\cup J$. Then we find the logarithm of $u_{J}$ can be written as 
+Let us first show that the $u$ variables incompatible with $u_{I}$ become 1 as $u_{I}$ goes to 0. It is obvious that $u_{I}$ and $u_{J}$ are incompatible if either (1) $I\cap J=  \varnothing$  or (2) $I\cap J \neq \varnothing,I, J $. For the first case, let us denote $K=[0,n]-I-J$ as the complement set of $[0,n]$ with respect to $I\cup J$. Then we find the logarithm of $u_{J}$ can be written as 
 \begin{equation}
      \log u_{J} = \sum_{\kappa\subset K,\psi\subset I} (-1)^{\lvert\kappa\rvert+\lvert \psi\rvert }\log (x_{J}+x_{ \kappa} +x_{ \psi} )\:. \label{1incompuvarforPn}
 \end{equation}
 As $x_{i}\to 0$ with $i\in I$, we have 
 \begin{equation}
-   \log u_{J} \to \sum_{\kappa\subset K} (-1)^{\lvert \kappa\rvert } \log (x_{J}+x_{ \kappa})\Biggl(\sum_{\psi\subset I}(-1)^{\lvert\psi\rvert}\binom{\lvert \psi \rvert }{\lvert I \rvert }\Biggr)=0 \label{incompn1}
+   \log u_{J} \to \sum_{\kappa\subset K} (-1)^{\lvert \kappa\rvert } \log (x_{J}+x_{ \kappa})\Biggl(\sum_{\psi\subset I}(-1)^{\lvert\psi\rvert}\binom{\lvert I \rvert }{\lvert \psi \rvert }\Biggr)=0 \label{incompn1}
 \end{equation}
 where the binomial expansion of $(1-1)^{\lvert I \rvert}$ has been used. For the second case, the logarithm of $u_{J}$ can be written as 
 \begin{equation}
@@ -1568,27 +1668,28 @@ where the binomial expansion of $(1-1)^{\lvert I \rvert}$ has been used. For the
 \end{equation}
 where $I'=I-J$, $J'=J-I$ and $K=[0,n]-(I\cup J)$. Then a similar argument as in \eqref{incompn1} gives $\log u_{J}\to 0$ under the limit of all $x_{i}\to 0$ with $i\in I$.
 
-Now let us consider the behaviour of compatible $u$-variables under this limit. For $J\subset I$, we again introduce $I'=I-J$ and $K=[0,n]-I$, then the logarithm of $u_{J}$ can written as 
+Now let us consider the behaviour of compatible $u$ variables under this limit. For $J\subset I$, we again introduce $I'=I-J$ and $K=[0,n]-I$, then the logarithm of $u_{J}$ can written as 
 \begin{equation}
      \log u_{J}=\sum_{\psi'\subset I', \kappa \subset K} (-1)^{\lvert \psi'\rvert +\lvert \kappa \rvert} \log (x_{J}+x_{\psi'}+x_{\kappa})
 \end{equation}
-Next, we replac $x_{i}$ with $ \epsilon x_{i}$ for all $i\in I$ and take $\epsilon \to 0$, then 
+Next, we replace $x_{i}$ with $ \epsilon x_{i}$ for all $i\in I$ and take $\epsilon \to 0$, then 
 \begin{align}
    \log u_{J} &\to \lim_{\epsilon \to 0} \sum_{\psi'\subset I', \kappa \subset K} (-1)^{\lvert \psi'\rvert +\lvert \kappa \rvert} \log (\epsilon x_{J}+ \epsilon x_{\psi'}+x_{\kappa}) \nonumber  \\
-    &=\lim_{\epsilon\to 0} \biggl(\log \epsilon+\sum_{\kappa\subset K,\kappa \neq \varnothing}\log x_{\kappa}\biggr)\Biggr( \sum_{\psi'\subset I'}(-1)^{\lvert\psi'\rvert}\binom{\lvert \psi' \rvert }{\lvert I \rvert }\Biggr)
+    &=\lim_{\epsilon\to 0} \biggl(\log \epsilon+\sum_{\kappa\subset K,\kappa \neq \varnothing}\log x_{\kappa}\biggr)\Biggr( \sum_{\psi'\subset I'}(-1)^{\lvert\psi'\rvert}\binom{\lvert I \rvert }{\lvert  \psi' \rvert }\Biggr)
     +\sum_{\psi'\subset I'} (-1)^{\lvert \psi'\rvert }\log (x_{J}+x_{\psi'}) \nonumber \\
     &=\sum_{\psi'\subset I'} (-1)^{\lvert \psi'\rvert }\log (x_{J}+x_{\psi'}) \label{subP1}
 \end{align}
-Obviously, the expression in the last line of \eqref{subP1} is exactly the $u$-variable for the permutahderon $\mathscr{P}_{\lvert I\rvert -1}$. For $J\supset I$, under the limit of $x_I\to 0$, the logarithm of $u_{J}$ simply becomes 
+Obviously, the expression in the last line of \eqref{subP1} is a $u$ variable for the permutohedron $\mathscr{P}_{\lvert I\rvert -1}$. For $J\supset I$, under the limit of $x_I\to 0$, the logarithm of $u_{J}$ simply becomes 
 \begin{equation}
    \log u_{J} = \sum_{\kappa \subset K} (-1)^{\kappa} \log (x_{I}+x_{J-I}+x_{\kappa}) 
    \to  \sum_{\kappa \subset K} (-1)^{\kappa} \log (x_{J-I}+x_{\kappa}) 
 \end{equation}
-where $K=[0,n]-J$, which is exactly the $u$-variable for the permutahderon $\mathscr{P}_{n-\lvert I\rvert}$
+where $K=[0,n]-J$, which is a $u$ variable for the permutohderon $\mathscr{P}_{n-\lvert I\rvert}$. 
+%Now that we have shown that 
 
-\subsubsection{$u$-equations of ${\mathscr P_n}$}
+\subsubsection{The $u$ equations of ${\mathscr P_n}$}
 
-For a permutohedra $\mathscr P_n$, we can directly use eq.\eqref{GPfacet} to express $x_I$ by $\{u_I\}$ which gives us many algebraic equations of $u$-variables:
+For a permutohedron $\mathscr P_n$, we can directly use eq.\eqref{GPfacet} to express $x_I$ in terms of $\{u_I\}$ which gives us many algebraic equations for the $u$ variables:
 \[
 \prod_{I}x_I^{S_I}=\prod_{J}u_J^{F_J}=\prod_{J}\prod_{I\subset J}u_J^{S_I}=\prod_{I}\biggl(\prod_{J\supset I}u_J\bigg)^{S_I},
 \]
@@ -1596,7 +1697,7 @@ so
 \begin{equation}\label{xinu}
 x_I=\prod_{J\supset I}u_J
 \end{equation}
-for any $I\in \mathscr P_n$, where we introduce a fake $u$-variable 
+for any $I\in \mathscr P_n$, where we introduce a fake $u$ variable 
 $u_{[0,n]}:=x_{[0,n]}$. We know some algebraic equations of $\{x_I\}$, 
 for example, linear equations $x_I+x_J=x_{I\cup J}$ for $I\cap J=\varnothing$, 
 so
@@ -1608,150 +1709,188 @@ or equivalently
 \prod_{I\subset K,K\not\supset I\cup J}u_K +
 \prod_{J\subset K,K\not\supset I\cup J}u_K = 1.
 \end{equation}
+We can in fact use the above relations to find the $u$ equations for $\mathscr{P}_n$ recursively as follows:
+
+For $I,J$ such that $|I|=n$ and $J=[0,n]-I = \{ i \}$ we have 
+$1-u_{I}= \prod_{i \in J} u_{J}$
+which is already an $u$ equation for $u_{I}$. For $|I|=n-1,~J=\{i\}$ and $\{k\}=[0,n]-(I\cup J)$ we have 
+$1- u_{I}u_{I\cup\{k\}} = \prod_{{\{i\} \in J}\atop{J\neq I\cup\{i\}}} u_J $ by rewriting $1- u_{I}u_{I\cup\{k\}}  =1-u_{I}+u_{I}(1-u_{I\cup\{k\}})$ and using the above equations we get 
+\bea
+1-u_{I}=\prod_{{\{i\} \in J}\atop{J\neq I\cup\{i\}}} u_J - u_{I} \prod_{\{i\} \in K} u_K =\prod_{{\{i\} \in J}\atop{J\neq I\cup\{i\}}} u_J \left(1- u_{I}  u_{I\cup\{i\}}\right)
+\eea
+More generally we can find the $u$ equation for any $I$ recursively by starting from $|I|=n$. We can argue this inductively by assuming we know the $u$ equations for all $I$ such that $|I|\geq k$.
+
+We can now look at all the sets $\{I_1,\dots,I_n\}$ that contain $|I|=k-1$ but not $I\cup J$ and arrange them as $|I|<|I_1|\leq |I_2|\leq \cdots \leq |I_n|$
+\bea
+1-\prod_{I\subset K,K\not\supset I\cup J}u_K &=&1-u_{I}u_{I_1}\cdots u_{I_n}= 1-u_I+u_I(1-u_{I_1}\cdots u_{I_n})\nonumber \\
+&=&(1-u_I)+u_I(1-u_{I_1})+u_I u_{I_1}(1-u_{I_2})+\cdots+u_I\prod_{i=1}^{n-1}u_{I_{i}}(1-u_{I_n})
+\eea
+Since $|I|< |I_i|$ for any $i$, we already know the $u$ equations for $I_i$ and we can find the equation for $u_I$.
 
 Let us consider the $2 d$ example for which the relations are :
-\bea
-1-u_1 u_{12} &=&u_0 u_{02}, ~~1-u_2 u_{12} =u_0 u_{01},~~1-u_{12}= u_0 u_{01} u_{02} \nonumber \\
-1- u_{01}&=& u_{0}u_1 u_{01}u_{12},~~1-u_0 u_{02}= u_{0}u_2 u_{02} u_{12}
-\eea
-By rewriting $(1-u_i)= (1-u_i u_{12})-u_i(1-u_{12}))$ we can get $u$-equations for $u_i$ with $i=1,2$. Similarly by rewriting $(1-u_0)=(1-u_0 u_{01} u_{02})-u_0 (1-u_{01})-u_0 u_{01}(1-u_{02}) $ we can get the $u$-equation for $u_0$
-\bea
-1-u_1&=&u_0 u_{02}(1-u_1 u_{01}), ~~1-u_2 =u_0 u_{01}(1-u_2 u_{02}),~~1-u_{12}= u_0 u_{01} u_{02} \nonumber \\
-1- u_{01}&=& u_{0}u_1 u_{01}u_{12},~~1-u_0 u_{02}= u_{0}u_2 u_{02} u_{12}~~1-u_0=u_1 u_{12}(1-u_0 u_{01})
-\eea
-More generally we can rewrite 
-\bea
-(1-u_I)= (1- \prod_{I \subset J} u_I) -u_I(1-u_{I_1})-u_I u_{I_1}(1-u_{I_2})-\cdots-\prod_{I \subsetneq [1~n]}(1-u_{12\cdots n})
-\eea
-Since $I \subsetneq I_1,I_2$ $|I|< |I_1|,|I_2|$ thus we already know the $u$-equations for $I_1,I_2,\cdots,[1,n]$ as we recursively find them starting from $|I|=n$.
-
-A nice fact about the $u$-equations we obtain is that $1-u_I$ are all at most linear and multi term in $u_I$ for any $n$.
-However, they do not make the factorization manifest at the level of $u$-equations as we take some $u_I \rightarrow 0$.
-The $u$-equations for $\mathscr{P}_n$ which make factorization manifest are complicated polynomials of order $n-|I|-1$ in the corresponding $u$'s. Thus, the most general $u$-equations can be conjectured to be:
-\bea
-1-u_{I} = \prod_{J} u^{s_J}_{J} F(u_I, u_J,u_K) 
-\eea
-where, $J$ are all sets incompatible with $I$, $K$ are all sets compatible with $I$ excluding itself and $s_J$ are positive integers. $F(u_I, u_J,u_K) $ is polynomial of degree $n-|I|-1$ in $u_I$ and we conjecture that $F(u_I =0, u_J,u_K) = 1$ which makes $\mathscr{P}_n$ binary as we proved using a different method in the previous section. But we do not have a closed form expression for $F(u_I, u_J,u_K)$ for all $n$.
-
-Some of the simplest ones are:\\
-
-For $|I| =n-1$ and $s_K = \begin{cases}  1,~ if K \not\subset I & \\ 2, ~if K \subset I\end{cases}$
-
-\bea
-1-u_{I} &=& \prod_ {S - I \subset J } u_{J} \prod_ {K \cap I \ne \Phi } (u_{\bar{K}})^{s_K}  \nonumber \\
-1-u_{12\cdots n} &=& \prod_ {{I \subset S}\atop {I \ne \Phi}} u_{\bar{I}} \nonumber
-\eea
-and for $|I| =n-2$ with $ \bar{I} = \{i, j\}$
-\bea
-1-u_{I}= u_i u_j u^{2}_{ij} \prod_{J \subset I} u_{J \cup \{i\}} u_{J \cup \{j\}} u^{2}_{J \cup \{i,j\}} \prod_{K \subset S-I} (u_{\bar{K}})^{3} (u_{\bar{K \cup \{i\}}})^{2}  (u_{\bar{K \cup\{j\}}})^{2}  u_{\bar{K\cup \{i,j\}}} \left( 1+ u_{\bar{\{i\}}} u_{\bar{\{j\}}} u^{'}_{\bar{\{ij\}}} \prod_{I \subset L} u_L \right)                       \nonumber
-\eea
-
-Using eq.\eqref{xinu}, we can say more on $u$-equations,
 \[
-1-u_I=1-\prod_{J\supset I}x_J^{(-1)^{|J|-|I|}}=\frac{\prod_{|J|-|I| \text{ odd}; J\supset I}x_J-\prod_{|J|-|I| \text{ even}; J\supset I}x_J}{\prod_{|J|-|I| \text{ odd}; J\supset I}x_J}=:\frac{N_{I,n}(x)}{\prod_{|J|-|I| \text{ odd}; J\supset I}x_J},
+1-u_1 u_{12} =u_0 u_{02}, ~1-u_2 u_{12} =u_0 u_{01},~1-u_{12}= u_0 u_{01} u_{02},~1- u_{01}= u_2 u_{01}u_{12},~1-u_{02}= u_1 u_{02} u_{12}
 \]
-where $N_{I,n}(x)$ is a polynomial of degree $D_{I,n}=2^{|\bar I|-1}$.
-It's easy to see that $x_i$ for $i\not\in I$ is a factor of $N_{I,n}(x)$ by setting $x_i=0$, so we can define a new polynomial $f_{I,n}$ of degree $D_{I,n}-|\bar I|$ with non-negative coefficients such that
+and the $u$ equations
+\begin{align}\label{npu}
+1-u_1&=u_0 u_{02}(1-u_1 u_{01}), \quad 1-u_2 =u_0 u_{01}(1-u_2 u_{02}),\quad 1-u_{12}= u_0 u_{01} u_{02} \nonumber\\
+1- u_{01}&= u_2 u_{01}u_{12},\qquad \qquad \:1-u_{02} = u_1 u_{02} u_{12} \quad\qquad \qquad \: 1-u_0=u_1 u_{12}(1-u_0 u_{01})
+\end{align}
+which is different non-perfect set of $u$ equations for ${\mathscr P}_2$ unlike eq.\eqref{perm2}!
+
+A nice fact about the $u$ equations we obtain is that $1-u_I$ are all at most linear and multi-term in $u_I$ for any $n$.
+However, they do not make the factorization manifest at the level of $u$ equations as we take some $u_I \rightarrow 0$ all incompatible $u_J \rightarrow 1$ but the $u$ equations corresponding to other $u$'s are trivially satisfied thereby not reflecting the facets of ${\mathscr P}_n$ (as can be seen by taking $u_{12} \rightarrow 0$ in eq.\eqref{npu}).
+
+The $u$ equations for $\mathscr{P}_n$ similar to eqs.\eqref{perm2}, \eqref{perm3} which do make factorization manifest are complicated polynomials %of order $n-|I|-1$
+in the corresponding $u$'s. 
+The most general $u$ equations can be conjectured to be:
+\bea \label{ueqforpn}
+1-u_{I} = (1+h_{I,n}(u)) \prod_{J} u^{(J||I)}_{J} 
+\eea
+where $J$ runs over all sets incompatible with $I$, $(J||I)$ is a positive integer, called the ``compatibility degree'', and $h_{I,n}(u)$ is polynomial %of degree $n-|I|-1$
+in $u_I$ such that $h_{I,n}|_{u_I =0} = 0$ which makes $\mathscr{P}_n$ binary as we proved using a different method in the previous section. But we do not have a closed form expression for $h_{I,n}(u)$ for all $n$ and $I$. We list some of them along with the ${\mathscr P_4}$ example in appendix (\ref{appendix:B}). 
+
+%Some of the simplest ones are:\\
+
+%For $|I| =n-1$ and $s_K = \begin{cases}  1,~ if K \not\subset I & \\ 2, ~if K \subset I\end{cases}$
+
+%\bea
+%1-u_{I} &=& \prod_ {S - I \subset J } u_{J} \prod_ {K \cap I \ne \Phi } (u_{\bar{K}})^{s_K}  \nonumber \\
+%1-u_{12\cdots n} &=& \prod_ {{I \subset S}\atop {I \ne \Phi}} u_{\bar{I}} \nonumber
+%\eea
+%and for $|I| =n-2$ with $ \bar{I} = \{i, j\}$
+%\bea
+%1-u_{I}= u_i u_j u^{2}_{ij} \prod_{J \subset I} u_{J \cup \{i\}} u_{J \cup \{j\}} u^{2}_{J \cup \{i,j\}} \prod_{K \subset S-I} (u_{\bar{K}})^{3} (u_{\bar{K \cup \{i\}}})^{2}  (u_{\bar{K \cup\{j\}}})^{2}  u_{\bar{K\cup \{i,j\}}} \left( 1+ u_{\bar{\{i\}}} u_{\bar{\{j\}}} u^{'}_{\bar{\{ij\}}} \prod_{I \subset L} u_L \right)                       \nonumber
+%\eea
+
+Although the polynomial $h_{I,n}$ is very complicated for general $I$ and $n$, we can still say something about its  ``compatibility degree'' $J||I$ in eq.\eqref{ueqforpn}.
+Using eq.\eqref{uvarforPn}, 
+\begin{equation}\label{oneminusui}
+1-u_I=1-\prod_{J\supset I}x_J^{(-1)^{|J|-|I|}}=\frac{\prod_{|J|-|I| \text{ odd}; J\supset I}x_J-\prod_{|J|-|I| \text{ even}; J\supset I}x_J}{\prod_{|J|-|I| \text{ odd}; J\supset I}x_J}=:\frac{N_{I,n}(x)}{\prod_{|J|-|I| \text{ odd}; J\supset I}x_J},
+\end{equation}
+where $N_{I,n}(x)$ is a polynomial of degree $2^{|\bar I|-1}$ in $x$.
+It's easy to see that $x_i$ for $i\not\in I$ is a factor of $N_{I,n}(x)$ by setting $x_i=0$, so we can define a new polynomial $f_{I,n}$ of degree $2^{|\bar I|-1}-|\bar I|$ with non-negative coefficients such that
 \[
 N_{I,n}(x)=f_{I,n}(x)\prod_{i\not\in I}x_i.
 \]
-It's not so obvious that $x_i$ for $i\not\in I$ is not a factor of $f_{I,n}$, which means that the above factorization of $N_{I,n}$ is reasonable. In fact, the $(D_{I,n}-|\bar I|)$-th derivative of $N_{I,n}$ with respect to $x_I$ is $a_{I,n}\prod_{i\not\in I}x_i$, 
-where $a_{I,n}$ is a positive integer. It's conjectured that $a_{I,n}=(|\bar I|-1)!=(n-|I|)!$.
-
-From
-\[
-\prod_{i\not\in I}x_i=\prod_J u_J^{|J|-|I\cap J|}
-\quad\text{and}\quad
-\prod_{|J|-|I| \text{ odd}; J\supset I}x_J
-=
-\prod_{J\supsetneq I}u_J^{2^{|J|-|I|-1}},
-\]
-then
+%It's not so obvious that $x_i$ for $i\not\in I$ is not a factor of $f_{I,n}$, which means that the above factorization of $N_{I,n}$ is reasonable. It will be clear when we calculate $N_{I,n}(x)|_{x_I=0}$ below.
+%In fact, the coefficient of $x_I^{D_{I,n}-|\bar I|}$ in $N_{I,n}(x)$ is $a_{I,n}\prod_{i\not\in I}x_i$, 
+%where $a_{I,n}$ is a positive integer. It's conjectured that $a_{I,n}=(|\bar I|-1)!=(n-|I|)!$.
+Using eq.\eqref{xinu},
+%\[
+%\prod_{i\not\in I}x_i=\prod_J u_J^{|J|-|I\cap J|}
+%\quad\text{and}\quad
+%\prod_{|J|-|I| \text{ odd}; J\supset I}x_J
+%=
+%\prod_{J\supsetneq I}u_J^{2^{|J|-|I|-1}},
+%\]
+%then
 \[
 \prod_{i\not\in I}x_i\bigg/\prod_{|J|-|I| \text{ odd}; J\supset I}x_J
-=\prod_{J\not\supset I} u_J^{|J|-|I\cap J|}\prod_{J\supsetneq I} u_J^{|J|-|I|-2^{|J|-|I|-1}}
+=\prod_{J\not\supset I} u_J^{|J|-|I\cap J|}\prod_{J\supsetneq I} u_J^{|J|-|I|-2^{|J|-|I|-1}}.
 \]
-is a rational function of $x$.
-Since $|J|-|I|-2^{|J|-|I|-1}\leq 0$, it's natural to rewrite that
-\begin{equation}\label{ueqofPn}
+Since $|J|-|I|-2^{|J|-|I|-1}\leq 0$ for $J\supsetneq I$, it's natural to rewrite eq.\eqref{oneminusui} as
+\[
 1-u_I=g_{I,n}\prod_{J\not\supset I} u_J^{|J|-|I\cap J|},
-\end{equation}
+\]
 where 
 \[
-g_{I,n}:=f_{I,n}\bigg /\prod_{J\supsetneq I} u_J^{2^{|J|-|I|-1}-(|J|-|I|)}
+g_{I,n}=f_{I,n}\bigg /\prod_{J\supsetneq I} u_J^{2^{|J|-|I|-1}-(|J|-|I|)}
 =f_{I,n}\bigg /\prod_{J\supset I, |J|-|I|\, \text{odd}\atop{|J|-|I|\geq 3}} x_J.
 \]
-We conjecture that $g$ is a polynomial of $u$ with non-negative coefficients.
-The product $\prod_{J\not\supset I} u_J^{|J|-|I\cap J|}$ has appeared in all known examples with right powers. It's clear that any compatible $u_J$ for $J\subset I$ doesn't appear in the product because $I\cap J=J$. Thus, there's a conjecture about the compatibility degree:
+It's easy to see that $g_{I,n}=1+h_{I,n}$ by taking $x_I\to 0$, where $h_{I,n}$ is a rational function of $x$ such that $h_{I,n}|_{x_I=0}=0$. In fact, 
 \[
-I||J=|J|-|I\cap J|\text{ for $I\not\subset J$},\quad  I||J=0 \text{ for $I\subset J$}.
+N_{I,n}|_{x_I=0}=\prod_{|J|-|I| \text{ odd}; J\supset I}x_{J-I}=\prod_{i\not\in I}x_i\prod_{J\supset I, |J|-|I|\, \text{odd}\atop{|J|-|I|\geq 3}} x_{J-I}=f_{I,n}|_{x_I=0}\prod_{i\not\in I}x_i\quad \Rightarrow\quad g_{I,n}|_{x_I=0}=1.
 \]
-It's not symmetric when $|I|\neq |J|$. 
-
-We conjecture (and have checked upto $n=6$) that we can solve the $u$-equations in terms of $u_1,u_{12},\cdots,u_{12\cdots n} $ for the rest of the $u$'s.
- 
- \bea
-\int_{\mathbb{R}^{n}_{+}} \prod_{i =1}^{n} \frac{d x_i}{x_i} \prod_{I} \left(x_I \right) ^{-\alpha^{'} S_I} &=& \int_{\mathbb{R}^{n}_{+}} \prod_{i =1}^{n} \frac{d x_i}{x_i} \prod_{\alpha} \left(u_I \right) ^{-\alpha^{'} F_{\alpha}} \\
-&=&\int_{[0,1]^n} \prod_{i =1}^{n} \frac{d u_{1\cdots i}}{u_{1\cdots i}(1-u_{1\cdots i})} \prod_{\alpha} \left(u_I(u_{1\cdots i}) \right) ^{-\alpha^{'} F_{\alpha}}
-\eea 
-
-
-
-\subsection{Binary aspects of generalized Permutohedra}
-
-
-
-Inspired by the $u$-variables for permutahdera, we directly come up with the $u$-variables for generalized permutohedra. To this end, we first find all minimum extensions $I_{a}$ of $I$ in $\mathbf{B}$, that is there is no $J\in\mathbf{B}$ such that $I\subsetneq J\subsetneq I_{a}$, and we denote the collection of these extensions by $\mathscr{G}_{I}$. Then, the $u$-variables for the generalized permutohedron with building set $\mathbf{B}$ are
-\begin{equation}
-   \log u_{I} :=  \log x_{I} +(-1)^{k}\sum _{\varnothing\neq\{I_{a_{1}},\cdots,I_{a_{k}}\}\subset \mathscr{G}_{I}} \log x(I_{a_{1}},\ldots, I_{a_{k}})  \label{uvarforgenpermu}
+Therefore, 
+\begin{equation}\label{ueqofPn}
+1-u_I=(1+h_{I,n})\prod_{J\not\supset I} u_J^{|J|-|I\cap J|},
 \end{equation}
-where the sum is over all nonemepty subsets of $\mathscr{G}_{I}$, and we introduce
+and we conjecture that $h_{I,n}$ is a polynomial of $u$ with non-negative coefficients, and the ``compatibility degree'' is 
+\[
+J||I=|J|-|I\cap J|\text{ for $I\not\subset J$},\quad  J||I=0 \text{ for $I\subset J$}.
+\]
+It's clear that any compatible $u_J$ for $J\subset I$ doesn't appear in the product because $I\cap J=J$.
+Note that it's not symmetric when $|I|\neq |J|$.
+
+
+
+% In the case of $n$-dimensional cluster polytopes, all $u$ variables can be expressed \emph{rationally} in terms of $n$ of them, which correspond a acyclic quiver, by solving $u$ equations~\cite{Arkani-Hamed:2019plo}. Then the configuration space can be described by a $n$-dimensional hypercube $0<u_{\alpha}<1$ with the canonical form $\prod \mathrm{d} \log \frac{u_{\alpha}}{1-u_{\alpha}}$. The situation becomes quite different for the $n$-dimensional permutohedron when $n>2$ (since $\mathscr{P}_{2}=\mathscr{B}_{2}$). First, all vertices (for which the coresponding $u$ variables can freely take values from 0 to 1) of a permutohedron are equivalent up to a permutation of indices. Then we can simply solve all $u$'s in terms of $u_{[1,i]}$ with $i\in [1,n]$, and the solutions are not rational when $n=3$. Thus, the stringy integral \eqref{intgenperm} for the $(n>2)$-dimensional permutahderon dose \emph{not} admit a form of 
+% \begin{equation}
+%     (\alpha')^{n}\int_{[0,1]^{n}} \prod_{\alpha=1}^{n}\mathrm{d}\log\frac{u_{\alpha}}{1-u_{\alpha}} \: \prod_{a=1}^{N} u_{a}^{\alpha' X_{a}} \:,
+% \end{equation} 
+% as in the case of cluster polytopes \cite{Arkani-Hamed:2019plo}. Of course, this doesn't mean the stringy integral \eqref{intgenperm} for $\mathscr{P}_{n>2}$ cannot be expressed rationally in terms of $u$ variables. For example, one can use $u_{\bar{\imath}}:= u_{[0,n]-\{i\}}$ to describe this configuration space rationally since $x_{i}=(u_{\bar{\imath}}-1)/\bigl(n-1-\sum u_{\bar{\imath}} \bigr)$ under the gauge fixing of $x_{0}=1$, then the stringy integral
+% \begin{equation}
+%   \mathcal{I}(\mathscr{P}_{n>2})= \int_{U} \frac{1}{\sum_{i=1}^{n}u_{\bar{\imath}}-(n-1)} \prod_{i=1}^{n}\frac{\mathrm{d}u_{\bar{\imath}}}{1-u_{\bar{\imath}}} \prod_{I\subset [0,n]} u_{I}(\{u_{\bar{\imath}}\})^{\alpha' F_{I}}
+% \end{equation}
+% where 
+% \begin{equation*}
+%   U=\biggl\{\sum_{i=1}^{n} u_{\bar{\imath}}>n-1 \quad \text{and}\quad  0<u_{\bar{\imath}}<1\biggr\} \:.
+% \end{equation*}
+% There are certainly lots of other choices of $u$'s to describe this configuration space rationally, however, the integration region $U$ depends on these choices now.
+% rather than just an $n$-dimensional hypercube.
+% We conjecture (and have checked upto $n=6$) that we can solve the $u$ equations in terms of $u_1,u_{12},\cdots,u_{12\cdots n} $ for the rest of the $u$'s.
+ 
+% \bea
+% \int_{\mathbb{R}^{n}_{+}} \prod_{i =1}^{n} \frac{d x_i}{x_i} \prod_{I} \left(x_I \right) ^{-\alpha' S_I} &=& \int_{\mathbb{R}^{n}_{+}} \prod_{i =1}^{n} \frac{d x_i}{x_i} \prod_{\alpha} \left(u_I \right) ^{-\alpha' F_{\alpha}} \\
+% &=&\int_{[0,1]^}n} \prod_{i =1}^{n} \frac{d u_{1\cdots i}}{u_{1\cdots i}(1-u_{1\cdots i})} \prod_{\alpha} \left(u_I(u_{1\cdots i}) \right) ^{-\alpha' F_{\alpha}}
+% \eea 
+
+\subsection{Generalized permutohedra as binary geometries}\label{sect3.4}
+
+Inspired by the $u$ variables for permutohdera, we directly come up with the $u$ variables for generalized permutohedra. To this end, we first find all minimum extensions $I_{a}$ of $I$ in $\mathbf{B}$, that is there is no $J\in\mathbf{B}$ such that $I\subsetneq J\subsetneq I_{a}$, and we denote the collection of these extensions by $\mathscr{G}_{I}$. Then, the $u$ variables for the generalized permutohedron with the building set $\mathbf{B}$ are
+\begin{equation}
+   \log u_{I} :=  \log x_{I} +(-1)^{k}\sum _{\varnothing\neq\{I_{a_{1}},\dots,I_{a_{k}}\}\subset \mathscr{G}_{I}} \log x(I_{a_{1}},\ldots, I_{a_{k}})  \label{uvarforgenpermu}
+\end{equation}
+where the sum is over all nonempty subsets of $\mathscr{G}_{I}$, and we introduce
 \[
 x(I_{a_{1}},\ldots,I_{a_{k}}):=x_{I_{a_{1}}\cup \cdots \cup I_{a_{k}}}   
 \]
 to avoid too many subscripts. Obviously, an equivalent form of eq.\eqref{uvarforgenpermu} is
 \begin{equation}
-   \log u_{I} := (-1)^{k}\sum _{\{I_{a_{1}},\cdots,I_{a_{k}}\}\subset \mathscr{G}_{I}} \log \bigl(x_{I}+x(I_{a_{1}}-I,\ldots, I_{a_{k}}-I)\bigr)  \label{uvarforgenpermu1}
+   \log u_{I} := (-1)^{k}\sum _{\{I_{a_{1}},\dots,I_{a_{k}}\}\subset \mathscr{G}_{I}} \log \bigl(x_{I}+x(I_{a_{1}}-I,\ldots, I_{a_{k}}-I)\bigr)  \label{uvarforgenpermu1}
 \end{equation}
-It is easy to check that the $u$-variables for simplices, hypertubes, associahedra, cyclohedra and permutohedra defined above can be viewed as the special cases of \eqref{uvarforgenpermu}:
+Let us consider several simple examples to illustrate this construction:
+% It is easy to check that the $u$ variables for simplices, hypercubes, associahedra, cyclohedra and permutohedra defined above can be viewed as the special cases of \eqref{uvarforgenpermu}:
 \begin{enumerate}[label=(\roman*)]
-   \item For a $n$-dimensional simplex, $\mathscr{G}_{\{i\}}=\{[0,n]\}$ for every singleton $\{i\}$.
-   \item For a $n$-dimensional hypertube, $\mathscr{G}_{\{0\}}=\{[0,1]\}$, $\mathscr{G}_{\{i\neq 0\}}=\{[0,i]\}$ and $\mathscr{G}_{[0,i]}=\{[0,i+1]\}$.
+   %\item For a $n$-dimensional simplex, $\mathscr{G}_{\{i\}}=\{[0,n]\}$ for every singleton $\{i\}$.
+   \item For a $n$-dimensional hypercube, $\mathscr{G}_{\{0\}}=\{[0,1]\}$, $\mathscr{G}_{\{i\neq 0\}}=\{[0,i]\}$ and $\mathscr{G}_{[0,i]}=\{[0,i+1]\}$. This gives $u_{0}=x_{0}/x_{01}$, $u_{i}=x_{i}/x_{[0,i]}$ and $u_{[0,i]}=x_{[0,i]}/x_{[0,i+1]}$. These are indeed the $u$ variables for the $n$-dimensional hypercube since  $u_{i+1}+u_{[0,i]}=1$ for $i\in [0,n{-}1]$.
    \item For a $n$-dimensional associahedron,
    \[
    \mathscr{G}_{[i,j]}=\begin{cases}
       \{[i-1,j],[i,j+1]\}   & \quad \text{if $i\neq 0$ and $j\neq n $}\\
       \{[0,j+1]\} &\quad \text{if $i= 0$ and $j\neq n $} \\
       \{[i-1,j]\} &\quad \text{if $i\neq 0$ and $j= n $}
-   \end{cases}   
+   \end{cases}   \:.
    \]
-   \item For a $n$-dimensional cyclohedron, $\mathscr{G}_{[i,j]}=\{[i-1,j],[i,j+1]\}$
-   \item For a $n$-dimensional permutohedron, $\mathscr{G}_{I}=\{I\cup\{j\}\vert j\in [0,n]-I \}$
+   This reproduces the $u$ variables \eqref{uvarforAn} for the $n$-dimensional associahedron.
+   \item For a $n$-dimensional cyclohedron, $\mathscr{G}_{[i,i+k]}=\{[i-1,i+k],[i,i+k+1]\}$.  This reproduces the $u$ variables \eqref{uvarforBn} for the $n$-dimensional cyclohedron.
+   \item For a $n$-dimensional permutohedron, $\mathscr{G}_{I}=\{I\cup\{j\}\vert j\in [0,n]-I \}$. This reproduces the $u$ variables \eqref{uvarforPn} for the $n$-dimensional permutohedron.
 \end{enumerate}
 
-% \paragraph{Example:} For the generalized permutahderon with building set 
+% \paragraph{Example:} For the generalized permutohedron with building set 
 % \[
 % \mathbf{B}=\{\{0\},\{1\},\{2\},\{3\},\{0,1,2\},\{1,3\},\{0,1,2,3\}\},
 % \]
-% the corresponding $u$-variables are
+% the corresponding $u$ variables are
 % \begin{gather*}
 %    u_{0}=\frac{x_{0}}{x_{012}} \:,\quad  u_{1}=\frac{x_{1}x_{0123}}{x_{012}x_{13}} \:,\quad 
 %    u_{2}=\frac{x_{2}}{x_{012}} \:, \quad u_{3}=\frac{x_{3}}{x_{13}} \\
 %    u_{012}=\frac{x_{012}}{x_{0123}}\:,\qquad u_{13}=\frac{x_{13}}{x_{0123}} \:, \quad 
 % \end{gather*}
 
-For generalized permutahdera, $u_{I}$ and $u_{J}$ are incompatible if $I$ and $J$ are one of the following two cases:
-\begin{enumerate}
+For generalized permutohedra, as we have reviewed in sec.(\ref{GP}), $u_{I}$ and $u_{J}$ are incompatible if $I$ and $J$ are one of the following two cases:
+\begin{enumerate}[label=(\arabic*)]
    \item $I\cap J=\varnothing$ and $I\cup J \in \mathbf{B}$ \:, 
    \item $I\cap J \neq \varnothing,I, J $ \:,
 \end{enumerate}
-while $u_{I}$ and $u_{J}$ are compatible if $I$ and $J$ are one of the following three cases:
-\begin{enumerate}[resume]
+while $u_{I}$ and $u_{J}$ are compatible if $I$ and $J$ satify one of the following three conditions:
+\begin{enumerate}[resume,label=(\arabic*)]
    \item $J\subset I$\:,
    \item $I\subset J$ \:,
    \item $I\cap J=\varnothing$ and $I\cup J \notin \mathbf{B}$ \:.
 \end{enumerate}
-We will follow the argument in the cases of permutahdera: replacing $x_{i}$ with $ \epsilon x_{i}$ for all $i\in I$ and taking $\epsilon \to 0$, then considering the behaviour of the other $u_{J}$'s under this limit case by case. 
+We will follow the same argument as in the case of permutohedra: replacing $x_{i}$ with $ \epsilon x_{i}$ for all $i\in I$ and taking $\epsilon \to 0$, then considering the behaviour of the other $u_{J}$'s under this limit case by case. 
 % For future convenience, we assume that the generating set $\mathbf{J}$ for $J$ has $s$ elements denoted by $J_{a}$ with $a\in[1,s]$, and introduce 
 % \begin{equation}
 %    p(J_{1},\ldots,J_{r}) = \sum_{a\in J_{1}\cup\cdots\cup J_{r}}x_{a}
@@ -1769,69 +1908,102 @@ For case (3), we again denote $\mathscr{G}^{I}_{J}$ as the collection of the ele
   & \qquad \qquad\qquad \qquad \qquad \qquad    + x (J_{b_{1}}{-}I,\ldots,J_{b_{l}}{-}I)\Bigr) \nonumber  \\
   &=\sum_{\{J_{a_{1}},\ldots,J_{a_{k}}\}\subset \mathscr{G}_{J}^{I}} (-1)^{k+l}\log\Bigl( x_{J}+ x(J_{a_{1}}{-}J,\ldots,J_{a_{k}}{-}J) \Bigr). 
 \end{align}
-Remarkably, they are $u$-variables for the generalized permutohedron with the building set
-\begin{equation}
-   \mathbf{B}_{I} = \{J \vert J\subset I, J\in \mathbf{B}\}.
-\end{equation}
+Remarkably, these are $u$ variables for the generalized permutohedron with the building set $\mathbf{B}_{I}$ defined by \eqref{BI}.
+% \begin{equation}
+%   \mathbf{B}_{I} = \{J \vert J\subset I, J\in \mathbf{B}\}.
+% \end{equation}
 
-Case (4) and (5) are quite trivial. For case (4), the limit behaviour of $u_{J}$ as $x_{I}\to 0$ can be simply obtained by replacing each $x_{K}$ in eq.\eqref{uvarforgenpermu} with $x_{K-I}$. For case (5), $u_{J}$ is  independent of $x_{i}$ with $i\in I$. Remarkably, they are $u$-variables for the generalized permutohedron with the building set
-\begin{equation}
-   \mathbf{B}_{\bar{I}} = \{J-I \vert J\in \mathbf{B}\}.
-\end{equation}
+Case (4) and (5) are quite trivial. For both cases, the limit behaviour of $u_{J}$ as $x_{I}\to 0$ can be simply obtained by replacing each $x_{K}$ in eq.\eqref{uvarforgenpermu} with $x_{K-I}$. %For case (5), $u_{J}$ is  independent of $x_{i}$ with $i\in I$. 
+Remarkably, these are the $u$ variables for the generalized permutohedron with the building set $ \mathbf{B}_{\bar{I}}$ defined by \eqref{BIbar}.
 
 
-\paragraph{Example}  We start with the Cayley graph proposed in \cite{} and further studied in \cite{}. In \cite{}, the ABHY realization for general Cayley graphs have been proposed, here we will use several examples of Cayley graphs to illustrate that the binary geometries exist for general permutohedra. The first Cayley graph which is nether associahedron nor permutahderon is so-called  ``next-to-$A_{3}$'', in terms of generalized permutahdera, the building set for next-to-$A_{3}$ is 
-\begin{equation}
-   \mathscr{NA}_{3}=\{\{1,2,3,4\},\{1,2,3\},\{1,3,4\},\{2,3,4\},\{1,2\},\{1,3\},\{2,3\},\{3,4\},\{1\},\{2\},\{3\},\{4\}\}
-\end{equation}
-
-the $u$ variables are 
-\begin{align}
-   &u_{1}=\frac{x_{1}x_{123}}{x_{12}x_{13}} \:, \quad  u_{2}=\frac{x_{2}x_{123}}{x_{12}x_{23}} \:,  \quad 
-   u_{3}=\frac{x_{3}x_{134}x_{234}x_{123}}{x_{34}x_{13}x_{23}x_{1234}} \:, \quad 
-   u_{4}=\frac{x_{4}}{x_{34}} \\
-   &u_{12}=\frac{x_{12}}{x_{123}} \:, \quad u_{13}=\frac{x_{13}x_{1234}}{x_{134}x_{123}} \:,\quad 
-   u_{23}=\frac{x_{23}x_{1234}}{x_{123}x_{234}} \:, \quad u_{34}=\frac{x_{34}x_{1234}}{x_{134}x_{234}} \\
-   &u_{123}=\frac{x_{123}}{x_{1234}} \:, \quad u_{134}=\frac{x_{134}}{x_{1234}} \:, \quad 
-   u_{234}=\frac{x_{234}}{x_{1234}}
-\end{align}
-The $u$ equations are
-\begin{align}
-   &1-u_{1}=u_{2}u_{3}u_{23}^{2}u_{34}u_{234}^{2} \:, \\
-   &1-u_{2}=u_{1}u_{3}u_{13}^{2}u_{34}u_{134}^{2} \:, \\
-   &1-u_{3}= u_{1}u_{2}u_{4}u_{12}^{2}(1+u_{3}u_{13}u_{23}u_{34}u_{123}u_{134}u_{234}) \:, \\
-   &1-u_{4}=u_{3}u_{13}u_{23}u_{123}  \:, \\
-   &1-u_{12} =u_{3}u_{13}u_{23}u_{34}u_{134}u_{234} \:, \\
-   &1-u_{13} =u_{2}u_{4}u_{12}u_{23}u_{34}u_{234}^{2} \:, \\
-   &1-u_{23}= u_{1}u_{4}u_{12}u_{13}u_{34}u_{134}^{2} \:, \\
-   &1-u_{34}= u_{1}u_{2}u_{12}^{2}u_{13}u_{23}u_{123}^{2} \:, \\
-   &1-u_{123}=u_{4}u_{34}u_{134}u_{234} \:, \\
-   &1-u_{134}=u_{2}u_{12}u_{23}u_{123}u_{234} \:, \\
-   &1-u_{234}=u_{1}u_{12}u_{13}u_{123}u_{134} \:, 
-\end{align} 
+Here we just showed that binary geometries exist for generalized permutohedra and gave the corresponding $u$ variables. The $u$ equations are quite complicated in general, and we only have closed formulas for $\mathscr{A}_{n}$, $\mathscr{B}_{n}$ and their several degenerations. For permutohedra, we have just conjectured the $u$ equations are of form \eqref{ueqforpn}. More general, the $u$ equations don't even take the form of \eqref{ueqforpn}. For example, consider the generalized permutohedron with building set 
+\[
+\mathbf{B}=\{\{0\},\{1\},\{2\},\{3\},\{0,1,2\},\{1,3\},\{0,1,2,3\}\},
+\]
+the corresponding $u$ variables are
+\begin{gather*}
+   u_{0}=\frac{x_{0}}{x_{012}} \:,\quad  u_{1}=\frac{x_{1}x_{0123}}{x_{012}x_{13}} \:,\quad 
+   u_{2}=\frac{x_{2}}{x_{012}} \:, \quad u_{3}=\frac{x_{3}}{x_{13}} \\
+   u_{012}=\frac{x_{012}}{x_{0123}}\:,\qquad u_{13}=\frac{x_{13}}{x_{0123}} \:. \quad 
+\end{gather*}
+The $u$ equations are\footnote{If we introduce $\tilde{u}_{02}=u_{0}+u_{2}$, then $\tilde{u}_{02}$ together with the remaining 4 $u$'s form $\mathscr{A}_{2}$}
+\begin{gather*}
+u_{0}+u_{2}+u_{1}u_{13}=1\:, \quad  u_{1}+(u_{0}+u_{2})u_{3}=1 \:, \quad u_{3}+u_{1}u_{012}=1\:, \\
+u_{012}+u_{3}u_{13}=1\:, \quad u_{13}+(u_{0}+u_{2})u_{012}=1\:.
+\end{gather*}
+We leave the study of compatible degrees and $u$ equations for general permutohedra to future work.
+%(Chi: If we denote $\tilde{u}_{02}=u_{0}+u_{2}$, then $\tilde{u}_{02}$ together with the remaining 4 $u$'s form $\mathscr{A}_{2}$ )
+% \begin{equation}
+%   \mathbf{B}_{\bar{I}} = \{J-I \vert J\in \mathbf{B}\}.
+% \end{equation}
 
 
-\subsection {Binary geometries with non-linear factors}
-We can also consider general Minkowski sums of non-simplices and see if these also give us any instance of polytopes with perfect $u$ equations. One such case is the following:
+% \paragraph{Example}  We start with the Cayley graph proposed in \cite{He:2018pue} and further studied in \cite{}. In \cite{}, the ABHY realization for general Cayley graphs have been proposed, here we will use several examples of Cayley graphs to illustrate that the binary geometries exist for general permutohedra. The first Cayley graph which is nether associahedron nor permutohedron is so-called  ``next-to-$A_{3}$'', in terms of generalized permutohedra, the building set for next-to-$A_{3}$ is 
+% \begin{equation}
+%   \mathscr{NA}_{3}=\{\{1,2,3,4\},\{1,2,3\},\{1,3,4\},\{2,3,4\},\{1,2\},\{1,3\},\{2,3\},\{3,4\},\{1\},\{2\},\{3\},\{4\}\}\nonumber
+% \end{equation}
+% (Prashanth:@Chi there an obvious symmetry between 1 and 2 in this example. Can you use it to make it more compact ?)
+% the $u$ variables are 
+% \begin{align}
+%   &u_{1}=\frac{x_{1}x_{123}}{x_{12}x_{13}} \:, \quad  u_{2}=\frac{x_{2}x_{123}}{x_{12}x_{23}} \:,  \quad 
+%   u_{3}=\frac{x_{3}x_{134}x_{234}x_{123}}{x_{34}x_{13}x_{23}x_{1234}} \:, \quad 
+%   u_{4}=\frac{x_{4}}{x_{34}}\nonumber \\
+%   &u_{12}=\frac{x_{12}}{x_{123}} \:, \quad u_{13}=\frac{x_{13}x_{1234}}{x_{134}x_{123}} \:,\quad 
+%   u_{23}=\frac{x_{23}x_{1234}}{x_{123}x_{234}} \:, \quad u_{34}=\frac{x_{34}x_{1234}}{x_{134}x_{234}} \nonumber\\
+%   &u_{123}=\frac{x_{123}}{x_{1234}} \:, \quad u_{134}=\frac{x_{134}}{x_{1234}} \:, \quad 
+%   u_{234}=\frac{x_{234}}{x_{1234}}
+% \end{align}
+% The $u$ equations are
+% \begin{align*}
+%   &1-u_{1}=u_{2}u_{3}u_{23}^{2}u_{34}u_{234}^{2}\\
+%   &1-u_{2}=u_{1}u_{3}u_{13}^{2}u_{34}u_{134}^{2}\\
+%   &1-u_{3}= u_{1}u_{2}u_{4}u_{12}^{2}(1+u_{3}u_{13}u_{23}u_{34}u_{123}u_{134}u_{234})\\
+%   &1-u_{4}=u_{3}u_{13}u_{23}u_{123} \\
+%   &1-u_{12} =u_{3}u_{13}u_{23}u_{34}u_{134}u_{234}\\
+%   &1-u_{13} =u_{2}u_{4}u_{12}u_{23}u_{34}u_{234}^{2}\\
+%   &1-u_{23}= u_{1}u_{4}u_{12}u_{13}u_{34}u_{134}^{2}\\
+%   &1-u_{34}= u_{1}u_{2}u_{12}^{2}u_{13}u_{23}u_{123}^{2}\\
+%   &1-u_{123}=u_{4}u_{34}u_{134}u_{234}\\
+%   &1-u_{134}=u_{2}u_{12}u_{23}u_{123}u_{234}\\
+%   &1-u_{234}=u_{1}u_{12}u_{13}u_{123}u_{134}, 
+% \end{align*} 
 
-We consider the Minkowski sum of $n-1$ $A_2$'s with following Newton polynomial :
+\section{Discussions}
+
+In this paper we introduced a large class of integrals,  ${\cal I}_{\bf B}$, which can be regarded as a family of rigid stringy canonical forms%~\cite{Arkani-Hamed:2019mrd} 
+for generalized permutohedra ${\mathscr P}(\bf B)$, and we show that corresponding configuration spaces are always binary geometries. These rigid integrals satisfy the remarkable property that, at any ``massless'' pole, {\it i.e.} poles of the leading order $\Omega({\mathscr P}(\bf B) )$, the residue is given by a product of two such integrals, ${\cal I}_{{\bf B}_L} \times {\cal I}_{{\bf B}_R}$. Our results greatly extended the scope of binary geometries and associated integrals with such ``perfect'' factorization properties, which were originally thought to tie to the more special class of generalized associahedra for finite-type cluster algebras. For infinite families of cases as degenerations of associahedra and cyclohedra (which belong to both generalized permutohedra and generalized associahedra), we find additionally that the $u$ equations are ``perfect'' just like the case for cluster configuration spaces. Our preliminary investigations have opened up various new avenues to be explored, and we end with listing some open questions.
+
+\paragraph{Generalized permutohedra vs. generalized associahedra} Our results provide an infinite number of examples generalizing ordinary string integrals (and cluster string integrals of type $B_n$), where the configuration space is determined by {\it linear} factors, or equivalently hyperplane arrangement. In this sense, it is fair to say that we have only explored a very special corner in the world of binary configuration spaces and associated stringy integrals. Even for cluster cases, it is unknown if the cluster configuration space of type $C_n$ can be realized by hyperplane arrangement (see also \cite{Li:2018mnq}), and for type $ D_n$ and exceptional cases, the conjecture is that the spaces cannot be obtained this way~\cite{Arkani-Hamed:2019plo}; we expect that these cases do not belong to integrals with ``linear'' factors. It would be highly desirable to look for a wider class of binary geometries which naturally incorporate both generalized permutohedra and generalized associahedra. 
+
+On the other hand, it would be interesting to study the configuration spaces for generalized permutohedra in a way similar to the cluster case. The $u$ equations for {\it e.g.} ${\mathscr P}_d$ are certainly worth further investigations, and one could ask if there might be any analog/generalization of cluster algebra behind it. Another question concerns going beyond positive part of the space since it is binary even in the complex case, and it would be nice to study complex space and connected components of the real space. For the cluster case, connected components are in bijection with sign patterns of the $u$ variables allowed by the so-called extended $u$ equations~\cite{Arkani-Hamed:2019plo}. It would be highly desirable to see if one could obtain all the extended $u$ equations for {\it e.g.} ${\mathscr P}_d$, which can help us understand these questions better. Relatedly, the number of connected components and other interesting properties of the space can be inferred by counting the number of points in the space for a finite field; since we are dealing with hyperplane arrangement, the point count $N(p)$ is always a polynomial. Just to illustrate the counting with some examples, since ${\mathscr P}_2={\mathscr B}_2$, the point count is $N(p)=(p-3)^2$, and if we plug in $p=-1$ we have $|N(-1)|=16$ connected components; we find for ${\mathscr P}_3$, $N(p)=(p-4)(p^2-10p+26)$, thus there are $185$ connected components, and for ${\mathscr P}_4$, $N(p)=p^4- 30 p^3+ 345 p^2- 1785 p+3485$ thus $5646$ connected components. 
+
+Moreover, since we have found a variety of such geometries with perfect $u$ equations from degenerating ${\mathscr A}_n$ and ${\mathscr B}_n$, it'd be very interesting to explore more cases with perfect $u$ equations from degenerations of other types, {\it e.g.} ${\mathscr C_n}$ and ${\mathscr D_n}$. Along this direction, an intriguing possibility is to classify binary geometries with perfect $u$ equations from degenerating cluster cases; since any product of such geometries still has perfect $u$ equations, this amounts to find all elementary, non-factorizing geometries with perfect $u$ equations. More importantly,  what are the possible interpretations of these degenerations from cluster algebra; even for ${\mathscr A}_{n-3}$, what are the meaning of these degenerations of ${\cal M}_{0,n}$ and the string integrals?
+
+\paragraph{Generalized string integrals and applications} One of the most pressing questions is to study further these stringy integrals and their potential applications to physics. We would like to understand why these integrals factorize at finite $\alpha'$ just as cluster stringy integrals, though most of them are not related to cluster algebra. Recall that cluster stringy integrals of classical types are natural $\alpha'$-deformation of bi-adjoint $\phi^3$ amplitudes through one-loop~\cite{Arkani-Hamed:2019vag}, and in general the physical meaning of these integrals and their leading orders are unclear. A special class of generalized permutohedra, called Cayley polytopes, have natural interpretations as sum of certain tree-level $\phi^3$ diagrams~\cite{Gao:2017dek,He:2018pue}; for these cases, the stringy integrals provide a rigid $\alpha'$-deformation of these $\phi^3$ ``amplitudes''~\footnote{For other applications of generalized permutohedra to physics, see~\cite{early2017generalized,Early:2018zuw}.}. It would be interesting to see what role do generalize permutohedra play in the general story of formulating scattering amplitudes as differential forms~\cite{Arkani-Hamed:2017tmz, He:2018okq, Arkani-Hamed:2017mur, Arkani-Hamed:2019vag}.
+
+We have not touched various properties of these stringy integrals, such as recurrence relations, complex (and real) integrals with two different ``orderings'' and scattering (saddle-point) equations and pushforward, It would be interesting to understand these points better, especially for the ${\mathscr P}_d$ case, which is completely symmetric in the labels. The scattering equations read
+\[\frac{X_i}{x_i}=\sum_{I \ni i} \frac{c_I}{\sum_{j \in i} x_j}\,,
+\]
+which provide a one-to-one map from ${\bf x}\in \mathbb{R}_{\geq 0}^d$ to ${\mathscr P}_d$, and $\Omega({\mathscr P}_d)$ is given by the pushforward via summing over the solutions. By plugging in $p=1$ in the point count $N(p)$, one can obtain the number of solutions (saddle points), which also gives the dimension of the space of integral functions~\cite{Arkani-Hamed:2019mrd}. For example, for $d=2, 3, 4$, we have $4, 51, 2016$ solutions respectively. 
+
+One class of examples which are particularly interesting are the Stokes polytopes and Accordiohedra~\cite{Banerjee:2018tun,Raman:2019utu} associated with planar $\phi^{p}$ amplitudes. A nice fact about Stokes polytopes~\cite{Chapoton, Raman:2019utu} is that any product of associahedra ${\mathscr A}_{i_1}\times \cdots \times {\mathscr A}_{i_k}$ is a Stokes polytope of dimension $n=i_1+\cdots+i_k$; more interestingly, degenerations of ${\mathscr A_3}$ with perfect $u$ equations correspond to $3d$ Stokes polytopes. Furthermore every Stokes polytope is a Minkowski sum of associahedra \cite{Baryshnikov} and thus it would be natural to consider them as these might provide nice class of physically relevant examples which also play a role in classifying binary geometries with perfect $u$ equations.
+
+\paragraph {Beyond linear factors}
+Throughout the paper we have considered stringy integrals with linear factors whose Newton polytopes are coordinate simplices. In fact, one can discover more polytopes which also have perfect $u$ equations, once we consider non-linear factors. One particularly simple class of examples we discover concern polytopes that are Minkowski sum of $n$ line intervals and $n-1$ triangles, with Newton polynomials:  
 \bea \label{new}
-\prod_{i=1}^{n} (1+x_i ) \prod_{i=1}^{n-1} (1+x_i +x_i x_{i+1}) 
+\prod_{i=1}^{n} (1+x_i )^{-\alpha' c_i}  \prod_{i=1}^{n-1} (1+x_i +x_i x_{i+1})^{-\alpha' c_{i, i+1}}\,.
 \eea 
-This gives a family of simple $n$-dimensional polytopes with $3n-1$ facets  and Pell number $P_n$ (~recursively defined as $ P_n=2 P_{n-1} +P_{n-2}$ with $P_1=1,~ P_2=2$) of vertices which we shall call $X_n$. 
+It turns out this gives a family of simple $n$-dimensional polytopes with $3n-1$ facets and the number of vertices is given by the Pell number $P_n$ (recursively defined as $ P_n=2 P_{n-1} +P_{n-2}$ with $P_1=1,~ P_2=2$). We refer to the polytope as $\mathscr{X}_n$.
 
-We can solve for $u$-variables for this family and we get :
+The big polyhedron is a simplex, and we find that the $u$ variables take a very simple form:
 \bea
-u_1 &=& \frac{p_n}{q_n}, ~u_2 = \frac{p_{n-1}q_n}{p_{n-1,n}},~u_3 = \frac{p_{n-2}q_{n-1}}{p_{n-2,n-1}}, \cdots,
+u_1 &=& \frac{p_n}{q_n}, ~u_2 = \frac{p_{n-1}q_n}{p_{n-1,n}},~u_3 = \frac{p_{n-2}q_{n-1}}{p_{n-2,n-1}}, \dots,
 u_{n-2} = \frac{p_1 q_2}{p_{12}}, ~u_{n-1} = \frac{p_{2}q_3}{p_{23}},~u_n = \frac{p_{3}q_{4}}{p_{34}}, \nonumber \\
-u_{n+1} &=& \frac{1}{q_1}, ~u_{n+2} = \frac{p_{12}}{q_{1}q_{2}},~u_{n+3} = \frac{q_{1}}{p_{23}}, \cdots,
+u_{n+1} &=& \frac{1}{q_1}, ~u_{n+2} = \frac{p_{12}}{q_{1}q_{2}},~u_{n+3} = \frac{q_{1}}{p_{23}}, \dots,
 u_{3n-1} = \frac{ q_{n-1}}{p_{n-1n}} 
 \eea
-where $p_i =x_i$, $q_i= 1+x_i$ and $p_{i~i+1}=1+x_i+ x_i x_{i+1}$.
-
-The $u$ equations obtained from these $u$ variables are of three types viz. $1-u$ being the product of two, three or four $u$'s  for any $n$.  
-
-There are exactly 4 $u$'s which have $1-u$ is product of 2 u's:
+where we denote $p_i :=x_i$, $q_i := 1+x_i$ and $p_{i~i+1}:=1+x_i+ x_i x_{i+1}$. Remarkably, for any $n$, we have perfect $u$ equations which fall into three types viz. $1-u$ being the product of two, three or four $u$'s. The first type has 4 equations:
 \bea
 1-u_{1} =u_{3n-2} u_{3n-1},~
 1-u_{n-2} =u_{n+1} u_{n+3},~
@@ -1842,368 +2014,180 @@ u_{1} u_{4} , n=4\\
 u_{1} u_{2} , n\geq 5
 \end{cases} 
 \eea
-The facets corresponding to setting any of these $u \to 0$ is $X_{n-1}$.
-
-There are exactly $n-3$ $u$'s which have $1-u$ is product of 4 u's:
+with the corresponding facets being $\mathscr{X}_{n-1}$. The second type has $n-3$ equations
 \bea
-1-u_{n+4} =u_{n} u_{n+2}u_{n+4} u_{n+6} ~~and~~
-1-u_{n+6+ 2 i} =u_{n-3-i} u_{n+4+2 i} u_{n+5+2 i} u_{n+8+2 i}~ for~i=0,\cdots,(n-5) 
+1-u_{n+4} =u_{n} u_{n+2}u_{n+4} u_{n+6}, \quad 1-u_{n+6+2 i} =u_{n-3-i} u_{n+4+2 i} u_{n+5+2 i} u_{n+8+2 i}~ {\rm for}~i=0,\dots,n-5;
 \eea
-The facets corresponding to setting any of these $u \to 0$ is $A^{m}_1 \times X_{n-m-1}$.
+with the corresponding facets being $\mathscr{A}^{m}_1 \times \mathscr{X}_{n-m-1}$. The third type has $2n-2$ equations, but we do not yet have a complete classification of these facets. It would be nice to see if $\mathscr{X}_n$'s are equivalent to some degeneration of $\mathscr{P}_n$, or if they are genuinely new binary geometries with perfect $u$ equations.  
+%We can also replace the first the first term in the Newton polynomial \eqref{new} with $(1+x_1+ x_2)$ and we get an identical system of $u$ equations
+%
+%\bea
+%u_1 &=& \frac{p_n}{q_n}, ~u_2 = \frac{p_{n-1}q_n}{p_{n-1,n}},~u_3 = \frac{p_{n-2}q_{n-1}}{p_{n-2,n-1}}, \cdots,
+%u_{n-3} = \frac{p_4 q_5}{p_{45}}, ~u_{n-2} = \frac{p_{1}}{q_{1}},~u_{n-1} = \frac{p_{2}q_{3}}{p_{23}},~u_{n} = \frac{p_{3}q_{4}}{p_{34}}, \nonumber \\
+%u_{n+1} &=& \frac{q_2}{p_{12}}, ~u_{n+2} = \frac{q_{1}}{p_{12}},~u_{n+3} = \frac{p_{23}}{q_{2}q_{3}}, \cdots,
+%u_{3n-1} = \frac{ p_{12}}{q_{1}q_{2}} 
+%\eea
+%where $p_i =x_i$, $q_i= 1+x_i$ and $p_{i~i+1}=1+x_i+ x_i x_{i+1}$ with $p_{12}= 1+x_1+x_2$.
+%
+%The $u$ equations obtained from these $u$ variables are of three types viz. $1-u$ being the product of two, three or four $u$'s  for any $n$.  
+%
+%There are exactly 4 $u$'s which have $1-u$ is product of 2 u's:
+%\bea
+%1-u_{1} =u_{3n-2} u_{3n-3},~
+%1-u_{n-2} =u_{n+1} u_{3n-1},~
+%1-u_{n+1} =u_{n-2} u_{n+2},~
+%1-u_{3n-1} = \begin{cases}
+%u_{2} u_{3} , n=3\\
+%u_{1} u_{4} , n=4\\
+%u_{1} u_{2} , n\geq 5
+%\end{cases} \nonumber 
+%\eea
+%The facets corresponding to setting any of these $u \to 0$ is $X_{n-1}$.
+%
+%There are exactly $n-3$ $u$'s which have $1-u$ is product of 4 u's:
+%\bea
+%1-u_{n+3} =u_{n} u_{n+2}u_{n+5} u_{3n-1} ~~and~~
+%1-u_{n+5+ 2 i} =u_{n-3-i} u_{n+3+2 i} u_{n+4+2 i} u_{n+7+2 i}~ for~i=0,\cdots,(n-5) \nonumber
+%\eea
 
-All the other $2n-2$ $u$'s correspond to $1-u$ is product of 3 u's and we do not yet have a complete classification of the facets.
+\paragraph{Stringy integrals at finite $\alpha'$}
 
-We can also replace the first the first term in the Newton polynomial \eqref{new} with $(1+x_1+ x_2)$ and we get an identical system of $u$-equations
+An important open question for stringy canonical form in general is to understand structures both at higher orders in the $\alpha'$-expansion and even at finite $\alpha'$. 
+The leading order of \eqref{stringycanonicalform} computes the canonical form of the corresponding polytope, which does not depend on the coefficients of the polynomials, but higher orders do, and it would be interesting to study $\alpha'$ expansion for stringy integrals for {\it e.g.} permutohedra. 
+ 
+Moreover, having closed form expressions at finite $\alpha'$ is certainly desirable. Our preliminary study already provides some examples, and let us look at a toy example which was considered in~\cite{Arkani-Hamed:2019mrd}:
+ \bea
+I(\alpha') &=& \int_{0}^{\infty} \int_{0}^{\infty} \frac{dx}{x} ~\frac{dy}{y} \left( \frac{1}{x} + \frac{1}{y}+ x y \right)^{-\alpha' } \nonumber 
+\eea 
+We can use the symmetry in $x,~y$ to make a symmetric change of variables to $u=x+y$ and $v =x y$, and the integral can be easily evaluated as
+ \bea
+I(\alpha') &=& \int_{0}^{\infty} \int_{0}^{\frac{u^2}{4}} \frac{2 du ~ dv}{v \sqrt{u^2-4 v} }\left( \frac{u}{v} + v  \right)^{-\alpha'}= \frac{\Gamma{\left[\frac{\alpha'}{3}\right]^{3}}}{3 \Gamma{ \left[\alpha'\right]}} \nonumber
+\eea
+%We can expand the result in $\alpha'$ to get 
+%{\scriptsize \bea
+%I(\alpha') = \frac{9}{(\alpha') ^2}-\frac{\pi ^2}{2}+\frac{8 \alpha'  \zeta
+%   (3)}{3}-\frac{11 \pi ^4 (\alpha') ^2}{1080}+(\alpha') ^3 \left(\frac{16
+%   \zeta (5)}{9}-\frac{4 \pi ^2 \zeta (3)}{27}\right)+(\alpha') ^4
+%   \left(\frac{32 \zeta (3)^2}{81}-\frac{613 \pi
+%   ^6}{1224720}\right)+O\left((\alpha') ^5\right)  \nonumber 
+%\eea}
+%The coefficient $9$ of the leading term is the area of the dual triangle corresponding to the one with vertices $\{(0,-1),~(-1,0),~(1,1) \}$ and sub leading term is zero as expected.
+%
+%The simplest example of such an integral whose result is known in any dimension is the Hypercube:
+%\bea
+%I(\alpha',~X_i,~c_i ) &=&  \int_{0}^{\infty} \cdots \int_{0}^{\infty} \prod_{i=1}^{n} ~dx_i ~x_i^{\alpha' X_i -1} \prod_{i=1}^{n} \left(  a_i ~x_i^{m_i} +b_i \right)^{-\alpha' c_i } \nonumber  \\
+%&=&\prod_{i=1}^n \frac{b_i^{\alpha'\left(c_i- \frac{X_i}{m_i}\right)}}{m_i~ a_i ^{\frac{\alpha' X_i}{m_i}}} B\left(\frac{\alpha' X_i}{m_i}, \alpha' \left(c_i- \frac{X_i}{m_i}\right) \right) \nonumber
+%\eea
 
+This is in fact a special class of a large class of integrals which all correspond to simplex case. By using the integral identity $\int_{{\mathbb R_{+}^{n}}} \prod_{i=1}^{n} \frac{d x_i }{x_i}~x_i^{a_i}  f\left(\sum_{i=1}^{n} x_i \right)   = \frac{\prod_{i=1}^n \Gamma{(a_i)}}{\Gamma{(\sum_{i=1}^n a_i)}} \int_{0}^{\infty} f(\beta) \beta^{\sum_{i=1}^{n} a_n -1} d\beta$, we can easily evaluate the following general integral for simplex:
 \bea
-u_1 &=& \frac{p_n}{q_n}, ~u_2 = \frac{p_{n-1}q_n}{p_{n-1,n}},~u_3 = \frac{p_{n-2}q_{n-1}}{p_{n-2,n-1}}, \cdots,
-u_{n-3} = \frac{p_4 q_5}{p_{45}}, ~u_{n-2} = \frac{p_{1}}{q_{1}},~u_{n-1} = \frac{p_{2}q_{3}}{p_{23}},~u_{n} = \frac{p_{3}q_{4}}{p_{34}}, \nonumber \\
-u_{n+1} &=& \frac{q_2}{p_{12}}, ~u_{n+2} = \frac{q_{1}}{p_{12}},~u_{n+3} = \frac{p_{23}}{q_{2}q_{3}}, \cdots,
-u_{3n-1} = \frac{ p_{12}}{q_{1}q_{2}} 
-\eea
-where $p_i =x_i$, $q_i= 1+x_i$ and $p_{i~i+1}=1+x_i+ x_i x_{i+1}$ with $p_{12}= 1+x_1+x_2$.
+I(\alpha',~X_i,~c ) &=&  \int_{0}^{\infty} \cdots \int_{0}^{\infty} \prod_{i=1}^{n} ~dx_i ~x_i^{\alpha' X_i -1}  \left( b+\sum_{i=1}^n a_i x_i^{m_i} \right)^{-\alpha' c } \nonumber  \\
+&=& \frac{b^{\alpha' \left(\sum_{i=1}^n \frac{X_i}{m_i}-c \right) }}{(\prod_{i=1}^n m_i) (\prod_{i=1}^n a_i^{\alpha' X_i /m_i})} \int_{0}^{\infty} \cdots \int_{0}^{\infty} \prod_{i=1}^{n} ~dy_i ~y_i^{ \frac{\alpha' X_i}{m_i} -1}  \left( 1+\sum_{i=1}^n y_i \right)^{-\alpha' c } \nonumber  \\
+&=&\frac{b^{\alpha' \left(\sum_{i=1}^n \frac{X_i}{m_i}-c \right) }}{(\prod_{i=1}^n m_i) (\prod_{i=1}^n a_i^{\alpha' X_i /m_i})} B\left(\frac{ \alpha' X_1}{m_1},\dots,~\frac{ \alpha' X_n}{m_n}, ~ \alpha' \left(c- \sum_{i=1}^n \frac{X_i}{m_i} \right) \right) \nonumber \eea
+%More generally by interpreting the stringy integral \eqref{stringycanonicalform} as a Mellin transform it was shown in \cite{Mellin,Eulermellin} that the result of any stringy integral with linear factors i.e any generalized permutohedron is given by product of gamma functions of the facets of the Newton polytope times an entire function. 
 
-The $u$ equations obtained from these $u$ variables are of three types viz. $1-u$ being the product of two, three or four $u$'s  for any $n$.  
+We shall leave the evaluation of more stringy integrals and related topics to future work.
 
-There are exactly 4 $u$'s which have $1-u$ is product of 2 u's:
-\bea
-1-u_{1} =u_{3n-2} u_{3n-3},~
-1-u_{n-2} =u_{n+1} u_{3n-1},~
-1-u_{n+1} =u_{n-2} u_{n+2},~
-1-u_{3n-1} = \begin{cases}
-u_{2} u_{3} , n=3\\
-u_{1} u_{4} , n=4\\
-u_{1} u_{2} , n\geq 5
-\end{cases} \nonumber 
-\eea
-The facets corresponding to setting any of these $u \to 0$ is $X_{n-1}$.
 
-There are exactly $n-3$ $u$'s which have $1-u$ is product of 4 u's:
-\bea
-1-u_{n+3} =u_{n} u_{n+2}u_{n+5} u_{3n-1} ~~and~~
-1-u_{n+5+ 2 i} =u_{n-3-i} u_{n+3+2 i} u_{n+4+2 i} u_{n+7+2 i}~ for~i=0,\cdots,(n-5) \nonumber
-\eea
-It would be nice to see if these also correspond to degenerations of some generalised permutahedra. 
-
- \newpage
-\section{Discussions}
-There are several interesting open questions, like the question of  whether degenerations of other cluster types (in particular $C_n$ and $D_n$ can also give binary geometries with (perfect?) $u$-equations.\\\\
-\noindent
-Though many examples of degenerations of $A_n$ and $B_n$ were products of lower dimensional objects of the same type, there were examples where we got non-trivial degenerations which did not factor. We would like to completely classify these cases and this would settle the question of identifying all the ``atoms'' of binary geometries with perfect $u$-equations. One class of examples which is certainly of both mathematical and physical interest in this context are the Stokes polytopes (and more generally Accordiohedra).
-
-\newpage
+\section*{ Acknowledgements}
+We are grateful to Nima Arkani-Hamed, Thomas Lam, Hugh Thomas for stimulating discussions and collaborations on related projects. P.R. would like to thank the generous hospitality of the Institute of Theoretical Physics, Chinese Academy of Sciences, Beijing during a visit when part of this work was done. The research of S.H., Z.L. and C.Z. is supported in part by NSF of China under Grant No. 11947302 and 11935013. 
 
 \appendix 
-\section{Appendix: Nested Complex}\label{appendix: A} 
 
-A subset ${\mathbf N}$ in the building set ${\mathbf B}$ is called a {\it nested set} if it satisfies the following conditions:
-\begin{compactenum}[\quad (1)]
-    \item For any $I,J \in {\mathbf N}$, we either have $I \subset J$ or $J\subset I$ or $I$ and $J$ are disjoint.
-    \item For any collection of $k \geq 2$ disjoint subsets $J_1,J_2,\cdots, J_k \in N$ their union $J_1 \cup \cdots \cup J_k$ is not in B.
-    \item ${\mathbf N}$ contains all maximal elements of $B$.
-\end{compactenum}
-The {\it nested complex} ${\mathbf N}({\mathbf B})$ is defined as the poset of the set of all nested sets in ${\mathbf B}$ ordered by inclusion.\\
+\section{Appendix: Degenerations of ${\mathscr P_n}$ which lead to products}\label{appendix:A}
+In this section we consider degenerations of $\mathscr{P_n}$ give the most general products. 
 
-\paragraph*{Facial structure} 
-Let us assume that the set ${\mathbf B}$ associated with a generalised permutahedron ${\mathscr P_n}^{y}$ is a building set on $[0,n]$. Then the poset of faces ${\mathscr P_n}^{y}$ ordered by reverse inclusion is isomorphic to the nested complex ${\mathbf N}({\mathbf B})$. 
+The maximal set of a building set ${\mathbf B_{max}}$ is the set of all inclusion maximal elements of the building set ${\mathbf B}$. A building set ${\mathbf B}$ is connected if ${\mathbf B_{max}}$ has a single element\cite{Postnikov:2006}.
 
-The face $P_N$ of ${\mathscr P_n(y)}$ associated with the nested set $N \in \mathcal{N}(B)$ is given by:
-\bea
-P_N = \left \{ \right (t_1,\cdots,t_{n}) \in \mathbb{R}^{n} | \sum_{i \in I} t_i =y_{I}~{\rm for}~I \in N; ~ \sum_{i \in J}~t_i \geq y_J,~ {\rm for} ~J \in B  )\}
-\eea
-In particular the dimension of the face $P_N$ equals $n+1-|N|$.\\ 
-Another description of the faces is the following: 
+\vspace{1ex}
 
-For each decomposition $[0,n]=  \sqcup_{I \subset {\mathbf N} } S_I $ where $S_I$ are non-empty, the face $P_N$ of ${\mathscr P_N}^{y}(y_I)$ associated with the nested set ${\mathbf N} \in {\mathbf N}({\mathbf B})$ is:
-\bea
-P_N = \sum_{{J \subset {\mathbf B}}\atop{J \cap S_I \neq \emptyset}} y_{J} \Delta_{J \cap S_I}
-\eea
-\subsubsection{Degenerations of ${\mathscr P_n}$ which lead to  products}
+\noindent {\bf Theorem:} If ${\mathbf B_1},{\mathbf B_2},\dots {\mathbf B_n}$ are connected subsets of a building set ${\mathbf B}$ then the corresponding nestohedron ${\mathscr N_{{\mathbf B}}}$ is isomorphic to the product of the nestohedra ${\mathscr N}_{ {\mathbf B_1}} \times{\mathscr N}_{ {\mathbf B_2}} \cdots \times {\mathscr N}_{{\mathbf B_n}}$\cite{Postnikov:2006}.
 
-In this section we provide an answer to the question of which degenerations of $\mathscr{P_n}$ give the most general products of such geometries. We begin by stating the following results about Nestohedra.
+\vspace{1ex}
 
-The maximal set of a building set $B_{max}$ is the set of all inclusion maximal elements of the building set $B$. A building set $B$ is connected if $B_{max}$ has a single element.
+The result follows as for any pair of connected building sets ${\mathbf B_{i}},{\mathbf B_{j}}$ either  ${\mathbf B_{i}} \cup {\mathbf B_{j}} = \varnothing $ in which case ${\cal I}_{{\mathbf B_i}\cup {\mathbf B_j}} = {\cal I}_{\mathbf B_i} \times {\cal I}_{\mathbf B_j}$ or ${\mathbf B_{i}} \cup {\mathbf B_{j}} = \{k\}$ in this we can rescale the $x_l \rightarrow x_k x_l$ for $l \in {\mathbf B_{j}} $ to decouple the integrals. Thus we always get ${\cal I}_{\mathbf B}={\cal I}_{\mathbf B_1}\times{\cal I}_{\mathbf B_2}\cdots \times{\cal I}_{\mathbf B_n}$. \\
+Using the above result we construct a degeneration of  ${\mathscr P_n}$ which are the most general products i.e., $\prod_{p_i} X_{p_i}$ such that $\sum^{k}_{i=1} p_{i} = n$ by dividing the $(n+1)$ singlets into $k$ parts 
+\[
+[0,p_1],\quad [p_1,p_1+p_2],\quad \dots ,\quad [\sum^{k-1}_{i=1}p_{i},\sum^{k}_{i=1}p_{i}= n]
+\]
+and using them to construct the building sets $\mathbf B_{p_i}$ of $X_{p_i}\left[\sum^{(i-1)}_{j=1}p_{j},\sum^{i}_{j=1}p_{j}\right].$ 
 
-{\bf Theorem:} If $B_1, B_2,\cdots B_n$ are connected subsets of a building set $B$ then the corresponding nestohedron ${\mathscr N_B}$ is isomorphic to the product of the nestohedra ${\mathscr N}_{ B_1} \times{\mathscr N}_{ B_2} \cdots \times {\mathscr N}_{B_n}$.
-
-We can use the above result to construct a degeneration of  ${\mathscr P_n}$ which are the most general products i.e., $\prod_{p_i} X_{p_i}$ such that $\sum^{k}_{i=1} p_{i} = n$ and $X = {\mathscr A} ,{\mathscr B}, {\mathscr P }$ by dividing the $(n+1)$ singlets into $k$ parts $\{0,\cdots,p_1\}, \{p_1,\cdots,p_1+p_2\},\cdots \{\sum^{k-1}_{i=1}p_{i},\cdots,\sum^{k}_{i=1}p_{i}= n\}$ and constructing the corresponding $X_{p_i}$'s which we denote by $X_{p_i}\left(\sum^{(i-1)}_{j=1}p_{j},\cdots,\sum^{i}_{j=1}p_{j}\right).$ 
-
-Let us consider the $P_4$ example for which the allowed possibilities are : $A_1^{4}$, $A_1^2 \times A_2$, $A_1 \times A_3$, $A^{2}_2$, $A_1^2 \times B_2$, $A_1 \times B_3$,$A_1 \times P_3$,$ A_2\times B_2$ and $B^{2}_2$.
+{\bf Example:} degenerations of ${\mathscr P_4}$ into ${\mathscr A_1^{4}}$, ${\mathscr A_1^2} \times{\mathscr A_2}$, ${\mathscr A_1} \times {\mathscr A_3}$, ${\mathscr A^{2}_2}$, ${\mathscr A_1^2} \times {\mathscr B_2}$, ${\mathscr A_1} \times {\mathscr B_3}$,${\mathscr A_1} \times {\mathscr P_3}$,$ {\mathscr A_2}\times {\mathscr B_2}$ and ${\mathscr B^{2}_2}$.
  
-For $A_1^{4}$ the building set is $ \{ {0},{1},{2},{3},{4},{01},{12},{23},{34} \}$ where $\{0,01\} , \{1,12\},\{2,23\},\{3,34\}$ generate the 4 $A_1$'s which we denote as $A_1(0,1) \times A_1(1,2) \times A_1(2,3) \times A_1(3,4) $.
+For ${\mathscr A_1^{4}}$ the building set is $ \{ {0},{1},{2},{3},{4},{01},{12},{23},{34} \}$ where $\{0,01\} , \{1,12\},\{2,23\},\{3,34\}$ generate the 4 ${\mathscr A_1}$'s which we denote as ${\mathscr A_1}(0,1) \times {\mathscr A_1}(1,2) \times {\mathscr A_1}(2,3) \times {\mathscr A_1}(3,4) $.
 
-For $A_1^{2} \times A_2$ the building set is $ \{ {0},{1},{2},{3},{4},{01},{12},{23},{34},{234} \}$ generated by $A_1(0,1)\times A_1(1,2) \times A_2(2,3,4)$'s.
+For ${\mathscr A_1}^{2} \times {\mathscr A_2}$ the building set is $ \{ {0},{1},{2},{3},{4},{01},{12},{23},{34},{234} \}$ generated by ${\mathscr A_1}(0,1)\times {\mathscr A_1}(1,2) \times {\mathscr A_2}(2,3,4)$'s.
 
-For  $A_1 \times A_3$ the building set is $ \{ {0},{1},{2},{3},{4},{01},{12},{23},{34},{123},{234},{1234} \}$ generated by  $A_1(0,1)\times A_3(1,2,3,4)$.
+For  ${\mathscr A_1} \times {\mathscr A_3}$ the building set is $ \{ {0},{1},{2},{3},{4},{01},{12},{23},{34},{123},{234},{1234} \}$ generated by  ${\mathscr A_1}(0,1)\times {\mathscr A_3}(1,2,3,4)$.
 
-For  $A_2^{2}$ the building set is $ \{ {0},{1},{2},{3},{4},{01},{12},{23},{34} ,{012},{234}\}$ generated by $A_2(0,1,2)\times A_2(2,3,4)$
+For  ${\mathscr A_2^{2}}$ the building set is $ \{ {0},{1},{2},{3},{4},{01},{12},{23},{34} ,{012},{234}\}$ generated by ${\mathscr A_2}(0,1,2)\times {\mathscr A_2}(2,3,4)$
 
-For $A_1^{2} \times B_2$ the building set is $ \{ {0},{1},{2},{3},{4},{01},{12},{23},{34},{24},{234} \}$ generated by $A_1(0,1)\times A_1(1,2) \times B_2(2,3,4)$'s.
+For ${\mathscr A_1}^{2} \times {\mathscr B_2}$ the building set is $ \{ {0},{1},{2},{3},{4},{01},{12},{23},{34},{24},{234} \}$ generated by ${\mathscr A_1}(0,1)\times {\mathscr A_1}(1,2) \times {\mathscr B_2}(2,3,4)$'s.
 
-For $A_1 \times B_3$ the building set is $ \{ {0},{1},{2},{3},{4},{01},{12},{23},{34},{14},{123},{234},{134},{124},{1234} \}$ generated by  $A_1(0,1)\times B_3(1,2,3,4)$.
+For ${\mathscr A_1} \times {\mathscr B_3}$ the building set is $ \{ {0},{1},{2},{3},{4},{01},{12},{23},{34},{14},{123},{234},{134},{124},{1234} \}$ generated by  ${\mathscr A_1}(0,1)\times {\mathscr B_3}(1,2,3,4)$.
 
-For $A_1 \times P_3$ the building set is $ \{ {0},{1},{2},{3},{4},{01},{12},{23},{34},{14},{13},{24},{123},{234},{134},{124},{1234} \}$ generated by  $A_1(0,1)\times P_3(1,2,3,4)$.
+For ${\mathscr A_1} \times {\mathscr P_3}$ the building set is $ \{ {0},{1},{2},{3},{4},{01},{12},{23},{34},{14},{13},{24},{123},{234},{134},{124},{1234} \}$ generated by  ${\mathscr A_1}(0,1)\times {\mathscr P_3}(1,2,3,4)$.
 
-For $A_2 \times B_2$ the building set is $ \{ {0},{1},{2},{3},{4},{01},{12},{23},{34},{24},{012},{234}\}$ generated by $A_2(0,1,2)\times B_2(2,3,4)$
+For ${\mathscr A_2} \times {\mathscr B_2}$ the building set is $ \{ {0},{1},{2},{3},{4},{01},{12},{23},{34},{24},{012},{234}\}$ generated by ${\mathscr A_2}(0,1,2)\times {\mathscr B_2}(2,3,4)$
 
-For $B_2^{2}$ the building set is $ \{ {0},{1},{2},{3},{4},{01},{12},{02},{23},{34},{24} ,{012},{234}\}$ generated by $B_2(0,1,2)\times B_2(2,3,4)$
+For ${\mathscr B_2^{2}}$ the building set is $ \{ {0},{1},{2},{3},{4},{01},{12},{02},{23},{34},{24} ,{012},{234}\}$ generated by ${\mathscr B_2}(0,1,2)\times {\mathscr B_2}(2,3,4)$.
 
 We can similarly find a degeneration of ${\mathscr P_n}$ which would correspond to any product.
 
+\section{Appendix: Some $u$ equations of ${\mathscr P_n}$}\label{appendix:B}
 
-\section*{4d permutahedron}
-The $u$ variables for the 4d permutahedron are:
-{\tiny
-\begin{align*}
-u_1&= \frac{x (w+x+1) (x+y+1) (w+x+y) (x+z+1) (w+x+z)
-   (x+y+z) (w+x+y+z+1)}{(x+1) (w+x) (x+y) (w+x+y+1) (x+z) (w+x+z+1) (x+y+z+1)
-   (w+x+y+z)},\nonumber \\  u_2 &= \frac{y (w+y+1) (x+y+1) (w+x+y) (y+z+1) (w+y+z) (x+y+z)
-   (w+x+y+z+1)}{(y+1) (w+y) (x+y) (w+x+y+1) (y+z) (w+y+z+1) (x+y+z+1)
-   (w+x+y+z)} \nonumber \\  u_3 &= \frac{z (w+z+1) (x+z+1) (w+x+z) (y+z+1) (w+y+z) (x+y+z)
-   (w+x+y+z+1)}{(z+1) (w+z) (x+z) (w+x+z+1) (y+z) (w+y+z+1) (x+y+z+1)
-   (w+x+y+z)},\nonumber \\ u_4 &= \frac{w (w+x+1) (w+y+1) (w+x+y) (w+z+1) (w+x+z) (w+y+z) (w+x+y+z+1)}{(w+1)
-   (w+x) (w+y) (w+x+y+1) (w+z) (w+x+z+1) (w+y+z+1) (w+x+y+z)},\nonumber \\
-   u_{12} &=  \frac{(x+y) (w+x+y+1) (x+y+z+1) (w+x+y+z)}{(x+y+1) (w+x+y)
-   (x+y+z) (w+x+y+z+1)},~u_{13} = \frac{(x+z) (w+x+z+1) (x+y+z+1) (w+x+y+z)}{(x+z+1) (w+x+z)
-   (x+y+z) (w+x+y+z+1)},\nonumber \\ ~ u_{14} &= \frac{(w+x)(w+x+y+1) (w+x+z+1) (w+x+y+z)}{(w+x+1) (w+x+y) (w+x+z) (w+x+y+z+1)}, u_{24} = \frac{(w+y) (w+x+y+1) (w+y+z+1) (w+x+y+z)}{(w+y+1) (w+x+y) (w+y+z) (w+x+y+z+1)},\nonumber \\ ~u_{23} &=
-   \frac{(y+z) (w+y+z+1) (x+y+z+1) (w+x+y+z)}{(y+z+1) (w+y+z) (x+y+z)(w+x+y+z+1)},~ u_{34} = \frac{(w+z) (w+x+z+1) (w+y+z+1) (w+x+y+z)}{(w+z+1) (w+x+z) (w+y+z) (w+x+y+z+1)}, \nonumber \\  
-  u_{123} &= \frac{(x+y+z) (w+x+y+z+1)}{(x+y+z+1)(w+x+y+z)},~u_{134}= \frac{(w+x+z) (w+x+y+z+1)}{(w+x+z+1)(w+x+y+z)},~ u_{124}= \frac{(w+x+y) (w+x+y+z+1)}{(w+x+y+1) (w+x+y+z)},~ u_{234} = \frac{(w+y+z) (w+x+y+z+1)}{(w+y+z+1) (w+x+y+z)},\nonumber \\
-    u_{1234} &= \frac{w+x+y+z}{w+x+y+z+1},\nonumber \\ u'_1&= \frac{w+y+z+1}{w+x+y+z+1},~~u'_2= \frac{w+x+z+1}{w+x+y+z+1}, u'_3=  \frac{w+x+y+1}{w+x+y+z+1},u'_4 = \frac{x+y+z+1}{w+x+y+z+1}, \nonumber \\  u'_{12} &= \frac{(w+z+1) (w+x+y+z+1)}{(w+x+z+1) (w+y+z+1)}, u'_{13} = \frac{(w+y+1) (w+x+y+z+1)}{(w+x+y+1) (w+y+z+1)},\nonumber \\  u'_{14} &= \frac{(y+z+1) (w+x+y+z+1)}{(w+y+z+1) (x+y+z+1)},u'_{23} = \frac{(w+x+1) (w+x+y+z+1)}{(w+x+y+1) (w+x+z+1)}, \nonumber \\ u'_{24}&= \frac{(x+z+1) (w+x+y+z+1)}{(w+x+z+1)(x+y+z+1)}, u'_{34}=  \frac{(x+y+1) (w+x+y+z+1)}{(w+x+y+1) (x+y+z+1)},\nonumber \\  
-u'_{123} &=  \frac{(w+1) (w+x+y+1) (w+x+z+1) (w+y+z+1)}{(w+x+1) (w+y+1) (w+z+1) (w+x+y+z+1)},~u'_{124}= \frac{(z+1) (w+x+z+1) (w+y+z+1) (x+y+z+1)}{(w+z+1) (x+z+1) (y+z+1) (w+x+y+z+1)},\nonumber \\  u'_{134}&= \frac{(y+1) (w+x+y+1) (w+y+z+1) (x+y+z+1)}{(w+y+1)(x+y+1) (y+z+1) (w+x+y+z+1)},u'_{234} = \frac{(x+1) (w+x+y+1) (w+x+z+1) (x+y+z+1)}{(w+x+1) (x+y+1) (x+z+1) (w+x+y+z+1)},\nonumber \\  u'_{1234} &= \frac{(w+x+1) (w+y+1)(x+y+1) (w+z+1) (x+z+1) (y+z+1) (w+x+y+z+1)}{(w+1) (x+1) (y+1) (w+x+y+1) (z+1) (w+x+z+1) (w+y+z+1) (x+y+z+1)} \nonumber
-\end{align*}
-}
-\newpage
-\vspace*{-25pt}
+Some of the $u$ equations for the $n$-dimensional permutohedron are:\\
+For $|I|=n$ or $n-1$ we have  
+\[
+1-u_{I} = \prod_{J\not\supset I} u_{J}^{|J|-|I\cap J|}
+\]
+%For $|I| =n-1$ and $s_K = \begin{cases}  1,~ if K \not\subset I & \\ 2, ~if K \subset I\end{cases}$
+% we have 
+% \bea1-u_{I} &=& \prod_ {S - I \subset J } u_{J} \prod_ {K \cap I \ne \Phi } (u_{\bar{K}})^{s_K}
+% \eea
+and for $|I| =n-2$,
+\[
+1-u_{I}= \left(1+\prod_{J\supset I}u_J\right)\prod_{J\not\supset I} u_{J}^{|J|-|I\cap J|}
+\]
+The other $u$ equations are not two or three term equations,
+%and seem to be polynomials of order $n-|I|-1$ in the corresponding $u$'s. 
+and in general it has the form 
+\[
+1-u_I=(1+h_{I,n}(u))\prod_{J\not\supset I} u_{J}^{|J|-|I\cap J|},
+\]
+where $h_{I,n}(u)$ is conjectured to be a polynomial of $\{u_J\,|\, J\supset I\}$ such that $h_{I,n}(u)|_{u_I=0}=0$.
+
+Let us write down the ${\mathscr P_4}$ example:
+\[
+u_0= \frac{x_{0} x_{012} x_{013} x_{014} x_{023} x_{024} x_{034} x_{01234}}{x_{01} x_{02} x_{03} x_{04} x_{0123} x_{0124} x_{0134} x_{0234}},
+u_{01} =  \frac{x_{01} x_{0123} x_{0124} x_{0134}}{x_{012} x_{013} x_{014} x_{01234}},
+u_{012} = \frac{x_{012} x_{01234}}{x_{0123} x_{0124}},
+u_{0123} = \frac{x_{0123}}{x_{01234}}
+\]
 The $u$ equations are 
-{\tiny
-{\begin{align*}
-1-u_1&=u_2 u_3 u_4 u_{2,3}^2 u_{24}^2 u_{34}^2 u_{234}^4
-   \left(u'\right)_1^8 \left(u'\right)_{12}^4 \left(u'\right)_{13}^4
-   \left(u'\right)_{14}^4 \left(u'\right)_{123}^2
-   \left(u'\right)_{124}^2 \left(u'\right)_{134}^2 u'_{1234}+ 6~
- \textcolor{red}{  u_1^2} u_2 u_3 u_4 u_{12}^2 u_{13}^2 u_{14}^2 u_{23}^2 u_{24}^2
-   u_{34}^2 u_{123}^2 u_{124}^2 u_{134}^2 u_{234}^3 u_{1234}
-   u'_2 u'_3 u'_4 \left(u'\right)_1^4  \nonumber \\ &\left(u'\right)_{12}^3
-   \left(u'\right)_{13}^3 \left(u'\right)_{14}^3
-   \left(u'\right)_{23}^2 \left(u'\right)_{24}^2
-   \left(u'\right)_{34}^2 \left(u'\right)_{123}^2
-   \left(u'\right)_{124}^2 \left(u'\right)_{134}^2
-   \left(u'\right)_{234}^2 u'_{1234}+~2 ~\textcolor{red}{u_1} u_2 u_3 u_4 u_{12}
-   u_{13} u_{14} u_{23}^2 u_{24}^2 u_{34}^2 u_{123} u_{124}
-   u_{134} u_{234}^3 \left(u'\right)_1^4 \left(u'\right)_{12}^3
-   \left(u'\right)_{13}^3 \nonumber \\ & \left(u'\right)_{14}^3 u'_{23} u'_{24}
-   u'_{34} \left(u'\right)_{123}^2 \left(u'\right)_{124}^2
-   \left(u'\right)_{134}^2 u'_{234} \left(u_{234}
-   \left(1-u_{1234}\right) u_{1234} u'_1+u'_2 u'_3
-   \left(1-u'_{23}\right)+u'_2 u'_4 \left(1-u'_{24}\right)+u'_3 u'_4
-   \left(1-u'_{34}\right)+\left(u'\right)_1^2\right) u'_{1234} ,\nonumber \\
-   1-u_2&=u_1 u_3 u_4 u_{13}^2 u_{14}^2 u_{34}^2 u_{134}^4
-   \left(u'\right)_2^8 \left(u'\right)_{12}^4 \left(u'\right)_{23}^4
-   \left(u'\right)_{24}^4 \left(u'\right)_{123}^2
-   \left(u'\right)_{124}^2 \left(u'\right)_{234}^2 u'_{1234}+~6
-   u_1 \textcolor{red}{u_2^2} u_3 u_4 u_{1,2}^2 u_{13}^2 u_{14}^2 u_{23}^2 u_{24}^2
-   u_{34}^2 u_{123}^2 u_{124}^2 u_{134}^3 u_{234}^2 u_{1234}
-   u'_1 u'_3 u'_4 \left(u'\right)_2^4 \nonumber \\ &\left(u'\right)_{12}^3
-   \left(u'\right)_{13}^2 \left(u'\right)_{14}^2
-   \left(u'\right)_{23}^3 \left(u'\right)_{24}^3
-   \left(u'\right)_{34}^2 \left(u'\right)_{123}^2
-   \left(u'\right)_{124}^2 \left(u'\right)_{134}^2
-   \left(u'\right)_{234}^2 u'_{1234}+~2~ u_1 \textcolor{red}{u_2} u_3 u_4 u_{12}
-   u_{13}^2 u_{14}^2 u_{23} u_{24} u_{34}^2 u_{123} u_{124}
-   u_{134}^3 u_{234} \left(u'\right)_2^4 \left(u'\right)_{12}^3
-   u'_{13} u'_{14} \nonumber \\ & \left(u'\right)_{23}^3 \left(u'\right)_{24}^3
-   u'_{34} \left(u'\right)_{123}^2 \left(u'\right)_{124}^2
-   u'_{134} \left(u'\right)_{234}^2 \left(u_{134}
-   \left(1-u_{1234}\right) u_{1234} u'_2+u'_1 u'_3
-   \left(1-u'_{13}\right)+u'_1 u'_4 \left(1-u'_{14}\right)+u'_3 u'_4
-   \left(1-u'_{34}\right)+\left(u'\right)_2^2\right) u'_{1234} ,\nonumber \\
-   1-u_3&=u_1 u_2 u_4 u_{12}^2 u_{14}^2 u_{24}^2 u_{124}^4
-   \left(u'\right)_3^8 \left(u'\right)_{13}^4 \left(u'\right)_{23}^4
-   \left(u'\right)_{34}^4 \left(u'\right)_{123}^2
-   \left(u'\right)_{134}^2 \left(u'\right)_{234}^2 u'_{1234}+~6
-   u_1 u_2 \textcolor{red}{u_3^2} u_4 u_{12}^2 u_{13}^2 u_{14}^2 u_{23}^2 u_{24}^2
-   u_{34}^2 u_{123}^2 u_{124}^3 u_{134}^2 u_{234}^2 u_{1234}
-   u'_1 u'_2 u'_4 \left(u'\right)_3^4 \nonumber \\ & \left(u'\right)_{12}^2
-   \left(u'\right)_{13}^3 \left(u'\right)_{14}^2
-   \left(u'\right)_{23}^3 \left(u'\right)_{24}^2
-   \left(u'\right)_{34}^3 \left(u'\right)_{123}^2
-   \left(u'\right)_{124}^2 \left(u'\right)_{134}^2
-   \left(u'\right)_{234}^2 u'_{1234} +~2 ~u_1 u_2 \textcolor{red}{u_3} u_4 u_{1,2}^2
-   u_{13} u_{14}^2 u_{23} u_{24}^2 u_{34} u_{123} u_{124}^3
-   u_{134} u_{234} \left(u'\right)_3^4 u'_{12}
-   \left(u'\right)_{13}^3 u'_{14} \nonumber \\ &\left(u'\right)_{23}^3 u'_{24}
-   \left(u'\right)_{34}^3 \left(u'\right)_{123}^2 u'_{124}
-   \left(u'\right)_{134}^2 \left(u'\right)_{234}^2 \left(u_{124}
-   \left(1-u_{1234}\right) u_{1234} u'_3+u'_1 u'_2
-   \left(1-u'_{12}\right)+u'_1 u'_4 \left(1-u'_{14}\right)+u'_2 u'_4
-   \left(1-u'_{24}\right)+\left(u'\right)_3^2\right) u'_{1234} ,\nonumber \\
-   1-u_4 &= u_1 u_2 u_3 u_{12}^2 u_{13}^2 u_{23}^2 u_{123}^4
-   \left(u'\right)_4^8 \left(u'\right)_{14}^4 \left(u'\right)_{24}^4
-   \left(u'\right)_{34}^4 \left(u'\right)_{124}^2
-   \left(u'\right)_{134}^2 \left(u'\right)_{234}^2 u'_{1234}+~6
-   u_1 u_2 u_3 \textcolor{red}{u_4^2} u_{12}^2 u_{13}^2 u_{14}^2 u_{23}^2 u_{24}^2
-   u_{34}^2 u_{123}^3 u_{124}^2 u_{134}^2 u_{234}^2 u_{1234}
-   u'_1 u'_2 u'_3 \left(u'\right)_4^4 \nonumber\\ &\left(u'\right)_{12}^2
-   \left(u'\right)_{13}^2 \left(u'\right)_{14}^3
-   \left(u'\right)_{23}^2 \left(u'\right)_{24}^3
-   \left(u'\right)_{34}^3 \left(u'\right)_{123}^2
-   \left(u'\right)_{124}^2 \left(u'\right)_{134}^2
-   \left(u'\right)_{234}^2 u'_{1234}+~2 u_1 u_2 u_3 \textcolor{red}{u_4} u_{12}^2
-   u_{13}^2 u_{14} u_{23}^2 u_{24} u_{34} u_{123}^3 u_{124}
-   u_{134} u_{234} \left(u'\right)_4^4 u'_{12} u'_{13}
-   \left(u'\right)_{14}^3 \nonumber\\ &u'_{23} \left(u'\right)_{24}^3
-   \left(u'\right)_{34}^3 u'_{123} \left(u'\right)_{124}^2
-   \left(u'\right)_{134}^2 \left(u'\right)_{234}^2 \left(u_{123}
-   \left(1-u_{1234}\right) u_{1234} u'_4+u'_1 u'_2
-   \left(1-u'_{12}\right)+u'_1 u'_3 \left(1-u'_{13}\right)+u'_2 u'_3
-   \left(1-u'_{23}\right)+\left(u'\right)_4^2\right) u'_{1234},\nonumber \\
-    1-u_{12}&= u_3 u_4
-   u_{13} u_{14} u_{23} u_{24} u_{34}^2 u_{134}^2 u_{234}^2 \left(u'\right)_1^3
-   \left(u'\right)_2^3 \left(u'\right)_{12}^3 \left(u'\right)_{13}^2
-   \left(u'\right)_{14}^2 \left( u'\right)_{23}^2 \left(u'\right)_{24}^2 \left(1+u_{12}
-   u_{123} u_{124} u_{1234} u'_3 u'_4 u'_{34}\right) \left(u'\right)_{123}^2
-   \left(u'\right)_{124}^2 u'_{134} u'_{234} u'_{1234},\nonumber \\
-     1-u_{13}&=u_2 u_4 u_{12}
-   u_{14} u_{23} u_{24}^2 u_{34} u_{124}^2 u_{234}^2 \left(u'\right)_1^3
-   \left(u'\right)_3^3 \left(u'\right)_{12}^2 \left(u'\right)_{13}^3
-   \left(u'\right)_{14}^2 \left(u'\right)_{23}^2 \left(1+ u_{13} u_{123} u_{134} u_{1234}
-   u'_2 u'_4 u'_{24}\right) \left(u'\right)_{34}^2 \left(u'\right)_{123}^2 u'_{124}
-   \left(u'\right)_{134}^2 u'_{234} u'_{1234},\nonumber \\ 
-   1-u_{14}&= u_2 u_3 u_{12} u_{13} u_{23}^2 u_{24} u_{34} u_{123}^2 u_{234}^2
-   \left(u'\right)_1^3 \left(u'\right)_4^3 \left(u'\right)_{12}^2 \left(u'\right)_{13}^2
-   \left(u'\right)_{14}^3 \left(1+ u_{14} u_{124} u_{134} u_{1234} u'_2 u'_3
-   u'_{23}\right) \left(u'\right)_{24}^2 \left(u'\right)_{34}^2 u'_{123}
-   \left(u'\right)_{124}^2 \left(u'\right)_{134}^2 u'_{234} u'_{1234}, \nonumber \\ 
-    1-u_{34}&= u_1 u_2 u_{12}^2 u_{13}
-   u_{14} u_{23} u_{24} u_{123}^2 u_{124}^2 \left(u'\right)_3^3 \left(u'\right)_4^3
-   \left(1+u_{34} u_{134} u_{234} u_{1234} u'_1 u'_2 u'_{12}\right)
-   \left(u'\right)_{13}^2 \left(u'\right)_{14}^2 \left(u'\right)_{23}^2
-   \left(u'\right)_{24}^2 \left(u'\right)_{34}^3 u'_{123} u'_{124}
-   \left(u'\right)_{134}^2 \left(u'\right)_{234}^2 u'_{1234}, \nonumber \\ 
-   1-u_{24}&=u_1 u_3 u_{12} u_{13}^2 u_{14}
-   u_{23} u_{34} u_{123}^2 u_{134}^2 \left(u'\right)_2^3 \left(u'\right)_4^3
-   \left(u'\right)_{12}^2 \left(1+ u_{24} u_{124} u_{234} u_{1234} u'_1 u'_3
-   u'_{13}\right) \left(u'\right)_{14}^2 \left(u'\right)_{23}^2 \left(u'\right)_{24}^3
-   \left(u'\right)_{34}^2 u'_{123} \left(u'\right)_{124}^2 u'_{134}
-   \left(u'\right)_{234}^2 u'_{1234},\nonumber \\
-    1-u_{23}&=u_1 u_4 u_{12} u_{13} u_{14}^2 u_{24}
-   u_{34} u_{124}^2 u_{134}^2 \left(u'\right)_2^3 \left(u'\right)_3^3
-   \left(u'\right)_{12}^2 \left(u'\right)_{13}^2 \left(1+u_{23} u_{123} u_{234} u_{1234}
-   u'_1 u'_4 u'_{14}\right) \left(u'\right)_{23}^3 \left(u'\right)_{24}^2
-   \left(u'\right)_{34}^2 \left(u'\right)_{123}^2 u'_{124} u'_{134}
-   \left(u'\right)_{234}^2 u'_{1234},\nonumber \\ 
-   1-u_{124}&=u_3 u_{13} u_{23} u_{34} u_{123} u_{134}
-   u_{234} \left(u'\right)_1^2 \left(u'\right)_2^2 \left(u'\right)_4^2
-   \left(u'\right)_{12}^2 u'_{13} \left(u'\right)_{14}^2 u'_{23} \left(u'\right)_{24}^2
-   u'_{34} u'_{123} \left(u'\right)_{124}^2 u'_{134} u'_{234} u'_{1234},\nonumber \\ 
-   1-u_{123}&=u_4 u_{14}
-   u_{24} u_{34} u_{124} u_{134} u_{234} \left(u'\right)_1^2 \left(u'\right)_2^2
-   \left(u'\right)_3^2 \left(u'\right)_{12}^2 \left(u'\right)_{13}^2 u'_{14}
-   \left(u'\right)_{23}^2 u'_{24} u'_{34} \left(u'\right)_{123}^2 u'_{124} u'_{134}
-   u'_{234} u'_{1234},\nonumber \\ 
-   1-u_{134}&=u_2 u_{12} u_{23} u_{24} u_{123} u_{124} u_{234}
-   \left(u'\right)_1^2 \left(u'\right)_3^2 \left(u'\right)_4^2 u'_{12}
-   \left(u'\right)_{13}^2 \left(u'\right)_{14}^2 u'_{23} u'_{24} \left(u'\right)_{34}^2
-   u'_{123} u'_{124} \left(u'\right)_{134}^2 u'_{234} u'_{1234},\nonumber \\ 
-   1-u_{234}&=u_1 u_{12} u_{13} u_{14} u_{123} u_{124} u_{134}
-   \left(u'\right)_2^2 \left(u'\right)_3^2 \left(u'\right)_4^2 u'_{12} u'_{13} u'_{14}
-   \left(u'\right)_{23}^2 \left(u'\right)_{24}^2 \left(u'\right)_{34}^2 u'_{123} u'_{124}
-   u'_{134} \left(u'\right)_{234}^2 u'_{1234},\nonumber \\ 
-   1-u_{1234}&=u'_1
-   u'_2 u'_3 u'_4 u'_{12} u'_{13} u'_{14} u'_{23} u'_{24} u'_{34} u'_{123} u'_{124}
-   u'_{134} u'_{234} u'_{1234},\nonumber \\ 
-   1-u'_1&=u_1 u_{12} u_{13} u_{14} u_{123}
-   u_{124} u_{134} u_{1234} u'_2 u'_3 u'_4 u'_{23} u'_{24} u'_{34} u'_{234},\nonumber \\ 
-   1-u'_2&=u_2
-   u_{12} u_{23} u_{24} u_{123} u_{124} u_{234} u_{1234} u'_1 u'_3 u'_4 u'_{13} u'_{14}
-   u'_{34} u'_{134},\nonumber \\ 
-   1-u'_3&=u_3 u_{13} u_{23} u_{34} u_{123} u_{134} u_{234} u_{1234} u'_1
-   u'_2 u'_4 u'_{12} u'_{14} u'_{24} u'_{124},\nonumber \\ 
-   1-u'_4&=u_4 u_{14} u_{24} u_{34} u_{124}
-   u_{134} u_{234} u_{1234} u'_1 u'_2 u'_3 u'_{12} u'_{13} u'_{23} u'_{123},\nonumber \\ 
-   1-u'_{12}&=u_1
-   u_2 u_{12}^2 u_{13} u_{14} u_{23} u_{24} u_{123}^2 u_{124}^2 u_{134} u_{234}
-   u_{1234}^2 \left(u'\right)_3^2 \left(u'\right)_4^2 u'_{13} u'_{14} u'_{23} u'_{24}
-   \left(u'\right)_{34}^2 u'_{134} u'_{234},\nonumber \\
-   1-u'_{13}&=u_1 u_3 u_{12} u_{13}^2 u_{14}
-   u_{23} u_{34} u_{123}^2 u_{124} u_{134}^2 u_{234} u_{1234}^2 \left(u'\right)_2^2
-   \left(u'\right)_4^2 u'_{12} u'_{14} u'_{23} \left(u'\right)_{24}^2 u'_{34} u'_{124}
-   u'_{234},\nonumber \\
-   1-u'_{14}&=u_1 u_4 u_{12} u_{13} u_{14}^2 u_{24} u_{34} u_{123} u_{124}^2
-   u_{134}^2 u_{234} u_{1234}^2 \left(u'\right)_2^2 \left(u'\right)_3^2 u'_{12} u'_{13}
-   \left(u'\right)_{23}^2 u'_{24} u'_{34} u'_{123} u'_{234},\nonumber \\ 1-u'_{23}&=u_2 u_3 u_{12}
-   u_{13} u_{23}^2 u_{24} u_{34} u_{123}^2 u_{124} u_{134} u_{234}^2 u_{1234}^2
-   \left(u'\right)_1^2 \left(u'\right)_4^2 u'_{12} u'_{13} \left(u'\right)_{14}^2 u'_{24}
-   u'_{34} u'_{124} u'_{134},\nonumber \\ 1-u'_{24}&=u_2 u_4 u_{12} u_{14} u_{23} u_{24}^2 u_{34}
-   u_{123} u_{124}^2 u_{134} u_{234}^2 u_{1234}^2 \left(u'\right)_1^2 \left(u'\right)_3^2
-   u'_{12} \left(u'\right)_{13}^2 u'_{14} u'_{23} u'_{34} u'_{123} u'_{134},\nonumber \\ 1-u'_{34}&=u_3
-   u_4 u_{13} u_{14} u_{23} u_{24} u_{34}^2 u_{123} u_{124} u_{134}^2 u_{234}^2
-   u_{1234}^2 \left(u'\right)_1^2 \left(u'\right)_2^2 \left(u'\right)_{12}^2 u'_{13}
-   u'_{14} u'_{23} u'_{24} u'_{123} u'_{124},\nonumber \\
-   1-u'_{123}&=u_1 u_2 u_3 u_{12}^2 u_{13}^2
-   u_{14} u_{23}^2 u_{24} u_{34} u_{123}^3 u_{124}^2 u_{134}^2 u_{234}^2 u_{1234}^3
-   \left(u'\right)_4^3 \left(u'\right)_{14}^2 \left(u'\right)_{24}^2
-   \left(u'\right)_{34}^2 \left(1+ u'_1 u'_2 u'_3 u'_{12} u'_{13} u'_{23} u'_{123}\right)
-   u'_{124} u'_{134} u'_{234},\nonumber \\ 
-   1-u'_{124}&=u_1 u_2 u_4 u_{12}^2 u_{13} u_{14}^2 u_{23}
-   u_{24}^2 u_{34} u_{123}^2 u_{124}^3 u_{134}^2 u_{234}^2 u_{1234}^3 \left(u'\right)_3^3
-   \left(u'\right)_{13}^2 \left(u'\right)_{23}^2 \left(u'\right)_{34}^2 u'_{123}
-   \left(1+u'_1 u'_2 u'_4 u'_{12} u'_{14} u'_{24} u'_{124}\right) u'_{134}
-   u'_{234},\nonumber \\ 
-   1-u'_{134}&=u_1 u_3 u_4 u_{12} u_{13}^2 u_{14}^2 u_{23} u_{24} u_{34}^2
-   u_{123}^2 u_{124}^2 u_{134}^3 u_{234}^2 u_{1234}^3 \left(u'\right)_2^3
-   \left(u'\right)_{12}^2 \left(u'\right)_{23}^2 \left(u'\right)_{24}^2 u'_{123} u'_{124}
-   \left(1+ u'_1 u'_3 u'_4 u'_{13} u'_{14} u'_{34} u'_{134}\right) u'_{234},\nonumber \\ 
-   1-u'_{234}&=u_2
-   u_3 u_4 u_{12} u_{13} u_{14} u_{23}^2 u_{24}^2 u_{34}^2 u_{123}^2 u_{124}^2 u_{134}^2
-   u_{234}^3 u_{1234}^3 \left(u'\right)_1^3 \left(u'\right)_{12}^2 \left(u'\right)_{13}^2
-   \left(u'\right)_{14}^2 u'_{123} u'_{124} u'_{134} \left(u'_2 u'_3 u'_4 u'_{23} u'_{24}
-   u'_{34} u'_{234}+1\right) ,\nonumber \\
-   1-u'_{1234}&=6 u_1 u_2 u_3 u_4 u_{12}^2 u_{13}^2 u_{14}^2 u_{23}^2
-   u_{24}^2 u_{34}^2 u_{123}^3 u_{124}^3 u_{134}^3 u_{234}^3
-   u_{1234}^4 u'_1 u'_2 u'_3 u'_4 \left(u'\right)_{12}^2
-   \left(u'\right)_{13}^2 \left(u'\right)_{14}^2
-   \left(u'\right)_{23}^2 \left(u'\right)_{24}^2
-   \left(u'\right)_{34}^2 \left(u'\right)_{123}^2
-   \left(u'\right)_{124}^2 \left(u'\right)_{134}^2
-   \left(u'\right)_{234}^2 \textcolor{red}{\left(u'\right)_{1234}^2} - \nonumber \\  u_1 u_2& u_3 u_4
-   u_{12}^2 u_{13}^2 u_{14}^2 u_{23}^2 u_{24}^2 u_{34}^2
-   u_{123}^3 u_{124}^3 u_{134}^3 u_{234}^3 u_{1234}^4
-   u'_{12} u'_{13} u'_{14} u'_{23} u'_{24} u'_{34} u'_{123}
-   u'_{124} u'_{134} u'_{234} \left(-3
-   u_{1234}^2+\left(1-u'_1\right){}^2+\left(1-u'_2\right){}^2+\left(1
-   -u'_3\right){}^2+\left(1-u'_4\right){}^2\right) \textcolor{red}{u'_{1234}} \nonumber \\ & + u_1 u_2
-   u_3 u_4 u_{12}^2 u_{13}^2 u_{14}^2 u_{23}^2 u_{24}^2 u_{34}^2
-   u_{123}^4 u_{124}^4 u_{134}^4 u_{234}^4 u_{1234}^8 \nonumber
-  \end{align*} }}
-The $u$-equations for $u_1,u_2,u_3,u_4,u^{'}_{1234}$ are quadratic in the coresponding $u$'s. The 10 facets obtained by setting $u^{'}_{i}, ~u_{i}, u^{'}_{1234}, u_{1234} \rightarrow 0$ are all $P_3$ and the 20 facets obtained by setting $u^{'}_{ij}, ~u_{ij}, ~u^{'}_{ijk},~u_{ijk} \rightarrow 0$ are all $A_1 \times P_2$ . Thus, 4d permutahderon is indeed a binary positive geometry!
+\begin{align*}
+   &1-u_0=u_{1} u_{2} u_{3} u_{4} u_{12}^2 u_{13}^2 u_{14}^2 u_{23}^2 u_{24}^2 u_{34}^2 u_{123}^3 u_{124}^3 u_{134}^3 u_{234}^3u_{1234}^4 
+    (1+h_{\{0\},4}),\\
+   &1-u_{01}=u_{2} u_{3} u_{4} u_{02} u_{03} u_{04} u_{12} u_{13} u_{14} u_{23}^2 u_{24}^2 u_{34}^2 u_{023}^2 u_{024}^2 u_{034}^2 u_{123}^2 u_{124}^2 u_{134}^2 u_{234}^3 u_{0234}^3 u_{1234}^3(1+h_{\{0,1\},4}),\\
+   &1-u_{012}=u_{3} u_{4} u_{03} u_{04} u_{13} u_{14} u_{23} u_{24} u_{34}^2 u_{013} u_{014} u_{023} u_{024} u_{034}^2 u_{123} u_{124} u_{134}^2 u_{234}^2 u_{0134}^2 u_{0234}^2 u_{1234}^2,\\ 
+   &1-u_{0123}=u_{4} u_{04} u_{14} u_{24} u_{34} u_{014} u_{024} u_{034} u_{124} u_{134} u_{234} u_{0124} u_{0134} u_{0234} u_{1234}
+\end{align*}
+where 
+\[
+h_{\{0,1\},4}=u_{01} u_{012} u_{013} u_{014} u_{0123} u_{0124} u_{0134},
+\]
+\begin{align*}
+h_{\{0\},4}(u)=&\,u_{0} u_{01}^3 u_{02} u_{03} u_{04} u_{012}^3 u_{013}^3 u_{023} u_{024} u_{034} u_{0123}^2 u_{0124}^2 u_{0134}^2 u_{0234} u_{014}^3\\
+&+u_{0} u_{01} u_{02} u_{03} u_{04} u_{012}^2 u_{013}^2 u_{023} u_{024} u_{034} u_{0123}^2 u_{0124}^2 u_{0134}^2 u_{014}^2\\
+&+u_{0}^2 u_{01}^2 u_{02}^2 u_{03}^2 u_{04}^2 u_{012}^2 u_{013}^2 u_{023}^2 u_{024}^2 u_{034}^2 u_{0123} u_{0124} u_{0134} u_{0234}^2 u_{014}^2\\
+&+u_{0} u_{01}^2 u_{02} u_{03} u_{04} u_{012}^2 u_{013}^2 u_{023} u_{024} u_{034} u_{0123} u_{0124} u_{0134} u_{0234}^2 u_{014}^2\\
+&+u_{0} u_{01} u_{02} u_{03} u_{04} u_{012} u_{013} u_{023} u_{024} u_{034} u_{0234} u_{014}.
+\end{align*}
+The other $u$ variables and $u$ equations can be obtained by permutation of the indices. %The $u$ equations for $u_i$ are quadratic in $u_i$'s. 
 
-More generally the following are some of the $u$-equations for the $n$-dimensional permutahderon:\\
-
-For $|I| =n-1$ and $s_K = \begin{cases}  1,~ if K \not\subset I & \\ 2, ~if K \subset I\end{cases}$
-
-\bea
-1-u_{I} &=& \prod_ {S - I \subset J } u_{J} \prod_ {K \cap I \ne \Phi } (u^{'}_{K})^{s_K}  \nonumber \\
-1-u_{12\cdots n} &=& \prod_ {{I \subset S}\atop {I \ne \Phi}} u^{'}_{I} \nonumber
-\eea
-
-For $t_J = \begin{cases}  1,~ if I  \not\subset J & \\ 2, ~if I \subset J \end{cases}$
-
-\bea
-1-u^{'}_{i} &=& \prod_ {\{ i \} \subset J } u_{J} \prod_ {K \subset S- \{i\} } u^{'}_{K} \nonumber \\
-1-u^{'}_{i j} &=& \prod_ {\{i,j \}\cap J \ne \Phi} u^{t_J}_{J} \prod_ {K \subset S-\{i, j \} } (u^{'}_{K})^{2} u^{'}_{K \cup {i}} u^{'}_{K \cup{j} } \nonumber 
-\eea
-
-and for $|I| =n-2$ with $S- I = \{i, j\}$
-
-\bea
-1-u_{I}= u_i u_j u^{2}_{ij} \prod_{J \subset I} u_{J \cup \{i\}} u_{J \cup \{j\}} u^{2}_{J \cup \{i,j\}} \prod_{K \subset S-I} (u^{'}_K)^{3} (u^{'}_{K \cup \{i\}})^{2}  (u^{'}_{K \cup\{j\}})^{2}  u^{'}_{K\cup \{i,j\}} \left( 1+ u^{'}_i u^{'}_j u^{'}_{ij} \prod_{I \subset L} u_L \right)                       \nonumber
-\eea
-The other $u$-equations are not two or three term equations and seem to be some higher  order polynomials in the corresponding $u$'s and it would be nice if we could classify all of them.
-
+The 10 facets of $\mathscr P_4$ obtained by setting $u_{i}, u_{i j k l} \rightarrow 0$ are all $\mathscr{P}_3$ and the 20 facets obtained by setting $u_{i j},~u_{i j k} \rightarrow 0$ are all $\mathscr{A}_1 \times \mathscr{P}_2$ . 
 
  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\bibliographystyle{unsrt}
+\bibliographystyle{utphys}
 \bibliography{draft_ABP}
 \end{document}
- 
