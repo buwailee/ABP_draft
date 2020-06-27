@@ -1,15 +1,14 @@
 \documentclass[hidelinks,12pt]{article}
 \pdfoutput=1
-\usepackage{jheppub}
 
 %\input epsf.sty
 %\topmargin -.1cm
 %\textheight 21cm
 %\oddsidemargin 0.15cm 
 %\textwidth 14cm
-\usepackage{cite,comment}
+\usepackage{comment}
 \usepackage{epsfig,amssymb,euscript,xspace,xcolor}
-\usepackage{amsfonts,amssymb,amsmath,mathtools,empheq,amsthm,hyperref,graphicx,paralist}
+\usepackage{amsfonts,amssymb,amsmath,mathtools,empheq,amsthm,graphicx,paralist}
 \usepackage{mathrsfs,float}  
 \usepackage{pgf,tikz,pgfplots}
 \usetikzlibrary{arrows}
@@ -25,15 +24,17 @@
 
 \usepackage[utf8]{inputenc}
 
-\usepackage[titles]{tocloft}
-\renewcommand{\cftdot}{} %Don't want dots in TOC
-
+% \usepackage[titles]{tocloft}
+% \renewcommand{\cftdot}{} %Don't want dots in TOC
 
 \definecolor{lightblue}{rgb}{.1,.4,.5}
 \definecolor{brown1}{rgb}{.64,.43,.138}
 
-\usepackage{hyperref,cite}
-\hypersetup{linktocpage, colorlinks=true,linkcolor= blue,citecolor=blue,urlcolor=lightblue}
+% \usepackage{hyperref}
+% \hypersetup{linktocpage, colorlinks=true,linkcolor= blue,citecolor=blue,urlcolor=lightblue}
+
+\usepackage{jheppub}
+
 
 \newcommand{\hab}{}
 
@@ -48,8 +49,8 @@
 \newcommand{\epkll}{\epsilon^{\mu\rho}p_{\rho}k^{\nu}k^{\sigma}}
 \newcommand{\epklll}{\epsilon^{\mu\nu}p_{\rho}k^{\rho}k^{\sigma}}
 
-\textwidth 16.9cm
-\oddsidemargin -.25cm
+% \textwidth 16.9cm
+% \oddsidemargin -.25cm
 
 \def\ZZZ{{\hbox{ Z\kern-1.6mm Z}}}
 \def\RRR{{\hbox{ R\kern-2.4mm R}}}
@@ -221,8 +222,8 @@
 
 \newcommand{\bi}{{\bf i}}
 
-\renewcommand{\theequation}{\thesection.\arabic{equation}}
-\renewcommand{\theequation}{\arabic{equation}}
+% \renewcommand{\theequation}{\thesection.\arabic{equation}}
+% \renewcommand{\theequation}{\arabic{equation}}
 
 \newcommand{\bea}[1]{\begin{eqnarray}\label{#1} }
 \newcommand{\eea}{\end{eqnarray}}
@@ -341,6 +342,7 @@
 \definecolor{cqcqcq}{rgb}{0.7529411764705882,0.7529411764705882,0.7529411764705882}
 \definecolor{rvwvcq}{rgb}{0.08235294117647059,0.396078431372549,0.7529411764705882}
 \makeatletter
+
 \newenvironment{calc}{\allowdisplaybreaks\start@align\@ne\st@rredtrue\m@ne}
 {\addtocounter{equation}{1}\tag{\theequation}\endalign}
 % for calculations/derivations---only last line gets an equation number, 
@@ -385,64 +387,29 @@
 \newtheorem{identity}{Identity}[section]
 
 
-
-
-
+\date{\today}
+\title{Stringy canonical forms and binary geometries from associahedra, cyclohedra and generalized permutohedra}
 
 \begin{document}
 
-\baselineskip 24pt
+% \baselineskip 24pt
 
+\author[a,b]{Song He}
+\author[a,b]{,\,Zhenjie Li}
+\author[a,c,d]{,\,Prashanth Raman}
+\author[a,b]{,\,Chi Zhang}
+\affiliation[a]{CAS Key Laboratory of Theoretical Physics, Institute of Theoretical Physics, Chinese Academy of Sciences, Beijing 100190, China}
+\affiliation[b]{School of Physical Sciences, University of Chinese Academy of Sciences, No.19A Yuquan Road, Beijing 100049, China}
+\affiliation[c]{Institute of Mathematical Sciences, Taramani, Chennai 600 113, India}
+\affiliation[d]{Homi Bhabha National Institute, Anushakti Nagar, Mumbai 400085, India}
+\emailAdd{songhe@itp.ac.cn}
+\emailAdd{lizhenjie@itp.ac.cn}
+\emailAdd{prashanthr@imsc.res.in}
+\emailAdd{zhangchi@itp.ac.cn}
+\date{\today}
+\abstract{Stringy canonical forms are a class of integrals that provide $\alpha'$-deformations of the canonical form of any polytopes. For generalized associahedra of finite-type cluster algebras, there exist completely rigid stringy integrals, whose configuration spaces are the so-called binary geometries, and for classical types are associated with (generalized) scattering of particles and strings. In this paper we propose a large class of rigid stringy canonical forms for another class of polytopes, generalized permutohedra, which also include associahedra and cyclohedra as special cases (type $A_n$ and $B_n$ generalized associahedra). Remarkably, we find that the configuration spaces of such integrals are also binary geometries, which were suspected to exist for generalized associahedra only. For any generalized permutohedron that can be written as Minkowski sum of coordinate simplices, we show that its rigid stringy integral factorizes into products of lower integrals for massless poles at finite $\alpha'$, and the configuration space is binary although the $u$ equations take a more general form than those ``perfect'' ones for cluster cases. Moreover, we provide an infinite class of examples obtained by degenerations of type $A_n$ and $B_n$ integrals, which have perfect $u$ equations as well. Our results provide yet another family of generalizations of the usual string integral and moduli space, whose physical interpretations remain to be explored. }
 
-\begin{center}
-
-{\Large \bf Stringy canonical forms and binary geometries from associahedra, cyclohedra and generalized permutohedra}
-
-
-\end{center}
-
-\vskip .5cm
-\medskip
-
-\vspace*{4.0ex}
-
-\baselineskip=15 pt
-
-\centerline{\large \rm  {\bf Song He$^{a, b}$, Zhenjie Li$^{a, b}$, Prashanth Raman$^{a, c,d}$, Chi Zhang$^{a, b}$ } } 
-
-\vspace*{4.0ex}
-{\it ~ $^a$ CAS Key Laboratory of Theoretical Physics, Institute of Theoretical Physics, Chinese Academy}
-
-{\it of Sciences, Beijing 100190, China}
-
-{\it ~$^b$ School of Physical Sciences, University of Chinese Academy of Sciences, No.19A Yuquan Road,}
-
-{\it Beijing 100049, China}
-
-{\it ~$^c$ Institute of Mathematical Sciences, Taramani, Chennai 600 113, India}
-
-{\it ~$^d$ Homi Bhabha National Institute, Anushakti Nagar, Mumbai 400085, India}
-
-
-\vspace*{1.0ex}
-\centerline{\it ~E-mail : songhe@itp.ac.cn, lizhenjie@itp.ac.cn, prashanthr@imsc.res.in, zhangchi@itp.ac.cn} 
-\vspace*{5.0ex}
-\centerline{\bf Abstract} \bigskip
-
-Stringy canonical forms are a class of integrals that provide $\alpha'$-deformations of the canonical form of any polytopes. For generalized associahedra of finite-type cluster algebras, there exist completely rigid stringy integrals, whose configuration spaces are the so-called binary geometries, and for classical types are associated with (generalized) scattering of particles and strings. In this paper we propose a large class of rigid stringy canonical forms for another class of polytopes, generalized permutohedra, which also include associahedra and cyclohedra as special cases (type $A_n$ and $B_n$ generalized associahedra). Remarkably, we find that the configuration spaces of such integrals are also binary geometries, which were suspected to exist for generalized associahedra only. For any generalized permutohedron that can be written as Minkowski sum of coordinate simplices, we show that its rigid stringy integral factorizes into products of lower integrals for massless poles at finite $\alpha'$, and the configuration space is binary although the $u$ equations take a more general form than those ``perfect'' ones for cluster cases. Moreover, we provide an infinite class of examples obtained by degenerations of type $A_n$ and $B_n$ integrals, which have perfect $u$ equations as well. Our results provide yet another family of generalizations of the usual string integral and moduli space, whose physical interpretations remain to be explored. 
-
-
-
-
-\vfill \eject
-
-
-
-\baselineskip=18pt
-
-\tableofcontents
-
-\newpage
+\maketitle
 
 \section{Introduction}
 In \cite{Arkani-Hamed:2019mrd} the notion of {\it stringy canonical forms} was introduced which provides vast generalizations of tree-level string amplitudes as integrals over the moduli space ${\cal M}_{0, n}$~\footnote{The study of these types of integrals perhaps dates back to Euler, and more recently they are studied in various contexts, see~\cite{Mellin, Eulermellin, Panzer:2019yxl}. }. Various nice properties of string amplitudes and their field-theory limits, such as factorizations for $\alpha' \to 0$ limit and finite $\alpha'$, channel duality and exponential softness at UV, scattering equations, {\it etc.} all naturally extend to stringy canonical forms. To briefly summarize the idea, let's begin with the disk integral for the open-string amplitudes with ordering $(1,2,\dots, n)$:
@@ -1244,9 +1211,9 @@ with the  understanding that $K_{1,0}=K_{2,0}=[0,n]$ and the other $\tilde u_I$ 
 
 The $u$ equations are:
 \begin{align*}
-1-\tilde u_{[0,l]}&=\left(\prod_{i=0}^{l-1} \prod_{j=i+1}^{k+1}  \tilde u_{[0,i]\cup [j,n]} \prod_{j=i+1}^{l+1} \tilde u_{[0,i]\cup [j,n]}\right) \left(\prod_{i=1}^{l+1} \prod_{j=l+1}^{n}\tilde u_{[i,j]} \right) \left(\prod_{i=1}^{k+1} \tilde u_{[i,n]} \right),\\\\
-1-\tilde u_{[m+2,n]}&=\left( \prod_{j=0}^{m}\tilde u_{[0,j]} \prod_{i=1}^{n-m-1}\tilde u_{[0,m+i]}^2 \right) \left( \prod_{i=m+1}^{n-1}\prod_{j=1}^{m+1}\tilde u_{[j,i]} \right) \left(\prod_{j=0}^{k-m-2} \prod_{i=1}^{m} \tilde u_{[0,i]\cup [3+j+m, n]} \prod_{i= m+1}^{j+m+1} \tilde u_{[0,i]\cup [3+j+m,n]}^2 \right) \\\\
-1-\tilde u_{K_{l,m}}&=\left(\prod_{a=0}^1\prod_{i=l+1}^{n}\tilde u_{[a,i]}\right) \left(\prod_{{\tiny {K_{l',m'} \not\subset K_{l,m}}\atop{K_{l,m} \not\subset K_{l',m'}} }} \tilde u_{K_{l',m'}}^{(l',m')||(l,m)}\right)\left(\prod_{j=2}^{m+1} \prod_{i=l+1}^{n} \tilde u_{[j,i]} \right)\times 
+&1-\tilde u_{[0,l]}=\left(\prod_{i=0}^{l-1} \prod_{j=i+1}^{k+1}  \tilde u_{[0,i]\cup [j,n]} \prod_{j=i+1}^{l+1} \tilde u_{[0,i]\cup [j,n]}\right) \left(\prod_{i=1}^{l+1} \prod_{j=l+1}^{n}\tilde u_{[i,j]} \right) \left(\prod_{i=1}^{k+1} \tilde u_{[i,n]} \right),\\[2ex]
+&1-\tilde u_{[m+2,n]}=\left( \prod_{j=0}^{m}\tilde u_{[0,j]} \prod_{i=1}^{n-m-1}\tilde u_{[0,m+i]}^2 \right) \left( \prod_{i=m+1}^{n-1}\prod_{j=1}^{m+1}\tilde u_{[j,i]} \right) \left(\prod_{j=0}^{k-m-2} \prod_{i=1}^{m} \tilde u_{[0,i]\cup [3+j+m, n]} \prod_{i= m+1}^{j+m+1} \tilde u_{[0,i]\cup [3+j+m,n]}^2 \right) \\[2ex]
+&1-\tilde u_{K_{l,m}}=\left(\prod_{a=0}^1\prod_{i=l+1}^{n}\tilde u_{[a,i]}\right) \left(\prod_{{\tiny {K_{l',m'} \not\subset K_{l,m}}\atop{K_{l,m} \not\subset K_{l',m'}} }} \tilde u_{K_{l',m'}}^{(l',m')||(l,m)}\right)\left(\prod_{j=2}^{m+1} \prod_{i=l+1}^{n} \tilde u_{[j,i]} \right)\times 
 \begin{cases}
  1, ~{\rm if} ~ l=m  \\
  \prod_{i=0}^{l+1} \prod_{j=m+1}^n \tilde u_{[i,j]},~ {\rm if}~l \neq m
@@ -1300,16 +1267,16 @@ Notice that the above proof did not use the fact that ${\mathbf B_1}, {\mathbf B
 \section{Stringy canonical forms and binary geometries for generalized permutohedra}
 In this section we shall argue that a large class of generalized permutohedra which are realised as degenerations of permutohedron ${\mathscr P_n}$ are binary geometries. Before we proceed we shall review some details about the generalized permutohedra \cite{Postnikov:2005,Postnikov:2006} which we shall use throughout the paper.
 \subsection{Generalized permutohedra}\label{GP}
-A generalized permutohedron is a polytope that can obtained be as Minkowski sums and differences of co-ordinate simplices. 
+A generalized permutohedron is a polytope that can be obtained as Minkowski sums and differences of co-ordinate simplices. 
 
 Let $\Delta_{[0,n]} = \operatorname{ConvexHull}(e_1,\dots,e_n)$ be the standard coordinate simplex in $\mathbb{R}^{n+1}$. Then we have:
 \bea
 {\mathscr P_n}(\{y_I \})= \sum y_I . \Delta_I  
 \eea
 for some collection of subsets $I \in [0,n]$.
-We shall restrict ourselves to the large class of generalized permutohedra which admit such a realisation only as Minkowski sums except translations i.e, $y_I \ge 0$ for all non-singlets $I$\footnote{This is mainly due to the subtle nature of the Minkowski difference operation, which makes the shape of the resulting polytope dependent on the relative magnitudes of $y_I$'s. We allow $y_I$ for singlets to be  negative as it is only a translation and to connect with \eqref{intgenperm}.} which are called Nestohedra. Throughout the paper we shall mean Nestohedra or products of Nestohedra whenever we refer to generalized permutohedra.
+We shall restrict ourselves to the large class of generalized permutohedra which admit such a realisation only as Minkowski sums except translations i.e, $y_I \ge 0$ for all non-singlets $I$~\footnote{This is mainly due to the subtle nature of the Minkowski difference operation, which makes the shape of the resulting polytope dependent on the relative magnitudes of $y_I$'s. We allow $y_I$ for singlets to be  negative as it is only a translation and to connect with \eqref{intgenperm}.} which are called nestohedra. Throughout the paper we shall mean nestohedra or products of nestohedra whenever we refer to generalized permutohedra.
 
-The combinatorial structure of the generalized permutohedron ${\mathscr P_n(\{y_I\})}$ (Nestohedra) is independent of $y_I$ and depends only on the collection of subsets $I \in [0,n]$ of the  building set ${\mathbf B}$, which is 
+The combinatorial structure of the generalized permutohedron ${\mathscr P_n(\{y_I\})}$ (nestohedra) is independent of $y_I$ and depends only on the collection of subsets $I \in [0,n]$ of the  building set ${\mathbf B}$, which is 
 a collection of non-empty subsets of $[0,n]$ satisfying the following: %is called a building set ${\mathbf B} if it satisfies the following:
 \begin{compactenum}[\quad (1)]
     \item If $I,J \in {\mathbf B}$ and $I \cap J \neq \varnothing $, then $I \cup J \in {\mathbf B}$.
@@ -1318,14 +1285,14 @@ a collection of non-empty subsets of $[0,n]$ satisfying the following: %is calle
 Here are some interesting examples of generalized permutohedra:
 \begin{itemize}
     \item  If ${\mathbf B}= \{[i] | i=0,\dots,n \}$ is the complete flag of intervals, then ${\mathscr P_n(\{y_I\})}$ is the Stanley-Pitman polytope or Hypercube.
-    \item If ${\mathbf B}$ corresponds to all the non empty subsets of $[0,n]$ and $Y_I =y_{|I|}$ i.e., the variables $Y_I$ are equal for all subsets of the same cardinality, then ${\mathscr P_n(\{y_I\})}$ is the usual permutohedron ${\mathscr P_n}$. 
+    \item If ${\mathbf B}$ corresponds to all the non empty subsets of $[0,n]$ and $Y_I =y_{|I|}$ {\it i.e.}, the variables $Y_I$ are equal for all subsets of the same cardinality, then ${\mathscr P_n(\{y_I\})}$ is the usual permutohedron ${\mathscr P_n}$. 
     \item If ${\mathbf B}=\{ [i,j] | 0\leq  i \leq j \leq n\}$ is the set of consecutive intervals, then ${\mathscr P_n(\{y_I\})}$ is the associahedron ${\mathscr A_n}$. 
     \item If  $\mathbf B=\{[i,i+k]\,:\,0\leq i, k\leq n\}$ is the set of cyclic intervals, then ${\mathscr P_n(\{y_I\})}$ is the cyclohedron ${\mathscr B_n}$.
     \item Let $\Gamma$ be a graph on the vertex set $[0,n]$. Let us assume that ${\mathbf B} = {\mathbf B}(\Gamma)$ is the set of subsets $I \in [0,n]$ such that the induced graph $\Gamma$ is connected, then  ${\mathscr P_n(\{y_I\})}$ is a graph associahedron.
 \end{itemize}
 
 
-\paragraph{Nested complex} To describe the combinatorial structure we need the notion of {\it Nested complex}. We shall only summarize the necessary results here and let the reader interested in the details to refer \cite{Postnikov:2005,Postnikov:2006}.
+\paragraph{Nested complex} To describe the combinatorial structure we need the notion of {\it nested complex}. We shall only summarize the necessary results here and let the reader interested in the details to refer \cite{Postnikov:2005,Postnikov:2006}.
 A subset ${\mathbf N}$ in the building set ${\mathbf B}$ is called a {\it nested set} if it satisfies the following conditions:
 \begin{compactenum}[\quad (1)]
     \item For any $I,J \in {\mathbf N}$, we either have $I \subset J$ or $J\subset I$ or $I$ and $J$ are disjoint.
@@ -1336,7 +1303,7 @@ The {\it nested complex} ${\mathbf N}({\mathbf B})$ is defined as the poset of t
 \paragraph*{Facial structure} 
 Let us assume that the set ${\mathbf B}$ associated with a generalized permutohedron ${\mathscr P_n(\{y_I\})}$ is a building set on $[0,n]$. \emph{Then the poset of faces ${\mathscr P_n(\{y_I\})}$ ordered by reverse inclusion is isomorphic to the nested complex ${\mathbf N}({\mathbf B})$}. 
 
-In particular, it means that (1) the number of facets $N$ of the generalized permutohedron just corresponds to the set of all elements in ${\mathbf B}$ excluding the maximal element, and (2) two facets corresponding to the sets $I$ and $J$ in ${\mathbf B}$ intersect i.e., are {\it compatible} with each other if and only if  either $I \subset J$,~ $J \subset I$~ or $I \cap J = \varnothing ~{\text and} ~ I \cup J \notin {\mathbf B}$.
+In particular, it means that (1) the set of facets of the generalized permutohedron just corresponds to the set of all elements in ${\mathbf B}$ excluding the maximal element, and (2) two facets corresponding to the sets $I$ and $J$ in ${\mathbf B}$ intersect {\it i.e.}, are {\it compatible} with each other, if and only if  either $I \subset J$,~ $J \subset I$~ or $I \cap J = \varnothing ~{\text and} ~ I \cup J \notin {\mathbf B}$.
 
 The face $P_\mathbf{N}$ of ${\mathscr P_n(\{y_I\})}$ associated with the nested set $\mathbf{N} \in \mathbf{N}(\mathbf{B})$ is given by
 \bea\label{deffacet}
@@ -1421,12 +1388,12 @@ This polygon has 6 facets which correspond to the sets $\{ \{0\},\{1\},\{2\},\{0
 % \draw (155,263) node [anchor=north west][inner sep=0.75pt]   [align=left] {Figure showing the compatible\textbackslash incompatible facets of the 2d associahedron  \\ and permutohedron as generalized permutohedra};
 \end{tikzpicture}
 \end{center}
-\caption{Compatible\textbackslash incompatible facets of the 2d associahedron (a) and permutohedron (b) as generalized permutohedra}
+\caption{Facets of the 2d associahedron (a) and permutohedron (b) as generalized permutohedra}
 \end{figure}
 
 \vspace{1ex}
 
-Generalized permutohedra have big polyhedra which are simplices. Thus its quite natural to wonder if the associated $u$ variables satisfy some kind of $u$ equations. We claim and we shall show in the next section that this indeed the case. Further we show that all these polytopes are binary geometries even though some of them do not admit perfect $u$ equations. 
+The big polyhedron of generalized permutohedron is a simplex. Thus it's quite natural to wonder if the associated $u$ variables satisfy some kind of $u$ equations. We claim and we shall show in the next section that this is indeed the case. Further we show that all these polytopes are binary geometries even though some of them do not admit perfect $u$ equations. 
 
 % Here are some interesting examples of generalized permutohedra:
 
@@ -1457,7 +1424,7 @@ Generalized permutohedra have big polyhedra which are simplices. Thus its quite 
 \subsection{ABHY-like realizations and $u$ variables for generalized permutohedra}
 
 %We have seen that any $n$-dimensional generalized permutohedron can be constructed by a Minkowski sum of simplices labeled by subsets in the building set $\mathbf{B}$, which satisfy the conditions given above. 
-As we mentioned earlier, one can write down a natural stringy integral \eqref{intgenperm} for generalized permutahedron $\mathscr{P}(\bf B)$,
+As mentioned earlier, one can write down a natural stringy integral \eqref{intgenperm} for generalized permutahedron $\mathscr{P}(\bf B)$,
 %it is a highly non-trivial fact about generalized permutohedra that the number of facets is given by $N=n+m$, where $m$ is the number of non-singletons in $\bf B$. 
 %because each facet $F_I$ is given by a nested set $\{[0,n],I\}$ for $I\neq [0,n]$.
 and its polytope is given by the Minkowski sum
@@ -1488,7 +1455,7 @@ solution for the permutohedron $\mathscr P_n$ is
 \end{equation}
 This gives us the following ABHY polytope:
 setting 
-$S_I=-C_I$ for any non-singleton $I\in \mathscr P_n$, where $C_I$ are positive 
+$S_I=-C_I$ for any non-singleton $I$, where $C_I$ are positive 
 constants, and the polytope is given by the alternating sum
 \begin{equation}\label{ABHY}
 	F_I\geq 0,\quad -C_I=\sum_{J\neq \varnothing,J\subset I}(-1)^{|J|-|I|}F_J
@@ -1525,9 +1492,9 @@ For another example, consider the building set
 \]
 It's a degeneration of $\mathscr P_3$, where
 \[
-C_{01},C_{02},C_{03},C_{12},C_{23},C_{013},C_{023},C_{123}=0.
+C_{01},C_{02},C_{03},C_{12},C_{23},C_{013},C_{023},C_{123}=0,
 \]
-Its $u$ variables and $u$ equations can be found at the end of section (\ref{sect3.4}). By solving the ABHY conditions for these $C_I=0$, we get the vanishing facets
+and its $u$ variables and $u$ equations can be found at the end of section (\ref{sect3.4}). By solving the ABHY conditions for these $C_I=0$, we get the vanishing facets
 \begin{align*}
 &F_{0i}=F_0+F_i,\quad F_{12}=F_1+F_2,\quad F_{23}=F_2+F3,\\
 &F_{013}=F_{13}+F_0,\quad F_{023}=F_0+F_2+F_3,\quad F_{123}=F_2+F_{13},
@@ -1971,20 +1938,21 @@ We leave the study of compatible degrees and $u$ equations for general permutohe
 
 \section{Discussions}
 
-In this paper we introduced a large class of integrals,  ${\cal I}_{\bf B}$, which can be regarded as a family of rigid stringy canonical forms%~\cite{Arkani-Hamed:2019mrd} 
-for generalized permutohedra ${\mathscr P}(\bf B)$, and we show that corresponding configuration spaces are always binary geometries. These rigid integrals satisfy the remarkable property that, at any ``massless'' pole, {\it i.e.} poles of the leading order $\Omega({\mathscr P}(\bf B) )$, the residue is given by a product of two such integrals, ${\cal I}_{{\bf B}_L} \times {\cal I}_{{\bf B}_R}$. Our results greatly extended the scope of binary geometries and associated integrals with such ``perfect'' factorization properties, which were originally thought to tie to the more special class of generalized associahedra for finite-type cluster algebras. For infinite families of cases as degenerations of associahedra and cyclohedra (which belong to both generalized permutohedra and generalized associahedra), we find additionally that the $u$ equations are ``perfect'' just like the case for cluster configuration spaces. Our preliminary investigations have opened up various new avenues to be explored, and we end with listing some open questions.
+In this paper we introduce a large class of integrals,  ${\cal I}_{\bf B}$, which can be regarded as a family of rigid stringy canonical forms%~\cite{Arkani-Hamed:2019mrd} 
+for generalized permutohedra ${\mathscr P}(\bf B)$, and we show that corresponding configuration spaces are always binary geometries. These rigid integrals satisfy the remarkable property that, at any ``massless'' pole, {\it i.e.} poles of the leading order $\Omega({\mathscr P}(\bf B) )$, the residue is given by a product of two such integrals, ${\cal I}_{{\bf B}_L} \times {\cal I}_{{\bf B}_R}$. Our results greatly extend the scope of binary geometries and associated integrals with such ``perfect'' factorization properties, which were originally thought to tie to the more special class of generalized associahedra for finite-type cluster algebras. For infinite families of cases as degenerations of associahedra and cyclohedra (which belong to both generalized permutohedra and generalized associahedra), we find additionally that the $u$ equations are ``perfect'' just like the case for cluster configuration spaces. Our preliminary investigations have opened up various new avenues to be explored, and we end with listing some open questions.
 
 \paragraph{Generalized permutohedra vs. generalized associahedra} Our results provide an infinite number of examples generalizing ordinary string integrals (and cluster string integrals of type $B_n$), where the configuration space is determined by {\it linear} factors, or equivalently hyperplane arrangement. In this sense, it is fair to say that we have only explored a very special corner in the world of binary configuration spaces and associated stringy integrals. Even for cluster cases, it is unknown if the cluster configuration space of type $C_n$ can be realized by hyperplane arrangement (see also \cite{Li:2018mnq}), and for type $ D_n$ and exceptional cases, the conjecture is that the spaces cannot be obtained this way~\cite{Arkani-Hamed:2019plo}; we expect that these cases do not belong to integrals with ``linear'' factors. It would be highly desirable to look for a wider class of binary geometries which naturally incorporate both generalized permutohedra and generalized associahedra. 
 
 On the other hand, it would be interesting to study the configuration spaces for generalized permutohedra in a way similar to the cluster case. The $u$ equations for {\it e.g.} ${\mathscr P}_d$ are certainly worth further investigations, and one could ask if there might be any analog/generalization of cluster algebra behind it. Another question concerns going beyond positive part of the space since it is binary even in the complex case, and it would be nice to study complex space and connected components of the real space. For the cluster case, connected components are in bijection with sign patterns of the $u$ variables allowed by the so-called extended $u$ equations~\cite{Arkani-Hamed:2019plo}. It would be highly desirable to see if one could obtain all the extended $u$ equations for {\it e.g.} ${\mathscr P}_d$, which can help us understand these questions better. Relatedly, the number of connected components and other interesting properties of the space can be inferred by counting the number of points in the space for a finite field; since we are dealing with hyperplane arrangement, the point count $N(p)$ is always a polynomial. Just to illustrate the counting with some examples, since ${\mathscr P}_2={\mathscr B}_2$, the point count is $N(p)=(p-3)^2$, and if we plug in $p=-1$ we have $|N(-1)|=16$ connected components; we find for ${\mathscr P}_3$, $N(p)=(p-4)(p^2-10p+26)$, thus there are $185$ connected components, and for ${\mathscr P}_4$, $N(p)=p^4- 30 p^3+ 345 p^2- 1785 p+3485$ thus $5646$ connected components. 
 
-Moreover, since we have found a variety of such geometries with perfect $u$ equations from degenerating ${\mathscr A}_n$ and ${\mathscr B}_n$, it'd be very interesting to explore more cases with perfect $u$ equations from degenerations of other types, {\it e.g.} ${\mathscr C_n}$ and ${\mathscr D_n}$. Along this direction, an intriguing possibility is to classify binary geometries with perfect $u$ equations from degenerating cluster cases; since any product of such geometries still has perfect $u$ equations, this amounts to find all elementary, non-factorizing geometries with perfect $u$ equations. More importantly,  what are the possible interpretations of these degenerations from cluster algebra; even for ${\mathscr A}_{n-3}$, what are the meaning of these degenerations of ${\cal M}_{0,n}$ and the string integrals?
+Moreover, since we have found a variety of such geometries with perfect $u$ equations from degenerating ${\mathscr A}_n$ and ${\mathscr B}_n$, it'd be very interesting to explore more cases with perfect $u$ equations from degenerations of other types, {\it e.g.} ${\mathscr C_n}$ and ${\mathscr D_n}$. Along this direction, an intriguing possibility is to classify binary geometries with perfect $u$ equations from degenerating cluster cases; since any product of such geometries still has perfect $u$ equations, this amounts to find all elementary, non-factorizing geometries with perfect $u$ equations. More importantly,  what are the possible interpretations of these degenerations from cluster algebra; even for ${\mathscr A}_{n-3}$, what is the meaning of these degenerations of ${\cal M}_{0,n}$ and the string integrals?
 
 \paragraph{Generalized string integrals and applications} One of the most pressing questions is to study further these stringy integrals and their potential applications to physics. We would like to understand why these integrals factorize at finite $\alpha'$ just as cluster stringy integrals, though most of them are not related to cluster algebra. Recall that cluster stringy integrals of classical types are natural $\alpha'$-deformation of bi-adjoint $\phi^3$ amplitudes through one-loop~\cite{Arkani-Hamed:2019vag}, and in general the physical meaning of these integrals and their leading orders are unclear. A special class of generalized permutohedra, called Cayley polytopes, have natural interpretations as sum of certain tree-level $\phi^3$ diagrams~\cite{Gao:2017dek,He:2018pue}; for these cases, the stringy integrals provide a rigid $\alpha'$-deformation of these $\phi^3$ ``amplitudes''~\footnote{For other applications of generalized permutohedra to physics, see~\cite{early2017generalized,Early:2018zuw}.}. It would be interesting to see what role do generalize permutohedra play in the general story of formulating scattering amplitudes as differential forms~\cite{Arkani-Hamed:2017tmz, He:2018okq, Arkani-Hamed:2017mur, Arkani-Hamed:2019vag}.
 
-We have not touched various properties of these stringy integrals, such as recurrence relations, complex (and real) integrals with two different ``orderings'' and scattering (saddle-point) equations and pushforward, It would be interesting to understand these points better, especially for the ${\mathscr P}_d$ case, which is completely symmetric in the labels. The scattering equations read
-\[\frac{X_i}{x_i}=\sum_{I \ni i} \frac{c_I}{\sum_{j \in i} x_j}\,,
-\]
+We have not touched various properties of these stringy integrals, such as recurrence relations, complex (and real) integrals with two different ``orderings'' and scattering (saddle-point) equations and pushforward. It would be interesting to understand these points better, especially for the ${\mathscr P}_d$ case, which is completely symmetric in the labels. The scattering equations read
+\bea
+\frac{S_i}{x_i}=\sum_{I \ni i} \frac{C_I}{x_I}\,,
+\eea
 which provide a one-to-one map from ${\bf x}\in \mathbb{R}_{\geq 0}^d$ to ${\mathscr P}_d$, and $\Omega({\mathscr P}_d)$ is given by the pushforward via summing over the solutions. By plugging in $p=1$ in the point count $N(p)$, one can obtain the number of solutions (saddle points), which also gives the dimension of the space of integral functions~\cite{Arkani-Hamed:2019mrd}. For example, for $d=2, 3, 4$, we have $4, 51, 2016$ solutions respectively. 
 
 One class of examples which are particularly interesting are the Stokes polytopes and Accordiohedra~\cite{Banerjee:2018tun,Raman:2019utu} associated with planar $\phi^{p}$ amplitudes. A nice fact about Stokes polytopes~\cite{Chapoton, Raman:2019utu} is that any product of associahedra ${\mathscr A}_{i_1}\times \cdots \times {\mathscr A}_{i_k}$ is a Stokes polytope of dimension $n=i_1+\cdots+i_k$; more interestingly, degenerations of ${\mathscr A_3}$ with perfect $u$ equations correspond to $3d$ Stokes polytopes. Furthermore every Stokes polytope is a Minkowski sum of associahedra \cite{Baryshnikov} and thus it would be natural to consider them as these might provide nice class of physically relevant examples which also play a role in classifying binary geometries with perfect $u$ equations.
@@ -2001,10 +1969,10 @@ The big polyhedron is a simplex, and we find that the $u$ variables take a very 
 u_1 &=& \frac{p_n}{q_n}, ~u_2 = \frac{p_{n-1}q_n}{p_{n-1,n}},~u_3 = \frac{p_{n-2}q_{n-1}}{p_{n-2,n-1}}, \dots,
 u_{n-2} = \frac{p_1 q_2}{p_{12}}, ~u_{n-1} = \frac{p_{2}q_3}{p_{23}},~u_n = \frac{p_{3}q_{4}}{p_{34}}, \nonumber \\
 u_{n+1} &=& \frac{1}{q_1}, ~u_{n+2} = \frac{p_{12}}{q_{1}q_{2}},~u_{n+3} = \frac{q_{1}}{p_{23}}, \dots,
-u_{3n-1} = \frac{ q_{n-1}}{p_{n-1n}} 
+u_{3n-1} = \frac{ q_{n-1}}{p_{n-1n}} ,
 \eea
 where we denote $p_i :=x_i$, $q_i := 1+x_i$ and $p_{i~i+1}:=1+x_i+ x_i x_{i+1}$. Remarkably, for any $n$, we have perfect $u$ equations which fall into three types viz. $1-u$ being the product of two, three or four $u$'s. The first type has 4 equations:
-\bea
+\[
 1-u_{1} =u_{3n-2} u_{3n-1},~
 1-u_{n-2} =u_{n+1} u_{n+3},~
 1-u_{n+1} =u_{n-2} u_{n+2},~
@@ -2012,12 +1980,13 @@ where we denote $p_i :=x_i$, $q_i := 1+x_i$ and $p_{i~i+1}:=1+x_i+ x_i x_{i+1}$.
 u_{2} u_{3} , n=3\\
 u_{1} u_{4} , n=4\\
 u_{1} u_{2} , n\geq 5
-\end{cases} 
-\eea
+\end{cases},
+\]
 with the corresponding facets being $\mathscr{X}_{n-1}$. The second type has $n-3$ equations
-\bea
-1-u_{n+4} =u_{n} u_{n+2}u_{n+4} u_{n+6}, \quad 1-u_{n+6+2 i} =u_{n-3-i} u_{n+4+2 i} u_{n+5+2 i} u_{n+8+2 i}~ {\rm for}~i=0,\dots,n-5;
-\eea
+\[
+1-u_{n+4} =u_{n} u_{n+2}u_{n+4} u_{n+6},
+1-u_{n+6+2 i} =u_{n-3-i} u_{n+4+2 i} u_{n+5+2 i} u_{n+8+2 i}~ {\rm for}~i=0,\dots,n-5;
+\]
 with the corresponding facets being $\mathscr{A}^{m}_1 \times \mathscr{X}_{n-m-1}$. The third type has $2n-2$ equations, but we do not yet have a complete classification of these facets. It would be nice to see if $\mathscr{X}_n$'s are equivalent to some degeneration of $\mathscr{P}_n$, or if they are genuinely new binary geometries with perfect $u$ equations.  
 %We can also replace the first the first term in the Newton polynomial \eqref{new} with $(1+x_1+ x_2)$ and we get an identical system of $u$ equations
 %
@@ -2057,11 +2026,11 @@ The leading order of \eqref{stringycanonicalform} computes the canonical form of
  
 Moreover, having closed form expressions at finite $\alpha'$ is certainly desirable. Our preliminary study already provides some examples, and let us look at a toy example which was considered in~\cite{Arkani-Hamed:2019mrd}:
  \bea
-I(\alpha') &=& \int_{0}^{\infty} \int_{0}^{\infty} \frac{dx}{x} ~\frac{dy}{y} \left( \frac{1}{x} + \frac{1}{y}+ x y \right)^{-\alpha' } \nonumber 
+I(\alpha') &=& \int_{0}^{\infty} \int_{0}^{\infty} \frac{\mathrm{d}x}{x} ~\frac{\mathrm{d}y}{y} \left( \frac{1}{x} + \frac{1}{y}+ x y \right)^{-\alpha' }. \nonumber 
 \eea 
 We can use the symmetry in $x,~y$ to make a symmetric change of variables to $u=x+y$ and $v =x y$, and the integral can be easily evaluated as
  \bea
-I(\alpha') &=& \int_{0}^{\infty} \int_{0}^{\frac{u^2}{4}} \frac{2 du ~ dv}{v \sqrt{u^2-4 v} }\left( \frac{u}{v} + v  \right)^{-\alpha'}= \frac{\Gamma{\left[\frac{\alpha'}{3}\right]^{3}}}{3 \Gamma{ \left[\alpha'\right]}} \nonumber
+I(\alpha') &=& \int_{0}^{\infty} \int_{0}^{\frac{u^2}{4}} \frac{2 \mathrm{d}u ~ \mathrm{d}v}{v \sqrt{u^2-4 v} }\left( \frac{u}{v} + v  \right)^{-\alpha'}= \frac{\Gamma{\left[\frac{\alpha'}{3}\right]^{3}}}{3 \Gamma{ \left[\alpha'\right]}}. \nonumber
 \eea
 %We can expand the result in $\alpha'$ to get 
 %{\scriptsize \bea
@@ -2079,16 +2048,19 @@ I(\alpha') &=& \int_{0}^{\infty} \int_{0}^{\frac{u^2}{4}} \frac{2 du ~ dv}{v \sq
 %&=&\prod_{i=1}^n \frac{b_i^{\alpha'\left(c_i- \frac{X_i}{m_i}\right)}}{m_i~ a_i ^{\frac{\alpha' X_i}{m_i}}} B\left(\frac{\alpha' X_i}{m_i}, \alpha' \left(c_i- \frac{X_i}{m_i}\right) \right) \nonumber
 %\eea
 
-This is in fact a special class of a large class of integrals which all correspond to simplex case. By using the integral identity $\int_{{\mathbb R_{+}^{n}}} \prod_{i=1}^{n} \frac{d x_i }{x_i}~x_i^{a_i}  f\left(\sum_{i=1}^{n} x_i \right)   = \frac{\prod_{i=1}^n \Gamma{(a_i)}}{\Gamma{(\sum_{i=1}^n a_i)}} \int_{0}^{\infty} f(\beta) \beta^{\sum_{i=1}^{n} a_n -1} d\beta$, we can easily evaluate the following general integral for simplex:
+This is in fact a special class of a large class of integrals which all correspond to simplex case. By using the integral identity 
+\[\int_{{\mathbb R_{+}^{n}}} \prod_{i=1}^{n} \frac{\mathrm{d} x_i }{x_i}~x_i^{a_i}  f\left(\sum_{i=1}^{n} x_i \right)   = \frac{\prod_{i=1}^n \Gamma{(a_i)}}{\Gamma{(\sum_{i=1}^n a_i)}} \int_{0}^{\infty} f(\beta) \beta^{\sum_{i=1}^{n} a_n -1} \mathrm{d}\beta,
+\]
+we can easily evaluate the following general integral for simplex:
 \bea
-I(\alpha',~X_i,~c ) &=&  \int_{0}^{\infty} \cdots \int_{0}^{\infty} \prod_{i=1}^{n} ~dx_i ~x_i^{\alpha' X_i -1}  \left( b+\sum_{i=1}^n a_i x_i^{m_i} \right)^{-\alpha' c } \nonumber  \\
-&=& \frac{b^{\alpha' \left(\sum_{i=1}^n \frac{X_i}{m_i}-c \right) }}{(\prod_{i=1}^n m_i) (\prod_{i=1}^n a_i^{\alpha' X_i /m_i})} \int_{0}^{\infty} \cdots \int_{0}^{\infty} \prod_{i=1}^{n} ~dy_i ~y_i^{ \frac{\alpha' X_i}{m_i} -1}  \left( 1+\sum_{i=1}^n y_i \right)^{-\alpha' c } \nonumber  \\
-&=&\frac{b^{\alpha' \left(\sum_{i=1}^n \frac{X_i}{m_i}-c \right) }}{(\prod_{i=1}^n m_i) (\prod_{i=1}^n a_i^{\alpha' X_i /m_i})} B\left(\frac{ \alpha' X_1}{m_1},\dots,~\frac{ \alpha' X_n}{m_n}, ~ \alpha' \left(c- \sum_{i=1}^n \frac{X_i}{m_i} \right) \right) \nonumber \eea
+I(\alpha',~X_i,~c ) &=&  \int_{0}^{\infty} \cdots \int_{0}^{\infty} \prod_{i=1}^{n} ~\mathrm{d}x_i ~x_i^{\alpha' X_i -1}  \left( b+\sum_{i=1}^n a_i x_i^{m_i} \right)^{-\alpha' c } \nonumber  \\
+&=& \frac{b^{\alpha' \left(\sum_{i=1}^n \frac{X_i}{m_i}-c \right) }}{(\prod_{i=1}^n m_i) (\prod_{i=1}^n a_i^{\alpha' X_i /m_i})} \int_{0}^{\infty} \cdots \int_{0}^{\infty} \prod_{i=1}^{n} ~\mathrm{d}y_i ~y_i^{ \frac{\alpha' X_i}{m_i} -1}  \left( 1+\sum_{i=1}^n y_i \right)^{-\alpha' c } \nonumber  \\
+&=&\frac{b^{\alpha' \left(\sum_{i=1}^n \frac{X_i}{m_i}-c \right) }}{(\prod_{i=1}^n m_i) (\prod_{i=1}^n a_i^{\alpha' X_i /m_i})} B\left(\frac{ \alpha' X_1}{m_1},\dots,~\frac{ \alpha' X_n}{m_n}, ~ \alpha' \left(c- \sum_{i=1}^n \frac{X_i}{m_i} \right) \right). \nonumber \eea
 %More generally by interpreting the stringy integral \eqref{stringycanonicalform} as a Mellin transform it was shown in \cite{Mellin,Eulermellin} that the result of any stringy integral with linear factors i.e any generalized permutohedron is given by product of gamma functions of the facets of the Newton polytope times an entire function. 
 All stringy integrals (including the ones with non-linear factors) can in principle be evaluated as linear combination of A-hypergeometric functions with special arguments by identification the with a GKZ system \cite{saito2013grobner,gelfand1990generalized} (see also \cite{delaCruz:2019skx}). We shall leave the evaluation of more stringy integrals and related topics to future work.
 
 
-\section*{ Acknowledgements}
+\section*{Acknowledgements}
 We are grateful to Nima Arkani-Hamed, Thomas Lam, Hugh Thomas for stimulating discussions and collaborations on related projects. P.R. would like to thank the generous hospitality of the Institute of Theoretical Physics, Chinese Academy of Sciences, Beijing during a visit when part of this work was done. The research of S.H., Z.L. and C.Z. is supported in part by NSF of China under Grant No. 11947302 and 11935013. 
 
 \appendix 
@@ -2105,7 +2077,7 @@ The maximal set of a building set ${\mathbf B_{max}}$ is the set of all inclusio
 \vspace{1ex}
 
 The result follows as for any pair of connected building sets ${\mathbf B_{i}},{\mathbf B_{j}}$ either  ${\mathbf B_{i}} \cup {\mathbf B_{j}} = \varnothing $ in which case ${\cal I}_{{\mathbf B_i}\cup {\mathbf B_j}} = {\cal I}_{\mathbf B_i} \times {\cal I}_{\mathbf B_j}$ or ${\mathbf B_{i}} \cup {\mathbf B_{j}} = \{k\}$ in this we can rescale the $x_l \rightarrow x_k x_l$ for $l \in {\mathbf B_{j}} $ to decouple the integrals. Thus we always get ${\cal I}_{\mathbf B}={\cal I}_{\mathbf B_1}\times{\cal I}_{\mathbf B_2}\cdots \times{\cal I}_{\mathbf B_n}$. \\
-Using the above result we construct a degeneration of  ${\mathscr P_n}$ which are the most general products i.e., $\prod_{p_i} X_{p_i}$ such that $\sum^{k}_{i=1} p_{i} = n$ by dividing the $(n+1)$ singlets into $k$ parts 
+Using the above result we construct a degeneration of  ${\mathscr P_n}$ which are the most general products {\it i.e.}, $\prod_{p_i} X_{p_i}$ such that $\sum^{k}_{i=1} p_{i} = n$ by dividing the $(n+1)$ singlets into $k$ parts 
 \[
 [0,p_1],\quad [p_1,p_1+p_2],\quad \dots ,\quad [\sum^{k-1}_{i=1}p_{i},\sum^{k}_{i=1}p_{i}= n]
 \]
